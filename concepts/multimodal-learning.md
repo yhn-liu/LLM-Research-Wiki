@@ -69,12 +69,12 @@ papers:
 
 ## 相关论文
 
-- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.md) — 提出多模态强化学习的预对齐框架，通过黑箱蒸馏提升多模态模型的推理能力
-- [HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.md) — 构建统一的驾驶世界模型，实现 3D 场景的多模态理解与生成
+- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 提出多模态强化学习的预对齐框架，通过黑箱蒸馏提升多模态模型的推理能力
+- [HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 构建统一的驾驶世界模型，实现 3D 场景的多模态理解与生成
 
 ## 相关概念
 
-- [大语言模型](large-language-model.md) — 多模态模型的基础语言能力
-- [世界模型](world-models.md) — 多模态生成的重要应用方向
-- [知识蒸馏](knowledge-distillation.md) — 多模态模型的压缩与迁移
-- [自动驾驶](autonomous-driving.md) — 多模态感知的重要应用场景
+- [大语言模型](large-language-model.md.html) — 多模态模型的基础语言能力
+- [世界模型](world-models.md.html) — 多模态生成的重要应用方向
+- [知识蒸馏](knowledge-distillation.md.html) — 多模态模型的压缩与迁移
+- [自动驾驶](autonomous-driving.md.html) — 多模态感知的重要应用场景

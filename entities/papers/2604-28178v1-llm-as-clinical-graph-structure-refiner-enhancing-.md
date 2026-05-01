@@ -61,12 +61,12 @@ Electroencephalogram (EEG) signals are vital for automated seizure detection, bu
 
 ## 相关概念
 
-- [脑电图](../concepts/eeg.md)
-- [图神经网络](../concepts/graph-neural-networks.md)
-- [癫痫检测](../concepts/seizure-detection.md)
-- [大语言模型](../concepts/large-language-models.md)
-- [图结构学习](../concepts/graph-structure-learning.md)
-- [临床 AI](../concepts/clinical-ai.md)
+- [脑电图](../concepts/eeg.html)
+- [图神经网络](../concepts/graph-neural-networks.html)
+- [癫痫检测](../concepts/seizure-detection.html)
+- [大语言模型](../concepts/large-language-models.html)
+- [图结构学习](../concepts/graph-structure-learning.html)
+- [临床 AI](../concepts/clinical-ai.html)
 
 ---
 

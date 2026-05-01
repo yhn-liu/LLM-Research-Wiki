@@ -58,10 +58,10 @@ Surprisal theory links human processing effort to the predictability of an upcom
 
 ## 相关概念
 
-- [惊讶理论](../concepts/surprisal-theory.md)
-- [分词](../concepts/tokenization.md)
-- [语言模型评估](../concepts/language-model-evaluation.md)
-- [自然语言处理](../concepts/nlp.md)
+- [惊讶理论](../concepts/surprisal-theory.html)
+- [分词](../concepts/tokenization.html)
+- [语言模型评估](../concepts/language-model-evaluation.html)
+- [自然语言处理](../concepts/nlp.html)
 
 ---
 

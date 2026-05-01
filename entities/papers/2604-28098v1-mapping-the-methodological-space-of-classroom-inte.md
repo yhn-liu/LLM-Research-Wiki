@@ -75,9 +75,9 @@ Research on classroom interaction has long been divided between large-scale obse
 
 ## 相关概念
 
-- [课堂互动](../concepts/classroom-interaction.md)
-- [对话教学](../concepts/dialogic-teaching.md)
-- [教育研究方法论](../concepts/educational-research-methodology.md)
-- [人工智能教育应用](../concepts/ai-in-education.md)
-- [民族志研究](../concepts/ethnographic-research.md)
-- [多模态分析](../concepts/multimodal-analysis.md)
+- [课堂互动](../concepts/classroom-interaction.html)
+- [对话教学](../concepts/dialogic-teaching.html)
+- [教育研究方法论](../concepts/educational-research-methodology.html)
+- [人工智能教育应用](../concepts/ai-in-education.html)
+- [民族志研究](../concepts/ethnographic-research.html)
+- [多模态分析](../concepts/multimodal-analysis.html)

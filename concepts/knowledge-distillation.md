@@ -75,11 +75,11 @@ papers:
 
 ## 相关论文
 
-- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.md) — 提出黑箱在线策略蒸馏（Black-box OPD），在多模态强化学习中实现无需访问权重的高效知识迁移和预对齐
+- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 提出黑箱在线策略蒸馏（Black-box OPD），在多模态强化学习中实现无需访问权重的高效知识迁移和预对齐
 
 ## 相关概念
 
-- [大语言模型](large-language-model.md) — 知识蒸馏的主要应用对象
-- [强化学习](reinforcement-learning.md) — 策略蒸馏是强化学习中的重要技术
-- [多模态学习](multimodal-learning.md) — 多模态场景下的蒸馏应用
-- [AI安全与对齐](ai-safety-alignment.md) — 蒸馏过程中的安全对齐问题
+- [大语言模型](large-language-model.md.html) — 知识蒸馏的主要应用对象
+- [强化学习](reinforcement-learning.md.html) — 策略蒸馏是强化学习中的重要技术
+- [多模态学习](multimodal-learning.md.html) — 多模态场景下的蒸馏应用
+- [AI安全与对齐](ai-safety-alignment.md.html) — 蒸馏过程中的安全对齐问题

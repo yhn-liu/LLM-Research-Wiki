@@ -80,20 +80,20 @@ papers:
 
 ## 相关论文
 
-- [Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](../papers/2404-07143-arxiv-query-searchqueryampidlist240407143ampstart0.md) — 提出 Infini-attention 机制，通过压缩记忆实现无限上下文长度的高效 Transformer 处理
-- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.md) — 提出基于黑箱在线策略蒸馏的多模态强化学习预对齐框架
-- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.md) — 研究 LLM 是否能学会抵抗强化学习训练中的探索引导
-- [Synthetic Computers at Scale for Long-Horizon Productivity Simulation](../papers/2604-28181v1-synthetic-computers-at-scale-for-long-horizon-prod.md) — 利用 LLM 构建大规模合成计算机环境用于长期生产力模拟
-- [TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering](../papers/2604-28076v1-topbench-a-benchmark-for-implicit-prediction-and-r.md) — 针对表格问答的隐式预测和推理基准测试
-- [Measuring research data reuse in scholarly publications](../papers/2604-28061v1-measuring-research-data-reuse-in-scholarly-publica.md) — 利用生成式 AI 评估学术出版中的研究数据复用
-- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.md) — 评估 AI 生成学术图像取证分析的综合基准
-- [LLM as Clinical Graph Structure Refiner](../papers/2604-28178v1-llm-as-clinical-graph-structure-refiner-enhancing-.md) — 利用 LLM 作为临床图结构优化器，增强 EEG 癫痫诊断中的表示学习
+- [Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](../papers/2404-07143-arxiv-query-searchqueryampidlist240407143ampstart0.html) — 提出 Infini-attention 机制，通过压缩记忆实现无限上下文长度的高效 Transformer 处理
+- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 提出基于黑箱在线策略蒸馏的多模态强化学习预对齐框架
+- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 研究 LLM 是否能学会抵抗强化学习训练中的探索引导
+- [Synthetic Computers at Scale for Long-Horizon Productivity Simulation](../papers/2604-28181v1-synthetic-computers-at-scale-for-long-horizon-prod.html) — 利用 LLM 构建大规模合成计算机环境用于长期生产力模拟
+- [TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering](../papers/2604-28076v1-topbench-a-benchmark-for-implicit-prediction-and-r.html) — 针对表格问答的隐式预测和推理基准测试
+- [Measuring research data reuse in scholarly publications](../papers/2604-28061v1-measuring-research-data-reuse-in-scholarly-publica.html) — 利用生成式 AI 评估学术出版中的研究数据复用
+- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.html) — 评估 AI 生成学术图像取证分析的综合基准
+- [LLM as Clinical Graph Structure Refiner](../papers/2604-28178v1-llm-as-clinical-graph-structure-refiner-enhancing-.html) — 利用 LLM 作为临床图结构优化器，增强 EEG 癫痫诊断中的表示学习
 
 ## 相关概念
 
-- [强化学习](reinforcement-learning.md) — LLM 后训练对齐的关键方法
-- [多模态学习](multimodal-learning.md) — 扩展 LLM 到视觉等多模态输入
-- [知识蒸馏](knowledge-distillation.md) — 模型压缩与知识迁移
-- [基准评估](benchmarking.md) — LLM 能力的系统性评估
-- [智能体](ai-agents.md) — 基于 LLM 的自主智能系统
-- [AI安全与对齐](ai-safety-alignment.md) — 确保 LLM 行为安全可控
+- [强化学习](reinforcement-learning.md.html) — LLM 后训练对齐的关键方法
+- [多模态学习](multimodal-learning.md.html) — 扩展 LLM 到视觉等多模态输入
+- [知识蒸馏](knowledge-distillation.md.html) — 模型压缩与知识迁移
+- [基准评估](benchmarking.md.html) — LLM 能力的系统性评估
+- [智能体](ai-agents.md.html) — 基于 LLM 的自主智能系统
+- [AI安全与对齐](ai-safety-alignment.md.html) — 确保 LLM 行为安全可控

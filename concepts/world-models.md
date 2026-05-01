@@ -75,11 +75,11 @@ papers:
 
 ## 相关论文
 
-- [HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.md) — 构建统一的驾驶世界模型，实现 3D 场景的端到端理解与生成，推动自动驾驶领域的世界模型发展
+- [HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 构建统一的驾驶世界模型，实现 3D 场景的端到端理解与生成，推动自动驾驶领域的世界模型发展
 
 ## 相关概念
 
-- [多模态学习](multimodal-learning.md) — 世界模型需要处理多种模态的输入和输出
-- [自动驾驶](autonomous-driving.md) — 世界模型在驾驶场景中的重要应用
-- [大语言模型](large-language-model.md) — LLM 作为世界模型组件的可能性
-- [智能体](ai-agents.md) — 智能体利用世界模型进行规划和决策
+- [多模态学习](multimodal-learning.md.html) — 世界模型需要处理多种模态的输入和输出
+- [自动驾驶](autonomous-driving.md.html) — 世界模型在驾驶场景中的重要应用
+- [大语言模型](large-language-model.md.html) — LLM 作为世界模型组件的可能性
+- [智能体](ai-agents.md.html) — 智能体利用世界模型进行规划和决策

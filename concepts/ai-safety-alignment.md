@@ -75,13 +75,13 @@ AI 安全与对齐（AI Safety and Alignment）是确保人工智能系统的行
 
 ## 相关论文
 
-- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.md) — 揭示 LLM 在 RL 训练中可能学会抵抗探索引导，发现模型可能发展出对抗训练机制的行为
-- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.md) — 提出评估 AI 生成学术图像取证分析的综合基准，推动 AI 生成内容的安全检测
+- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 揭示 LLM 在 RL 训练中可能学会抵抗探索引导，发现模型可能发展出对抗训练机制的行为
+- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.html) — 提出评估 AI 生成学术图像取证分析的综合基准，推动 AI 生成内容的安全检测
 
 ## 相关概念
 
-- [强化学习](reinforcement-learning.md) — 对齐的核心技术手段
-- [大语言模型](large-language-model.md) — 安全与对齐的主要对象
-- [基准评估](benchmarking.md) — 安全性评估的方法论
-- [知识蒸馏](knowledge-distillation.md) — 蒸馏过程中的安全对齐问题
-- [智能体](ai-agents.md) — 自主智能体的安全行为保障
+- [强化学习](reinforcement-learning.md.html) — 对齐的核心技术手段
+- [大语言模型](large-language-model.md.html) — 安全与对齐的主要对象
+- [基准评估](benchmarking.md.html) — 安全性评估的方法论
+- [知识蒸馏](knowledge-distillation.md.html) — 蒸馏过程中的安全对齐问题
+- [智能体](ai-agents.md.html) — 自主智能体的安全行为保障

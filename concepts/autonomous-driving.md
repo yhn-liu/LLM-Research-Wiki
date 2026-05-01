@@ -74,12 +74,12 @@ papers:
 
 ## 相关论文
 
-- [HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.md) — 构建统一的驾驶世界模型，实现 3D 场景的端到端理解与生成，推动自动驾驶从模块化向统一架构的演进
+- [HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 构建统一的驾驶世界模型，实现 3D 场景的端到端理解与生成，推动自动驾驶从模块化向统一架构的演进
 
 ## 相关概念
 
-- [世界模型](world-models.md) — 自动驾驶中场景理解和生成的核心技术
-- [多模态学习](multimodal-learning.md) — 多传感器信息的融合处理
-- [图神经网络](graph-neural-networks.md) — 交通场景中关系建模的方法
-- [基准评估](benchmarking.md) — 自动驾驶系统的评估方法
-- [大语言模型](large-language-model.md) — LLM 在自动驾驶决策中的应用潜力
+- [世界模型](world-models.md.html) — 自动驾驶中场景理解和生成的核心技术
+- [多模态学习](multimodal-learning.md.html) — 多传感器信息的融合处理
+- [图神经网络](graph-neural-networks.md.html) — 交通场景中关系建模的方法
+- [基准评估](benchmarking.md.html) — 自动驾驶系统的评估方法
+- [大语言模型](large-language-model.md.html) — LLM 在自动驾驶决策中的应用潜力

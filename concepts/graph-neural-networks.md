@@ -77,11 +77,11 @@ papers:
 
 ## 相关论文
 
-- [LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis](../papers/2604-28178v1-llm-as-clinical-graph-structure-refiner-enhancing-.md) — 提出利用 LLM 作为临床图结构优化器，通过优化 EEG 癫痫诊断中的图表示来增强特征学习效果
+- [LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis](../papers/2604-28178v1-llm-as-clinical-graph-structure-refiner-enhancing-.html) — 提出利用 LLM 作为临床图结构优化器，通过优化 EEG 癫痫诊断中的图表示来增强特征学习效果
 
 ## 相关概念
 
-- [大语言模型](large-language-model.md) — 与 GNN 结合增强图结构数据的理解
-- [多模态学习](multimodal-learning.md) — 图数据与其他模态的融合
-- [基准评估](benchmarking.md) — GNN 模型的评估方法
-- [知识蒸馏](knowledge-distillation.md) — GNN 模型的压缩与迁移
+- [大语言模型](large-language-model.md.html) — 与 GNN 结合增强图结构数据的理解
+- [多模态学习](multimodal-learning.md.html) — 图数据与其他模态的融合
+- [基准评估](benchmarking.md.html) — GNN 模型的评估方法
+- [知识蒸馏](knowledge-distillation.md.html) — GNN 模型的压缩与迁移

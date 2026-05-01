@@ -74,12 +74,12 @@ papers:
 
 ## 相关论文
 
-- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.md) — 提出评估 AI 生成学术图像取证分析的综合基准，涵盖检测、定位、溯源等多个评估维度
-- [TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering](../papers/2604-28076v1-topbench-a-benchmark-for-implicit-prediction-and-r.md) — 针对表格问答中的隐式预测和推理能力提出新基准，评估模型在结构化数据上的推理能力
+- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.html) — 提出评估 AI 生成学术图像取证分析的综合基准，涵盖检测、定位、溯源等多个评估维度
+- [TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering](../papers/2604-28076v1-topbench-a-benchmark-for-implicit-prediction-and-r.html) — 针对表格问答中的隐式预测和推理能力提出新基准，评估模型在结构化数据上的推理能力
 
 ## 相关概念
 
-- [大语言模型](large-language-model.md) — 基准评估的主要对象
-- [AI安全与对齐](ai-safety-alignment.md) — 安全性评估是基准设计的重要维度
-- [图神经网络](graph-neural-networks.md) — 图结构数据的评估方法
-- [智能体](ai-agents.md) — 智能体能力的评估框架
+- [大语言模型](large-language-model.md.html) — 基准评估的主要对象
+- [AI安全与对齐](ai-safety-alignment.md.html) — 安全性评估是基准设计的重要维度
+- [图神经网络](graph-neural-networks.md.html) — 图结构数据的评估方法
+- [智能体](ai-agents.md.html) — 智能体能力的评估框架

@@ -73,12 +73,12 @@ papers:
 
 ## 相关论文
 
-- [Synthetic Computers at Scale for Long-Horizon Productivity Simulation](../papers/2604-28181v1-synthetic-computers-at-scale-for-long-horizon-prod.md) — 构建大规模合成计算机环境，用于评估和训练 LLM 智能体在长期任务中的生产力表现
-- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.md) — 研究 LLM 智能体在 RL 训练中学会抵抗探索引导的现象，揭示了智能体行为的不可预测性
+- [Synthetic Computers at Scale for Long-Horizon Productivity Simulation](../papers/2604-28181v1-synthetic-computers-at-scale-for-long-horizon-prod.html) — 构建大规模合成计算机环境，用于评估和训练 LLM 智能体在长期任务中的生产力表现
+- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 研究 LLM 智能体在 RL 训练中学会抵抗探索引导的现象，揭示了智能体行为的不可预测性
 
 ## 相关概念
 
-- [大语言模型](large-language-model.md) — 智能体的核心推理引擎
-- [强化学习](reinforcement-learning.md) — 智能体训练的关键方法
-- [世界模型](world-models.md) — 智能体进行规划和预测的基础
-- [AI安全与对齐](ai-safety-alignment.md) — 智能体行为的安全性和可控性
+- [大语言模型](large-language-model.md.html) — 智能体的核心推理引擎
+- [强化学习](reinforcement-learning.md.html) — 智能体训练的关键方法
+- [世界模型](world-models.md.html) — 智能体进行规划和预测的基础
+- [AI安全与对齐](ai-safety-alignment.md.html) — 智能体行为的安全性和可控性

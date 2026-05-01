@@ -75,12 +75,12 @@ papers:
 
 ## 相关论文
 
-- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.md) — 提出基于黑箱在线策略蒸馏的预对齐方法，涉及 RLVR、GRPO、DAPO、GSPO 等多种 RL 训练范式
-- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.md) — 揭示 LLM 在 RL 训练中可能学会抵抗探索引导，发现新的对抗性行为模式
+- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 提出基于黑箱在线策略蒸馏的预对齐方法，涉及 RLVR、GRPO、DAPO、GSPO 等多种 RL 训练范式
+- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 揭示 LLM 在 RL 训练中可能学会抵抗探索引导，发现新的对抗性行为模式
 
 ## 相关概念
 
-- [大语言模型](large-language-model.md) — 强化学习的主要应用领域之一
-- [AI安全与对齐](ai-safety-alignment.md) — RL 是实现 AI 对齐的核心技术
-- [知识蒸馏](knowledge-distillation.md) — 与 RL 训练结合进行模型压缩和对齐
-- [多模态学习](multimodal-learning.md) — 多模态场景下的强化学习应用
+- [大语言模型](large-language-model.md.html) — 强化学习的主要应用领域之一
+- [AI安全与对齐](ai-safety-alignment.md.html) — RL 是实现 AI 对齐的核心技术
+- [知识蒸馏](knowledge-distillation.md.html) — 与 RL 训练结合进行模型压缩和对齐
+- [多模态学习](multimodal-learning.md.html) — 多模态场景下的强化学习应用
