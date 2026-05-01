@@ -1,6 +1,5 @@
 title: LLM Research Wiki
 description: AI/ML/NLP/CV 科研知识库
-theme: minima
 
 markdown: kramdown
 kramdown:
@@ -16,8 +15,8 @@ exclude:
   - _archive/
   - SCHEMA.md
   - log.md
-  - .gitignore
   - README.md
+  - GITHUB_SETUP.md
 
 # 包含论文页面
 include:
