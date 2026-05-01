@@ -20,7 +20,7 @@ title: LLM Research Wiki
 | 标题 | 分类 | 日期 |
 |------|------|------|
 {% for paper in papers %}
-| [{{ paper.title }}]({{ paper.url }}) | {{ paper.tags | join: ", " }} | {{ paper.published }} |
+| [{{ paper.title }}]({{ site.baseurl }}{{ paper.url }}) | {{ paper.tags | join: ", " }} | {{ paper.published }} |
 {% endfor %}
 {% else %}
 暂无论文
@@ -34,7 +34,7 @@ title: LLM Research Wiki
 
 ### 访问方式
 
-- **GitHub Pages:** https://yhn-liu.github.io/LLM-Research-Wiki/
+- **GitHub Pages:** {{ site.url }}{{ site.baseurl }}/
 - **GitHub 仓库:** https://github.com/yhn-liu/LLM-Research-Wiki
 
 ---

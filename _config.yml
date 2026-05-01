@@ -1,10 +1,11 @@
 title: LLM Research Wiki
 description: AI/ML/NLP/CV 科研知识库
+baseurl: /LLM-Research-Wiki
+url: https://yuhanliu.space
 
 markdown: kramdown
 kramdown:
   input: GFM
-  hard_wrap: false
   hard_wrap: false
 
 exclude:
