@@ -6,7 +6,7 @@ title: LLM Research Wiki
 # 🔬 LLM Research Wiki
 
 > AI/ML 领域的维基式知识库。按概念组织，论文为据，持续更新。
-> 最后更新：2026-05-01 | 概念：10 | 论文：11
+> 最后更新：2026-05-01 | 概念：11 | 论文：11
 
 ---
 
@@ -31,7 +31,7 @@ title: LLM Research Wiki
 
 - **训练方法** → [强化学习](concepts/reinforcement-learning.html) | [知识蒸馏](concepts/knowledge-distillation.html)
 - **模型架构** → [大语言模型](concepts/large-language-model.html) | [图神经网络](concepts/graph-neural-networks.html) | [世界模型](concepts/world-models.html)
-- **应用场景** → [自动驾驶](concepts/autonomous-driving.html) | [医学AI](concepts/graph-neural-networks.html) | [智能体](concepts/ai-agents.html)
+- **应用场景** → [自动驾驶](concepts/autonomous-driving.html) | [医学AI](concepts/medical-ai.html) | [智能体](concepts/ai-agents.html)
 - **评估与安全** → [基准评估](concepts/benchmarking.html) | [AI安全与对齐](concepts/ai-safety-alignment.html)
 
 ---
