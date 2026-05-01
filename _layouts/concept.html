@@ -1,0 +1,15 @@
+---
+layout: default
+title: 概念页面
+---
+
+{{ content }}
+
+<script>
+// Auto-link concept references in paper pages
+document.querySelectorAll('a').forEach(a => {
+  if (a.href && a.href.includes('concepts/') && !a.href.endsWith('.md')) {
+    a.style.borderBottom = '2px solid #e94560';
+  }
+});
+</script>
