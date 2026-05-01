@@ -74,9 +74,9 @@ Infini-attention的核心思想是在标准注意力机制的基础上引入压�
 
 ## 相关概念
 
-- [Transformer](../concepts/transformer.html)
-- [注意力机制](../concepts/attention-mechanism.html)
-- [大语言模型](../concepts/large-language-model.html)
-- [长上下文学习](../concepts/long-context-learning.html)
-- [压缩记忆](../concepts/compressive-memory.html)
-- [流式推理](../concepts/streaming-inference.html)
+- [Transformer](../../concepts/transformer.html)
+- [注意力机制](../../concepts/attention-mechanism.html)
+- [大语言模型](../../concepts/large-language-model.html)
+- [长上下文学习](../../concepts/long-context-learning.html)
+- [压缩记忆](../../concepts/compressive-memory.html)
+- [流式推理](../../concepts/streaming-inference.html)

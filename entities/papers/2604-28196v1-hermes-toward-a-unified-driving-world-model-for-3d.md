@@ -69,9 +69,9 @@ HERMES++ 是一种统一的驾驶世界模型，旨在同时解决 3D 场景理�
 
 ## 相关概念
 
-- [驾驶世界模型](../concepts/driving-world-model.html)
-- [3D场景理解](../concepts/3d-scene-understanding.html)
-- [大语言模型](../concepts/large-language-models.html)
-- [点云预测](../concepts/point-cloud-prediction.html)
-- [BEV表示](../concepts/bev-representation.html)
-- [自动驾驶](../concepts/autonomous-driving.html)
+- [驾驶世界模型](../../concepts/driving-world-model.html)
+- [3D场景理解](../../concepts/3d-scene-understanding.html)
+- [大语言模型](../../concepts/large-language-models.html)
+- [点云预测](../../concepts/point-cloud-prediction.html)
+- [BEV表示](../../concepts/bev-representation.html)
+- [自动驾驶](../../concepts/autonomous-driving.html)

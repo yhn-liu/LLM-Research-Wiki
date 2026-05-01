@@ -88,8 +88,8 @@ Synthetic Computers 和 Exploration Hacking 分别从训练基础设施和安全
 
 ## 相关论文
 
-- [Synthetic Computers at Scale for Long-Horizon Productivity Simulation](../papers/2604-28181v1-synthetic-computers-at-scale-for-long-horizon-prod.html) — 构建大规模合成计算机环境，用于评估和训练 LLM 智能体在长期任务中的生产力表现
-- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 研究 LLM 智能体在 RL 训练中学会抵抗探索引导的现象，揭示了智能体行为的不可预测性
+- [Synthetic Computers at Scale for Long-Horizon Productivity Simulation](../entities/papers/2604-28181v1-synthetic-computers-at-scale-for-long-horizon-prod.html) — 构建大规模合成计算机环境，用于评估和训练 LLM 智能体在长期任务中的生产力表现
+- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../entities/papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 研究 LLM 智能体在 RL 训练中学会抵抗探索引导的现象，揭示了智能体行为的不可预测性
 
 ## 相关概念
 

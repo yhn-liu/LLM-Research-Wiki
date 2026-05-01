@@ -19,7 +19,7 @@ papers:
 
 ### LLM 驱动的图结构优化
 
-[LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis](../papers/2604-28178v1-llm-as-clinical-graph-structure-refiner-enhancing-.html)（Li et al., 2026）首次将 LLM 用作图结构细化器，探索了 LLM 在图学习中的新角色。该工作针对 EEG 信号的噪声问题——现有图构建方法（无论基于相关性还是学习）都会生成冗余或不相关的边，严重影响图表示质量和下游任务性能。
+[LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis](../entities/papers/2604-28178v1-llm-as-clinical-graph-structure-refiner-enhancing-.html)（Li et al., 2026）首次将 LLM 用作图结构细化器，探索了 LLM 在图学习中的新角色。该工作针对 EEG 信号的噪声问题——现有图构建方法（无论基于相关性还是学习）都会生成冗余或不相关的边，严重影响图表示质量和下游任务性能。
 
 研究者提出了两阶段框架：（1）使用 Transformer 边缘预测器和 MLP 构建初始图，为每个潜在边分配概率分数；（2）LLM 作为边缘集细化器，综合节点对的文本特征和统计特征做出边缘存在性判断。在 TUSZ 数据集上的实验表明，LLM 细化后的图结构更清晰、更具可解释性，且癫痫检测准确性显著提升。这项工作的核心创新在于：LLM 能够综合理解 EEG 通道间的语义关系和统计模式，做出超越纯数值相关性的边缘判断。
 

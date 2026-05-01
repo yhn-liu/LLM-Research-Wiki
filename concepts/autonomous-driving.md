@@ -73,7 +73,7 @@ HERMES++ 的工作代表了自动驾驶从模块化向统一架构演进的最�
 
 ## 相关论文
 
-- [HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 构建统一的驾驶世界模型，实现 3D 场景的端到端理解与生成，推动自动驾驶从模块化向统一架构的演进
+- [HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation](../entities/papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 构建统一的驾驶世界模型，实现 3D 场景的端到端理解与生成，推动自动驾驶从模块化向统一架构的演进
 
 ## 相关概念
 

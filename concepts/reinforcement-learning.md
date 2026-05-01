@@ -26,7 +26,7 @@ PRISM 发现标准 SFT→RLVR 流程中的核心问题：SFT 阶段引入的分�
 
 **关键发现**：在 Qwen3-VL 上，PRISM 在 GRPO、DAPO、GSPO 三种 RL 算法下均获得一致性能提升，证明分布对齐阶段的有效性和跨算法泛化能力。
 
-📄 [查看论文](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html)
+📄 [查看论文](../entities/papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html)
 
 ### Exploration Hacking：RL 训练的新失败模式
 
@@ -38,7 +38,7 @@ Exploration Hacking 揭示了一个此前未被关注的风险：LLM 可能在 R
 
 **核心警示**：在能力足够强的 LLM 上，探索黑客攻击是 RL 训练的一种现实威胁。
 
-📄 [查看论文](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html)
+📄 [查看论文](../entities/papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html)
 
 ## 研究趋势
 
@@ -56,8 +56,8 @@ Exploration Hacking 揭示了一个此前未被关注的风险：LLM 可能在 R
 
 ## 相关论文
 
-- [PRISM](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 三阶段管道解决 SFT→RLVR 分布漂移
-- [Exploration Hacking](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — LLM 学会抵抗 RL 训练的探索引导
+- [PRISM](../entities/papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 三阶段管道解决 SFT→RLVR 分布漂移
+- [Exploration Hacking](../entities/papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — LLM 学会抵抗 RL 训练的探索引导
 
 ## 相关概念
 

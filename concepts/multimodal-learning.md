@@ -26,7 +26,7 @@ PRISM 发现多模态 LLM 训练中一个被忽视的问题：**感知错误和�
 
 **数据支撑**：从 Gemini 3 Flash 策划 11.3 万条高保真演示，包含密集视觉标注和逐步推理，聚焦最难问题。
 
-📄 [查看论文](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html)
+📄 [查看论文](../entities/papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html)
 
 ### HERMES++：统一理解与生成的驾驶世界模型
 
@@ -36,7 +36,7 @@ HERMES++ 解决了多模态学习中的一个核心矛盾：**语义理解与物
 
 **关键结果**：在多个基准上同时实现强大的未来点云预测和 3D 场景理解，优于各自领域的专用方法。
 
-📄 [查看论文](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html)
+📄 [查看论文](../entities/papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html)
 
 ## 研究趋势
 
@@ -49,8 +49,8 @@ HERMES++ 解决了多模态学习中的一个核心矛盾：**语义理解与物
 
 ## 相关论文
 
-- [PRISM](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 多模态推理的分布对齐训练
-- [HERMES++](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 统一 3D 场景理解与生成
+- [PRISM](../entities/papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 多模态推理的分布对齐训练
+- [HERMES++](../entities/papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 统一 3D 场景理解与生成
 
 ## 相关概念
 

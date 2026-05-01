@@ -73,7 +73,7 @@ PRISM 提出的黑箱 OPD 是当前蒸馏技术的前沿方向：
 
 ## 相关论文
 
-- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 提出黑箱在线策略蒸馏（Black-box OPD），在多模态强化学习中实现无需访问权重的高效知识迁移和预对齐
+- [PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning](../entities/papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 提出黑箱在线策略蒸馏（Black-box OPD），在多模态强化学习中实现无需访问权重的高效知识迁移和预对齐
 
 ## 相关概念
 

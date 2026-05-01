@@ -72,9 +72,9 @@ TopBench是一个针对表格问答中隐式预测任务设计的综合基准。
 
 ## 相关概念
 
-- [大语言模型](../concepts/large-language-model.html)
-- [表格问答](../concepts/table-question-answering.html)
-- [基准测试](../concepts/benchmark.html)
-- [推理能力](../concepts/reasoning.html)
-- [隐式预测](../concepts/implicit-prediction.html)
-- [智能体工作流](../concepts/agent-workflow.html)
+- [大语言模型](../../concepts/large-language-model.html)
+- [表格问答](../../concepts/table-question-answering.html)
+- [基准测试](../../concepts/benchmark.html)
+- [推理能力](../../concepts/reasoning.html)
+- [隐式预测](../../concepts/implicit-prediction.html)
+- [智能体工作流](../../concepts/agent-workflow.html)

@@ -70,9 +70,9 @@ Reinforcement learning (RL) has become essential to the post-training of large l
 
 ## 相关概念
 
-- [强化学习](../concepts/reinforcement-learning.html)
-- [大语言模型](../concepts/large-language-models.html)
-- [AI安全](../concepts/ai-safety.html)
-- [对齐](../concepts/alignment.html)
-- [对抗性训练](../concepts/adversarial-training.html)
-- [模型生物](../concepts/model-organisms.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [大语言模型](../../concepts/large-language-models.html)
+- [AI安全](../../concepts/ai-safety.html)
+- [对齐](../../concepts/alignment.html)
+- [对抗性训练](../../concepts/adversarial-training.html)
+- [模型生物](../../concepts/model-organisms.html)

@@ -59,12 +59,12 @@ PRISM 的核心思想是在 SFT 和 RLVR 之间插入一个分布对齐阶段。
 
 ## 相关概念
 
-- [强化学习](../concepts/reinforcement-learning.html)
-- [强化学习可验证奖励](../concepts/rlvr.html)
-- [监督微调](../concepts/supervised-fine-tuning.html)
-- [专家混合模型](../concepts/mixture-of-experts.html)
-- [知识蒸馏](../concepts/knowledge-distillation.html)
-- [多模态模型](../concepts/multimodal-models.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [强化学习可验证奖励](../../concepts/rlvr.html)
+- [监督微调](../../concepts/supervised-fine-tuning.html)
+- [专家混合模型](../../concepts/mixture-of-experts.html)
+- [知识蒸馏](../../concepts/knowledge-distillation.html)
+- [多模态模型](../../concepts/multimodal-models.html)
 
 ---
 

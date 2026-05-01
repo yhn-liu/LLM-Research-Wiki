@@ -64,11 +64,11 @@ AEGIS 基准的设计围绕三个核心维度展开。首先是领域特定复�
 
 ## 相关概念
 
-- [AI 生成图像检测](../concepts/ai-generated-image-detection.html)
-- [图像取证](../concepts/image-forensics.html)
-- [多模态大语言模型](../concepts/multimodal-llm.html)
-- [对抗性评测](../concepts/adversarial-evaluation.html)
-- [学术诚信](../concepts/academic-integrity.html)
+- [AI 生成图像检测](../../concepts/ai-generated-image-detection.html)
+- [图像取证](../../concepts/image-forensics.html)
+- [多模态大语言模型](../../concepts/multimodal-llm.html)
+- [对抗性评测](../../concepts/adversarial-evaluation.html)
+- [学术诚信](../../concepts/academic-integrity.html)
 
 ---
 

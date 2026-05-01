@@ -69,8 +69,8 @@ Realistic long-horizon productivity work is strongly conditioned on user-specifi
 
 ## 相关概念
 
-- [合成数据](../concepts/synthetic-data.html)
-- [强化学习](../concepts/reinforcement-learning.html)
-- [大语言模型](../concepts/large-language-models.html)
-- [代理能力](../concepts/agent-capabilities.html)
-- [长期推理](../concepts/long-horizon-reasoning.html)
+- [合成数据](../../concepts/synthetic-data.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [大语言模型](../../concepts/large-language-models.html)
+- [代理能力](../../concepts/agent-capabilities.html)
+- [长期推理](../../concepts/long-horizon-reasoning.html)

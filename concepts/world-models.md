@@ -29,7 +29,7 @@ HERMES++ 针对驾驶世界模型的核心矛盾：现有方法**要么侧重场
 
 **关键结果**：在多个基准上同时实现强大的未来点云预测和 3D 场景理解性能，均优于各自领域的专用方法。模型和代码已开源。
 
-📄 [查看论文](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html)
+📄 [查看论文](../entities/papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html)
 
 ## 研究趋势
 
@@ -43,7 +43,7 @@ HERMES++ 代表了世界模型从"纯生成"向"理解+生成统一"的转变：
 
 ## 相关论文
 
-- [HERMES++](../papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 统一 3D 场景理解与未来几何预测
+- [HERMES++](../entities/papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 统一 3D 场景理解与未来几何预测
 
 ## 相关概念
 

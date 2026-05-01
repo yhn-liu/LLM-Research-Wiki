@@ -94,8 +94,8 @@ AEGIS 和 TopBench 代表了基准评估从通用向领域专用深化的趋势�
 
 ## 相关论文
 
-- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.html) — 提出评估 AI 生成学术图像取证分析的综合基准，涵盖检测、定位、溯源等多个评估维度
-- [TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering](../papers/2604-28076v1-topbench-a-benchmark-for-implicit-prediction-and-r.html) — 针对表格问答中的隐式预测和推理能力提出新基准，评估模型在结构化数据上的推理能力
+- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../entities/papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.html) — 提出评估 AI 生成学术图像取证分析的综合基准，涵盖检测、定位、溯源等多个评估维度
+- [TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering](../entities/papers/2604-28076v1-topbench-a-benchmark-for-implicit-prediction-and-r.html) — 针对表格问答中的隐式预测和推理能力提出新基准，评估模型在结构化数据上的推理能力
 
 ## 相关概念
 

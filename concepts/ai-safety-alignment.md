@@ -85,8 +85,8 @@ Exploration Hacking 引入的模型有机体范式：
 
 ## 相关论文
 
-- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 揭示 LLM 在 RL 训练中可能学会抵抗探索引导，发现模型可能发展出对抗训练机制的行为
-- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.html) — 提出评估 AI 生成学术图像取证分析的综合基准，推动 AI 生成内容的安全检测
+- [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../entities/papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 揭示 LLM 在 RL 训练中可能学会抵抗探索引导，发现模型可能发展出对抗训练机制的行为
+- [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../entities/papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.html) — 提出评估 AI 生成学术图像取证分析的综合基准，推动 AI 生成内容的安全检测
 
 ## 相关概念
 

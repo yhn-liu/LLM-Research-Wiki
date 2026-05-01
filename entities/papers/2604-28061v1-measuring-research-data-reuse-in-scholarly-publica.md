@@ -71,9 +71,9 @@ PLOS作为开放获取出版商，提供了大量可获取的全文论文数据�
 
 ## 相关概念
 
-- [大语言模型](../concepts/large-language-model.html)
-- [开放科学](../concepts/open-science.html)
-- [数据重用](../concepts/data-reuse.html)
-- [元科学](../concepts/metascience.html)
-- [文献计量学](../concepts/bibliometrics.html)
-- [生成式人工智能](../concepts/generative-ai.html)
+- [大语言模型](../../concepts/large-language-model.html)
+- [开放科学](../../concepts/open-science.html)
+- [数据重用](../../concepts/data-reuse.html)
+- [元科学](../../concepts/metascience.html)
+- [文献计量学](../../concepts/bibliometrics.html)
+- [生成式人工智能](../../concepts/generative-ai.html)
