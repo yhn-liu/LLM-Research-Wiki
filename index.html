@@ -51,23 +51,6 @@ title: 首页
 <p>暂无论文</p>
 {% endif %}
 
-## 🔍 按标签浏览
-
-{% assign all_tags = "" | split: "" %}
-{% for paper in papers %}
-  {% for tag in paper.tags %}
-    {% unless all_tags contains tag %}
-      {% assign all_tags = all_tags | push: tag %}
-    {% endunless %}
-  {% endfor %}
-{% endfor %}
-
-<div class="tags-cloud">
-  {% for tag in all_tags %}
-  <a href="#{{ tag }}" class="tag-link">{{ tag }}</a>
-  {% endfor %}
-</div>
-
 ## 📖 使用说明
 
 ### 导入新论文
@@ -92,10 +75,6 @@ python3 ~/.hermes/scripts/import_paper.py --pdf /path/to/paper.pdf
 
 - **GitHub Pages:** https://yhn-liu.github.io/LLM-Research-Wiki/
 - **GitHub 仓库:** https://github.com/yhn-liu/LLM-Research-Wiki
-
-## 📝 日志
-
-{% include_relative log.md %}
 
 ---
 

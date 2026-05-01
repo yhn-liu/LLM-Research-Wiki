@@ -1,7 +1,4 @@
 ---
-layout: paper
----
----
 title: "PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning"
 created: 2026-05-01
 updated: 2026-05-01

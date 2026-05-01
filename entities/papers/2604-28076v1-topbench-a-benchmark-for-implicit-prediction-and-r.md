@@ -1,7 +1,4 @@
 ---
-layout: paper
----
----
 title: "TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering"
 created: 2026-05-01
 updated: 2026-05-01

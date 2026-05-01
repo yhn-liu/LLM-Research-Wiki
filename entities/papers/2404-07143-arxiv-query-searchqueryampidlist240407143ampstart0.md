@@ -1,7 +1,4 @@
 ---
-layout: paper
----
----
 title: "arXiv Query: search_query=&amp;id_list=2404.07143&amp;start=0&amp;max_results=10"
 created: 2026-05-01
 updated: 2026-05-01

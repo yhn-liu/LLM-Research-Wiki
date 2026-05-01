@@ -1,7 +1,4 @@
 ---
-layout: paper
----
----
 title: "Exploration Hacking: Can LLMs Learn to Resist RL Training?"
 created: 2026-05-01
 updated: 2026-05-01
