@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28123v1
-authors: "Sudong Wang, Weiquan Huang, Xiaomin Yu et al. (12 authors)"
-published: 2026-04-30
-categories: cs.CV, cs.AI, cs.CL
-tags: [nlp, cv, ai]
-source_url: https://arxiv.org/abs/2604.28123v1
-pdf_url: https://arxiv.org/pdf/2604.28123v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning

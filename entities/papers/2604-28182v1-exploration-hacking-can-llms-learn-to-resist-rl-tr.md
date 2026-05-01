@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "Exploration Hacking: Can LLMs Learn to Resist RL Training?"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28182v1
-authors: "Eyon Jang, Damon Falck, Joschka Braun et al. (9 authors)"
-published: 2026-04-30
-categories: cs.LG, cs.CL
-tags: [nlp, ml]
-source_url: https://arxiv.org/abs/2604.28182v1
-pdf_url: https://arxiv.org/pdf/2604.28182v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # Exploration Hacking: Can LLMs Learn to Resist RL Training?

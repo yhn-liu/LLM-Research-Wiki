@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "Synthetic Computers at Scale for Long-Horizon Productivity Simulation"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28181v1
-authors: "Tao Ge, Baolin Peng, Hao Cheng et al. (4 authors)"
-published: 2026-04-30
-categories: cs.AI, cs.CL, cs.LG
-tags: [nlp, ml, ai]
-source_url: https://arxiv.org/abs/2604.28181v1
-pdf_url: https://arxiv.org/pdf/2604.28181v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # Synthetic Computers at Scale for Long-Horizon Productivity Simulation

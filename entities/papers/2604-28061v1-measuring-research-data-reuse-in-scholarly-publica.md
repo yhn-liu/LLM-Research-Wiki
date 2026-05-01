@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "Measuring research data reuse in scholarly publications using generative artificial intelligence: Open Science Indicator development and preliminary results"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28061v1
-authors: "Lauren Cadwallader, Iain Hrynaszkiewicz, parth sarin et al. (4 authors)"
-published: 2026-04-30
-categories: cs.DL, cs.CL
-tags: [nlp]
-source_url: https://arxiv.org/abs/2604.28061v1
-pdf_url: https://arxiv.org/pdf/2604.28061v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # Measuring research data reuse in scholarly publications using generative artificial intelligence: Open Science Indicator development and preliminary results

@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "On the Proper Treatment of Units in Surprisal Theory"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28147v1
-authors: "Samuel Kiegeland, Vésteinn Snæbjarnarson, Tim Vieira et al. (4 authors)"
-published: 2026-04-30
-categories: cs.CL
-tags: [nlp]
-source_url: https://arxiv.org/abs/2604.28147v1
-pdf_url: https://arxiv.org/pdf/2604.28147v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # On the Proper Treatment of Units in Surprisal Theory

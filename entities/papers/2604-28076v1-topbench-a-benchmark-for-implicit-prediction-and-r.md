@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28076v1
-authors: "An-Yang Ji, Jun-Peng Jiang, De-Chuan Zhan et al. (4 authors)"
-published: 2026-04-30
-categories: cs.CL, cs.AI, cs.LG
-tags: [nlp, ml, ai]
-source_url: https://arxiv.org/abs/2604.28076v1
-pdf_url: https://arxiv.org/pdf/2604.28076v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering

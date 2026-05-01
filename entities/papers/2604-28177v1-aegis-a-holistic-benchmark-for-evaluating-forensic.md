@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28177v1
-authors: "Bo Zhang, Tzu-Yen Ma, Zichen Tang et al. (21 authors)"
-published: 2026-04-30
-categories: cs.CV, cs.CY
-tags: [cv]
-source_url: https://arxiv.org/abs/2604.28177v1
-pdf_url: https://arxiv.org/pdf/2604.28177v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images

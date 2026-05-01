@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "Mapping the Methodological Space of Classroom Interaction Research: Scale, Duration, and Modality in an Age of AI"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28098v1
-authors: "Dorottya Demszky, Edith Bouton, Alison Twiner et al. (5 authors)"
-published: 2026-04-30
-categories: cs.AI, cs.CL, cs.CY
-tags: [nlp, ai]
-source_url: https://arxiv.org/abs/2604.28098v1
-pdf_url: https://arxiv.org/pdf/2604.28098v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # Mapping the Methodological Space of Classroom Interaction Research: Scale, Duration, and Modality in an Age of AI

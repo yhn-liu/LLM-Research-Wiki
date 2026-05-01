@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28178v1
-authors: "Lincan Li, Zheng Chen, Yushun Dong"
-published: 2026-04-30
-categories: cs.AI
-tags: [ai]
-source_url: https://arxiv.org/abs/2604.28178v1
-pdf_url: https://arxiv.org/pdf/2604.28178v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis

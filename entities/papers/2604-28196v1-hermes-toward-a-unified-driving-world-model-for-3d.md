@@ -1,20 +1,14 @@
 ---
 layout: paper
----
----
 title: "HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation"
-created: 2026-05-01
-updated: 2026-05-01
+arxiv_id: 
+authors: ""
+published: 
+categories: 
+tags: []
 type: paper
-arxiv_id: 2604.28196v1
-authors: "Xin Zhou, Dingkang Liang, Xiwu Chen et al. (7 authors)"
-published: 2026-04-30
-categories: cs.CV
-tags: [cv]
-source_url: https://arxiv.org/abs/2604.28196v1
-pdf_url: https://arxiv.org/pdf/2604.28196v1
-confidence: high
-status: analyzed
+source_url: https://arxiv.org/abs/
+pdf_url: https://arxiv.org/pdf/
 ---
 
 # HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation
