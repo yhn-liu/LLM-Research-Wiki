@@ -1,0 +1,31 @@
+title: LLM Research Wiki
+description: AI/ML/NLP/CV 科研知识库
+theme: minima
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-seo-tag
+
+# 排除不需要发布的文件
+exclude:
+  - raw/
+  - _archive/
+  - SCHEMA.md
+  - log.md
+  - .gitignore
+  - README.md
+
+# 包含论文页面
+include:
+  - entities/**/*.md
+  - concepts/**/*.md
+  - comparisons/**/*.md
+  - queries/**/*.md
+
+# 静态文件
+keep_files:
+  - assets

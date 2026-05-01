@@ -1,0 +1,102 @@
+---
+layout: default
+title: 首页
+---
+
+# 🧠 LLM Research Wiki
+
+> AI/ML/NLP/CV 科研知识库 - 由 LLM 自动维护
+
+## 📊 统计信息
+
+<div class="stats">
+  <p>最后更新: {{ site.time | date: "%Y-%m-%d" }}</p>
+</div>
+
+## 📚 论文库
+
+{% assign papers = site.pages | where: "type", "paper" | sort: "published" | reverse %}
+
+{% if papers.size > 0 %}
+<table class="papers-table">
+  <thead>
+    <tr>
+      <th>标题</th>
+      <th>作者</th>
+      <th>分类</th>
+      <th>日期</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for paper in papers %}
+    <tr>
+      <td>
+        <a href="{{ paper.url }}">{{ paper.title }}</a>
+        {% if paper.arxiv_id %}
+        <br><small><a href="https://arxiv.org/abs/{{ paper.arxiv_id }}" target="_blank">arXiv: {{ paper.arxiv_id }}</a></small>
+        {% endif %}
+      </td>
+      <td>{{ paper.authors | truncatewords: 5 }}</td>
+      <td>
+        {% for tag in paper.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </td>
+      <td>{{ paper.published }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>暂无论文</p>
+{% endif %}
+
+## 🔍 按标签浏览
+
+{% assign all_tags = "" | split: "" %}
+{% for paper in papers %}
+  {% for tag in paper.tags %}
+    {% unless all_tags contains tag %}
+      {% assign all_tags = all_tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+
+<div class="tags-cloud">
+  {% for tag in all_tags %}
+  <a href="#{{ tag }}" class="tag-link">{{ tag }}</a>
+  {% endfor %}
+</div>
+
+## 📖 使用说明
+
+### 导入新论文
+
+```bash
+# 从 URL 导入
+python3 ~/.hermes/scripts/import_paper.py https://arxiv.org/abs/xxxx.xxxxx
+
+# 从 PDF 导入
+python3 ~/.hermes/scripts/import_paper.py --pdf /path/to/paper.pdf
+```
+
+### 每日自动更新
+
+每天丹麦时间 08:00 自动：
+1. 获取最新 arXiv 论文
+2. 生成双语 PDF 报告
+3. 导入论文到 Wiki
+4. 推送到 GitHub
+
+### 访问方式
+
+- **GitHub Pages:** https://yhn-liu.github.io/LLM-Research-Wiki/
+- **GitHub 仓库:** https://github.com/yhn-liu/LLM-Research-Wiki
+
+## 📝 日志
+
+{% include_relative log.md %}
+
+---
+
+*Powered by Hermes Agent + Karpathy's LLM Wiki Pattern*
