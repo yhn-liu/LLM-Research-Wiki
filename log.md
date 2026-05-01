@@ -30,3 +30,39 @@
 - 作者: Tsendsuren Munkhdalai, Manaal Faruqui, Siddharth G...
 - 导入方式: url
 - 状态: unread
+
+## [2026-05-01] ingest | arXiv Query: search_query=&amp;id_list=2308.10848&
+- arXiv ID: 2308.10848
+- 作者: Weize Chen, Yusheng Su, Jingwei Zuo, Cheng Yang, C...
+- 导入方式: url
+- 状态: unread
+
+## [2026-05-01] ingest | arXiv Query: search_query=&amp;id_list=2303.17760&
+- arXiv ID: 2303.17760
+- 作者: Guohao Li, Hasan Abed Al Kader Hammoud, Hani Itani...
+- 导入方式: url
+- 状态: unread
+
+## [2026-05-01] ingest | arXiv Query: search_query=&amp;id_list=2307.07924&
+- arXiv ID: 2307.07924
+- 作者: Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan...
+- 导入方式: url
+- 状态: unread
+
+## [2026-05-01] ingest | arXiv Query: search_query=&amp;id_list=2308.08155&
+- arXiv ID: 2308.08155
+- 作者: Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, B...
+- 导入方式: url
+- 状态: unread
+
+## [2026-05-01] ingest | arXiv Query: search_query=&amp;id_list=2308.00352&
+- arXiv ID: 2308.00352
+- 作者: Sirui Hong, Mingchen Zhuge, Jiaqi Chen, Xiawu Zhen...
+- 导入方式: url
+- 状态: unread
+
+## [2026-05-01] ingest | arXiv Query: search_query=&amp;id_list=2305.19118&
+- arXiv ID: 2305.19118
+- 作者: Tian Liang, Zhiwei He, Wenxiang Jiao, Xing Wang, Y...
+- 导入方式: url
+- 状态: unread

@@ -6,7 +6,7 @@ title: LLM Research Wiki
 # 🔬 LLM Research Wiki
 
 > AI/ML 领域的维基式知识库。按概念组织，论文为据，持续更新。
-> 最后更新：2026-05-01 | 概念：11 | 论文：11
+> 最后更新：2026-05-01 | 概念：11 | 论文：17
 
 ---
 
@@ -22,7 +22,7 @@ title: LLM Research Wiki
 | [知识蒸馏](concepts/knowledge-distillation.html) | 教师-学生框架、黑箱蒸馏、策略蒸馏 | 1 |
 | [世界模型](concepts/world-models.html) | 环境动态预测与生成 | 1 |
 | [基准评估](concepts/benchmarking.html) | 标准化测试与评估方法论 | 2 |
-| [智能体](concepts/ai-agents.html) | LLM 驱动的自主代理与工具使用 | 2 |
+| [智能体](concepts/ai-agents.html) | LLM 驱动的自主代理与多代理协作 | 8 |
 | [图神经网络](concepts/graph-neural-networks.html) | 图结构学习与推理 | 1 |
 | [自动驾驶](concepts/autonomous-driving.html) | 感知、预测、规划与世界模型 | 1 |
 | [AI安全与对齐](concepts/ai-safety-alignment.html) | 对齐问题、对抗训练、安全评估 | 2 |
@@ -66,9 +66,15 @@ title: LLM Research Wiki
 
 - [**Leave No Context Behind: Infini-attention**](entities/papers/2404-07143-arxiv-query-searchqueryampidlist240407143ampstart0.html) — 通过压缩记忆实现无限上下文 Transformer
 
-### 智能体与仿真
+### 智能体与多代理协作
 
 - [**Synthetic Computers at Scale**](entities/papers/2604-28181v1-synthetic-computers-at-scale-for-long-horizon-prod.html) — 大规模合成计算机环境用于长期生产力仿真
+- [**CAMEL: Communicative Agents for "Mind" Exploration**](entities/papers/2303-17760-arxiv-query-searchqueryampidlist230317760ampstart0.html) — 角色扮演双 agent 自主协作框架
+- [**ChatDev: Communicative Agents for Software Development**](entities/papers/2307-07924-arxiv-query-searchqueryampidlist230707924ampstart0.html) — 聊天驱动的多角色软件开发公司
+- [**MetaGPT: Meta Programming for Multi-Agent Collaboration**](entities/papers/2308-00352-arxiv-query-searchqueryampidlist230800352ampstart0.html) — SOP 编码的多 agent 协作框架
+- [**AgentVerse: Multi-Agent Collaboration and Emergent Behaviors**](entities/papers/2308-10848-arxiv-query-searchqueryampidlist230810848ampstart0.html) — 动态多 agent 协作与涌现社会行为
+- [**AutoGen: Multi-Agent Conversation Framework**](entities/papers/2308-08155-arxiv-query-searchqueryampidlist230808155ampstart0.html) — 微软开源的通用多 agent 对话框架
+- [**MAD: Multi-Agent Debate**](entities/papers/2305-19118-arxiv-query-searchqueryampidlist230519118ampstart0.html) — 多 agent 辩论克服单 agent 思维退化
 
 ### 其他
 
