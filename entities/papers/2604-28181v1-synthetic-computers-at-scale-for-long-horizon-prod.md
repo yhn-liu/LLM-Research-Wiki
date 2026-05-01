@@ -2,7 +2,7 @@
 layout: paper
 title: "Synthetic Computers at Scale for Long-Horizon Productivity Simulation"
 arxiv_id: 2604.28181v1
-authors: ""
+authors: "Tao Ge, Baolin Peng, Hao Cheng et al. (4 authors)"
 published: 2026-05-01
 categories: cs.AI, cs.CL, cs.LG
 tags: [nlp, ml, ai]
@@ -33,16 +33,15 @@ Realistic long-horizon productivity work is strongly conditioned on user-specifi
 
 ## 核心贡献
 
-- Synthetic Computers at Scale
-- scale synthetic data creation for such productivity scenarios
+- 提出 Synthetic Computers at Scale
 
 ## 方法概述
 
-ology for creating such environments with realistic folder hierarchies and content-rich artifacts (e. g. , documents, spreadsheets, and presentations).
+directory structures and content-rich artifacts
 
 ## 实验结果
 
-<!-- 需要手动补充 -->
+详见摘要部分
 
 ## 相关论文
 

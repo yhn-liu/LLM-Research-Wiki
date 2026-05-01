@@ -2,7 +2,7 @@
 layout: paper
 title: "LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis"
 arxiv_id: 2604.28178v1
-authors: ""
+authors: "Lincan Li, Zheng Chen, Yushun Dong"
 published: 2026-05-01
 categories: cs.AI
 tags: [ai]
@@ -33,17 +33,15 @@ Electroencephalogram (EEG) signals are vital for automated seizure detection, bu
 
 ## 核心贡献
 
-- ### English
-
-Electroencephalogram (EEG) signals are vital for automated seizure detection, but their inherent noise makes robust representation learning challenging
+- Electroencephalogram (EEG) signals are vital for automated seizure detection, but their inherent noise makes robust representation learning challenging.
 
 ## 方法概述
 
-s, whether correlation-based or learning-based, often generate redundant or irrelevant edges due to the noisy nature of EEG data.  This significantly impairs the quality of graph representation and limits downstream task performance.  Motivated by the remarkable reasoning and contextual understanding capabilities of large language models (LLMs), we explore the idea of using LLMs as graph edge refiners.
+我们提出了一个两阶段框架：我们首先验证基于LLM的边缘细化可以有效识别和删除冗余连接，从而显着提高癫痫检测准确性和更有意义的图结构
 
 ## 实验结果
 
-that our LLM-refined graph learning framework not; that our LLM-refined graph learning framework not
+This significantly impairs the quality of graph representation and limits downstream task performance.
 
 ## 相关论文
 

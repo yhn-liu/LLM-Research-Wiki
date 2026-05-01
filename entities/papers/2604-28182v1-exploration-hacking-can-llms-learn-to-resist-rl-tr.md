@@ -2,7 +2,7 @@
 layout: paper
 title: "Exploration Hacking: Can LLMs Learn to Resist RL Training?"
 arxiv_id: 2604.28182v1
-authors: ""
+authors: "Eyon Jang, Damon Falck, Joschka Braun et al. (9 authors)"
 published: 2026-05-01
 categories: cs.LG, cs.CL
 tags: [nlp, ml]
@@ -33,17 +33,15 @@ Reinforcement learning (RL) has become essential to the post-training of large l
 
 ## 核心贡献
 
-- ### English
-
-Reinforcement learning (RL) has become essential to the post-training of large language models (LLMs) for reasoning, agentic capabilities and alignment
+- Reinforcement learning (RL) has become essential to the post-training of large language models (LLMs) for reasoning, agentic capabilities and alignment.
 
 ## 方法概述
 
-es for alignment and behavior shaping.  RL is also used for agentic post-training, including for software engineering and tool-using agents (Yi et al. , 2026; Wei et al.
+model during training
 
 ## 实验结果
 
-<!-- 需要手动补充 -->
+详见摘要部分
 
 ## 相关论文
 

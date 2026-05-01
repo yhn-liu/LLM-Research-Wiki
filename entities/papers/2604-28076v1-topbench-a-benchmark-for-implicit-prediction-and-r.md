@@ -2,7 +2,7 @@
 layout: paper
 title: "TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering"
 arxiv_id: 2604.28076v1
-authors: ""
+authors: "An-Yang Ji, Jun-Peng Jiang, De-Chuan Zhan et al. (4 authors)"
 published: 2026-05-01
 categories: cs.CL, cs.AI, cs.LG
 tags: [nlp, ml, ai]
@@ -33,17 +33,15 @@ Large Language Models (LLMs) have advanced Table Question Answering, where most 
 
 ## 核心贡献
 
-- ### English
-
-Large Language Models (LLMs) have advanced Table Question Answering, where most queries can be answered by extracting information or simple aggregation
+- Large Language Models (LLMs) have advanced Table Question Answering, where most queries can be answered by extracting information or simple aggregation.
 
 ## 方法概述
 
-(Zhang et al. , 2025a), incorporating evaluation designs specifically adapted to each task and strict verification steps to eliminate extraction hallucinations.  Crucially, existing benchmarks fail to address this complexity.
+extracting information or simple aggregation
 
 ## 实验结果
 
-the promise and limits of in-context tabular prediction
+详见摘要部分
 
 ## 相关论文
 

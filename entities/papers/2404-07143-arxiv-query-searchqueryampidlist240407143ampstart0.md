@@ -2,7 +2,7 @@
 layout: paper
 title: "arXiv Query: search_query=&amp;id_list=2404.07143&amp;start=0&amp;max_results=10"
 arxiv_id: 2404.07143
-authors: ""
+authors: "Tsendsuren Munkhdalai, Manaal Faruqui, Siddharth Gopal"
 published: 2026-05-01
 categories: cs.CL, cs.AI, cs.LG
 tags: [nlp, ml, ai]
@@ -27,15 +27,12 @@ This work introduces an efficient method to scale Transformer-based Large Langua
 
 ## 核心贡献
 
-- the effectiveness of our approach on long-context language modeling benchmarks
 
 ## 方法概述
 
-to scale Transformer-based Large Language Models (LLMs) to infinitely long inputs with bounded memory and computation.  A key component in our proposed approach is a new attention technique dubbed Infini-attention.  The Infini-attention incorporates a compressive memory into the vanilla attention mechanism and builds in both masked local attention and long-term linear attention mechanisms in a single Transformer block.
 
 ## 实验结果
 
-the effectiveness of our approach
 
 ## 相关论文
 

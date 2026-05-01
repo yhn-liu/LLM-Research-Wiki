@@ -2,7 +2,7 @@
 layout: paper
 title: "HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation"
 arxiv_id: 2604.28196v1
-authors: ""
+authors: "Xin Zhou, Dingkang Liang, Xiwu Chen et al. (7 authors)"
 published: 2026-05-01
 categories: cs.CV
 tags: [cv]
@@ -33,13 +33,11 @@ Driving world models serve as a pivotal technology for autonomous driving by sim
 
 ## 核心贡献
 
-- ### English
-
-Driving world models serve as a pivotal technology for autonomous driving by simulating environmental dynamics
+- Driving world models serve as a pivotal technology for autonomous driving by simulating environmental dynamics.
 
 ## 方法概述
 
-es predominantly focus on future scene generation, often overlooking comprehensive 3D scene understanding.  Conversely, while Large Language Models (LLMs) demonstrate impressive reasoning capabilities, they lack the capacity to predict future geometric evolution, creating a significant disparity between semantic interpretation and physical simulation.  To bridge this gap, we propose H ERMES ++, a unified driving world model that integrates 3D scene understanding and future geometry prediction with.
+simulating environmental dynamics
 
 ## 实验结果
 

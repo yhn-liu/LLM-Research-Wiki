@@ -2,7 +2,7 @@
 layout: paper
 title: "On the Proper Treatment of Units in Surprisal Theory"
 arxiv_id: 2604.28147v1
-authors: ""
+authors: "Samuel Kiegeland, Vésteinn Snæbjarnarson, Tim Vieira et al. (4 authors)"
 published: 2026-05-01
 categories: cs.CL
 tags: [nlp]
@@ -33,17 +33,15 @@ Surprisal theory links human processing effort to the predictability of an upcom
 
 ## 核心贡献
 
-- ### English
-
-Surprisal theory links human processing effort to the predictability of an upcoming linguistic unit, but empirical work often leaves the notion of a unit underspecified
+- Surprisal theory links human processing effort to the predictability of an upcoming linguistic unit, but empirical work often leaves the notion of a unit underspecified.
 
 ## 方法概述
 
-ological infelicity.  Researchers must reconcile the gap between their desired units and the model’s alphabet (see Figure 1), typically through bespoke post hoc procedures that impose unit boundaries on token strings (Wilcox et al. , 2020; Nair and Resnik, 2023; Wilcox et al.
+详见摘要部分
 
 ## 实验结果
 
-<!-- 需要手动补充 -->
+As a result, surprisal-based predictors depend implicitly on ad hoc procedures that conflate two dis
 
 ## 相关论文
 

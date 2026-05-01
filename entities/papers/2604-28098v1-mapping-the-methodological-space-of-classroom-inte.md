@@ -2,7 +2,7 @@
 layout: paper
 title: "Mapping the Methodological Space of Classroom Interaction Research: Scale, Duration, and Modality in an Age of AI"
 arxiv_id: 2604.28098v1
-authors: ""
+authors: "Dorottya Demszky, Edith Bouton, Alison Twiner et al. (5 authors)"
 published: 2026-05-01
 categories: cs.AI, cs.CL, cs.CY
 tags: [nlp, ai]
@@ -33,15 +33,17 @@ Research on classroom interaction has long been divided between large-scale obse
 
 ## 核心贡献
 
-- a framework mapping this methodological space along three dimensions--scale
+- 提出 framework mapping this methodological space along three dimensions--scale
+- and Snell and Lefstein
+- --and an interview with the lead researchers, organized around three questions: what can be
 
 ## 方法概述
 
-<!-- 需要手动补充 -->
+contrasting studies of dialogic teaching--Howe et al
 
 ## 实验结果
 
-<!-- 需要手动补充 -->
+详见摘要部分
 
 ## 相关论文
 

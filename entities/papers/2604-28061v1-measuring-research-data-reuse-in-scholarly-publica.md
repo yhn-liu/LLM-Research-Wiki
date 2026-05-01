@@ -2,7 +2,7 @@
 layout: paper
 title: "Measuring research data reuse in scholarly publications using generative artificial intelligence: Open Science Indicator development and preliminary results"
 arxiv_id: 2604.28061v1
-authors: ""
+authors: "Lauren Cadwallader, Iain Hrynaszkiewicz, parth sarin et al. (4 authors)"
 published: 2026-05-01
 categories: cs.DL, cs.CL
 tags: [nlp]
@@ -33,17 +33,15 @@ Numerous metascience studies and other initiatives have begun to monitor the pre
 
 ## 核心贡献
 
-- ### English
-
-Numerous metascience studies and other initiatives have begun to monitor the prevalence of open science practices when it is more important to understand the 'downstream' effects or impacts of open science
+- Numerous metascience studies and other initiatives have begun to monitor the prevalence of open science practices when it is more important to understand the 'downstream' effects or impacts of open science.
 
 ## 方法概述
 
-s.  However, open science policies and practices require financial and other kinds of support to implement effectively, and can be viewed as an investment in better research outcomes more than a cost.  It is nevertheless important for policy makers, funders and others implementing policies or seeking to understand researcher practices to understand if open science policies lead to positive, or unintended, impacts on research.
+of research data
 
 ## 实验结果
 
-a data reuse rate of 43%; a data reuse rate of 43%, which is higher than established bibliometric techniques
+a data reuse rate of 43%
 
 ## 相关论文
 

@@ -2,7 +2,7 @@
 layout: paper
 title: "AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images"
 arxiv_id: 2604.28177v1
-authors: ""
+authors: "Bo Zhang, Tzu-Yen Ma, Zichen Tang et al. (21 authors)"
 published: 2026-05-01
 categories: cs.CV, cs.CY
 tags: [cv]
@@ -33,13 +33,13 @@ We introduce AEGIS, A holistic benchmark for Evaluating forensic analysis of AI-
 
 ## 核心贡献
 
-- ### English
-
-We introduce AEGIS, A holistic benchmark for Evaluating forensic analysis of AI-Generated academic ImageS
+- (1) Domain-Specific Complexity: covering seven academic categories with 39 fine-grained subtypes, exposing intrinsic forensic difficulty, where even GPT-5
+- Domain-Specific Complexity: covering seven academic categories with 39 fine-grained subtypes, exposing intrinsic forensic difficulty, where even GPT-5
+- Diverse Forgery Simulations: modeling four prevalent a
 
 ## 方法概述
 
-s, including frequency-domain (Corvi et al. , 2023), diffusion-process (Chen et al. , 2024a), patchlevel (Chen et al.
+详见摘要部分
 
 ## 实验结果
 
