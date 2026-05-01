@@ -11,7 +11,7 @@ tags: [nlp]
 source_url: https://arxiv.org/abs/2604.28061v1
 pdf_url: https://arxiv.org/pdf/2604.28061v1
 confidence: high
-status: unread
+status: analyzed
 ---
 
 # Measuring research data reuse in scholarly publications using generative artificial intelligence: Open Science Indicator development and preliminary results
@@ -35,19 +35,38 @@ Numerous metascience studies and other initiatives have begun to monitor the pre
 
 ## 核心贡献
 
-<!-- 待填充：阅读论文后补充 -->
+- ### English
+
+Numerous metascience studies and other initiatives have begun to monitor the prevalence of open science practices when it is more important to understand the 'downstream' effects or impacts of open science
 
 ## 方法概述
 
-<!-- 待填充：阅读论文后补充 -->
+s.  However, open science policies and practices require financial and other kinds of support to implement effectively, and can be viewed as an investment in better research outcomes more than a cost.  It is nevertheless important for policy makers, funders and others implementing policies or seeking to understand researcher practices to understand if open science policies lead to positive, or unintended, impacts on research.
 
 ## 实验结果
 
-<!-- 待填充：阅读论文后补充 -->
+a data reuse rate of 43%; a data reuse rate of 43%, which is higher than established bibliometric techniques
 
 ## 相关论文
 
 <!-- 待填充：添加相关论文链接 -->
+
+
+## 分析信息
+
+- **分析来源:** summary_extract
+- **分析置信度:** medium
+- **分析时间:** 2026-05-01 20:14
+- **关键词:** LLM
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-01 20:20
+- **关键词:** attention, LLM, PPO
+- **PDF 路径:** /root/wiki/raw/papers/2604-28061v1.pdf
 
 ---
 *导入时间: 2026-05-01 19:53*

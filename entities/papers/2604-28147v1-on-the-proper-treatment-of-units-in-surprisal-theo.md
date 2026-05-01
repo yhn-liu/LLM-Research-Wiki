@@ -11,7 +11,7 @@ tags: [nlp]
 source_url: https://arxiv.org/abs/2604.28147v1
 pdf_url: https://arxiv.org/pdf/2604.28147v1
 confidence: high
-status: unread
+status: analyzed
 ---
 
 # On the Proper Treatment of Units in Surprisal Theory
@@ -35,19 +35,38 @@ Surprisal theory links human processing effort to the predictability of an upcom
 
 ## 核心贡献
 
-<!-- 待填充：阅读论文后补充 -->
+- ### English
+
+Surprisal theory links human processing effort to the predictability of an upcoming linguistic unit, but empirical work often leaves the notion of a unit underspecified
 
 ## 方法概述
 
-<!-- 待填充：阅读论文后补充 -->
+ological infelicity.  Researchers must reconcile the gap between their desired units and the model’s alphabet (see Figure 1), typically through bespoke post hoc procedures that impose unit boundaries on token strings (Wilcox et al. , 2020; Nair and Resnik, 2023; Wilcox et al.
 
 ## 实验结果
 
-<!-- 待填充：阅读论文后补充 -->
+<!-- 需要手动补充 -->
 
 ## 相关论文
 
 <!-- 待填充：添加相关论文链接 -->
+
+
+## 分析信息
+
+- **分析来源:** summary_extract
+- **分析置信度:** medium
+- **分析时间:** 2026-05-01 20:14
+- **关键词:** AI, ML
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-01 20:20
+- **关键词:** GPT, RL, segmentation
+- **PDF 路径:** /root/wiki/raw/papers/2604-28147v1.pdf
 
 ---
 *导入时间: 2026-05-01 19:53*

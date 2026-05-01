@@ -12,7 +12,7 @@ source_url: https://arxiv.org/abs/2404.07143
 pdf_url: https://arxiv.org/pdf/2404.07143
 source_type: url
 confidence: high
-status: unread
+status: analyzed
 ---
 
 # arXiv Query: search_query=&amp;id_list=2404.07143&amp;start=0&amp;max_results=10
@@ -30,19 +30,36 @@ This work introduces an efficient method to scale Transformer-based Large Langua
 
 ## 核心贡献
 
-<!-- 待填充：阅读论文后补充 -->
+- the effectiveness of our approach on long-context language modeling benchmarks
 
 ## 方法概述
 
-<!-- 待填充：阅读论文后补充 -->
+to scale Transformer-based Large Language Models (LLMs) to infinitely long inputs with bounded memory and computation.  A key component in our proposed approach is a new attention technique dubbed Infini-attention.  The Infini-attention incorporates a compressive memory into the vanilla attention mechanism and builds in both masked local attention and long-term linear attention mechanisms in a single Transformer block.
 
 ## 实验结果
 
-<!-- 待填充：阅读论文后补充 -->
+the effectiveness of our approach
 
 ## 相关论文
 
 <!-- 待填充：添加相关论文链接 -->
+
+
+## 分析信息
+
+- **分析来源:** summary_extract
+- **分析置信度:** medium
+- **分析时间:** 2026-05-01 20:14
+- **关键词:** transformer, attention, LLM, large language model, summarization
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-01 20:20
+- **关键词:** transformer, attention, LLM, large language model, RNN, PPO, fine-tuning, pre-training, summarization
+- **PDF 路径:** /root/wiki/raw/papers/2404-07143.pdf
 
 ---
 *导入时间: 2026-05-01 19:55*

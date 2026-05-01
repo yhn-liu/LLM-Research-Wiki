@@ -11,7 +11,7 @@ tags: [nlp, ai]
 source_url: https://arxiv.org/abs/2604.28098v1
 pdf_url: https://arxiv.org/pdf/2604.28098v1
 confidence: high
-status: unread
+status: analyzed
 ---
 
 # Mapping the Methodological Space of Classroom Interaction Research: Scale, Duration, and Modality in an Age of AI
@@ -35,19 +35,36 @@ Research on classroom interaction has long been divided between large-scale obse
 
 ## 核心贡献
 
-<!-- 待填充：阅读论文后补充 -->
+- a framework mapping this methodological space along three dimensions--scale
 
 ## 方法概述
 
-<!-- 待填充：阅读论文后补充 -->
+<!-- 需要手动补充 -->
 
 ## 实验结果
 
-<!-- 待填充：阅读论文后补充 -->
+<!-- 需要手动补充 -->
 
 ## 相关论文
 
 <!-- 待填充：添加相关论文链接 -->
+
+
+## 分析信息
+
+- **分析来源:** summary_extract
+- **分析置信度:** medium
+- **分析时间:** 2026-05-01 20:14
+- **关键词:** GAN
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-01 20:20
+- **关键词:** GAN
+- **PDF 路径:** /root/wiki/raw/papers/2604-28098v1.pdf
 
 ---
 *导入时间: 2026-05-01 19:53*

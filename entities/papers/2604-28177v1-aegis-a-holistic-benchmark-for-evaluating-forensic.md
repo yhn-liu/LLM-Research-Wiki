@@ -11,7 +11,7 @@ tags: [cv]
 source_url: https://arxiv.org/abs/2604.28177v1
 pdf_url: https://arxiv.org/pdf/2604.28177v1
 confidence: high
-status: unread
+status: analyzed
 ---
 
 # AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images
@@ -35,19 +35,38 @@ We introduce AEGIS, A holistic benchmark for Evaluating forensic analysis of AI-
 
 ## 核心贡献
 
-<!-- 待填充：阅读论文后补充 -->
+- ### English
+
+We introduce AEGIS, A holistic benchmark for Evaluating forensic analysis of AI-Generated academic ImageS
 
 ## 方法概述
 
-<!-- 待填充：阅读论文后补充 -->
+s, including frequency-domain (Corvi et al. , 2023), diffusion-process (Chen et al. , 2024a), patchlevel (Chen et al.
 
 ## 实验结果
 
-<!-- 待填充：阅读论文后补充 -->
+only limited localization accuracy (IoU 30
 
 ## 相关论文
 
 <!-- 待填充：添加相关论文链接 -->
+
+
+## 分析信息
+
+- **分析来源:** summary_extract
+- **分析置信度:** medium
+- **分析时间:** 2026-05-01 20:14
+- **关键词:** GPT
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-01 20:20
+- **关键词:** LLM, large language model, diffusion, classification, generation, multimodal, vision
+- **PDF 路径:** /root/wiki/raw/papers/2604-28177v1.pdf
 
 ---
 *导入时间: 2026-05-01 19:53*

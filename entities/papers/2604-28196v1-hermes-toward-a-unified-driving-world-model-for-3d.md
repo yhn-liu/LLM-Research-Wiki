@@ -11,7 +11,7 @@ tags: [cv]
 source_url: https://arxiv.org/abs/2604.28196v1
 pdf_url: https://arxiv.org/pdf/2604.28196v1
 confidence: high
-status: unread
+status: analyzed
 ---
 
 # HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation
@@ -35,19 +35,38 @@ Driving world models serve as a pivotal technology for autonomous driving by sim
 
 ## 核心贡献
 
-<!-- 待填充：阅读论文后补充 -->
+- ### English
+
+Driving world models serve as a pivotal technology for autonomous driving by simulating environmental dynamics
 
 ## 方法概述
 
-<!-- 待填充：阅读论文后补充 -->
+es predominantly focus on future scene generation, often overlooking comprehensive 3D scene understanding.  Conversely, while Large Language Models (LLMs) demonstrate impressive reasoning capabilities, they lack the capacity to predict future geometric evolution, creating a significant disparity between semantic interpretation and physical simulation.  To bridge this gap, we propose H ERMES ++, a unified driving world model that integrates 3D scene understanding and future geometry prediction with.
 
 ## 实验结果
 
-<!-- 待填充：阅读论文后补充 -->
+impressive reasoning capabilities
 
 ## 相关论文
 
 <!-- 待填充：添加相关论文链接 -->
+
+
+## 分析信息
+
+- **分析来源:** summary_extract
+- **分析置信度:** medium
+- **分析时间:** 2026-05-01 20:14
+- **关键词:** LLM, large language model, RL, generation
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-01 20:20
+- **关键词:** LLM, large language model, RL, generation, 3D
+- **PDF 路径:** /root/wiki/raw/papers/2604-28196v1.pdf
 
 ---
 *导入时间: 2026-05-01 19:53*

@@ -11,7 +11,7 @@ tags: [nlp, cv, ai]
 source_url: https://arxiv.org/abs/2604.28123v1
 pdf_url: https://arxiv.org/pdf/2604.28123v1
 confidence: high
-status: unread
+status: analyzed
 ---
 
 # PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal Reinforcement Learning
@@ -35,19 +35,38 @@ The standard post-training recipe for large multimodal models (LMMs) applies sup
 
 ## 核心贡献
 
-<!-- 待填充：阅读论文后补充 -->
+- ### English
+
+The standard post-training recipe for large multimodal models (LMMs) applies supervised fine-tuning (SFT) on curated demonstrations followed by reinforcement learning with verifiable rewards (RLVR)
 
 ## 方法概述
 
-<!-- 待填充：阅读论文后补充 -->
+s optimize it by reweighting or regularizing next-token likelihood (Qin & Springenberg, 2025; Zhu et al. , 2025).  * Equal contribution.
 
 ## 实验结果
 
-<!-- 待填充：阅读论文后补充 -->
+that PRISM consistently improves downstream RLVR performance across multiple RL algorithms (GRPO
 
 ## 相关论文
 
 <!-- 待填充：添加相关论文链接 -->
+
+
+## 分析信息
+
+- **分析来源:** summary_extract
+- **分析置信度:** medium
+- **分析时间:** 2026-05-01 20:14
+- **关键词:** reinforcement learning, RL, fine-tuning, multimodal, vision
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-01 20:20
+- **关键词:** LLM, large language model, reinforcement learning, RL, fine-tuning, multimodal, vision
+- **PDF 路径:** /root/wiki/raw/papers/2604-28123v1.pdf
 
 ---
 *导入时间: 2026-05-01 19:53*

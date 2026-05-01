@@ -11,7 +11,7 @@ tags: [nlp, ml, ai]
 source_url: https://arxiv.org/abs/2604.28181v1
 pdf_url: https://arxiv.org/pdf/2604.28181v1
 confidence: high
-status: unread
+status: analyzed
 ---
 
 # Synthetic Computers at Scale for Long-Horizon Productivity Simulation
@@ -35,19 +35,37 @@ Realistic long-horizon productivity work is strongly conditioned on user-specifi
 
 ## 核心贡献
 
-<!-- 待填充：阅读论文后补充 -->
+- Synthetic Computers at Scale
+- scale synthetic data creation for such productivity scenarios
 
 ## 方法概述
 
-<!-- 待填充：阅读论文后补充 -->
+ology for creating such environments with realistic folder hierarchies and content-rich artifacts (e. g. , documents, spreadsheets, and presentations).
 
 ## 实验结果
 
-<!-- 待填充：阅读论文后补充 -->
+<!-- 需要手动补充 -->
 
 ## 相关论文
 
 <!-- 待填充：添加相关论文链接 -->
+
+
+## 分析信息
+
+- **分析来源:** summary_extract
+- **分析置信度:** medium
+- **分析时间:** 2026-05-01 20:14
+- **关键词:** GAN
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-01 20:20
+- **关键词:** GAN, reinforcement learning, RL
+- **PDF 路径:** /root/wiki/raw/papers/2604-28181v1.pdf
 
 ---
 *导入时间: 2026-05-01 19:53*

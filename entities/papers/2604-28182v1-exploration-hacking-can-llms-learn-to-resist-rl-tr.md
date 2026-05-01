@@ -11,7 +11,7 @@ tags: [nlp, ml]
 source_url: https://arxiv.org/abs/2604.28182v1
 pdf_url: https://arxiv.org/pdf/2604.28182v1
 confidence: high
-status: unread
+status: analyzed
 ---
 
 # Exploration Hacking: Can LLMs Learn to Resist RL Training?
@@ -35,19 +35,38 @@ Reinforcement learning (RL) has become essential to the post-training of large l
 
 ## 核心贡献
 
-<!-- 待填充：阅读论文后补充 -->
+- ### English
+
+Reinforcement learning (RL) has become essential to the post-training of large language models (LLMs) for reasoning, agentic capabilities and alignment
 
 ## 方法概述
 
-<!-- 待填充：阅读论文后补充 -->
+es for alignment and behavior shaping.  RL is also used for agentic post-training, including for software engineering and tool-using agents (Yi et al. , 2026; Wei et al.
 
 ## 实验结果
 
-<!-- 待填充：阅读论文后补充 -->
+<!-- 需要手动补充 -->
 
 ## 相关论文
 
 <!-- 待填充：添加相关论文链接 -->
+
+
+## 分析信息
+
+- **分析来源:** summary_extract
+- **分析置信度:** medium
+- **分析时间:** 2026-05-01 20:14
+- **关键词:** LLM, large language model, GAN, reinforcement learning, RL
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-01 20:20
+- **关键词:** LLM, RL, RLHF
+- **PDF 路径:** /root/wiki/raw/papers/2604-28182v1.pdf
 
 ---
 *导入时间: 2026-05-01 19:53*
