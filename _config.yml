@@ -5,11 +5,8 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+  hard_wrap: false
 
-plugins:
-  - jekyll-seo-tag
-
-# 排除不需要发布的文件
 exclude:
   - raw/
   - _archive/
@@ -17,14 +14,5 @@ exclude:
   - log.md
   - README.md
   - GITHUB_SETUP.md
-
-# 包含论文页面
-include:
-  - entities/**/*.md
-  - concepts/**/*.md
-  - comparisons/**/*.md
-  - queries/**/*.md
-
-# 静态文件
-keep_files:
-  - assets
+  - sync_wiki.sh
+  - node_modules

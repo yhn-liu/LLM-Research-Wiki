@@ -4,7 +4,7 @@ title: "Exploration Hacking: Can LLMs Learn to Resist RL Training?"
 arxiv_id: 2604.28182v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.LG, cs.CL
+categories: cs.LG, cs.CL
 tags: [nlp, ml]
 type: paper
 source_url: https://arxiv.org/abs/2604.28182v1

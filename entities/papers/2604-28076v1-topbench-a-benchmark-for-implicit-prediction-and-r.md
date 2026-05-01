@@ -4,7 +4,7 @@ title: "TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular
 arxiv_id: 2604.28076v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.CL, cs.AI, cs.LG
+categories: cs.CL, cs.AI, cs.LG
 tags: [nlp, ml, ai]
 type: paper
 source_url: https://arxiv.org/abs/2604.28076v1

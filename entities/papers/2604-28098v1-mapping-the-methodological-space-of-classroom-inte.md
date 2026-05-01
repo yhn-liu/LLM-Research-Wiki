@@ -4,7 +4,7 @@ title: "Mapping the Methodological Space of Classroom Interaction Research: Scal
 arxiv_id: 2604.28098v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.AI, cs.CL, cs.CY
+categories: cs.AI, cs.CL, cs.CY
 tags: [nlp, ai]
 type: paper
 source_url: https://arxiv.org/abs/2604.28098v1

@@ -4,7 +4,7 @@ title: "Measuring research data reuse in scholarly publications using generative
 arxiv_id: 2604.28061v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.DL, cs.CL
+categories: cs.DL, cs.CL
 tags: [nlp]
 type: paper
 source_url: https://arxiv.org/abs/2604.28061v1

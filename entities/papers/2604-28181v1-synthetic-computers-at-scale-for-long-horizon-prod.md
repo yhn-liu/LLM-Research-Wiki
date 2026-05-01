@@ -4,7 +4,7 @@ title: "Synthetic Computers at Scale for Long-Horizon Productivity Simulation"
 arxiv_id: 2604.28181v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.AI, cs.CL, cs.LG
+categories: cs.AI, cs.CL, cs.LG
 tags: [nlp, ml, ai]
 type: paper
 source_url: https://arxiv.org/abs/2604.28181v1

@@ -4,7 +4,7 @@ title: "AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Gener
 arxiv_id: 2604.28177v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.CV, cs.CY
+categories: cs.CV, cs.CY
 tags: [cv]
 type: paper
 source_url: https://arxiv.org/abs/2604.28177v1

@@ -4,7 +4,7 @@ title: "PRISM: Pre-alignment via Black-box On-policy Distillation for Multimodal
 arxiv_id: 2604.28123v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.CV, cs.AI, cs.CL
+categories: cs.CV, cs.AI, cs.CL
 tags: [nlp, cv, ai]
 type: paper
 source_url: https://arxiv.org/abs/2604.28123v1

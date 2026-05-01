@@ -4,7 +4,7 @@ title: "On the Proper Treatment of Units in Surprisal Theory"
 arxiv_id: 2604.28147v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.CL
+categories: cs.CL
 tags: [nlp]
 type: paper
 source_url: https://arxiv.org/abs/2604.28147v1

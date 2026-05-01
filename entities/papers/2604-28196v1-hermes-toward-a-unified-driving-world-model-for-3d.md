@@ -4,7 +4,7 @@ title: "HERMES++: Toward a Unified Driving World Model for 3D Scene Understandin
 arxiv_id: 2604.28196v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.CV
+categories: cs.CV
 tags: [cv]
 type: paper
 source_url: https://arxiv.org/abs/2604.28196v1

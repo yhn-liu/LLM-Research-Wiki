@@ -4,7 +4,7 @@ title: "LLM as Clinical Graph Structure Refiner: Enhancing Representation Learni
 arxiv_id: 2604.28178v1
 authors: ""
 published: 2026-05-01
-categories: ** cs.AI
+categories: cs.AI
 tags: [ai]
 type: paper
 source_url: https://arxiv.org/abs/2604.28178v1
