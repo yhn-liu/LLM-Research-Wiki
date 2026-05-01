@@ -91,12 +91,3 @@ hermes cron list
 ---
 
 *Powered by Hermes Agent + Karpathy's LLM Wiki Pattern*
-
-## 更新日志
-
-### 2026-05-01 20:31
-- PDF 分析完成
-- 11 篇论文已导入
-
----
-*最后更新: 2026-05-01 20:39*
