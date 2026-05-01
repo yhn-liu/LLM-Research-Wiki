@@ -1,4 +1,7 @@
 ---
+layout: paper
+---
+---
 title: "AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images"
 created: 2026-05-01
 updated: 2026-05-01

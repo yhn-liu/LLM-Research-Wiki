@@ -1,4 +1,7 @@
 ---
+layout: paper
+---
+---
 title: "HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation"
 created: 2026-05-01
 updated: 2026-05-01

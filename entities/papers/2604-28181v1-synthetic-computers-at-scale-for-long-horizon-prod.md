@@ -1,4 +1,7 @@
 ---
+layout: paper
+---
+---
 title: "Synthetic Computers at Scale for Long-Horizon Productivity Simulation"
 created: 2026-05-01
 updated: 2026-05-01
