@@ -33,15 +33,17 @@ Driving world models serve as a pivotal technology for autonomous driving by sim
 
 ## 核心贡献
 
-- Driving world models serve as a pivotal technology for autonomous driving by simulating environmental dynamics.
+- 提出 HERMES++：统一的驾驶世界模型，整合 3D 场景理解和未来几何预测
+- 引入 LLM 增强的世界查询促进知识转移
+- 设计当前到未来的链接和联合几何优化策略
 
 ## 方法概述
 
-simulating environmental dynamics
+HERMES++ 通过四个关键设计：(1) BEV 表示整合多视图信息，(2) LLM 增强的世界查询促进知识转移，(3) 当前到未来链接弥合时间差距，(4) 联合几何优化策略结合显式几何约束和隐式潜在正则化。
 
 ## 实验结果
 
-impressive reasoning capabilities
+在多个基准上实现了强劲性能，在未来点云预测和 3D 场景理解任务中均优于专业方法。代码将在 https://github.com/H-EmbodVis/HERMESV2 公开。
 
 ## 相关论文
 
@@ -50,19 +52,9 @@ impressive reasoning capabilities
 
 ## 分析信息
 
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-01 20:14
-- **关键词:** LLM, large language model, RL, generation
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
+- **分析来源:** LLM亲自分析
 - **分析置信度:** high
-- **分析时间:** 2026-05-01 20:20
-- **关键词:** LLM, large language model, RL, generation, 3D
-- **PDF 路径:** /root/wiki/raw/papers/2604-28196v1.pdf
+- **分析时间:** 2026-05-01
 
 ---
 *导入时间: 2026-05-01 19:53*

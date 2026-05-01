@@ -33,15 +33,17 @@ Realistic long-horizon productivity work is strongly conditioned on user-specifi
 
 ## 核心贡献
 
-- 提出 Synthetic Computers at Scale
+- 提出大规模合成计算机方法，创建真实的计算机使用环境
+- 实现了长期模拟：每个代理运行超过 8 小时，平均 2000+ 回合
+- 在域内和域外评估中显著提升代理性能
 
 ## 方法概述
 
-directory structures and content-rich artifacts
+创建具有真实文件夹层次结构和丰富内容的合成计算机环境。在一个代理创建生产力目标后，另一个代理在该环境中进行长期工作模拟，通过导航文件系统、与模拟协作者协调等方式完成任务。
 
 ## 实验结果
 
-详见摘要部分
+创建了 1000 台合成计算机进行长期模拟，产生了丰富的体验式学习信号。代理在域内和域外生产力评估中均获得显著改进。该方法可扩展到数百万甚至数十亿个合成用户世界。
 
 ## 相关论文
 
@@ -50,19 +52,9 @@ directory structures and content-rich artifacts
 
 ## 分析信息
 
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-01 20:14
-- **关键词:** GAN
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
+- **分析来源:** LLM亲自分析
 - **分析置信度:** high
-- **分析时间:** 2026-05-01 20:20
-- **关键词:** GAN, reinforcement learning, RL
-- **PDF 路径:** /root/wiki/raw/papers/2604-28181v1.pdf
+- **分析时间:** 2026-05-01
 
 ---
 *导入时间: 2026-05-01 19:53*

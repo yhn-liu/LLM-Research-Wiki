@@ -33,15 +33,17 @@ Large Language Models (LLMs) have advanced Table Question Answering, where most 
 
 ## 核心贡献
 
-- Large Language Models (LLMs) have advanced Table Question Answering, where most queries can be answered by extracting information or simple aggregation.
+- 提出 TopBench 基准，专门评估 LLM 在表格问答中的隐式预测能力
+- 包含 4 个子任务共 779 个样本，涵盖单点预测、决策、治疗效果分析等
+- 揭示当前模型在识别潜在意图方面的不足
 
 ## 方法概述
 
-extracting information or simple aggregation
+构建了一个包含四种隐式预测任务的基准数据集，要求模型不仅检索信息，还需从历史模式中推断未观察到的答案。评估了文本和代理两种工作流程下的模型表现。
 
 ## 实验结果
 
-详见摘要部分
+当前模型经常难以识别隐式查询的潜在意图，默认只进行查找操作。准确的意图消歧是引导预测行为的先决条件，提高预测精度需要更复杂的建模能力。
 
 ## 相关论文
 
@@ -50,19 +52,9 @@ extracting information or simple aggregation
 
 ## 分析信息
 
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-01 20:14
-- **关键词:** LLM, large language model, RL
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
+- **分析来源:** LLM亲自分析
 - **分析置信度:** high
-- **分析时间:** 2026-05-01 20:20
-- **关键词:** LLM, large language model, GAN, RL, PPO, question answering
-- **PDF 路径:** /root/wiki/raw/papers/2604-28076v1.pdf
+- **分析时间:** 2026-05-01
 
 ---
 *导入时间: 2026-05-01 19:53*

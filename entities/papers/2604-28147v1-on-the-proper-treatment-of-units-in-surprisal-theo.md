@@ -33,15 +33,17 @@ Surprisal theory links human processing effort to the predictability of an upcom
 
 ## 核心贡献
 
-- Surprisal theory links human processing effort to the predictability of an upcoming linguistic unit, but empirical work often leaves the notion of a unit underspecified.
+- 系统梳理了惊讶理论中分析单元的选择问题
+- 提出了统一的框架来推理任意单位库存的惊讶
+- 主张将标记化视为实现细节而非科学原语
 
 ## 方法概述
 
-详见摘要部分
+理论分析框架。理清了惊讶理论中两个关键的建模选择：分析单元的定义和评估预测的感兴趣区域。提出了一个统一的数学框架来处理不同粒度的文本单元。
 
 ## 实验结果
 
-As a result, surprisal-based predictors depend implicitly on ad hoc procedures that conflate two dis
+揭示了现有惊讶分析中隐含的临时程序问题，为更严谨的惊讶理论应用提供了理论基础和实践指导。
 
 ## 相关论文
 
@@ -50,19 +52,9 @@ As a result, surprisal-based predictors depend implicitly on ad hoc procedures t
 
 ## 分析信息
 
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-01 20:14
-- **关键词:** AI, ML
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
+- **分析来源:** LLM亲自分析
 - **分析置信度:** high
-- **分析时间:** 2026-05-01 20:20
-- **关键词:** GPT, RL, segmentation
-- **PDF 路径:** /root/wiki/raw/papers/2604-28147v1.pdf
+- **分析时间:** 2026-05-01
 
 ---
 *导入时间: 2026-05-01 19:53*

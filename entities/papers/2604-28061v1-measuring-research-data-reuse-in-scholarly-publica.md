@@ -33,15 +33,17 @@ Numerous metascience studies and other initiatives have begun to monitor the pre
 
 ## 核心贡献
 
-- Numerous metascience studies and other initiatives have begun to monitor the prevalence of open science practices when it is more important to understand the 'downstream' effects or impacts of open science.
+- 开发了基于 LLM 的新指标来衡量研究数据重用率
+- 发现数据重用率为 43%，高于传统文献计量技术的测量结果
+- 证明了使用 LLM 和生成式 AI 可以大规模衡量数据重用
 
 ## 方法概述
 
-of research data
+使用 LLM 分析学术出版物中的数据重用证据。通过自然语言处理技术识别论文中对研究数据的引用和重用，建立了一个自动化的数据重用检测系统。
 
 ## 实验结果
 
-a data reuse rate of 43%
+数据重用率为 43%，显著高于传统文献计量技术的测量结果，表明研究数据共享和重用的积极影响可能被低估。
 
 ## 相关论文
 
@@ -50,19 +52,9 @@ a data reuse rate of 43%
 
 ## 分析信息
 
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-01 20:14
-- **关键词:** LLM
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
+- **分析来源:** LLM亲自分析
 - **分析置信度:** high
-- **分析时间:** 2026-05-01 20:20
-- **关键词:** attention, LLM, PPO
-- **PDF 路径:** /root/wiki/raw/papers/2604-28061v1.pdf
+- **分析时间:** 2026-05-01
 
 ---
 *导入时间: 2026-05-01 19:53*

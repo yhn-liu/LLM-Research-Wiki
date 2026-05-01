@@ -33,17 +33,17 @@ Research on classroom interaction has long been divided between large-scale obse
 
 ## 核心贡献
 
-- 提出 framework mapping this methodological space along three dimensions--scale
-- and Snell and Lefstein
-- --and an interview with the lead researchers, organized around three questions: what can be
+- 提出了课堂互动研究的方法论框架，沿规模、持续时间和模态三个维度映射研究空间
+- 通过对比对话教学研究案例说明框架的应用
+- 探讨了 AI 如何扩展这个方法论空间
 
 ## 方法概述
 
-contrasting studies of dialogic teaching--Howe et al
+提出一个三维框架（规模、持续时间、模态），用于系统地映射课堂互动研究的方法论空间。通过对比分析大规模观察研究和深度民族志研究，以及对主要研究者的访谈来验证框架。
 
 ## 实验结果
 
-详见摘要部分
+框架揭示了不同研究方法的优势和局限性，大规模研究适合发现普遍模式但缺乏深度，深度研究能揭示机制但难以推广。AI 技术有望扩展这个空间的边界。
 
 ## 相关论文
 
@@ -52,19 +52,9 @@ contrasting studies of dialogic teaching--Howe et al
 
 ## 分析信息
 
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-01 20:14
-- **关键词:** GAN
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
+- **分析来源:** LLM亲自分析
 - **分析置信度:** high
-- **分析时间:** 2026-05-01 20:20
-- **关键词:** GAN
-- **PDF 路径:** /root/wiki/raw/papers/2604-28098v1.pdf
+- **分析时间:** 2026-05-01
 
 ---
 *导入时间: 2026-05-01 19:53*

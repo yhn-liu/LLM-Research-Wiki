@@ -33,15 +33,17 @@ The standard post-training recipe for large multimodal models (LMMs) applies sup
 
 ## 核心贡献
 
-- The standard post-training recipe for large multimodal models (LMMs) applies supervised fine-tuning (SFT) on curated demonstrations followed by reinforcement learning with verifiable rewards (RLVR).
+- 提出 PRISM 三级管道，在 SFT 和 RLVR 之间插入分布对齐阶段
+- 基于策略蒸馏原理，使用黑盒对抗游戏对齐策略分布
+- 在多种 RL 算法和多模态基准测试中持续提升性能
 
 ## 方法概述
 
-reinforcement learning with verifiable rewards (RLVR)
+PRISM 管道包含三个阶段：SFT 初始化、分布对齐（基于策略蒸馏的黑盒对抗游戏）、RLVR 强化。使用专家混合判别器将策略与监督分布对齐，无需访问教师模型的内部逻辑。
 
 ## 实验结果
 
-详见摘要部分
+在 Qwen3-VL 上的实验表明，PRISM 在 GRPO、DAPO、GSPO 等多种 RL 算法和多个多模态基准测试中持续改进了下游 RLVR 性能。
 
 ## 相关论文
 
@@ -50,19 +52,9 @@ reinforcement learning with verifiable rewards (RLVR)
 
 ## 分析信息
 
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-01 20:14
-- **关键词:** reinforcement learning, RL, fine-tuning, multimodal, vision
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
+- **分析来源:** LLM亲自分析
 - **分析置信度:** high
-- **分析时间:** 2026-05-01 20:20
-- **关键词:** LLM, large language model, reinforcement learning, RL, fine-tuning, multimodal, vision
-- **PDF 路径:** /root/wiki/raw/papers/2604-28123v1.pdf
+- **分析时间:** 2026-05-01
 
 ---
 *导入时间: 2026-05-01 19:53*

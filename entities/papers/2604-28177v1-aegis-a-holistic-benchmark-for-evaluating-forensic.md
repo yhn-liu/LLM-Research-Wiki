@@ -33,17 +33,17 @@ We introduce AEGIS, A holistic benchmark for Evaluating forensic analysis of AI-
 
 ## 核心贡献
 
-- (1) Domain-Specific Complexity: covering seven academic categories with 39 fine-grained subtypes, exposing intrinsic forensic difficulty, where even GPT-5
-- Domain-Specific Complexity: covering seven academic categories with 39 fine-grained subtypes, exposing intrinsic forensic difficulty, where even GPT-5
-- Diverse Forgery Simulations: modeling four prevalent a
+- 提出 AEGIS 基准，评估 AI 生成学术图像的取证分析
+- 涵盖 7 个学术类别、39 个细粒度子类型、25 个生成模型
+- 联合评估检测、推理和定位三个维度
 
 ## 方法概述
 
-详见摘要部分
+构建了包含四种学术伪造策略的基准，使用 25 个不同的生成模型创建伪造图像。从检测、推理和定位三个维度评估取证能力，涵盖 MLLM 和专家模型。
 
 ## 实验结果
 
-only limited localization accuracy (IoU 30
+GPT-5.1 整体性能仅 48.80%，专家模型定位精度 IoU 仅 30.09%。MLLM 在文本工件识别方面准确率 84.74%，专家检测器在二进制真实性检测方面准确率 79.54%。
 
 ## 相关论文
 
@@ -52,19 +52,9 @@ only limited localization accuracy (IoU 30
 
 ## 分析信息
 
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-01 20:14
-- **关键词:** GPT
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
+- **分析来源:** LLM亲自分析
 - **分析置信度:** high
-- **分析时间:** 2026-05-01 20:20
-- **关键词:** LLM, large language model, diffusion, classification, generation, multimodal, vision
-- **PDF 路径:** /root/wiki/raw/papers/2604-28177v1.pdf
+- **分析时间:** 2026-05-01
 
 ---
 *导入时间: 2026-05-01 19:53*

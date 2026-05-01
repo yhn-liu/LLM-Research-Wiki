@@ -33,15 +33,17 @@ Electroencephalogram (EEG) signals are vital for automated seizure detection, bu
 
 ## 核心贡献
 
-- Electroencephalogram (EEG) signals are vital for automated seizure detection, but their inherent noise makes robust representation learning challenging.
+- 首次探索使用 LLM 作为图边缘细化器
+- 提出两阶段框架：图构建 + LLM 细化
+- 在癫痫检测任务中显著提升性能和可解释性
 
 ## 方法概述
 
-我们提出了一个两阶段框架：我们首先验证基于LLM的边缘细化可以有效识别和删除冗余连接，从而显着提高癫痫检测准确性和更有意义的图结构
+两阶段框架：首先使用 Transformer 边缘预测器和 MLP 构建初始图，然后利用 LLM 作为边缘细化器，根据节点对的文本和统计特征验证和删除冗余连接。
 
 ## 实验结果
 
-This significantly impairs the quality of graph representation and limits downstream task performance.
+在 TUSZ 数据集上的实验表明，LLM 细化后的图学习框架显著提高了癫痫检测准确性，同时产生了更清晰、更可解释的图结构。
 
 ## 相关论文
 
@@ -50,19 +52,9 @@ This significantly impairs the quality of graph representation and limits downst
 
 ## 分析信息
 
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-01 20:14
-- **关键词:** AI, ML
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
+- **分析来源:** LLM亲自分析
 - **分析置信度:** high
-- **分析时间:** 2026-05-01 20:20
-- **关键词:** transformer, attention, LLM, large language model, MLP, RL, generation
-- **PDF 路径:** /root/wiki/raw/papers/2604-28178v1.pdf
+- **分析时间:** 2026-05-01
 
 ---
 *导入时间: 2026-05-01 19:53*
