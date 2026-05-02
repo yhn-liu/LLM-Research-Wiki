@@ -6,7 +6,7 @@ title: LLM Research Wiki
 # 🔬 LLM Research Wiki
 
 > AI/ML 领域的维基式知识库。按概念组织，论文为据，持续更新。
-> 最后更新：2026-05-02 | 概念：61 | 论文：27
+> 最后更新：2026-05-02 | 概念：61 | 论文：32
 
 ---
 
@@ -15,15 +15,6 @@ title: LLM Research Wiki
 > 2026-05-02 自动更新，共 10 篇。这里是网站版每日论文导读；点击标题进入论文页面查看摘要、方法信号、相关主题和关键图示。
 
 <div class="daily-papers">
-<div class="daily-paper-card">
-  <a href="entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html" class="daily-thumb"><img src="assets/papers/2604-28179v1/fig1.png" alt="Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy"></a>
-  <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html">Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.CV · 多模态学习 / 基准评估 / 医学AI / 世界模型</div>
-    <p><strong>方法/亮点：</strong>We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling.</p>
-    <p class="daily-abstract">Bronchoscopic navigation relies on registering endoscopic video to a preoperative CT scan, but respiratory motion deforms the airway by 5-20 mm, creating CT-to-body divergence that limits localization accuracy. In practice, this is mitigated through breath-hol...</p>
-  </div>
-</div>
 <div class="daily-paper-card">
   <a href="entities/papers/2604-28185v1-visual-generation-in-the-new-era-an-evolution-from.html" class="daily-thumb"><img src="assets/papers/2604-28185v1/fig1.png" alt="Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling"></a>
   <div class="daily-paper-body">
@@ -34,48 +25,12 @@ title: LLM Research Wiki
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28190v1-representation-frchet-loss-for-visual-generation.html" class="daily-thumb"><img src="assets/papers/2604-28190v1/fig1.jpg" alt="Representation Fréchet Loss for Visual Generation"></a>
+  <a href="entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html" class="daily-thumb"><img src="assets/papers/2604-28179v1/fig1.png" alt="Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28190v1-representation-frchet-loss-for-visual-generation.html">Representation Fréchet Loss for Visual Generation</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.CV · 多模态学习 / 基准评估 / AI安全与对齐</div>
-    <p><strong>方法/亮点：</strong>We show that Fréchet Distance (FD), long considered impractical as a training objective, can in fact be effectively optimized in the representation space.</p>
-    <p class="daily-abstract">We show that Fréchet Distance (FD), long considered impractical as a training objective, can in fact be effectively optimized in the representation space. Our idea is simple: decouple the population size for FD estimation (e.g., 50k) from the batch size for gr...</p>
-  </div>
-</div>
-<div class="daily-paper-card">
-  <a href="entities/papers/2604-28192v1-last-r1-reinforcing-action-via-adaptive-physical-l.html" class="daily-thumb"><img src="assets/papers/2604-28192v1/fig1.png" alt="LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models"></a>
-  <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28192v1-last-r1-reinforcing-action-via-adaptive-physical-l.html">LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.RO, cs.CV · 多模态学习 / 强化学习 / 基准评估 / AI安全与对齐</div>
-    <p><strong>方法/亮点：</strong>In this paper, we present \textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (CoT) reasoning over physical dynamics prior to action execution, along with a tailored RL post-training paradigm.</p>
-    <p class="daily-abstract">Vision-Language-Action (VLA) models have increasingly incorporated reasoning mechanisms for complex robotic manipulation. However, existing approaches share a critical limitation: whether employing explicit linguistic reasoning that suffers from latency and di...</p>
-  </div>
-</div>
-<div class="daily-paper-card">
-  <a href="entities/papers/2604-28193v1-generalizable-sparse-view-3d-reconstruction-from-u.html" class="daily-thumb"><img src="assets/papers/2604-28193v1/fig1.png" alt="Generalizable Sparse-View 3D Reconstruction from Unconstrained Images"></a>
-  <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28193v1-generalizable-sparse-view-3d-reconstruction-from-u.html">Generalizable Sparse-View 3D Reconstruction from Unconstrained Images</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.CV · 多模态学习 / 基准评估</div>
-    <p><strong>方法/亮点：</strong>We present GenWildSplat, a feed-forward framework for sparse-view outdoor reconstruction that requires no per-scene optimization.</p>
-    <p class="daily-abstract">Reconstructing 3D scenes from sparse, unposed images remains challenging under real-world conditions with varying illumination and transient occlusions. Existing methods rely on scene-specific optimization using appearance embeddings or dynamic masks, which re...</p>
-  </div>
-</div>
-<div class="daily-paper-card">
-  <a href="entities/papers/2604-28075v1-repetition-over-diversity-high-signal-data-filteri.html" class="daily-thumb"><img src="assets/papers/2604-28075v1/fig1.png" alt="Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling"></a>
-  <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28075v1-repetition-over-diversity-high-signal-data-filteri.html">Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.CL, cs.AI · 大语言模型 / 基准评估</div>
-    <p><strong>方法/亮点：</strong>Recent research has shown that filtering massive English web corpora into high-quality subsets significantly improves training efficiency.</p>
-    <p class="daily-abstract">Recent research has shown that filtering massive English web corpora into high-quality subsets significantly improves training efficiency. However, for high-resource non-English languages like German, French, or Japanese, aggressive filtering creates a strateg...</p>
-  </div>
-</div>
-<div class="daily-paper-card">
-  <a href="entities/papers/2604-28197v1-omnirobothome-a-multi-camera-platform-for-real-tim.html" class="daily-thumb"><img src="assets/papers/2604-28197v1/fig1.png" alt="OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction"></a>
-  <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28197v1-omnirobothome-a-multi-camera-platform-for-real-tim.html">OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.RO, cs.CV · AI安全与对齐 / 智能体</div>
-    <p><strong>方法/亮点：</strong>We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human and object perception with coordinated multi-robot actuation in a shared world frame.</p>
-    <p class="daily-abstract">Human-robot collaboration has been studied primarily in dyadic or sequential settings. However, real homes require multiadic collaboration, where multiple humans and robots share a workspace, acting concurrently on interleaved subtasks with tight spatial and t...</p>
+    <h3><a href="entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html">Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.CV · 多模态学习 / 基准评估 / 医学AI / 世界模型</div>
+    <p><strong>方法/亮点：</strong>We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling.</p>
+    <p class="daily-abstract">Bronchoscopic navigation relies on registering endoscopic video to a preoperative CT scan, but respiratory motion deforms the airway by 5-20 mm, creating CT-to-body divergence that limits localization accuracy. In practice, this is mitigated through breath-hol...</p>
   </div>
 </div>
 <div class="daily-paper-card">
@@ -88,6 +43,15 @@ title: LLM Research Wiki
   </div>
 </div>
 <div class="daily-paper-card">
+  <a href="entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html" class="daily-thumb"><img src="assets/papers/2604-28169v1/fig1.jpg" alt="PhyCo: Learning Controllable Physical Priors for Generative Motion"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html">PhyCo: Learning Controllable Physical Priors for Generative Motion</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.CV, cs.AI, cs.LG · 大语言模型 / 多模态学习 / 强化学习 / 基准评估</div>
+    <p><strong>方法/亮点：</strong>We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into video generation.</p>
+    <p class="daily-abstract">Modern video diffusion models excel at appearance synthesis but still struggle with physical consistency: objects drift, collisions lack realistic rebound, and material responses seldom match their underlying properties. We present PhyCo, a framework that intr...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
   <a href="entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html" class="daily-thumb"><img src="assets/papers/2604-28158v1/fig1.png" alt="Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists"></a>
   <div class="daily-paper-body">
     <h3><a href="entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html">Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists</a></h3>
@@ -97,12 +61,48 @@ title: LLM Research Wiki
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html" class="daily-thumb"><img src="assets/papers/2604-28169v1/fig1.jpg" alt="PhyCo: Learning Controllable Physical Priors for Generative Motion"></a>
+  <a href="entities/papers/2604-28156v1-flexitac-a-low-cost-open-source-scalable-tactile-s.html" class="daily-thumb"><img src="assets/papers/2604-28156v1/fig1.png" alt="FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html">PhyCo: Learning Controllable Physical Priors for Generative Motion</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.CV, cs.AI, cs.LG · 大语言模型 / 多模态学习 / 强化学习 / 基准评估</div>
-    <p><strong>方法/亮点：</strong>We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into video generation.</p>
-    <p class="daily-abstract">Modern video diffusion models excel at appearance synthesis but still struggle with physical consistency: objects drift, collisions lack realistic rebound, and material responses seldom match their underlying properties. We present PhyCo, a framework that intr...</p>
+    <h3><a href="entities/papers/2604-28156v1-flexitac-a-low-cost-open-source-scalable-tactile-s.html">FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.RO, cs.AI, cs.LG · 世界模型</div>
+    <p><strong>方法/亮点：</strong>We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors.</p>
+    <p class="daily-abstract">We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors. FlexiTac is a practical &quot;plug-in&quot; module consisting of (i) thin, flexible tactile sensor pads that provide dense tactile sign...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28139v1-claw-eval-live-a-live-agent-benchmark-for-evolving.html" class="daily-thumb"><img src="assets/papers/2604-28139v1/fig1.png" alt="Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28139v1-claw-eval-live-a-live-agent-benchmark-for-evolving.html">Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.SE, cs.AI · 大语言模型 / 基准评估 / 智能体</div>
+    <p><strong>方法/亮点：</strong>We introduce Claw-Eval-Live, a live benchmark for workflow agents that separates a refreshable signal layer, updated across releases from public workflow-demand signals, from a reproducible, time-stamped release snapshot.</p>
+    <p class="daily-abstract">LLM agents are expected to complete end-to-end units of work across software tools, business services, and local workspaces. Yet many agent benchmarks freeze a curated task set at release time and grade mainly the final response, making it difficult to evaluat...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28138v1-crab-a-semantics-aware-checkpointrestore-runtime-f.html" class="daily-thumb"><img src="assets/papers/2604-28138v1/fig1.png" alt="Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28138v1-crab-a-semantics-aware-checkpointrestore-runtime-f.html">Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.OS, cs.AI · 大语言模型 / 强化学习 / 自动驾驶 / 智能体</div>
+    <p><strong>方法/亮点：</strong>Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and runtime artifacts.</p>
+    <p class="daily-abstract">Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and runtime artifacts. Checkpoint and restore (C/R) of this state is needed for fault tolerance, spot execution, RL rollout branching, and safe rollback-y...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28180v1-an-adaptive-wavelet-based-pinn-for-problems-with-l.html" class="daily-thumb"><img src="assets/papers/2604-28180v1/fig1.png" alt="An adaptive wavelet-based PINN for problems with localized high-magnitude source"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28180v1-an-adaptive-wavelet-based-pinn-for-problems-with-l.html">An adaptive wavelet-based PINN for problems with localized high-magnitude source</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.LG · 世界模型</div>
+    <p><strong>方法/亮点：</strong>In recent years, physics-informed neural networks (PINNs) have gained significant attention for solving differential equations, although they suffer from two fundamental limitations, namely, spectral bias inherent in neural networks and los</p>
+    <p class="daily-abstract">In recent years, physics-informed neural networks (PINNs) have gained significant attention for solving differential equations, although they suffer from two fundamental limitations, namely, spectral bias inherent in neural networks and loss imbalance arising ...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28176v1-defending-quantum-classifiers-against-adversarial.html" class="daily-thumb"><img src="assets/papers/2604-28176v1/fig1.png" alt="Defending Quantum Classifiers against Adversarial Perturbations through Quantum Autoencoders"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28176v1-defending-quantum-classifiers-against-adversarial.html">Defending Quantum Classifiers against Adversarial Perturbations through Quantum Autoencoders</a></h3>
+    <div class="daily-meta">2026-04-30 · quant-ph, cs.LG · 多模态学习 / 基准评估 / AI安全与对齐</div>
+    <p><strong>方法/亮点：</strong>In this paper, we propose an adversarial training-free defense framework that utilizes a quantum autoencoder to purify the adversarial samples through reconstruction.</p>
+    <p class="daily-abstract">Machine learning models can learn from data samples to carry out various tasks efficiently. When data samples are adversarially manipulated, such as by insertion of carefully crafted noise, it can cause the model to make mistakes. Quantum machine learning mode...</p>
   </div>
 </div>
 </div>
@@ -140,16 +140,16 @@ title: LLM Research Wiki
 <!-- 按日期倒序排列 -->
 
 <!-- DAILY_LATEST_AUTO -->
-- [**Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy**](entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html) — We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling
 - [**Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling**](entities/papers/2604-28185v1-visual-generation-in-the-new-era-an-evolution-from.html) — To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context
-- [**Representation Fréchet Loss for Visual Generation**](entities/papers/2604-28190v1-representation-frchet-loss-for-visual-generation.html) — We show that Fréchet Distance (FD), long considered impractical as a training objective, can in fact be effect
-- [**LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models**](entities/papers/2604-28192v1-last-r1-reinforcing-action-via-adaptive-physical-l.html) — In this paper, we present \textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (C
-- [**Generalizable Sparse-View 3D Reconstruction from Unconstrained Images**](entities/papers/2604-28193v1-generalizable-sparse-view-3d-reconstruction-from-u.html) — We present GenWildSplat, a feed-forward framework for sparse-view outdoor reconstruction that requires no per-
-- [**Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling**](entities/papers/2604-28075v1-repetition-over-diversity-high-signal-data-filteri.html) — Recent research has shown that filtering massive English web corpora into high-quality subsets significantly i
-- [**OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction**](entities/papers/2604-28197v1-omnirobothome-a-multi-camera-platform-for-real-tim.html) — We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human 
+- [**Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy**](entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html) — We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling
 - [**Computing Equilibrium beyond Unilateral Deviation**](entities/papers/2604-28186v1-computing-equilibrium-beyond-unilateral-deviation.html) — Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainabl
-- [**Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists**](entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html) — We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entitie
 - [**PhyCo: Learning Controllable Physical Priors for Generative Motion**](entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html) — We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into 
+- [**Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists**](entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html) — We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entitie
+- [**FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems**](entities/papers/2604-28156v1-flexitac-a-low-cost-open-source-scalable-tactile-s.html) — We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed fo
+- [**Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows**](entities/papers/2604-28139v1-claw-eval-live-a-live-agent-benchmark-for-evolving.html) — We introduce Claw-Eval-Live, a live benchmark for workflow agents that separates a refreshable signal layer, u
+- [**Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes**](entities/papers/2604-28138v1-crab-a-semantics-aware-checkpointrestore-runtime-f.html) — Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and 
+- [**An adaptive wavelet-based PINN for problems with localized high-magnitude source**](entities/papers/2604-28180v1-an-adaptive-wavelet-based-pinn-for-problems-with-l.html) — In recent years, physics-informed neural networks (PINNs) have gained significant attention for solving differ
+- [**Defending Quantum Classifiers against Adversarial Perturbations through Quantum Autoencoders**](entities/papers/2604-28176v1-defending-quantum-classifiers-against-adversarial.html) — In this paper, we propose an adversarial training-free defense framework that utilizes a quantum autoencoder t
 <!-- /DAILY_LATEST_AUTO -->
 
 ### 训练与对齐

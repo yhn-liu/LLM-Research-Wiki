@@ -116,3 +116,17 @@
   - [2604.28186v1] Computing Equilibrium beyond Unilateral Deviation
   - [2604.28158v1] Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI
   - [2604.28169v1] PhyCo: Learning Controllable Physical Priors for Generative Motion
+
+## [2026-05-02] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 不生成 PDF；论文页面包含摘要、方法信号、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2604.28185v1] Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic Wo
+  - [2604.28179v1] Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscop
+  - [2604.28186v1] Computing Equilibrium beyond Unilateral Deviation
+  - [2604.28169v1] PhyCo: Learning Controllable Physical Priors for Generative Motion
+  - [2604.28158v1] Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI
+  - [2604.28156v1] FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic
+  - [2604.28139v1] Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows
+  - [2604.28138v1] Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes
+  - [2604.28180v1] An adaptive wavelet-based PINN for problems with localized high-magnitude source
+  - [2604.28176v1] Defending Quantum Classifiers against Adversarial Perturbations through Quantum 
