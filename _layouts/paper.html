@@ -12,6 +12,11 @@
     h3 { color: #0f3460; margin-top: 20px; }
     a { color: #0f3460; text-decoration: none; border-bottom: 1px dashed #0f3460; }
     a:hover { color: #e94560; border-bottom-color: #e94560; }
+    a.concept-exists { color: #0f3460; border-bottom: 2px solid #0f3460; font-weight: 500; }
+    a.concept-exists:hover { color: #e94560; border-bottom-color: #e94560; }
+    a.concept-stub { color: #e94560; border-bottom: 2px dashed #e94560; opacity: 0.8; }
+    a.concept-stub:hover { opacity: 1; background: #fff3f3; border-radius: 3px; }
+    .concept-stub-badge { font-size: 0.7em; background: #e94560; color: white; padding: 1px 5px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
     .paper-meta { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0; }
     .paper-meta p { margin: 5px 0; }
     .tag { display: inline-block; background: #0f3460; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
@@ -23,8 +28,6 @@
     hr { border: none; border-top: 1px solid #ddd; margin: 20px 0; }
     nav { margin-bottom: 20px; padding: 10px 0; border-bottom: 1px solid #eee; display: flex; gap: 15px; align-items: center; }
     nav a { border-bottom: none; font-weight: 500; }
-    .related-section { background: #f0f4ff; padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px solid #d0d9f0; }
-    .related-section h2 { border-bottom: none; font-size: 1.1em; margin-top: 0; }
     @media (max-width: 600px) { body { padding: 10px; } }
   </style>
 </head>
@@ -35,9 +38,30 @@
     <a href="{{ site.baseurl }}/concepts/large-language-model.html">大语言模型</a>
     <a href="{{ site.baseurl }}/concepts/reinforcement-learning.html">强化学习</a>
     <a href="{{ site.baseurl }}/concepts/multimodal-learning.html">多模态</a>
+    <a href="{{ site.baseurl }}/concepts/world-models.html">世界模型</a>
   </nav>
   <article class="paper-content">
     {{ content }}
   </article>
+  <script>
+  (function() {
+    var existing = ["ai-agents","ai-safety-alignment","autonomous-driving","benchmarking","graph-neural-networks","knowledge-distillation","large-language-model","medical-ai","multimodal-learning","reinforcement-learning","world-models"];
+    document.querySelectorAll('a[href*="concepts/"]').forEach(function(a) {
+      var match = a.href.match(/concepts\/([a-z0-9-]+)\.html/);
+      if (match) {
+        var slug = match[1];
+        if (existing.indexOf(slug) !== -1) {
+          a.classList.add('concept-exists');
+        } else {
+          a.classList.add('concept-stub');
+          var badge = document.createElement('span');
+          badge.className = 'concept-stub-badge';
+          badge.textContent = '建设中';
+          a.appendChild(badge);
+        }
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
