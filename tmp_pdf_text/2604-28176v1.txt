@@ -1,0 +1,738 @@
+                                             Defending Quantum Classifiers against Adversarial
+                                               Perturbations through Quantum Autoencoders
+                                                                                Emma Andrews, Sahan Sanjaya, and Prabhat Mishra
+                                                                                      University of Florida, Gainesville, Florida, USA
+
+
+                                               Abstract—Machine learning models can learn from data sam-
+                                            ples to carry out various tasks efficiently. When data samples                                               Variational
+                                                                                                                            Adversarial                                  Prediction:
+                                                                                                                                                         Quantum
+                                            are adversarially manipulated, such as by insertion of carefully                perturbation                                     2
+                                                                                                                                                         Classifier
+                                            crafted noise, it can cause the model to make mistakes. Quantum
+arXiv:2604.28176v1 [quant-ph] 30 Apr 2026
+
+
+
+
+                                            machine learning models are also vulnerable to such adversar-
+                                            ial attacks, especially in image classification using variational     Fig. 1: A clean data sample can be adversarially perturbed
+                                            quantum classifiers. While there are promising defenses against       with noise. To humans, the image still looks like the digit 7,
+                                            these adversarial perturbations, such as training with adversarial    however, the machine learning model classifies it as a 2.
+                                            samples, they face practical limitations. For example, they are not
+                                            applicable in scenarios where training with adversarial samples
+                                            is either not possible or can overfit the models on one type          defense being used to protect different types of classifiers
+                                            of attack. In this paper, we propose an adversarial training-
+                                            free defense framework that utilizes a quantum autoencoder to         and the inability to run adversarial attacks on the classifier
+                                            purify the adversarial samples through reconstruction. Moreover,      to generate the adversarial samples.
+                                            our defense framework provides a confidence metric to identify           To address this gap, we propose a defense framework that
+                                            potentially adversarial samples that cannot be purified the           does not rely on adversarial training to protect against ad-
+                                            quantum autoencoder. Extensive evaluation demonstrates that
+                                            our defense framework can significantly outperform state-of-the-      versarial attacks. The defense framework focuses on quantum
+                                            art in prediction accuracy (up to 68%) under adversarial attacks.     state reconstruction of the adversarial sample where the recon-
+                                                                                                                  struction aims to reduce or remove adversarial perturbations.
+                                                                                                                  Specifically, we propose a defense framework where a quan-
+                                                                   I. I NTRODUCTION                               tum autoencoder (QAE) [11] encodes the adversarial sample
+                                               In adversarial machine learning, adversaries can craft data        that would be input to the VQC. This encoded representation
+                                            samples serving as inputs to machine learning models, causing         is decoded or reconstructed back into the original data space,
+                                            the models to make incorrect decisions [1], [2]. For example,         effectively extracting features in the adversarial sample that
+                                            Figure 1 shows that an adversary can add noise imperceptible          were present in the training dataset. We show that the QAE can
+                                            to humans to the MNIST [3] image of the digit 7, causing              outperform the classical autoencoder (CAE) [10] in prediction
+                                            the model to mispredict the label as a 2. Defending against           accuracy against adversarial attacks. Moreover, we provide a
+                                            these adversarial perturbations is thus necessary to ensure a         confidence metric from the fidelity of the encoded representa-
+                                            machine learning model is robust against adversarial attacks.         tion of a data sample and the classifier’s class predictions to
+                                            While adversarial attacks have been well studied in classical         determine if the sample is a potential adversarial sample.
+                                            machine learning, exploration in the context of quantum                  Specifically, this paper makes the following contributions.
+                                            machine learning models is in its infancy.
+                                                                                                                    • We propose a framework to defend quantum classifiers
+                                               Quantum machine learning (QML) has the potential to learn
+                                                                                                                      against adversarial perturbations using the ability of a
+                                            the features of data samples and carry out their tasks in less
+                                                                                                                      QAE to reconstruct the adversarial samples and purify
+                                            parameters compared to classical machine learning models [4],
+                                                                                                                      adversarial information before it is used by VQC for
+                                            [5]. QML models can still be vulnerable to adversarial data
+                                                                                                                      classification.
+                                            samples generated by adversarial attacks [6], [7]. Specifically,
+                                                                                                                    • We provide a confidence metric to identify adversarial
+                                            adversarial attacks from classical machine learning, such as
+                                                                                                                      samples and reject a sample based on a configurable
+                                            gradient-based attacks [8], [9], are able to produce adversarial
+                                                                                                                      threshold.
+                                            samples that can cause a variational quantum classifier (VQC)
+                                                                                                                    • Experimental evaluation demonstrates significant im-
+                                            to mispredict the class labels. Note that the model can correctly
+                                                                                                                      provement (up to 68%) in prediction accuracy compared
+                                            predict the class label in the absence of adversarial noise in
+                                                                                                                      to the state-of-the-art defense using classical autoen-
+                                            the data samples.
+                                                                                                                      coders.
+                                               There are various efforts that can successfully defend
+                                            against adversarial attacks [1], [2]. However, these strategies          The rest of the paper is organized as follows. Section II-D
+                                            primarily rely on adversarial training where the classifier is        provides relevant background and surveys related efforts. Sec-
+                                            trained on adversarial samples [7], [10]. There are many              tion III describes our defense framework. Section IV presents
+                                            scenarios where this training is not feasible, such as the            the experimental results. Section V concludes the paper.
+          II. BACKGROUND AND R ELATED W ORK
+   In this section, we first provide the necessary background on
+quantum machine learning, classical/quantum autoencoders,
+and adversarial attacks. Next, we survey related efforts and                     Encoder                      Decoder
+discuss their limitations.
+A. Quantum Machine Learning
+   Quantum Machine Learning (QML) consists of parame-
+terized quantum circuits that can be optimized according to                   Fig. 3: Classical autoencoder structure.
+some objective to perform a specific functionality and achieve
+specific results [4], [12]. These models typically consist of
+three major components, as shown in Figure 2: feature map,         decoder, to achieve data compression and reconstruction [11].
+ansatz, and measurements. A feature map embeds the input           However, implementation and training of QAEs differ from
+data into the quantum circuit representing the model. An           CAEs. The encoder U (θ), parameterized by θ, in the QAE is
+ansatz or the parameterized quantum circuit performs the           responsible for encoding the input state |ψin ⟩ on n qubits. The
+computation of the model. Finally, the measurements are used       encoded representation of |ψin ⟩ is the latent space representa-
+to obtain the result of the QML model.                             tion, and consists of k qubits, where k < n. The remaining
+   The parameters of the parameterized quantum circuit act         n − k qubits are denoted the trash qubits, and are swapped
+on the parameterized gates, changing the exact mathematical        with a reference state, often |0⟩⊗n−k , as input to the decoder.
+operation that gate performs on the quantum state at a given       The decoder then uses the latent state and the reference state
+time evolution in the parameterized quantum circuit. These         to reconstruct the output state |ψout ⟩. Due to the reversibility
+parameters are optimized like the weights in classical machine     of quantum gates, the decoder is the inverse U † (θ) of the
+learning models at each layer, changing the values to meet a       encoder.
+specific objective. This is often done through the minimization
+or maximization of the objective through a loss function, such                                Latent Space
+as minimizing the difference between the machine learning
+model class predictions and the actual class labels.
+                                                                                 Encoder                     Decoder
+
+
+
+
+      Feature Map           Ansatz
+                                                                              Fig. 4: Quantum autoencoder structure.
+
+
+                                                                   C. Adversarial Attacks
+          Fig. 2: General structure of QML models.                    A machine learning model can be attacked by creating an
+                                                                   adversarial sample where the input data sample is perturbed
+                                                                   with specifically crafted noise to cause the machine learning
+B. Autoencoders                                                    model to produce an incorrect result. One major category
+   Originating from classical machine learning, autoencoders       of attacks are gradient-based attacks, where the gradients
+are a group of models that can encode data samples into a          calculated during the execution of a machine learning model
+smaller representation and decode those compressed represen-       are used to craft an adversarial sample. The two most promi-
+tations back into the original data sample.                        nent gradient-based adversarial attacks are fast gradient sign
+   Classical Autoencoders (CAEs) consist of two key compo-         method (FGSM) [8] and projected gradient descent (PGD) [9].
+nents: an encoder and a decoder [13], as shown in Figure 3.           FGSM is a popular white-box adversarial example gener-
+The encoder is responsible for taking an input sample x ∈ Rm       ation method that uses the sign of the gradient of the loss
+and compressing it into a smaller dimension dataspace, known       function to add a fixed, small perturbation ϵ to the original
+as the latent space. The latent space representation of x is       input. Given an input x with label y and a loss function L(·),
+represented by z ∈ Rn , m > n, which is given as input to          the adversarial example xadv is generated as
+the decoder to reconstruct back into the original dataspace,                    xadv = x + ϵ · sign(∇x L(θ, x, y)) .            (1)
+resulting in x̂ ∈ Rm . Ideally, x ≈ x̂ for an efficient encoder
+and decoder.                                                       In an untargeted attack, FGSM maximizes the loss with respect
+   Quantum Autoencoders (QAEs) use a similar structure to          to the true label, pushing the input away from the correct
+classical autoencoders, also consisting of an encoder and a        classification boundary. In contrast, in a targeted attack, FGSM
+                                                                      attack type instead of robustness for any kind of adversarial
+                                                                      attack [22], [23]. Therefore, it is important to develop defenses
+                                                                      that do not use adversarial training to successfully defend
+                                                                      against adversarial attacks for these scenarios.
+                                                                           III. Q UANTUM AUTOENCODERS FOR D EFENDING
+                                                                                   AGAINST A DVERSARIAL ATTACKS
+                                                                         Figure 6 provides an overview of our proposed defense
+                                                                      framework QAE++ that consists of three major components.
+Fig. 5: Example of FGSM ϵ = 0.30 attack on MNIST images.              We first describe the VQC, which is the model under attack.
+The original MNIST images are shown in the top row, while             Next, we describe how QAE processes the given input sample
+the adversarial images are in the bottom row.                         to produce a reconstructed sample. We propose a confidence
+                                                                      metric to remove the reconstructed samples that are likely to
+                                                                      be misclassified. Finally, we put all the components together
+minimizes the loss with respect to a chosen target label by           to provide an overview of QAE++ algorithm.
+applying the perturbation in the opposite gradient direction,
+                                                                      A. Variational Quantum Classifiers
+thereby steering the input toward an incorrect class boundary.
+An example of original MNIST images perturbed using FGSM                 VQCs are a popular model architecture for classification
+with ϵ = 0.30 is shown in Figure 5.                                   tasks in QML [24]. These models embed the data into the
+   PGD is another widely used white-box adversarial example           circuit that consist of an ansatz featuring repeating layers of
+generation method that extends FGSM by iteratively applying           rotations and entanglement. The expectation values are then
+small perturbations. Given an input x with label y and a loss         measured to identify the class label the VQC recognizes the
+function L(·), the adversarial example is initialized as x(0) = x     input data sample as being a member of.
+and updated iteratively as                                               An important initial step in the VQC is preparing and
+                                                                    embedding the data into the quantum circuit for the ansatz to
+      x(t+1) = ΠBϵ (x) x(t) + α · sign(∇x L(θ, x, y)) , (2)           process. As the VQCs will be classifying images, amplitude
+                                                                      embedding is a natural fit. Amplitude embedding takes a
+where α is the step size and ΠBϵ (x) (·) denotes projection onto      feature vector x of size 2n and embeds it into n qubits, such
+the ball of interest (e.g., the ℓ∞ ball of radius ϵ centered at x).   that
+Unlike FGSM, which applies a single-step perturbation, PGD                                           2n
+                                                                                                     X
+performs multiple constrained updates, enabling it to explore                                  |ψ⟩ =     xi |i⟩                   (3)
+the loss landscape more effectively and generate stronger                                            i=0
+adversarial examples.                                                 is the resulting quantum state [25].
+                                                                         We focus on VQCs using the layer design of circuit-
+D. Related Work
+                                                                      centric quantum classifiers [24], also known as the strongly
+   There are several avenues to defend against adversarial            entangling layers. A layer consists of a single qubit rotation
+attacks in QML. For example, QML models can be defended               gate R(ϕ, θ, ω) followed by CNOT gates for neighboring pairs
+using noise, such as depolarization noise or noise layers [14],       of qubits. This repeated layering pattern is shown in Figure 7
+[15]. Other defense mechanisms include adversarial training,          for two layers on four qubits. Therefore, the total number of
+where the defense models or classifier itself are trained on          parameters of the VQC model is n layers × n × 3.
+adversarial samples either in place of or in conjunction with            The ansatz must be measured to obtain the predicted
+the original, clean samples [16], [17]. One way to reinforce the      class label of a given input data sample by the model. The
+adversarial training is to use a regularized loss function, such      expectation value is measured for the number of classes
+as Lipschitz regularization [7], [18]. Lipschitz regularization       associated with the dataset, meaning each qubit measured
+enables tighter Lipschitz bounds for the trained quantum              represents the logit for one class. The maximum value across
+classifier. The Lipschitz bounds provide a way to quantify how        the resulting expectation values is the class label associated
+input differences, such as adversarial noise, affect the output       with the corresponding qubit. For example, if qubit 2 had the
+of a machine learning model.                                          maximum expectation value, the predicted class label for the
+   In classical machine learning, there are several defenses          input data sample would be class 2.
+proposed using generative models to purify adversarial sam-
+ples, such as autoencoders [19], generative adversarial net-          B. Quantum Autoencoders
+works [20], and diffusion models [21]. This notion has carried           The QAE is the central part of QAE++. It is responsible for
+over to quantum, where classical autoencoders are adver-              acting as a preprocessing step on the input data samples prior
+sarially trained to defend VQCs against adversarial attacks           to the VQC. The QAE takes the input data sample, encodes
+through purification of the adversarial samples [10]. However,        it into a latent representation, and then reconstructs the input
+there are many scenarios where training with adversarial sam-         data sample. This reconstruction emphasizes the extraction of
+ples is either not possible or can cause overfitting to a specific    learned features in the original, clean data samples. Thus, an
+                                                  Encoding Fidelity
+
+
+                                                                                      Calculate
+                                   Reconstruction       Variational        Logits                                             Yes
+                        Quantum                                                      Confidence            Meets confidence          Predicted
+                                                        Quantum                                             threshold ?
+                       Autoencoder                                                     Metric                                       Class Label
+                                                        Classifier
+
+                                                                                                               No
+                                                                                                                                Rejected Sample
+
+Fig. 6: An overview of our defense framework. A sample, either clean or adversarial, is given as input x to the QAE. The
+QAE produces a reconstruction x̂ which is given to the VQC for classification. The QAE also produces the encoding fidelity
+⟨σZ ⟩x , which is used in calculation of the confidence metric. Once the VQC has predicted the reconstruction x̂, it produces
+the logit difference lx̂ which is used in addition to the encoding fidelity ⟨σZ ⟩x to calculate the confidence metric C. This is
+compared against the confidence threshold T . If the calculated confidence metric C meets the confidence threshold T , the
+predicted class label from the VQC is used. Otherwise, the sample is rejected as a potential adversarial sample.
+
+
+ R(α11 , β11 , γ11 ) •                 R(α21 , β21 , γ21 ) •                      Formally, the interactions between these states through the
+                                                                               encoder and decoder circuits can be defined as the interaction
+ R(α12 , β12 , γ12 )       •           R(α22 , β22 , γ22 )     •               between different subsystems [11]. The latent space qubits are
+                                                                               subsystem A, the trash space qubits are subsystem B, and the
+ R(α13 , β13 , γ13 )           •       R(α23 , β23 , γ23 )         •
+                                                                               reference space qubits are subsystem B ′ . We can express the
+ R(α14 , β14 , γ14 )               •   R(α24 , β24 , γ24 )             •       encoder output instead as a product of the subsystem states,
+                                                                               as
+Fig. 7: Two layers of the circuit-centric classifier design for                                 U (θ)|ψ⟩AB = |ψ⟩A ⊗ |ψ⟩B ,                (4)
+a four-qubit circuit. A layer consists of a group of 4 rotation
+gates followed by 4 entangling gates.                                          where |ψ⟩A is the state of the latent space representation, |ψ⟩B
+                                                                               is the trash state, and |ψ⟩AB is the output state of the encoder,
+                                                                               including both the latent state and the trash state.
+adversarial sample can be reconstructed, purifying adversarial                    The output of the decoder should be equivalent to the input
+noise from the sample.                                                         of the encoder, which can be formally expressed as
+   The QAE must first embed data into the circuit for the en-                                     U † (θ)U (θ)|ψ⟩AB = |ψ⟩AB .                  (5)
+coder to compress. This is achieved with amplitude embedding
+like with the VQCs as described in Section III-A. The original                 This occurs if the trash state is the reference state, in this case,
+data samples are images, where 2n pixels are embedded into n                   if the trash state is the basis state |ψB ′ ⟩ = |0⟩⊗n−k . Thus,
+qubits. The encoder ansatz processes the embedded quantum                      the parameters θ must be optimized so that the input state is
+state and compresses it into the latent space representation on                compressed into the encoder output state |ψAB ⟩ where |ψB ⟩ =
+k qubits, where k < n. The remaining n − k qubits, or the                      |ψB ′ ⟩. Therefore, the full output of the QAE is represented by
+trash space, must result in the reference state to the QAE for                 the density matrix
+an effective compression in the latent space. For this QAE, we                              †
+                                                                                    ρout = UAB ′ (θ) TrB [UAB (θ) |b⟩UAB ′ (θ)] UAB ′ (θ) ,    (6)
+use a reference state of the basis state |0⟩⊗n−k .
+   The decoder takes the reference state and the compressed                    where |b⟩ = |ψin ⟩⟨ψin |AB ⊗ |a⟩⟨a|B ′ , |a⟩ is the reference state
+latent state as input to reconstruct the output state. This output             contained in B ′ , and |ψin ⟩ is the input state to the encoder.
+state will encompass n qubits, the same as the original input                     This leads to efficient training of QAEs, where only the
+state. As the aim of the decoder is to reconstruct the state from              encoder needs to be trained to maximize the fidelity between
+the latent state, due to the reversible properties of quantum                  the trash state and the reference state at the encoder output. As
+gates the decoder can be the Hermitian conjugate of the en-                    the decoder is the inverse of the encoder, the encoder weights
+coder. The result from the decoder is the reconstructed output                 can also be used for the decoder. This is unlike CAEs, where
+state, which is measured with its probabilities to produce the                 both the encoder and decoder must be trained with their own
+resulting image.                                                               individual weights. Specifically for QAEs, the encoder can be
+   To learn the features of the dataset and compress the data                  trained to optimize the trash state resulting from the encoder
+samples effectively, the encoder ansatz is designed with re-                   to the reference state. This can be achieved by measuring the
+peated layers of single-qubit rotation gates and entanglements                 fidelity between the trash state and the reference state.
+between neighboring qubits. These layers utilize the same                         One efficient method to calculate the fidelity between two
+layer structure as the VQCs with the strongly entangling                       quantum states is through the SWAP test [26]. The SWAP
+layers, with the example given in Figure 7.                                    test requires an ancilla qubit, where the Hadamard gate
+               |0⟩      H    •    H                                  predicted correctly, the difference in the two maximum logits
+                                                                     produced is large, as the model was confident in its prediction.
+                                                                     Incorrect samples have a smaller difference, indicating that
+              |ψ1 ⟩          ×
+                                                                     the model was not confident and predicted the class label
+                                                                     incorrectly. This same notion extends to adversarial samples,
+              |ψ2 ⟩          ×                                       as the logit difference will also be minimized to alter the
+                                                                     classifier from predicting the correct class label.
+Fig. 8: A SWAP test used to measure the fidelity between
+                                                                        Specifically, we formulate the confidence metric as a linear
+quantum states |ψ1 ⟩ and |ψ2 ⟩.
+                                                                     combination of the encoding fidelity and the logit difference.
+                                                                     For a given sample, its calculated confidence metric is checked
+                                                                     against a threshold confidence metric. If the calculated con-
+is performed on the ancilla before performing a controlled
+                                                                     fidence metric is greater than the threshold, the resulting
+SWAP between the two comparing quantum states with the
+                                                                     prediction is accepted, with the resulting class label being
+ancilla qubit as the control qubit. This is followed by another
+                                                                     the same as the predicted label from the classifier. Otherwise,
+Hadamard gate on the ancilla qubit. The expectation value
+                                                                     the resulting prediction is rejected as a potential adversarial
+⟨σZ ⟩ is measured to produce the fidelity of the two quantum
+                                                                     sample.
+states. Figure 8 depicts the resulting circuit structure for the
+                                                                        3) Computation of Confidence Metric: The linear combina-
+SWAP test.
+                                                                     tion representing the confidence metric C adds the encoding
+   The expectation value ⟨σZ ⟩ measured from the SWAP
+                                                                     fidelity with the logit difference. With these two metrics, they
+test representing the fidelity between the trash state and the
+                                                                     each have their own value ranges. While the encoding fidelity
+reference state must be maximized to a value of 1 so that
+                                                                     ranges from 0 to 1, the logit difference varies between 0
+the trash state is equivalent to the reference state. In other
+                                                                     and 2 under expectation value measurement. To normalize
+words, maximization of the fidelity results in the trash state of
+                                                                     the ranges, we divide the logit difference by 2 in the linear
+|0⟩⊗n−k and compression of the input state |ψin ⟩ into k qubits
+                                                                     combination. This results in
+from n original qubits. Thus, the loss function for training the
+encoder maximizes the fidelity with                                                                         lx̂
+                                                                                             C = ⟨σZ ⟩L + ,                        (8)
+                                                                                                             2
+                         L = 1 − ⟨σZ ⟩,                       (7)    where the adversarial sample x has encoding fidelity of ⟨σZ ⟩x
+                                                                     for its reconstruction x̂ from the QAE with resulting logit
+which is minimized to 0.
+                                                                     difference of lx̂ .
+C. Confidence Metric                                                    For a calculated confidence metric C, this is thresholded
+                                                                     against an established confidence metric T . This threshold is
+   To augment the QAE reconstructions for better defense, we         expressed as the same linear combination, however the exact
+establish a confidence metric to determine whether to accept or      values may differ. While the direct values of the encoding
+reject a sample after classification by the VQC. This consists       fidelity and the logit difference are used for a calculated
+of two major components: the encoding fidelity and the logit         confidence metric, for threshold, they are determined from
+difference. These two components are analyzed per sample to          a validation set of samples and their resulting values. We
+establish the confidence metric to improve overall defense.          threshold the encoding fidelities on the 1st percentile of clean
+   1) Encoding Fidelity: A unique property with QAEs versus          validation set encoding fidelities, expressed as
+CAEs is that they can be trained using only the encoder by
+comparing the trash state |ψB ⟩ to the reference state |ψB ′ ⟩,                           ⟨σZ ⟩T = P1 (E) − δ,                    (9)
+as described previously. We utilize the SWAP test, measuring         where E is the resulting encoding fidelities produced from the
+the trash state and the reference state as the encoding fidelity     clean validation set and δ is a small tolerance factor to account
+⟨σZ ⟩x , analyzing how well the encoder is able to compress and      for potential outliers with clean samples. The thresholds for
+extract the features of the adversarial sample x compared to the     the logit differences are calculated similarly, where the average
+clean dataset it was trained on. This SWAP test measures the         logit difference of the incorrect samples from the validation
+fidelity of the compressed representation. A lower than normal       set is expressed as
+fidelity compared to the original training dataset indicates that
+                                                                                                   d
+the sample contained many features that were not exhibited                                      1X i
+                                                                                       lT = (        z − z2i ) − γ,              (10)
+in the original training dataset, indicating potential adversarial                              d i=1 1
+samples.
+   2) Logit Difference: When the model classifies the given          where d is the number of samples in the validation set, z1i is
+data sample, it produces logits or the different class labels        the maximum logit for sample i, z2i is the second largest logit
+and its probability that the sample is of the associated class       for sample i, and γ is a small tolerance factor to allow for
+label. When doing normal classification, the maximum value           some outliers with clean samples. The resulting threshold is
+in the logits and its corresponding class label is taken as          thus
+                                                                                                          lT
+the predicted class for the given data sample. With samples                               T = ⟨σZ ⟩T + ,                        (11)
+                                                                                                           2
+and is used to determine if a calculated sample confidence               1) Datasets: We use the MNIST [3] and FashionMNIST
+metric C is rejected or accepted.                                     (FMNIST) [29] datasets to evaluate our approach. Each dataset
+                                                                      contains 60,000 training images and 10,000 testing images
+D. QAE++: Putting It All Together                                     of handwritten digits (MNIST) or fashion items (FMNIST),
+                                                                      where each image is grayscale of size 28 × 28. To align
+    The QAE, confidence metric, and VQC are combined                  with amplitude embedding, we resize each image to 32 × 32
+together into the full defense framework QAE++. Algorithm 1           to fit along 10 qubits without requiring manual padding or
+outlines the major steps in our proposed framework (QAE++)            truncating. Each image contains one item out of 10 possible
+shown in Figure 6. QAE++ takes in as input a data sample to           items, making up the class labels.
+predict. This data sample can either be a clean image or an
+                                                                         To calculate the threshold confidence metric T , it must
+adversarial sample, which the defense framework has no prior
+                                                                      be independent of seen data in either training or testing. To
+knowledge on which one it is. In addition, the threshold T
+                                                                      achieve this, we split each dataset’s testing images into 2,000
+for the confidence metric is obtained on clean samples from
+                                                                      images for validation and 8,000 images for testing. The 2,000
+a validation dataset.
+                                                                      validation images are used to gather the individual thresholds
+    With the inputs, first the QAE++ algorithm processes the          for the encoding fidelities and the logit difference, as described
+given input data sample x through the QAE. The QAE                    in Section III-C. The 8,000 testing images are thus used to test
+reconstructs this given sample as x̂, attempting to extract           any defense and model.
+known features from the training dataset from the input sample           2) Variational Quantum Classifiers: All VQCs are imple-
+x effectively. This process also produces the encoder fidelity        mented in PennyLane using amplitude embedding and strongly
+⟨σZ ⟩x . Once the reconstruction x̂ is obtained, it is given to the   entangling layers. These models were trained with batch size
+VQC for classification, resulting in the logits z. The difference     256 and Adam [30] with a learning rate of 0.005 for 20 epochs.
+lx̂ between the two largest logits in z with the encoder fidelity     The test accuracy for the trained models is in Table I under
+⟨σZ ⟩x is used to calculate the confidence metric for the given       no attack and no defense for each dataset. For example, the
+sample, C (Equation 8). This confidence metric is compared            MNIST VQC-100 model has a test accuracy of 81.23% on
+against the given threshold T , resulting in either the predicted     the MNIST testing images. These VQCs are vulnerable to
+class label or a rejection as a potential adversarial sample.         the FGSM and PGD adversarial attacks and will incorrectly
+                                                                      predict class labels it previously was able to predict correctly.
+ Algorithm 1: QAE++                                                      3) State-of-the-Art Classical Autoencoders: CAEs are im-
+  Data: x: input data sample, either clean or adversarial,            plemented in PyTorch using convolutional layers with ReLU
+          T : confidence metric threshold                             activation function and a final linear layer, as used in the state-
+  Result: y: predicted class label or rejection                       of-the-art adversarial training defense approach [10]. These
+1 x̂, ⟨σZ ⟩x = QAE(x);                                                models were trained using batch size of 128 with Adam [30]
+2 z = VQC(x̂);                                                        with learning rate of 0.001 for 10 epochs. For fair comparison,
+3 lx̂ = z1 − z2 ;                                                     the CAEs were trained only on the clean samples of the
+                   l                                                  training dataset. This is in contrast to the exact approach
+4 C = ⟨σZ ⟩x + 2x̂ ;
+5 if C < T then                                                       in [10] where the CAEs are trained on the adversarial samples
+6      y = rejected;                                                  produced from FGSM and PGD attacks.
+7 else                                                                   4) Quantum Autoencoders: All QAEs are similarly imple-
+8      y = argmax(z);                                                 mented in PennyLane, with batch size 64, learning rate 0.1,
+9 end                                                                 and 10 epochs. We evaluate that each trained QAE on each
+                                                                      dataset can effectively extract features of the corresponding
+                                                                      dataset by evaluating the resulting VQC accuracy on recon-
+                                                                      structed images of the original dataset testing images. MNIST
+                      IV. E XPERIMENTS                                QAE performs equivalently to the original test accuracy, with
+   This section evaluates the effectiveness of our defense            81.26% accuracy compared to 81.23% without the QAE for
+framework against adversarial attacks. First, we outline the          VQC-100. FMNIST QAE is similar, with 64.44% accuracy
+experimental setup. Next, we present results from several             compared to the original accuracy of 65.59% for VQC-100.
+experiments to compare our framework with state-of-the-art            The other models for each dataset and the QAE performance
+defense approaches.                                                   are given in Table I. Figure 9 showcases an example of
+                                                                      the original MNIST images and the reconstruction from the
+                                                                      MNIST QAE on the accuracy of predictions from the MNIST
+A. Experimental Setup
+                                                                      VQC-100 model. The trained QAEs are used in QAE++.
+   We implement our defense framework with Python v3.13.5,
+PennyLane v0.44.0 [27], PyTorch 2.9.1 [28], and torchvision           B. Quantum Autoencoder Reconstructions
+0.24.1. PyTorch is used to optimize and train both the quantum          The effectiveness of both the CAEs and QAEs are evaluated
+and classical models used throughout the experiments.                 in the presence of adversarial samples. The testing images
+TABLE I: Individual accuracies on attack and attack power pairs per dataset, model, and defense mechanism. Best accuracies
+per attack pair, model, and dataset are in bold.
+                                       VQC-100                              VQC-200                            VQC-300
+ Dataset   Attack   ϵ
+                           None    CAE [10]   QAE     QAE++     None    CAE [10]   QAE     QAE++   None    CAE [10]   QAE     QAE++
+           None     0.00   81.23    81.47     81.26   81.26     84.03    83.79     84.14   84.14   85.46    85.31     85.84   85.84
+                    0.05   46.59    72.97     75.30   75.30     57.00    73.60     77.89   77.89   62.01    74.46     79.71   79.72
+                    0.10   18.18    61.99     66.72   66.55     28.76    60.44     69.84   69.66   32.98    58.03     70.91   70.84
+                    0.15    4.05    48.98     56.83   58.13     11.19    44.21     59.33   60.08   13.65    40.17     59.65   61.02
+           FGSM
+                    0.20    0.73    35.39     44.92   55.35      2.23    27.90     46.73   56.41    3.39    23.88     45.55   55.38
+ MNIST              0.25    0.11    23.75     31.05   66.91      0.46    16.93     32.77   64.41    0.55    13.50     29.55   63.21
+                    0.30    0.01    14.95     21.82   78.06      0.04    10.60     21.93   76.17    0.11     8.51     18.66   76.35
+                    0.05   46.09    73.00     75.29   75.29     56.56    73.56     77.92   77.95   61.69    74.36     79.76   79.77
+                    0.10   16.86    61.94     66.66   66.35     27.52    60.19     69.81   69.58   31.54    57.74     70.95   70.90
+                    0.15    2.67    48.20     57.43   57.76      7.98    43.09     59.48   59.61   10.96    38.05     59.58   60.48
+           PGD
+                    0.20    0.47    33.44     44.99   53.42      1.31    25.80     46.00   54.30    1.96    21.75     44.54   53.25
+                    0.25    0.03    21.43     31.64   64.53      0.10    15.06     31.50   62.46    0.31    11.86     28.82   61.58
+                    0.30    0.00    12.71     21.36   76.42      0.00     9.10     20.36   73.85   0.06     7.52      17.56   74.52
+           None     0.00   65.59    64.89     64.44   64.51     69.26    68.33     67.89   67.94   69.10    68.16     67.51   67.55
+                    0.05   42.16    59.50     53.97   54.65     46.56    60.89     57.34   57.67   48.61    57.24     56.61   56.93
+                    0.10   22.18    53.01     43.79   46.42     29.11    50.59     45.16   46.86   31.92    45.59     44.16   45.91
+                    0.15    6.34    45.11     32.24   39.06     13.00    39.73     32.24   36.21   16.60    33.48     30.54   34.86
+           FGSM
+                    0.20    0.47    36.38     19.31   31.87      3.43    26.86     19.54   27.14    5.30    21.40     17.08   25.22
+ FMNIST             0.25    0.00    26.46      8.92   29.48      0.36    15.65     9.75    21.81   0.57     11.46     6.84    19.62
+                    0.30    0.00    17.50      3.24   33.67      0.00     8.09     4.91    22.44   0.01      4.91     2.85    20.96
+                    0.05   42.19    59.59     53.96   54.57     46.54    60.82     57.34   57.71   48.65    57.21     56.66   56.97
+                    0.10   21.60    52.85     43.61   46.12     28.66    50.24     44.96   46.64   31.62    45.29     44.10   45.70
+                    0.15    5.33    43.69     31.26   37.94     11.72    37.61     31.21   35.34   15.00    31.69     29.55   34.02
+           PGD
+                    0.20    0.26    33.52     17.27   29.43      2.49    24.05     17.19   25.02    3.79    19.15     15.11   22.99
+                    0.25    0.00    21.50      6.88   27.71      0.10    12.06     7.34    20.10   0.11     8.94      5.20    16.86
+                    0.30    0.00    13.54      2.30   31.66      0.00     5.64     2.94    21.06   0.00     3.40      2.20    16.49
+
+
+
+
+Fig. 9: The MNIST VQC-100 model can still predict with
+about the same accuracy when the test images have been
+reconstructed via a QAE first. The resulting accuracy of
+original samples is 81.23%, while the accuracy on QAE
+reconstructions of the original samples is 81.26%.
+                                                                   Fig. 10: The MNIST images are perturbed with the FGSM
+                                                                   ϵ = 0.30, as shown in the top row. The VQC prediction on
+                                                                   these images are labeled above the images. Each image cannot
+of the dataset are adversarially perturbed with FGSM and           be predicted correctly. The bottom row showcases the QAE
+PGD at a specific attack power ϵ, ranging from ϵ = 0.05            reconstructions of the associated FGSM adversarial image.
+to ϵ = 0.30. We showcase specific examples of FGSM and             These reconstructions were able to make two of the images
+PGD on the MNIST testing images and how QAEs perform.              now predict correctly.
+Figure 10 displays sample images perturbed with FGSM
+ϵ = 0.30 attack. The QAE can defend against this adversarial
+attack, allowing the VQC to classify some adversarial samples      C. Rejections of Samples using Confidence Metric
+correctly whereas without a defense it was not capable of.
+Figure 11 shows this same success for the PGD ϵ = 0.10               The confidence metric per sample is gathered from a linear
+attack.                                                            combination of the encoding fidelity and the logit difference.
+                                                                   tion outcome, increases from 2 to 7,003. The majority of the
+                                                                   7,003 samples rejected at ϵ = 0.30 are incorrectly classified,
+                                                                   meaning the confidence metric is able to reject the most
+                                                                   harmful samples, additionally supported by only accepting 503
+                                                                   incorrectly classified samples. 494 correctly classified samples
+                                                                   are able to be accepted by the confidence metric, meaning
+                                                                   that the QAE produced a high fidelity reconstruction that
+                                                                   purified the adversarial noise for the VQC to classify the image
+                                                                   correctly with a large logit difference. The resulting defense
+                                                                   accuracies from Table I showcase that the confidence metric
+                                                                   rejections and acceptances is able to improve the defense
+                                                                   accuracy from 21.82% with the QAE only to 78.06% with
+                                                                   QAE++.
+                                                                      FMNIST has a similar phenomenon, where FGSM ϵ = 0.30
+Fig. 11: With the PGD adversarial perturbations, the QAE           rejected 2,462 incorrect samples and accepted 232 correct
+can reconstruct the images and remove some of the adversarial      samples. While many incorrect samples were accepted, the
+noise, allowing the model to correctly predict two images now      number of correct samples that were rejected was much
+than none prior without any defense.                               smaller compared to MNIST, with only 27 correct samples
+                                                                   being rejected. This shows that depending on the dataset and
+                                                                   the models, the confidence metrics will result in different
+                                                                   tradeoffs between rejection and acceptance strength, which can
+To evaluate the effectiveness of the confidence metric and
+                                                                   be configured by the user on a per dataset and model basis
+the threshold, we run the adversarial attacks individually on
+                                                                   for best suited performance given the application usage. This
+the entire testing image dataset to see how the confidence
+                                                                   rejection is still able to improve the accuracy of QAE from
+metric evolves under changing attack power for rejecting and
+                                                                   3.24% to 33.67%, as shown in Table I.
+accepting samples. Table II displays the number of samples
+per possible outcome for VQC-100 for both MNIST and
+FMNIST, depending on if the classifier predicted the correct       TABLE II: Number of rejected or accepted samples by QAE++
+class label and if the confidence metric was accepted or           per classification correctness for varying attack and attack
+rejected. The threshold T is calculated from the results of        power pairs with MNIST and FMNIST VQC-100.
+clean samples from the validation set. The δ (Equation 9) and
+                                                                                                Corr.    Incorr.   Incorr.   Corr.
+γ (Equation 10) values used to further threshold the threshold        Dataset   Attack    ϵ
+                                                                                                Accept   Reject    Accept    Reject
+encoding fidelity and threshold logit difference are taken as
+                                                                                None     0.00   6501       0        1499       0
+0.05 and 0.01 respectively for a tradeoff between rejecting
+incorrectly and correctly classified samples, as the goal is                             0.05   6023         1      1975        1
+                                                                                         0.10   5270        54      2608       68
+to maximize rejecting incorrect classifications and minimize                             0.15   4204       446      3008      342
+                                                                                FGSM
+correct ones.                                                                            0.20   2449      1979      2427     1145
+                                                                                         0.25   1108      4245      1271     1376
+   As the attack power ϵ increases, the number of rejected            MNIST
+                                                                                         0.30    494      5751       503     1252
+samples also increases, with the number of correctly predicted
+                                                                                         0.05   6022         1      1976        1
+samples decreasing. This is due to the QAE producing lower                               0.10   5263        45      2622       70
+quality reconstructions as the attack power grows, making it                             0.15   4214       407      2999      380
+                                                                                 PGD
+harder for the VQC to predict the class and thus decreasing the                          0.20   2482      1792      2609     1117
+                                                                                         0.25   1069      4093      1376     1462
+logit difference. For example with MNIST, the clean images                               0.30    429      5685       606     1280
+averaged an encoder fidelity of 0.9754 and logit difference
+                                                                                None     0.00   5153       8        2837       2
+0.1977, while for FGSM at ϵ = 0.30, the encoder fidelity
+                                                                                         0.05   4315        57      3625       3
+average dropped to 0.7781 and logit difference to 0.0513. With                           0.10   3499       215      4282       4
+the threshold T a linear combination of the encoder fidelity                             0.15   2566       559      4862      13
+                                                                                FGSM
+and the logit difference, as these metrics decrease while the                            0.20   1533      1017      5438      12
+                                                                                         0.25    699      1659      5627      15
+attack power increases, more samples are rejected as potential       FMNIST
+                                                                                         0.30    232      2462      5279      27
+adversarial samples. Additionally, the threshold emphasizes
+                                                                                         0.05   4313        53      3630       4
+accepting adversarial samples if the VQC is confident in                                 0.10   3486       204      4307       3
+its class prediction, and given its training and the QAE                                 0.15   2496       539      4960       5
+                                                                                 PGD
+reconstruction, is indicative that its prediction will be of the                         0.20   1374       980      5638       8
+                                                                                         0.25    533      1684      5766      17
+correct class.                                                                           0.30    159      2374      5442      25
+   This trend is observed from FGSM ϵ = 0.05 to ϵ = 0.30,
+where the number of rejected samples, regardless of classifica-
+                                    FGSM and PGD Attacks on MNIST VQC-100                                                    FGSM and PGD Attacks on MNIST VQC-200                                                    FGSM and PGD Attacks on MNIST VQC-300
+                80                                                                                       80                                                                                       80
+                70                                                                                       70                                                                                       70
+
+                60                                                                                       60                                                                                       60
+
+                50                                                                                       50                                                                                       50
+ Accuracy (%)
+
+
+
+
+                                                                                          Accuracy (%)
+
+
+
+
+                                                                                                                                                                                   Accuracy (%)
+                40                                                                                       40                                                                                       40
+
+                30                                                                                       30                                                                                       30
+                            FGSM None                                                                                FGSM None                                                                                FGSM None
+                            FGSM CAE                                                                                 FGSM CAE                                                                                 FGSM CAE
+                20          FGSM QAE                                                                     20          FGSM QAE                                                                     20          FGSM QAE
+                            FGSM QAE++                                                                               FGSM QAE++                                                                               FGSM QAE++
+                10          PGD None                                                                     10          PGD None                                                                     10          PGD None
+                            PGD CAE                                                                                  PGD CAE                                                                                  PGD CAE
+                            PGD QAE                                                                                  PGD QAE                                                                                  PGD QAE
+                0           PGD QAE++                                                                    0           PGD QAE++                                                                    0           PGD QAE++
+                     0.05          0.10        0.15            0.20   0.25         0.30                       0.05          0.10        0.15            0.20   0.25         0.30                       0.05          0.10        0.15            0.20   0.25         0.30
+                                                Attack Strength ( )                                                                      Attack Strength ( )                                                                      Attack Strength ( )
+
+                                                  (a)                                                                                      (b)                                                                                      (c)
+                                   FGSM and PGD Attacks on FMNIST VQC-100                                                   FGSM and PGD Attacks on FMNIST VQC-200                                                   FGSM and PGD Attacks on FMNIST VQC-300
+                                                                                                                                                                                                  60
+                60                                                           FGSM None                   60                                                           FGSM None                                                                                FGSM None
+                                                                             FGSM CAE                                                                                 FGSM CAE                                                                                 FGSM CAE
+                                                                             FGSM QAE                                                                                 FGSM QAE                                                                                 FGSM QAE
+                                                                             FGSM QAE++                                                                               FGSM QAE++                  50                                                           FGSM QAE++
+                50                                                           PGD None                    50                                                           PGD None                                                                                 PGD None
+                                                                             PGD CAE                                                                                  PGD CAE                                                                                  PGD CAE
+                                                                             PGD QAE                                                                                  PGD QAE                     40                                                           PGD QAE
+                40                                                           PGD QAE++                   40                                                           PGD QAE++                                                                                PGD QAE++
+ Accuracy (%)
+
+
+
+
+                                                                                          Accuracy (%)
+
+
+
+
+                                                                                                                                                                                   Accuracy (%)
+                30                                                                                                                                                                                30
+                                                                                                         30
+
+                20                                                                                       20                                                                                       20
+
+
+                10                                                                                       10                                                                                       10
+
+
+                0                                                                                        0                                                                                        0
+                     0.05          0.10        0.15            0.20   0.25         0.30                       0.05          0.10        0.15            0.20   0.25         0.30                       0.05          0.10        0.15            0.20   0.25         0.30
+                                                Attack Strength ( )                                                                      Attack Strength ( )                                                                      Attack Strength ( )
+
+                                                  (d)                                                                                      (e)                                                                                       (f)
+Fig. 12: Accuracy results across various models and datasets for the FGSM and PGD attacks. Each attack is defended with
+no defense, CAE [10], QAE, or QAE++. For MNIST, across all VQCs, QAE++ is able to correctly predict and reject samples
+with the best accuracy. For FMNIST, as the attack power grows, QAE++ produces the best accuracy. (a) MNIST, VQC-100;
+(b) MNIST, VQC-200; (c) MNIST, VQC-300; (d) FMNIST, VQC-100; (e) FMNIST, VQC-200; and (f) FMNIST, VQC-300.
+
+
+D. Performance of QAE++ with Adversarial Samples                                                                                                  Both the QAE and CAE defenses are able to retain decent
+                                                                                                                                                  accuracy under adversarial attacks, maintaining a similar ac-
+   Each attack power for each adversarial attack is tested with                                                                                   curacy up to ϵ = 0.10. However, at ϵ = 0.20, QAE++ is able
+the 8,000 testing images in each dataset. To evaluate the                                                                                         to use the confidence metric to reject an increasing number
+performance of QAE++ on correct rejections and predictions,                                                                                       of samples that the QAE and CAE struggle to reconstruct
+we utilize a final accuracy percentage. If a sample was                                                                                           cleanly and the VQC predicts incorrectly. With FGSM of
+accepted, it is counted as correct if the prediction of the VQC                                                                                   ϵ = 0.30, QAE++ can achieve 78.06% accuracy by being able
+is of the correct class. If a sample was instead rejected, it                                                                                     to reject incorrect samples and accept correct ones as shown
+is counted as correct if the prediction of the VQC is the                                                                                         previously in Section IV-C and Table II. In contrast, CAE and
+incorrect class. Thus, we consider the scenarios where QAE++                                                                                      QAE are not able to reconstruct the adversarial sample cleanly
+accepted an incorrect prediction or rejected a correct prediction                                                                                 enough for the VQC to correctly identify the true class label,
+as incorrect outcomes. This can additionally be tailored given                                                                                    suffering from accuracies of 14.95% and 21.82% respectively.
+how strict the user wants the rejection to be, as for some                                                                                        For increasing attack powers, QAE++ outperforms all other
+applications, rejection of an adversarial sample regardless of                                                                                    defense approaches, up to 68% better.
+the VQC prediction may be best suited.                                                                                                               This also shows that the QAE reconstructions are thus
+   Figure 12 showcases each of the defense mechanisms for                                                                                         able to extract more meaningful features of the original clean
+each attack pair on both the MNIST and FMNIST datasets for                                                                                        images out from the adversarial sample compared to CAEs.
+VQCs with 100, 200, and 300 layers. The original accuracies                                                                                       The VQC models can use these clearer features to predict the
+without any adversarial attacks are also included to establish a                                                                                  correct label with a higher accuracy. While the QAE does not
+baseline (ϵ = 0.00). These accuracies are also summarized in                                                                                      always outperform the CAE, such as for FMNIST, it is often
+Table I. Across both datasets and models, as the attack power                                                                                     more stable, maintaining similar resulting accuracies across
+increases, QAE++ outperforms all other defense mechanisms.                                                                                        different number of model layers. The reconstruction from the
+   With the MNIST VQC-100 results in Figure 12a, as the                                                                                           QAE is able to be put into a state such that information is not
+attack power grows for the FGSM attack, the accuracy of the                                                                                       lost as the layers increase, which the CAE struggles with as the
+VQC-100 model without any defense quickly becomes 0%.                                                                                             layers increase, resulting in a large drop in accuracy of 11.63%
+versus 1.70% for FMNIST FGSM ϵ = 0.15 from VQC-100                   TABLE III: Accuracy results from mixed clean and adversarial
+to VQC-300. The decreased accuracy from QAE can also                 samples of the 8,000 testing images across no defense, CAE,
+have QAE++ perform worse compared to CAE under smaller               QAE, and QAE++. Bold values are the best accuracy for the
+attack powers for smaller models, as the calculated confidence       dataset and model.
+metrics for these samples were not able to be sufficiently                                                        Accuracies
+rejected in a balanced manner. An alternative configuration             Dataset       Model
+                                                                                                  None      CAE [10]       QAE       QAE++
+to reject more incorrect samples may improve accuracy, at the
+cost of rejecting more correct classifications.                                     VQC-100      17.29%       45.62%      51.95%     65.60%
+                                                                        MNIST       VQC-200      21.64%       42.40%      53.69%     65.57%
+   Another benefit to using the QAE and QAE++ defense                               VQC-300      24.44%       40.05%      53.02%     67.20%
+approaches is the massive decrease in the required parameters                       VQC-100      17.11%      41.25%       29.80%     41.23%
+of the model compared to the CAE. The QAE model requires                FMNIST      VQC-200      20.55%      36.34%       31.66%     38.75%
+only 120 parameters to be optimized and stored to produce                           VQC-300      21.60%      31.56%       30.09%     37.21%
+higher quality reconstructions. On the other hand, the CAE
+model requires about 760x more parameters, with 91,424 total
+to optimize and store. This is a promising approach in being         the QAE performed at reconstructing the sample from its
+able to defend VQC models without adversarial training in            training with the encoder fidelity and the logit difference
+less parameters compared to classical model defenses, which          results in QAE++ being able to reject adversarial samples.
+can potentially free up computational resources for additional          Even though the CAE reconstructions are better quality in
+defense measures.                                                    terms of classification compared to the QAE with 36.34%
+                                                                     accuracy versus 31.66% respectively for VQC-200, being able
+E. QAE++ with Mixed Samples                                          to identify poor reconstructions via the confidence metric
+   The effectiveness of the defense mechanisms are also evalu-       boosts the accuracy to 38.75%, beyond what the CAE by
+ated on the testing images being split into clean and adversarial    itself can achieve. Despite CAE performing the best for VQC-
+samples, instead of all images being the same type. We split         100, it is only better by 0.02%. QAE++ is able to reject
+the training dataset evenly into clean images and adversarial        incorrect samples and accept correct samples, building off
+attacks of varying power. For the 8,000 testing images, they         QAE’s reconstruction ability. Thus, the increase from QAE
+are randomly split into clean image, images perturbed with           to QAE++ from 29.80% to 41.23% indicates that even under
+an FGSM attack, and images perturbed with a PGD attack.              poor QAE performance, QAE++ is able to improve the overall
+Within each attack, they are split into the different attack         accuracy, and as QAE performs better with more VQC layers,
+powers. We split as evenly as possible, which results in 800         the accuracy of QAE++ also performs better compared to
+clean images and 600 images for each attack and attack power.        CAE, as evidenced with VQC-200 and VQC-300.
+These images are given to each defense to perform their exact
+defense mechanism against.                                                                      V. C ONCLUSION
+   Table III shows the accuracies obtained from running no              In this paper, we propose a defense framework QAE++,
+defense, CAE, QAE, and QAE++ with the confidence metric              against adversarial attacks on variational quantum classifiers.
+and the QAE reconstruction. The confidence metric has its            QAE++ provides an adversarial training-free approach, where
+biggest advantage over both CAE and QAE as the attack                the defense must successfully defend against adversarial at-
+power increases, primarily with ϵ = 0.30 for both FGSM               tacks without prior exposure to adversarial samples. Our
+and PGD. For example with MNIST VQC-100 and FGSM                     QAE++ framework utilizes quantum autoencoder that is able
+ϵ = 0.30 and its associated split of 600 images, QAE results         to purify adversarial samples and provide an encoder fidelity.
+in 152 images being classified correctly. With the confidence        This encoder fidelity is used in addition to the classifier’s
+metric, 417 images can be correctly rejected as adversarial          confidence in predicting the final class in the form of the logit
+and 43 accepted and predicted correctly from the resulting           difference to establish a confidence metric to identify potential
+reconstructions, leading to a boost in accuracy. This is reflected   adversarial samples. Through the confidence metric, samples
+in the total difference of 51.95% for QAE and 65.60% for             can be rejected with incorrect classification or accepted with
+QAE++.                                                               correct classification with high accuracy compared to state-
+   FMNIST behaves similarly, where QAE++ performs the                of-the-art approaches, achieving up to 68% better accuracy
+best out of all defenses for VQC-200 and VQC-300, while              against adversarial attacks compared to state-of-the-art ap-
+being 0.02% worse than CAE for VQC-100. The confidence               proaches using classical autoencoders.
+metric elevates the resulting accuracy by allowing reconstruc-
+tions from the QAE that can cause incorrect predictions to be                                     R EFERENCES
+rejected from classification successfully. This is apparent with      [1] S. Qiu, Q. Liu, S. Zhou, and C. Wu, “Review of Artificial Intelligence
+the difference in accuracies, especially as the layers increase,          Adversarial Attack and Defense Technologies,” Applied Sciences, vol. 9,
+going from 30.09% with QAE to 37.21% with QAE++ for                       no. 5, Mar. 2019.
+                                                                      [2] K. Ren, T. Zheng, Z. Qin, and X. Liu, “Adversarial Attacks and Defenses
+VQC-300. Except for VQC-100, QAE++ outperforms CAE,                       in Deep Learning,” Engineering, vol. 6, no. 3, pp. 346–360, Mar. 2020.
+despite CAE outperforming QAE. Easily knowing how well                [3] Y. LeCun, “The MNIST database of handwritten digits,” 1998.
+ [4] M. Schuld, I. Sinayskiy, and F. Petruccione, “An introduction to quantum   [18] J. Berberich, D. Fink, D. Pranjić, C. Tutschku, and C. Holm, “Training
+     machine learning,” Contemporary Physics, vol. 56, no. 2, pp. 172–185,           robust and generalizable quantum models,” Physical Review Research,
+     Apr. 2015.                                                                      vol. 6, no. 4, p. 043326, Dec. 2024.
+ [5] P. Lamichhane and D. B. Rawat, “Quantum Machine Learning: Recent           [19] U. Hwang, J. Park, H. Jang, S. Yoon, and N. I. Cho, “PuVAE: A
+     Advances, Challenges, and Perspectives,” IEEE Access, vol. 13, pp.              Variational Autoencoder to Purify Adversarial Examples,” IEEE Access,
+     94 057–94 105, 2025.                                                            vol. 7, pp. 126 582–126 593, 2019.
+ [6] M. T. West, S. M. Erfani, C. Leckie, M. Sevior, L. C. L. Hollenberg,       [20] P. Samangouei, M. Kabkab, and R. Chellappa, “Defense-GAN: Protect-
+     and M. Usman, “Benchmarking adversarially robust quantum machine                ing Classifiers Against Adversarial Attacks Using Generative Models,”
+     learning at scale,” Physical Review Research, vol. 5, no. 2, p. 023186,         arXiv:1805.06605, May 2018.
+     Jun. 2023.                                                                 [21] W. Nie, B. Guo, Y. Huang, C. Xiao, A. Vahdat, and A. Anandkumar,
+ [7] M. Wendlinger, K. Tscharke, and P. Debus, “A Comparative Analysis of            “Diffusion Models for Adversarial Purification,” in Proceedings of the
+     Adversarial Robustness for Quantum and Classical Machine Learning               39th International Conference on Machine Learning. PMLR, Jun. 2022,
+     Models,” in 2024 IEEE International Conference on Quantum Comput-               pp. 16 805–16 827.
+     ing and Engineering (QCE), vol. 01, Sep. 2024, pp. 1447–1457.              [22] F. Tramer, N. Carlini, W. Brendel, and A. Madry, “On Adaptive Attacks
+ [8] I. J. Goodfellow, J. Shlens, and C. Szegedy, “Explaining and Harnessing         to Adversarial Example Defenses,” in Advances in Neural Information
+     Adversarial Examples,” arXiv:1412.6572, Mar. 2015.                              Processing Systems, vol. 33. Curran Associates, Inc., 2020, pp. 1633–
+ [9] A. Madry, A. Makelov, L. Schmidt, D. Tsipras, and A. Vladu,                     1645.
+     “Towards Deep Learning Models Resistant to Adversarial Attacks,”
+                                                                                [23] F. Croce and M. Hein, “Reliable evaluation of adversarial robustness
+     arXiv:1706.06083, Sep. 2019.
+                                                                                     with an ensemble of diverse parameter-free attacks,” in Proceedings of
+[10] A. Khatun and M. Usman, “Classical autoencoder distillation of quantum
+                                                                                     the 37th International Conference on Machine Learning. PMLR, Nov.
+     adversarial manipulations,” Physical Review Research, vol. 7, no. 4, p.
+                                                                                     2020, pp. 2206–2216.
+     L042054, Dec. 2025.
+                                                                                [24] M. Schuld, A. Bocharov, K. M. Svore, and N. Wiebe, “Circuit-centric
+[11] J. Romero, J. P. Olson, and A. Aspuru-Guzik, “Quantum autoencoders
+                                                                                     quantum classifiers,” Physical Review A, vol. 101, no. 3, p. 032308, Mar.
+     for efficient compression of quantum data,” Quantum Science and
+                                                                                     2020.
+     Technology, vol. 2, no. 4, p. 045001, Aug. 2017.
+[12] J. Biamonte, P. Wittek, N. Pancotti, P. Rebentrost, N. Wiebe, and          [25] M. Schuld and F. Petruccione, Supervised Learning with Quantum Com-
+     S. Lloyd, “Quantum machine learning,” Nature, vol. 549, no. 7671, pp.           puters, ser. Quantum Science and Technology. Springer International
+     195–202, Sep. 2017.                                                             Publishing, 2018.
+[13] G. E. Hinton and R. R. Salakhutdinov, “Reducing the Dimensionality of      [26] H. Buhrman, R. Cleve, J. Watrous, and R. de Wolf, “Quantum Fin-
+     Data with Neural Networks,” Science, vol. 313, no. 5786, pp. 504–507,           gerprinting,” Physical Review Letters, vol. 87, no. 16, p. 167902, Sep.
+     Jul. 2006.                                                                      2001.
+[14] Y. Du, M.-H. Hsieh, T. Liu, D. Tao, and N. Liu, “Quantum noise protects    [27] V. Bergholm et al., “PennyLane: Automatic differentiation of hybrid
+     quantum classifiers against adversaries,” Physical Review Research,             quantum-classical computations,” arXiv:1811.04968, Jul. 2022.
+     vol. 3, no. 2, p. 023153, May 2021.                                        [28] J. Ansel et al., “PyTorch 2: Faster Machine Learning Through Dynamic
+[15] C. Huang and S. Zhang, “Enhancing adversarial robustness of quantum             Python Bytecode Transformation and Graph Compilation,” in Proceed-
+     neural networks by adding noise layers,” New Journal of Physics,                ings of the 29th ACM International Conference on Architectural Support
+     vol. 25, no. 8, p. 083019, Aug. 2023.                                           for Programming Languages and Operating Systems, Volume 2, ser.
+[16] S. Lu, L.-M. Duan, and D.-L. Deng, “Quantum adversarial machine                 ASPLOS ’24, vol. 2. New York, NY, USA: Association for Computing
+     learning,” Physical Review Research, vol. 2, no. 3, p. 033212, Aug.             Machinery, Apr. 2024, pp. 929–947.
+     2020.                                                                      [29] H. Xiao, K. Rasul, and R. Vollgraf, “Fashion-MNIST: A Novel
+[17] M. T. West, S.-L. Tsang, J. S. Low, C. D. Hill, C. Leckie, L. C. L.             Image Dataset for Benchmarking Machine Learning Algorithms,”
+     Hollenberg, S. M. Erfani, and M. Usman, “Towards quantum enhanced               arXiv:1708.07747, Sep. 2017.
+     adversarial robustness in machine learning,” Nature Machine Intelli-       [30] D. P. Kingma and J. Ba, “Adam: A Method for Stochastic Optimization,”
+     gence, vol. 5, no. 6, pp. 581–589, Jun. 2023.                                   arXiv:1412.6980, Dec. 2014.
+

@@ -129,4 +129,8 @@
   - [2604.28139v1] Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows
   - [2604.28138v1] Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes
   - [2604.28180v1] An adaptive wavelet-based PINN for problems with localized high-magnitude source
-  - [2604.28176v1] Defending Quantum Classifiers against Adversarial Perturbations through Quantum 
+  - [2604.28176v1] Defending Quantum Classifiers against Adversarial Perturbations through Quantum
+## [2026-05-02] update | mandatory PDF+LM deep analysis
+- 对当前待解读论文执行 PDF 文本提取与 LM 深度解读，移除公开页面中的“深度解读状态/待 PDF 下载”提示。
+- 论文页发布标准更新为 `status: analyzed` / `confidence: high`，并包含核心贡献、方法概述、实验结果、局限性与注意点、相关概念。
+- 每日 arXiv 流程更新为：脚本先下载 PDF 和准备页面，cron 完成 PDF+LM 深度解读后再同步 GitHub Pages。

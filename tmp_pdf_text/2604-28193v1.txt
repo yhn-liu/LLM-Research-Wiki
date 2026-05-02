@@ -1,0 +1,645 @@
+                                              Generalizable Sparse-View 3D Reconstruction from Unconstrained Images
+
+                                                Vinayak Gupta1                  Chih-Hao Lin2                         Shenlong Wang2           Anand Bhattad3             Jia-Bin Huang1
+                                                    1                                                           2                                             3
+                                                        University of Maryland, College Park                        University of Illinois Urbana-Champaign       Johns Hopkins University
+
+                                                                               https://genwildsplat.github.io/
+                                               Sparse unposed images
+arXiv:2604.28193v1 [cs.CV] 30 Apr 2026
+
+
+
+
+                                                                                Different Viewpoint
+
+
+
+
+                                                            3 secs
+
+
+
+
+                                                  Appearance Controllable
+                                                  3D Scene Reconstruction                                                           Varying Illumination
+
+
+
+
+                                                 2 views                                              3 views               4 views                    5 views                     6 views
+
+
+
+
+                                         Figure 1. GenWildSplat reconstructs 3D scenes from sparse, unposed images with varying illumination and transient objects in a single
+                                         3-second feed-forward pass, and no per-scene optimization is required. Given 2–6 input views, our method predicts novel views under
+                                         target lighting conditions while handling occlusions. Top: Novel-view synthesis under different lighting from the same sparse inputs,
+                                         demonstrating appearance control. Bottom: Reconstruction quality across varying input sparsity (2–6 views), showing view-consistent
+                                         rendering even with minimal observations. In each block, the top-left image (inset) is an input view; the remaining images are novel-view
+                                         predictions under novel lighting. All scenes are unseen during training, demonstrating strong generalization to real-world environments.
+
+                                                                            Abstract                                                GenWildSplat predicts depth, camera parameters, and 3D
+                                                                                                                                    Gaussians in a canonical space using learned geomet-
+                                         Reconstructing 3D scenes from sparse, unposed images re-                                   ric priors. An appearance adapter modulates appearance
+                                         mains challenging under real-world conditions with vary-                                   for target lighting conditions, while semantic segmentation
+                                         ing illumination and transient occlusions. Existing meth-                                  handles transient objects. Through curriculum learning on
+                                         ods rely on scene-specific optimization using appearance                                   synthetic and real data, GenWildSplat generalizes across
+                                         embeddings or dynamic masks, which requires extensive                                      diverse illumination and occlusion patterns. Evaluations
+                                         per-scene training and fails under sparse views. Moreover,                                 on PhotoTourism and MegaScenes benchmark demonstrate
+                                         evaluations on limited scenes raise questions about gener-                                 state-of-the-art feed-forward rendering quality, achieving
+                                         alization. We present GenWildSplat, a feed-forward frame-                                  real-time inference without test-time optimization.
+                                         work for sparse-view outdoor reconstruction that requires
+                                         no per-scene optimization. Given unposed internet images,
+1. Introduction                                                  Table 1. Comparison of key characteristics across existing meth-
+                                                                 ods and our approach. Unlike optimization-based or feed-forward
+Reconstructing 3D scenes from 2D images is crucial for ap-       baselines, our method is fast, capable of sparse views, view-
+plications such as AR/VR and navigation [26, 57]. Extend-        consistent, and generalizes to novel lighting conditions.
+ing these techniques to in-the-wild imagery remains chal-
+lenging due to three factors: (1) Internet photos show wide       Method                            In-the-Wild      Fast    View-Consis         Few-Views
+
+lighting variations across time and seasons, (2) handheld         Optimization-Based [16, 36]             ✓           ✗              ✓                ✗
+                                                                  Feed-Forward Based [11]                 ✗           ✓              ✗                ✓
+captures contain transient occluders like tourists or vehicles    Ours                                    ✓           ✓              ✓                ✓
+that must be excluded, and (3) real-world scenes often pro-
+vide sparse viewpoints, unlike curated multi-view datasets.
+Effective reconstruction requires disentangling static scene
+content from dynamic lighting and transient objects. Prior
+NeRF [4, 32, 35] and Gaussian Splatting [8, 14, 16, 44,            Ground truth train view            Render train view                  Render test view
+                                                                                             (a) Poor generalization to test views
+45, 49] methods rely on per-scene optimization and dense
+views, while sparse-view in-the-wild approaches are time-
+intensive. Feed-forward models [11, 40, 48] enable real-
+time reconstruction but are limited to fixed lighting and fail          Input          Poses from COLMAP          Poses from VGGT            Ground Truth
+under dynamic conditions. In Tab. 1, we show the key char-                              (b) Prior methods fail on sparse-views
+
+acteristic differences between the previous methods. While
+these methods perform well on benchmarks like Photo-
+Tourism [34], they fail on more challenging datasets such
+                                                                    Ground Truth                Render              Ground Truth                 Render
+as MegaScenes [38] (Fig. 2), which feature sparse views,                              (c) Fails under unseen or extreme lighting
+diverse lighting, and heavy occlusions.
+                                                                 Figure 2. Limitations of Prior Work. Prior methods [16, 36]
+    To address these limitations, we introduce GenWild-
+                                                                 fail under sparse-view conditions. (a) Overfitting: Scene-specific
+Splat, a generalizable model for fast feed-forward 3D scene      optimization produces artifacts and geometric spikes with small
+reconstruction from sparse in-the-wild scenes without re-        camera perturbations. (b) Camera dependency: Methods rely on
+quiring per-scene optimization. To our knowledge, this           COLMAP for pose estimation, which fails under sparsity. Even
+is the first approach to integrate both appearance and oc-       with higher-quality transformer-based poses (e.g., VGGT), recon-
+clusion modeling within a feed-forward 3D reconstruction         structions exhibit severe artifacts and blurring. (c) Limited ap-
+paradigm. The key insight is that combining large-scale          pearance adaptation: Test-time optimization cannot adapt to
+synthetic and real-world data enables the model to learn         novel lighting, causing color bleeding and geometric distortions
+robust associations across diverse illumination conditions.      when target illumination differs from training conditions.
+Our framework uses VGGT’s transformer to process sparse,
+unposed multi-view images into rich feature maps, which          lighting conditions. However, the absence of such multi-
+specialized heads decode into depth, camera parameters,          view, multi-lighting datasets makes direct supervised learn-
+and per-pixel Gaussians. The resulting set of attributes         ing infeasible.
+defines a canonical representation that captures a unified           We train GenWildSplat without paired multi-view multi-
+scene geometry disentangled from illumination. However,          illumination data, using unordered image collections. Each
+directly decoding these canonical Gaussians into a novel         input image is mapped to a compact light code, and the ap-
+view via a differentiable rasterizer leads to multi-view in-     pearance adapter conditions on this code and the canoni-
+consistencies.                                                   cal Gaussian colors to generate transformed colors, which
+    To effectively map the canonical space to a desired tar-     are supervised via image reconstruction. Direct training on
+get lighting, we introduce an appearance adapter that con-       large-scale real-world data is unstable, as jointly learning
+ditions on the target lighting and transforms the canonical      geometry and illumination from sparse views is a highly
+Gaussian colors to the corresponding target lighting space.      ill-posed problem. To avoid collapse, we adopt a curricu-
+We parameterize lighting information using a light code es-      lum: first, learn appearance on synthetic data; and finally,
+timated by a light encoder, which represents it in a com-        add synthetic occlusions. This staged strategy enables sta-
+pact latent space. To handle transient objects, we leverage      ble optimization and strong generalization.
+a pre-trained segmentation network that identifies dynamic           To evaluate generalization on unseen scenes, we bench-
+elements, such as people or cars. It produces explicit occlu-    mark GenWildSplat on both the Phototourism and the more
+sion masks that guide our model to ignore transient regions      challenging MegaScenes datasets. Our method consistently
+during supervision, ensuring a clean and stable 3D scene.        outperforms existing approaches [16, 36, 54] in reconstruct-
+Ideally, one would train the model using multi-view images       ing accurate scene geometry, modeling appearance under
+under varying illumination to render novel views under new       varying illumination, and effectively handling occlusions.
+                                                                                                 Light                       Light Code
+
+                                                                                                Encoder                                                                Light Transformed                     Renderings
+                                                                                                  (Sec 3.3)                     L1 L2 L3
+                                                                                                                                                  Appearance             3D Gaussians
+                                                                                                                                                   Adapter
+                                                                                                                                                           (Sec 3.3)
+                                                                                                                                                      L1
+                                                                                                                                                                                           Differentiable
+                                                Depth                                                                                                                                       Rasterizer
+                                                Head                                                     Unproject
+                                                                                                          to 3D                                       ci
+                                                                                                                                                           MLP
+                                                                 Depth maps
+
+                            Geometry           Camera
+                                                                                                                                                      L2
+                                                                                                                                                                                           Differentiable
+                           Transformer          Head                                                                                                                                        Rasterizer
+                              (Sec 3.2)                          Camera extrinsics                                                                    ci
+                                                                                                                                                           MLP
+                                                                     & intrinsics                      3D Points x
+                                                                                                                                Canonical
+                                                                                                                &              3D Gaussians
+                                               Gaussian                                                   Map features
+                                                                                                          to each point
+                                                                                                                                                      L3
+                                                                                                                                                                                           Differentiable
+  Sparse Input Images                           Head                                                                                                                                        Rasterizer
+                                                                                                                                                      ci   MLP
+                                                              per-pixel gaussian parameters
+                                                   (scale si , rotation ri , opacity oi , color ci )
+                        Segmentation Network                                                                                                                                                                  Masked
+                                (Sec 3.4)                                                                                                                                                                   Supervision
+
+
+                                                                                                                          Predicted Occlusion Masks                                                           (Eq. 5)
+
+
+
+Figure 3. Overview of GenWildSplat. Given sparse, unposed images {Ii }Vi=1 with appearance variations and transient objects, a geometry
+transformer extracts multi-view features Fi encoding semantic and geometric information. Specialized prediction heads process these
+features to output per-pixel depth Di , camera parameters (Ki , Ei ), and Gaussian attributes, which are unprojected into canonical 3D
+Gaussians Gc . A light encoder ELight extracts per-image lighting codes Li = ELight (Ii ). An MLP Flight modulates the canonical
+Gaussian colors using these codes: Gℓi = Flight (Gc , Li ). Each set of transformed Gaussians Gℓi is rasterized to reconstruct Iˆi . A pre-
+trained segmentation network provides occlusion masks Mi to identify transient objects. Masked reconstruction loss focuses supervision
+on static content, enabling photorealistic, view-consistent reconstruction from sparse in-the-wild imagery.
+
+
+Interestingly, GenWildSplat surpasses scene-specific meth-                                                           39–41, 51] extend this using transformer cascades for uni-
+ods [16, 36] that rely on per-image appearance optimiza-                                                             fied pose, trajectory, and geometry estimation, while latent
+tion and test-time fine-tuning, demonstrating the strength                                                           approaches [10] self-supervise pose and view prediction.
+of leveraging large-scale pre-trained priors for robust 3D                                                           Despite strong performance, these methods degrade under
+understanding. Overall, GenWildSplat represents a step                                                               lighting variation or dynamic distractors.
+toward generalizable 3D reconstruction, offering a feed-                                                             Novel View Synthesis in the Wild reconstructs 3D scenes
+forward, illumination- and occlusion-aware framework that                                                            from unconstrained photo collections, challenged by (i)
+scales to diverse, real-world environments for real-time 3D                                                          varying illumination and (ii) transient objects.
+scene understanding.                                                                                                    Varying Appearance is handled via per-view latent em-
+                                                                                                                     beddings [25, 52], CNN-conditioned features [44, 54],
+2. Related Works                                                                                                     hash-grid fields [8], or hierarchical light decoupling [36].
+                                                                                                                     Most require long test-time optimization (10+ hours).
+Optimization-based Novel View Synthesis (NVS) recon-                                                                 Diffusion-based strategies have also been explored to har-
+structs 3D scenes from 2D images for novel viewpoint                                                                 monize illumination across views [1] or to enable training-
+generation. Gaussian Splatting (3DGS) [15] represents                                                                free multi-view consistent editing [2].
+scenes with explicit 3D Gaussian primitives, enabling real-                                                             Occlusion Modeling addresses moving objects via robust
+time rasterization via a CUDA pipeline. Extensions im-                                                               regression [33], uncertainty features [16, 30], 2D occlusion
+prove depth and camera regularization for few-view set-                                                              masks [54], or per-image and per-Gaussian transient em-
+tings [29, 47, 53, 58], but per-scene optimization is still re-                                                      beddings [36]. These methods remain slow, require inten-
+quired, limiting fast, test-time use.                                                                                sive training, and result from a lack of 3D priors.
+Feed-forward Novel View Synthesis (NVS) predicts 3D                                                                  In contrast, our feed-forward approach directly processes
+Gaussians without scene-specific tuning, either assuming                                                             sparse unposed images under varying lighting and dynam-
+known poses (pose-aware) or estimating poses during in-                                                              ics, reconstructing 3D scenes with controllable appear-
+ference (pose-free).                                                                                                 ance and view-consistent rendering in 3 seconds, without
+   Pose-aware methods use calibrated poses and include:                                                              per-scene optimization.
+(1) direct 3D Gaussian predictors [3, 5, 6, 43, 48]; (2)
+transformer-based LRM decoders [9, 50, 55, 59]; and (3)                                                              3. Method
+latent feed-forward models [12]. These are fast but rely on
+accurate camera poses.                                                                                               3.1. Preliminary: AnySplat
+   Pose-free methods jointly estimate poses and novel                                                                Our method builds upon AnySplat [11], a feed-forward
+views, with DUSt3R [42] and MASt3R [17] predicting                                                                   framework that reconstructs 3D scenes as Gaussian prim-
+depth and fusing dense 3D. Subsequent works [24, 27, 37,                                                             itives from multiple input images in a single pass.
+           Single scene varying illumination                                                                                                                                                    + Multiple scenes                                                                                      + Synthetic occlusions
+
+
+
+       Curriculum Training Process
+
+Figure 4. Curriculum Learning. Training proceeds in three stages. Stage I: Single scene with illumination variation. In this stage, the
+model learns to disentangle lighting from geometry. Stage II: Multiple scenes: the model then learns geometric and appearance priors
+across diverse environments. Stage III: Synthetic occlusions: the network learns to handle transient objects and multi-view inconsistencies.
+Despite training only on synthetic data, the model generalizes to real-world appearance variations and occlusions.
+
+
+Architecture. AnySplat takes unposed images and pro-                                                                                                                                                                             appearance-independent Gaussian properties and canonical
+cesses them through a VGGT [40] transformer backbone                                                                                                                                                                             SH coefficients \protect \bm  {c} \in \mathbb {R}^{75} . An appearance adapter \psi _\theta  modu-
+to extract multi-view features. Three prediction heads then                                                                                                                                                                      lates the canonical colors for target appearance:
+output: (a) depth maps for each view, (b) camera poses and
+(c) 3D Gaussian properties including position, color, shape,                                                                                                                                                                                                                        \boldsymbol {c_{L_i}} = \psi _\theta (\boldsymbol {c}, \mathbf {L}_i),                    (1)
+and opacity. To reduce redundancy from per-pixel Gaus-
+                                                                                                                                                                                                                                 where \protect \mathbf  {L}_i \in \mathbb {R}^{d} is a learned appearance embedding.
+sian prediction, AnySplat voxelizes the scene, assigns con-
+                                                                                                                                                                                                                                 Training. Gaussians \protect \bm  {\mathcal {G}_l} are rasterized via diff. splatting:
+fidence scores, and merges overlapping Gaussians within
+each voxel to form a compact 3D representation.                                                                                                                                                                                                                             \hat {I}_j = \mathcal {R}(\boldsymbol {\mathcal {G}_l}, \boldsymbol {K}_j, \boldsymbol {E}_j),    (2)
+Training. AnySplat trains without ground-truth 3D data.
+Instead, it uses VGGT’s pretrained model to generate                                                                                                                                                                             and trained end-to-end with reconstruction loss. Though
+pseudo-labels for depth and camera poses. The predicted                                                                                                                                                                          trained only on input views, the model generalizes to novel
+Gaussians are rendered back to 2D and supervised against                                                                                                                                                                         appearance conditions. We adopt a curriculum training
+the input views, ensuring the 3D representation remains                                                                                                                                                                          strategy to sequentially refine geometry, appearance, and
+consistent with the observed images.                                                                                                                                                                                             occlusion modeling for stable convergence. We describe
+                                                                                                                                                                                                                                 our methodology in Fig. 3
+3.2. Problem Formulation and Overview
+Given unposed input images \protect \mathcal  {I} = \{I_1, I_2, \dots , I_N\} captured                                                                                                                                           3.3. Appearance Modelling: Appearance Adapter
+under varying illumination with transient objects, we recon-                                                                                                                                                                     Existing methods like WildGaussians [16] and NexusS-
+struct a 3D scene that renders novel views under different                                                                                                                                                                       plats [36] model appearance using randomly initialized em-
+appearance conditions while handling occlusions.                                                                                                                                                                                 beddings jointly optimized with geometry during training.
+   Our model predicts 3D Gaussians conditioned on target                                                                                                                                                                         At test time, these methods require optimizing a new em-
+appearance \protect \mathbf  {L} as G l = fθ (I, L), where each Gaussian                                                                                                                                                         bedding for each novel view or lighting condition, preclud-
+    is parameterized by:
+   g_{L} \in \boldsymbol {\mathcal {G}_l}                                                                                                                                                                                        ing feed-forward inference. We instead predict all scene
+                                                                       g_l = \{\boldsymbol {\mu }, \boldsymbol {\sigma }, \boldsymbol {r}, \boldsymbol {s}, \boldsymbol {c}_L\},                                                 parameters, including appearance, in a single forward pass.
+                                                                                                                                                                                                                                    Our Appearance Adapter transforms Gaussian colors
+with position \protect \bm  {\mu } \in \mathbb {R}^3 , opacity \protect \bm  {\sigma } \in \mathbb {R}^+ , rotation \protect \bm  {r} \in \mathbb {R}^4 ,                                                                        to match a target lighting condition. A 2D CNN-based
+scale \protect \bm  {s} \in \mathbb {R}^3 , and appearance-dependent spherical har-                                                                                                                                              encoder ELight extracts per-view light codes, which an
+monic (SH) coefficients \protect \bm  {c}_L \in \mathbb {R}^{75} .                                                                                                                                                               MLP Flight uses to modulate the Gaussian colors Gc =
+Architecture. A VGGT transformer backbone \phi _\theta  extracts                                                                                                                                                                 [c1 , . . . , cN ]⊤ ∈ RN ×75 :
+multi-view features \protect \bm  {F} = \phi _\theta (\mathcal {I}). Similar to Anysplat, three
+prediction heads process these features:                                                                                                                                                                                                               \mathbf {L}_i = \mathcal {E}_{Light}(I^{(i)}), \quad i = 1, \dots , V.                                                 (3)
+  \boldsymbol {D} = h_D(\boldsymbol {F}), \, (\boldsymbol {K}, \boldsymbol {E}) = h_C(\boldsymbol {F}), \, (\boldsymbol {s}, \boldsymbol {r}, \boldsymbol {\sigma }, \boldsymbol {c}) = h_{\mathrm {gauss}}(\boldsymbol {F}),                        \mathcal {G}_{l_i} = F_{\text {light}}\!\left (\mathcal {G}_c, \mathbf {L}_i\right ), \quad i = 1, \dots , V,            (4)
+                                                                                                                                                                                                                                                                                                                                ⊤
+where h_D predicts per-view depth maps \protect \bm  {D} , h_C estimates                                                                                                                                                           where Gli = [c̃i,1 , . . . , c̃i,N ] are the transformed colors
+camera intrinsics \protect \bm  {K} and extrinsics \protect \bm  {E}, and h_{\mathrm {gauss}} outputs                                                                                                                            under view i’s lighting. Each set of transformed Gaussians
+  Gaussian-in-the-Wild [51]                                                                  WildGaussians [14]                                                                   NexusSplats [33]       GenWildSplat (Ours)           Ground Truth
+Figure 5. Comparison on the Photo-Tourism dataset against optimization-based methods. Optimization-based methods trained from
+scratch often struggle to accurately reconstruct scenes from sparse views, even when test-time optimization is applied. In contrast, our
+feedforward approach efficiently generates plausible geometry and controllable appearance for complex scenes. As shown in Fig. 2,
+replacing COLMAP poses with VGGT poses improves their performance; thus, we adopt this modification across all evaluations, thereby
+solely benefiting the baseline’s performance.
+
+is independently rasterized to reconstruct its corresponding                                                                                                                                data with appearance variation and transient objects is un-
+input view, enabling self-supervised training without test-                                                                                                                                 stable, as learning geometry, lighting, and occlusion jointly
+time optimization.                                                                                                                                                                          is difficult. Training only on curated datasets, however, fails
+                                                                                                                                                                                            to build priors for in-the-wild generalization. We use cur-
+3.4. Occlusion Modelling
+                                                                                                                                                                                            riculum learning to break the task into progressive stages
+Transient objects (such as people and vehicles) cause float-                                                                                                                                (Fig. 4), thereby improving convergence and reconstruction
+ing artifacts and unstable gradients when treated as static                                                                                                                                 quality compared to end-to-end training.
+geometry. Prior work [54] uses internally predicted visibil-                                                                                                                                Stage 1: Lighting (Appearance). Train on a single syn-
+ity maps or uncertainty estimates [16, 28], which can col-                                                                                                                                  thetic scene with illumination variation but no transients,
+lapse during unsupervised training by down-weighting dif-                                                                                                                                   learning lighting or broadly appearance representation with-
+ficult regions. This incorrectly suppresses static structures,                                                                                                                              out geometric or occlusion confounds. Empirically, we
+such as trees, that appear in sparse views (Fig. 2).                                                                                                                                        found that this simplified the appearance decomposition for
+      We instead use a pre-trained semantic segmentation                                                                                                                                    subsequent training without collapsing.
+network to detect common transient classes (person, car,                                                                                                                                    Stage 2: Multi-scene generalization. Introduce additional
+bus, truck). These predictions yield a binary mask                                                                                                                                          synthetic scenes to improve appearance and geometry mod-
+                      S \in \{0,1\}^{H \times W}
+                         where S(p)=1 indicates transients. We ap-                                                                                                                          eling across diverse environments.
+ply visibility weighting M = 1 - S directly to images:                                                                                                                                      Stage 3: Occlusion handling. Add synthetic transients
+I_{\text {m}} = I \odot M and \protect \hat  {I}_{\text {m}} = \hat {I} \odot M , focusing on static regions:                                                                               where we have access to ground-truth masks for supervi-
+                                                                                                                                                                                            sion. We then train the model to predict these occlusion
+                   \label {eq:loss_masked} \mathcal {L} &= \text {MSE}(I_{\text {m}}, \hat {I}_{\text {m}}) + \lambda \cdot \text {Percep}(I_{\text {m}}, \hat {I}_{\text {m}})    (5)      masks alongside geometry and appearance, disentangling
+                                                                                                                                                                                            transients from static content.
+       where \protect \hat  {I} is the rendered image, I_{\text {gt}} the ground truth, and
+                                                                                                                                                                                                Despite being trained only on synthetic occlusions and
+\odot  denotes elementwise multiplication. Using an external
+                                                                                                                                                                                            appearance variations, our method generalizes well to real-
+segmentation prior in this way prevents the model from “ex-
+                                                                                                                                                                                            world sparse-view scenes (Fig. 5, Fig. 6).
+plaining away” transient content by collapsing its own visi-
+bility estimate, stabilizes gradients in dynamic regions, and                                                                                                                               3.6. Training Framework
+preserves the static structure during training.
+                                                                                                                                                                                            For each input image, the network predicts scene geom-
+3.5. Curriculum Learning for Large-Scale Training                                                                                                                                           etry (per-Gaussian parameters and depth), while the light
+Feed-forward reconstruction on unconstrained imagery re-                                                                                                                                    encoder extracts a compact light code that represents the
+quires training on large, diverse datasets. Direct training on                                                                                                                              image’s illumination. The appearance adapter conditions
+  Gaussian-in-the-Wild [51]     WildGaussians [14]          NexusSplats [33]         GenWildSplat (Ours)           Ground Truth
+
+Figure 6. Comparison on the MegaScenes dataset against optimization-based methods. The MegaScenes dataset poses significant
+challenges for 3D reconstruction due to wide variations in viewpoints and lighting. Prior SOTA methods often fail, producing artifacts
+such as noisy ground (row 1), geometric distortions and inconsistencies when rendering novel views (row 2), and spiky/blurred skies (row
+3). GenWildSplat, in contrast, generates clean and consistent renderings across diverse scenes, demonstrating robust performance even on
+these highly challenging in-the-wild settings.
+
+on this code and the canonical Gaussian colors to produce              merge them into a binary transient mask. The model, initial-
+transformed colors, which are rasterized and compared to               ized from AnySplat pre-trained weights, uses a perceptual
+the original image. Though the method is not trained to                loss weight of λ = 0.05 and is trained via curriculum learn-
+render novel views or lighting, our method generalizes well            ing for 40K iterations (Stage 1: 10K, Stage 2: 10K, Stage
+to unseen views (Fig. 6). The network learns stable lighting           3: 20K) over 2 days on a single RTX A6000. Since this
+representations that enable transferring illumination appear-          problem setting is highly challenging, we additionally apply
+ance from one scene to another (Fig. 8), a capability absent           SyncFix [19] as a post-processing step to enhance the final
+in prior in-the-wild methods [16, 36, 54].                             results. We use this step only for visualization purposes
+                                                                       and exclude it from all baseline comparisons, so that differ-
+4. Experiments                                                         ences between methods remain clearly visible. All figures
+                                                                       and videos showing only our method in this paper and on
+4.1. Implementation Details                                            the project website are post-processed with SyncFix. Please
+                                                                       refer to supplementary for more details.
+GenWildSplat uses a 24-layer transformer with alternat-
+ing frame and global attention. The depth, camera, and
+                                                                       4.2. Datasets
+Gaussian heads adopt a DPT-based architecture that fuses
+multi-scale features to predict per-pixel depth, Gaussian at-          Training.     We train on 700+ outdoor scenes from
+tributes, and camera parameters. The light encoder fol-                DL3DV [23], augmented with synthetic lighting and occlu-
+lows [56], producing 16-dimensional lighting vectors. An               sions to mimic in-the-wild variability. Illumination diver-
+MLP expands these to 75 dimensions and modulates the                   sity is produced using DiffusionRenderer [21] via offline
+per-Gaussian SH coefficients accordingly. For occlusion                unconditioned relighting ( 30 minutes per scene). Tran-
+detection, we use YOLOv8 Segmentation [13] to classify                 sient occluders are generated by compositing COCO seg-
+common COCO categories (person, car, dog, etc.) and                    ments [22] (e.g., people, cars) at random locations, provid-
+                          Vanilla AnySplat [9]              AnySplat +                      AnySplat +                GenWildSplat (Ours)                            Ground Truth
+                                                        Style Transfer [43]           DiffusionRenderer [18]
+Figure 7. Comparison on the MegaScenes dataset against feed-forward based methods. Existing feed-forward 3D Gaussian Splatting
+methods cannot handle unconstrained inputs, so we construct baselines using style transfer and DiffusionRenderer to address appearance
+variations. The DiffusionRenderer+AnySplat baseline integrates AnySplat with DiffusionRenderer, which uses environment maps from
+DiffusionLight-Turbo. Style transfer [46] often introduces artifacts and color bleeding, while DiffusionRenderer [21] produces unrealistic
+outdoor relighting (row 2 shows a dimmed, non-photorealistic “night”). These per-image methods suffer from multi-view inconsistency,
+whereas GenWildSplat modulates appearance in 3D, yielding photorealistic, view-consistent results.
+                                                                                                   Table 2. Quantitative comparison against baselines. We com-
+ National Diet Building
+
+
+
+
+                                                                                                   pare against in-the-wild baselines on MegaScenes under sparse-
+                                                                                                   view settings with varying input views, where the best scores
+                                                                                                   and second best scores are highlighted with respective colors.
+                                                                                                                                             MegaScenes (3-View)       MegaScenes (6-View)
+                                                                                                      Method                Gen.   Time
+Bank of England
+
+
+
+
+                                                                                                                                             PSNR    SSIM    LPIPS    PSNR     SSIM    LPIPS
+                                                                                                      GS-W                   ✗      5 hrs    11.60   0.285   0.623     12.01   0.312   0.552
+                                                                                                      WildGaussians          ✗      8 hrs    12.73   0.316   0.599     13.29   0.373   0.532
+                                                                                                      NexusSplats            ✗     2.4 hrs   13.17   0.335   0.552     13.92   0.397   0.518
+                                                                                                      GenWildSplat (Ours)    ✓     3 secs    14.43   0.402   0.496     15.84   0.440   0.407
+
+                            Input image   Target Lighting   Rendered View #1   Rendered View #2
+
+Figure 8. Cross-scene appearance transfer. Our method dis-
+entangles appearance from geometry, allowing adaptation of illu-                                   parison with our feed-forward approach infeasible. Meth-
+mination from different scenes, something prior methods [16, 36]                                   ods like SparseGS-W [20] and MS-GS [18] lack public im-
+cannot do as they jointly optimize view and appearance.                                            plementations. We therefore define feed-forward baselines:
+
+ing exact ground-truth masks and are applied on-the-fly.                                           AnySplat [11] provides real-time reconstruction but does
+Evaluation. We evaluate on PhotoTourism [34] using 6 in-                                           not model appearance variation.
+put views across 3 scenes. To assess generalization, we fur-                                       StyleTransfer-AnySplat           extends     AnySplat with
+ther curate 20 challenging MegaScenes with strong light-                                           CCPL [46] for style adaptation, though this adjusts
+ing variation, occlusions, and viewpoint sparsity, selecting                                       artistic style rather than realistic illumination.
+scenes with fewer than 20 registered images. This avoids
+artificial subsampling and provides a more realistic sparse-                                       DiffusionRenderer+AnySplat integrates AnySplat with
+view benchmark for the future. Refer to the supplementary                                          DiffusionRenderer [21], which models lighting using envi-
+for visualizations of these sparse-view scenes.                                                    ronment maps from DiffusionLight-Turbo [7].
+                                                                                                      All baselines use Stable Diffusion [31] for mask-based
+4.3. Baselines
+                                                                                                   inpainting to handle occlusions. We use AnySplat as our
+Recent in-the-wild reconstruction methods, such as GS-                                             primary baseline, since GenWildSplat builds upon it; how-
+W [54], WildGaussians [16], and NexusSplats [36], require                                          ever, our modular approach could also extend to other feed-
+per-scene and test-time optimization, making a direct com-                                         forward methods, such as MVSplat [5] or PixelSplat [3].
+Table 3. Quantitative comparison against feed-forward meth-                  Table 4. Ablation study evaluated on the MegaScenes Dataset.
+ods. We compare our method against the feed-forward baselines
+                                                                                    Model Variant                   PSNR ↑ SSIM ↑ LPIPS ↓
+on the sparse-view setting on the MegaScenes dataset.
+                                                                                    w/o Appearance adapter          13.76      0.391        0.405
+   Method                         View Consistent   PSNR    SSIM    LPIPS           w/o Occlusion handling          15.14      0.405        0.513
+   Vanilla AnySplat                     ✗           12.65   0.311   0.412           w/o Curriculum learning         11.72      0.318        0.438
+   2D Baseline + AnySplat               ✗           12.90   0.281   0.486           Full model (Ours)               15.84      0.440        0.407
+   DiffusionRenderer + AnySplat         ✗           13.59   0.309   0.444
+   GenWildSplat (Ours)                  ✓           15.84   0.440   0.407
+
+
+
+
+4.4. Comparison on the PhotoTourism Dataset
+                                                                                Input        w/o Appearance   w/o Occlusion   w/o curriculum     Ours (Full)
+                                                                                                 adapter        handling         training
+We evaluate GenWildSplat against state-of-the-art in-the-
+wild baselines [16, 36, 54] on sparse-view PhotoTourism                     Figure 9. Ablation Study. Removing the appearance adapter, oc-
+(Fig. 5, Tab. 2). As Fig. 2 shows, COLMAP poses often de-                   clusion handling, or curriculum causes major failures: fixed ap-
+grade baseline performance under sparse views, so we use                    pearance, baked-in transient objects, or color collapse. With all
+VGGT poses for fair comparison. Despite no scene-specific                   components enabled, GenWildSplat produces clean, consistent 3D
+                                                                            reconstructions.
+training, our feed-forward model surpasses optimization-
+based methods, producing more realistic renderings from
+sparse inputs. This stems from our appearance adapter,
+which transfers priors learned via curriculum training, en-
+abling inference in just 3 seconds.
+                                                                                        a) Unseen regions                 b) Test view far from train views
+4.5. Comparison on the MegaScenes Dataset
+We further evaluate GenWildSplat on the challenging
+MegaScenes dataset (Fig. 6, Tab. 3). Prior methods, trained
+from scratch without learned priors, exhibit severe arti-
+facts and distortions, such as noisy ground regions(row 1),                  c) Indoor scene and inaccurate masks        d) Realistic lighting and shadows
+poor generalisation to novel views(row 2), and resulting in
+blurred skies(row 3). GenWildSplat produces clean, con-                     Figure 10. Limitations. (a) missing geometry in sparsely ob-
+                                                                            served regions, (b) artifacts and double geometry for test views
+sistent renderings across diverse scenes, demonstrating its
+                                                                            distant from training views, (c) degraded performance in indoor
+robustness even on very challenging in-the-wild datasets.                   environments with imperfect occlusion masks, and (d) absence of
+    For a fair comparison, we benchmark against a few                       shadow modeling and realistic relighting.
+AnySplat variants (Fig. 7). 2D style transfer [46] often in-
+troduces artifacts and color bleeding, while DiffusionRen-                  and Tab. 4. Removing the appearance adapter prevents the
+derer [21], relying on estimated environment maps, pro-                     model from capturing appearance variations, resulting in a
+duces unrealistic outdoor relighting (e.g., row 2 shows a                   fixed, single appearance. Disabling occlusion handling pre-
+dimmed but non-photorealistic “night”). These per-image                     vents the removal of transient objects, such as people on
+methods suffer from multi-view inconsistency, unlike Gen-                   the stairs. Without the proposed curriculum-based training,
+WildSplat, which modulates appearance directly in 3D for                    the Gaussian colors collapse, as the model struggles to learn
+photorealistic, view-consistent results.                                    geometry, appearance, and occlusions simultaneously. With
+                                                                            all components enabled, GenWildSplat models both appear-
+4.6. Results with Lighting from Different Scene                             ance and occlusions, producing view-consistent renderings.
+Unlike prior in-the-wild methods that jointly optimize light-
+ing and geometry and require a target lighting image from
+                                                                            5. Discussions
+the same scene, GenWildSplat disentangles appearance                        Limitations. GenWildSplat, while effective under sparse,
+from geometry, enabling cross-scene illumination trans-                     in-the-wild image collections, has several limitations. First,
+fer. As shown in Fig. 8, it produces photorealistic, view-                  sparse viewpoints naturally leave unseen regions, leading
+consistent results while preserving spatial and structural                  to incomplete geometry in areas not covered by the input
+consistency, demonstrating robust appearance control.                       images. Second, when test views lie far outside the train-
+                                                                            ing distribution, the model may produce artifacts or double-
+4.7. Ablation Study & Analysis                                              layered geometry due to limited viewpoint generalization.
+To evaluate the contribution of each component in our                       Third, indoor scenes are still hard: if the occlusion mask
+method, we perform an ablation study shown in Fig. 9                        fails to accurately capture objects or depth discontinuities,
+the resulting masks degrade the reconstruction quality. Fi-               Tan. Lrm: Large reconstruction model for single image to
+nally, the method does not model cast shadows or support                  3d. In ICLR, 2023. 3
+realistic relighting, limiting its applicability to tasks that re-   [10] Hanwen Jiang, Hao Tan, Peng Wang, Haian Jin, Yue Zhao,
+quire physically consistent illumination.                                 Sai Bi, Kai Zhang, Fujun Luan, Kalyan Sunkavalli, Qixing
+                                                                          Huang, et al. Rayzer: A self-supervised large view synthesis
+Conclusion. We present GenWildSplat, a generaliz-                         model. In ICCV, 2025. 3
+able, feed-forward Gaussian-splatting framework that re-             [11] Lihan Jiang, Yucheng Mao, Linning Xu, Tao Lu, Kerui Ren,
+constructs 3D scenes from sparse, unconstrained photo col-                Yichen Jin, Xudong Xu, Mulin Yu, Jiangmiao Pang, Feng
+lections in under 3 seconds. The key to our success is                    Zhao, et al. Anysplat: Feed-forward 3d gaussian splatting
+the appearance adapter, which directly modulates Gaussian                 from unconstrained views. In ACM SIGGRAPH Asia, 2025.
+colors in 3D, and a robust occlusion handling mechanism,                  2, 3, 7
+producing view-consistent, photorealistic renderings. Gen-           [12] Haian Jin, Hanwen Jiang, Hao Tan, Kai Zhang, Sai Bi,
+WildSplat moves the needle towards real-time, controllable,               Tianyuan Zhang, Fujun Luan, Noah Snavely, and Zexiang
+relightable 3D scenes from sparse internet imagery.                       Xu. Lvsm: A large view synthesis model with minimal 3d
+                                                                          inductive bias. In ICLR, 2024. 3
+Acknowledgements.           We are grateful for the valu-
+                                                                     [13] Glenn Jocher, Ayush Chaurasia, and Jing Qiu. Ultralytics
+able feedback and insightful discussions provided by
+                                                                          yolov8, 2023. 6, 1
+Mukund Varma T, Yao-Chih Lee, Yu-Hsiang Huang,
+                                                                     [14] Joanna Kaleta, Kacper Kania, Tomasz Trzciński, and Marek
+Hadi Alzayer, Sai Sri Teja Kuppa, and S Bala Prasanna.
+                                                                          Kowalski. Lumigauss: Relightable gaussian splatting in the
+                                                                          wild. In WACV, 2025. 2
+                                                                     [15] Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler,
+References                                                                and George Drettakis. 3d gaussian splatting for real-time
+ [1] Hadi Alzayer, Philipp Henzler, Jonathan T Barron, Jia-Bin            radiance field rendering. ACM Trans. Graph., 42(4):139–1,
+     Huang, Pratul P Srinivasan, and Dor Verbin. Generative mul-          2023. 3
+     tiview relighting for 3d reconstruction under extreme illumi-   [16] Jonas Kulhanek, Songyou Peng, Zuzana Kukelova, Marc
+     nation variation. In Proceedings of the Computer Vision and          Pollefeys, and Torsten Sattler. Wildgaussians: 3d gaussian
+     Pattern Recognition Conference, pages 10933–10942, 2025.             splatting in the wild. In NeurIPS, 2024. 2, 3, 4, 5, 6, 7, 8
+     3                                                               [17] Vincent Leroy, Yohann Cabon, and Jérôme Revaud. Ground-
+ [2] Hadi Alzayer, Yunzhi Zhang, Chen Geng, Jia-Bin Huang,                ing image matching in 3d with mast3r. In ECCV, 2024. 3
+     and Jiajun Wu. Coupled diffusion sampling for training-free     [18] Deming Li, Kaiwen Jiang, Yutao Tang, Ravi Ramamoorthi,
+     multi-view image editing. arXiv preprint arXiv:2510.14981,           Rama Chellappa, and Cheng Peng. Ms-gs: Multi-appearance
+     2025. 3                                                              sparse-view 3d gaussian splatting in the wild. arXiv preprint
+ [3] David Charatan, Sizhe Lester Li, Andrea Tagliasacchi, and            arXiv:2509.15548, 2025. 7, 1
+     Vincent Sitzmann. pixelsplat: 3d gaussian splats from image     [19] Deming Li, Abhay Yadav, Cheng Peng, Rama Chel-
+     pairs for scalable generalizable 3d reconstruction. In CVPR,         lappa, and Anand Bhattad. Syncfix: Fixing 3d recon-
+     2024. 3, 7                                                           structions via multi-view synchronization. arXiv preprint
+ [4] Xingyu Chen, Qi Zhang, Xiaoyu Li, Yue Chen, Ying Feng,               arXiv:2604.11797, 2026. 6
+     Xuan Wang, and Jue Wang. Hallucinated neural radiance           [20] Yiqing Li, Xuan Wang, Jiawei Wu, Yikun Ma, and Zhi Jin.
+     fields in the wild. In CVPR, 2022. 2                                 Sparsegs-w: Sparse-view 3d gaussian splatting in the wild
+ [5] Yuedong Chen, Haofei Xu, Chuanxia Zheng, Bohan Zhuang,               with generative priors. arXiv preprint arXiv:2503.19452,
+     Marc Pollefeys, Andreas Geiger, Tat-Jen Cham, and Jianfei            2025. 7, 1
+     Cai. Mvsplat: Efficient 3d gaussian splatting from sparse       [21] Ruofan Liang, Zan Gojcic, Huan Ling, Jacob Munkberg, Jon
+     multi-view images. In ECCV, 2024. 3, 7                               Hasselgren, Chih-Hao Lin, Jun Gao, Alexander Keller, Nan-
+ [6] Yuedong Chen, Chuanxia Zheng, Haofei Xu, Bohan Zhuang,               dita Vijaykumar, Sanja Fidler, et al. Diffusion renderer: Neu-
+     Andrea Vedaldi, Tat-Jen Cham, and Jianfei Cai. Mvs-                  ral inverse and forward rendering with video diffusion mod-
+     plat360: Feed-forward 360 scene synthesis from sparse                els. In CVPR, 2025. 6, 7, 8, 1
+     views. NeurIPS, 2024. 3                                         [22] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays,
+ [7] Worameth Chinchuthakun, Pakkapon Phongthawee, Amit                   Pietro Perona, Deva Ramanan, Piotr Dollár, and C Lawrence
+     Raj, Varun Jampani, Pramook Khungurn, and Supasorn                   Zitnick. Microsoft coco: Common objects in context. In
+     Suwajanakorn.        Diffusionlight-turbo: Accelerated light         ECCV, 2014. 6, 1
+     probes for free via single-pass chrome ball inpainting. arXiv   [23] Lu Ling, Yichen Sheng, Zhi Tu, Wentian Zhao, Cheng Xin,
+     preprint arXiv:2507.01305, 2025. 7                                   Kun Wan, Lantao Yu, Qianyu Guo, Zixun Yu, Yawen Lu,
+ [8] Hiba Dahmani, Moussab Bennehar, Nathan Piasco, Luis                  et al. Dl3dv-10k: A large-scale scene dataset for deep
+     Roldao, and Dzmitry Tsishkou. Swag: Splatting in the wild            learning-based 3d vision. In CVPR, 2024. 6, 1
+     images with appearance-conditioned gaussians. In ECCV,          [24] Yuzheng Liu, Siyan Dong, Shuzhe Wang, Yingda Yin, Yan-
+     2024. 2, 3                                                           chao Yang, Qingnan Fan, and Baoquan Chen. Slam3r: Real-
+ [9] Yicong Hong, Kai Zhang, Jiuxiang Gu, Sai Bi, Yang Zhou,              time dense scene reconstruction from monocular rgb videos.
+     Difan Liu, Feng Liu, Kalyan Sunkavalli, Trung Bui, and Hao           In CVPR, 2025. 3
+[25] Ricardo Martin-Brualla, Noha Radwan, Mehdi SM Sajjadi,         [40] Jianyuan Wang, Minghao Chen, Nikita Karaev, Andrea
+     Jonathan T Barron, Alexey Dosovitskiy, and Daniel Duck-             Vedaldi, Christian Rupprecht, and David Novotny. Vggt: Vi-
+     worth. Nerf in the wild: Neural radiance fields for uncon-          sual geometry grounded transformer. In CVPR, pages 5294–
+     strained photo collections. In CVPR, 2021. 3                        5306, 2025. 2, 4
+[26] Raul Mur-Artal, Jose Maria Martinez Montiel, and Juan D        [41] Qianqian Wang, Yifei Zhang, Aleksander Holynski,
+     Tardos. Orb-slam: A versatile and accurate monocular slam           Alexei A Efros, and Angjoo Kanazawa. Continuous 3d per-
+     system. IEEE transactions on robotics, 31(5):1147–1163,             ception model with persistent state. In CVPR, 2025. 3
+     2015. 2                                                        [42] Shuzhe Wang, Vincent Leroy, Yohann Cabon, Boris
+[27] Riku Murai, Eric Dexheimer, and Andrew J Davison.                   Chidlovskii, and Jerome Revaud. Dust3r: Geometric 3d vi-
+     Mast3r-slam: Real-time dense slam with 3d reconstruction            sion made easy. In CVPR, 2024. 3
+     priors. In CVPR, 2025. 3                                       [43] Yunsong Wang, Tianxin Huang, Hanlin Chen, and Gim Hee
+                                                                         Lee. Freesplat: Generalizable 3d gaussian splatting towards
+[28] Maxime Oquab, Timothée Darcet, Théo Moutakanni, Huy
+                                                                         free view synthesis of indoor scenes. NeurIPS, 37, 2024. 3
+     Vo, Marc Szafraniec, Vasil Khalidov, Pierre Fernandez,
+     Daniel Haziza, Francisco Massa, Alaaeldin El-Nouby, et al.     [44] Yuze Wang, Junyi Wang, and Yue Qi. We-gs: An in-the-wild
+     Dinov2: Learning robust visual features without supervision.        efficient 3d gaussian representation for unconstrained photo
+     Transactions on Machine Learning Research Journal, pages            collections. arXiv preprint arXiv:2406.02407, 2024. 2, 3
+     1–31, 2024. 5                                                  [45] Yuze Wang, Junyi Wang, Ruicheng Gao, Yansong Qu, Wan-
+                                                                         tong Duan, Shuo Yang, and Yue Qi. Look at the sky: Sky-
+[29] Avinash Paliwal, Wei Ye, Jinhui Xiong, Dmytro Kotovenko,
+                                                                         aware efficient 3d gaussian splatting in the wild. IEEE Trans-
+     Rakesh Ranjan, Vikas Chandra, and Nima Khademi Kalan-
+                                                                         actions on Visualization and Computer Graphics, 2025. 2
+     tari. Coherentgs: Sparse novel view synthesis with coherent
+                                                                    [46] Zijie Wu, Zhen Zhu, Junping Du, and Xiang Bai. Ccpl: Con-
+     3d gaussians. In ECCV, 2024. 3
+                                                                         trastive coherence preserving loss for versatile style transfer.
+[30] Weining Ren, Zihan Zhu, Boyang Sun, Jiaqi Chen, Marc                In ECCV, 2022. 7, 8
+     Pollefeys, and Songyou Peng. Nerf on-the-go: Exploiting        [47] Haolin Xiong, Sairisheek Muttukuru, Hanyuan Xiao, Rishi
+     uncertainty for distractor-free nerfs in the wild. In CVPR,         Upadhyay, Pradyumna Chari, Yajie Zhao, and Achuta
+     2024. 3                                                             Kadambi. Sparsegs: Sparse view synthesis using 3d gaus-
+[31] Robin Rombach, Andreas Blattmann, Dominik Lorenz,                   sian splatting. In 2025 International Conference on 3D Vi-
+     Patrick Esser, and Björn Ommer. High-resolution image syn-         sion (3DV), 2025. 3
+     thesis with latent diffusion models. In CVPR, 2022. 7          [48] Haofei Xu, Songyou Peng, Fangjinhua Wang, Hermann
+[32] Viktor Rudnev, Mohamed Elgharib, William Smith, Lingjie             Blum, Daniel Barath, Andreas Geiger, and Marc Pollefeys.
+     Liu, Vladislav Golyanik, and Christian Theobalt. Nerf for           Depthsplat: Connecting gaussian splatting and depth. In
+     outdoor scene relighting. In ECCV, 2022. 2                          CVPR, 2025. 2, 3
+[33] Sara Sabour, Suhani Vora, Daniel Duckworth, Ivan Krasin,       [49] Jiacong Xu, Yiqun Mei, and Vishal Patel. Wild-gs: Real-
+     David J Fleet, and Andrea Tagliasacchi. Robustnerf: Ignor-          time novel view synthesis from unconstrained photo collec-
+     ing distractors with robust losses. In CVPR, 2023. 3                tions. In NeurIPS, 2024. 2
+[34] Noah Snavely, Steven M Seitz, and Richard Szeliski. Photo      [50] Yinghao Xu, Zifan Shi, Wang Yifan, Hansheng Chen,
+     tourism: exploring photo collections in 3d. In ACM siggraph         Ceyuan Yang, Sida Peng, Yujun Shen, and Gordon Wet-
+     2006 papers. 2006. 2, 7, 1                                          zstein. Grm: Large gaussian reconstruction model for ef-
+                                                                         ficient 3d reconstruction and generation. In ECCV, 2024. 3
+[35] Jiaming Sun, Xi Chen, Qianqian Wang, Zhengqi Li, Hadar
+                                                                    [51] Jianing Yang, Alexander Sax, Kevin J Liang, Mikael Henaff,
+     Averbuch-Elor, Xiaowei Zhou, and Noah Snavely. Neural
+                                                                         Hao Tang, Ang Cao, Joyce Chai, Franziska Meier, and Matt
+     3d reconstruction in the wild. In ACM SIGGRAPH 2022
+                                                                         Feiszli. Fast3r: Towards 3d reconstruction of 1000+ images
+     conference proceedings, 2022. 2
+                                                                         in one forward pass. In CVPR, 2025. 3
+[36] Yuzhou Tang, Dejun Xu, Yongjie Hou, Zhenzhong Wang,
+                                                                    [52] Yifan Yang, Shuhai Zhang, Zixiong Huang, Yubing Zhang,
+     and Min Jiang. Nexussplats: Efficient 3d gaussian splatting
+                                                                         and Mingkui Tan. Cross-ray neural radiance fields for novel-
+     in the wild. arXiv preprint arXiv:2411.14514, 2024. 2, 3, 4,
+                                                                         view synthesis from unconstrained image collections. In
+     6, 7, 8
+                                                                         ICCV, 2023. 3
+[37] Zhenggang Tang, Yuchen Fan, Dilin Wang, Hongyu Xu,             [53] Ruihong Yin, Vladimir Yugay, Yue Li, Sezer Karaoglu, and
+     Rakesh Ranjan, Alexander Schwing, and Zhicheng Yan.                 Theo Gevers. Fewviewgs: Gaussian splatting with few view
+     Mv-dust3r+: Single-stage scene reconstruction from sparse           matching and multi-stage training. NeurIPS, 2024. 3
+     views in 2 seconds. In CVPR, 2025. 3                           [54] Dongbin Zhang, Chuming Wang, Weitao Wang, Peihao Li,
+[38] Joseph Tung, Gene Chou, Ruojin Cai, Guandao Yang, Kai               Minghan Qin, and Haoqian Wang. Gaussian in the wild: 3d
+     Zhang, Gordon Wetzstein, Bharath Hariharan, and Noah                gaussian splatting for unconstrained image collections. In
+     Snavely. Megascenes: Scene-level view synthesis at scale.           ECCV, 2024. 2, 3, 5, 6, 7, 8
+     In ECCV, 2024. 2                                               [55] Kai Zhang, Sai Bi, Hao Tan, Yuanbo Xiangli, Nanxuan Zhao,
+[39] Hengyi Wang and Lourdes Agapito. 3d reconstruction with             Kalyan Sunkavalli, and Zexiang Xu. Gs-lrm: Large recon-
+     spatial memory. In 2025 International Conference on 3D              struction model for 3d gaussian splatting. In ECCV, 2024.
+     Vision (3DV), 2025. 3                                               3
+[56] Xiao Zhang, William Gao, Seemandhar Jain, Michael Maire,
+     David Forsyth, and Anand Bhattad. Latent intrinsics emerge
+     from training to relight. In NeurIPS, 2024. 6
+[57] Linglong Zhou, Guoxin Wu, Yunbo Zuo, Xuanyu Chen, and
+     Hongle Hu. A comprehensive review of vision-based 3d re-
+     construction methods. Sensors, 24(7):2314, 2024. 2
+[58] Zehao Zhu, Zhiwen Fan, Yifan Jiang, and Zhangyang Wang.
+     Fsgs: Real-time few-shot view synthesis using gaussian
+     splatting. In ECCV, 2024. 3
+[59] Chen Ziwen, Hao Tan, Kai Zhang, Sai Bi, Fujun Luan, Yi-
+     cong Hong, Li Fuxin, and Zexiang Xu. Long-lrm: Long-
+     sequence large reconstruction model for wide-coverage
+     gaussian splats. In ICCV, 2025. 3
+Appendix                                                         sents practical scenarios where acquiring dense multi-view
+                                                                 captures is infeasible.
+A. Dataset Details                                                  Furthermore, the chosen scenes exhibit a range of illumi-
+                                                                 nation variations, including both subtle and extreme light-
+A.1. Training Dataset
+                                                                 ing changes, as well as moderate to high levels of transient
+For training GenWildSplat, we constructed a large-scale          occlusions. These characteristics create a challenging envi-
+synthetic dataset derived from the DL3DV [23] dataset. Ini-      ronment for novel-view synthesis and relighting tasks, pro-
+tially, we subsampled 2,000 scenes from DL3DV, focus-            viding a rigorous benchmark for assessing the performance
+ing specifically on outdoor environments, which resulted         and generalization capability of GenWildSplat and in total,
+in approximately 700 scenes suitable for our goal. These         we curated 20 scenes.
+scenes were then processed using our synthetic data gener-
+ation pipeline to enhance appearance diversity and robust-       B. Additional Architecture Details
+ness. In particular, we employed DiffusionRenderer [21] in
+a classifier-free guidance setting to randomly relight each      B.1. DPT Backbone
+image, thereby producing a wide range of lighting condi-         We adopt a Dense Prediction Transformer (DPT) back-
+tions. To optimize computational efficiency, we executed         bone for predicting depth, camera parameters, and Gaussian
+the inverse rendering step for only one iteration, as pre-       scene representations. The DPT encoder generates multi-
+liminary experiments indicated negligible differences com-       resolution feature maps that feed into three task-specific
+pared to performing 15 iterations. The forward rendering         heads: (i) a depth head producing a dense depth map via
+step, however, was carried out for 15 iterations to ensure       convolutional fusion; (ii) a camera head estimating global
+high-fidelity reconstructions of relit appearances. Due to       pose and intrinsics using pooled high-level features fol-
+the substantial computational cost of this process, approx-      lowed by an MLP; and (iii) a Gaussian head that outputs
+imately 30–45 minutes per scene, the relighting procedure        per-Gaussian parameters (mean positions, anisotropic co-
+was applied offline and limited to the 700 selected outdoor      variances, and feature vectors). This separation enables ac-
+scenes.                                                          curate spatial predictions while capturing global camera in-
+    We incorporated synthetic occlusions during training to      formation in a compact latent representation.
+mimic the in-the-wild images. Using a pretrained segmen-
+tation model [13] on the COCO [22] dataset, we created a         B.2. Light Encoder
+comprehensive bank of objects that could serve as occlud-        The light encoder uses only the encoder portion of a U-Net
+ers. During training, we randomly sampled between 2 to           style autoencoder built from residual convolutional blocks.
+10 objects from this bank and positioned them in the lower       Each block contains two convolutional layers, group nor-
+half of the image, mimicing the empirical distribution of        malization, and a nonlinear activation. The encoder has
+occlusions in real-world scenes. Occlusions were added           six resolution levels with block counts [1, 2, 2, 4, 4, 4], start-
+on-the-fly, with corresponding occlusion masks generated         ing at 256 × 256 resolution and halving at each level. La-
+in real time and used to supervise the model. This com-          tent channel widths are [32, 64, 128, 128, 256, 512]. Extrin-
+bination of relighting and occlusion augmentation enabled        sic lighting features are extracted from the bottleneck using
+GenWildSplat to learn robust appearance and geometry rep-        multiple MLP layers followed by spatial averaging, produc-
+resentations under sparse inputs, diverse illumination, and      ing a 16-dimensional vector that captures low-frequency,
+realistic occlusions, ensuring strong generalization to un-      global lighting. No intrinsic features are used.
+seen outdoor scenes.
+                                                                 B.3. Segmentation
+A.2. Evaluation Dataset                                          Occlusion masks are generated using the YOLOv8x.seg
+For evaluation, we carefully curated a set of testing scenes     model trained on COCO classes. The selected COCO ob-
+from the MegaScenes dataset to reflect realistic sparsity        jects: person, bicycle, car, motorcycle, bus, train, truck,
+and complexity. Specifically, we selected scenes contain-        boat, bird, cat, dog, horse, sheep, cow, elephant, bear, zebra,
+ing fewer than 20–25 images, deliberately ensuring that the      giraffe, backpack, umbrella, handbag, suitcase, chair, key-
+dataset mimics the sparse viewpoint coverage and diverse         board, book. These objects are used to create an occluder
+lighting conditions encountered in real-world captures. Un-      bank for online augmentation during training.
+like prior works such as MS-GS [18] and SparseGS-W [20],
+which simulate sparsity by artificially discarding images
+                                                                 B.4. Appearance Adapter
+from densely captured scenes like PhotoTourism [34], our         The Appearance Adapter is a five-layer MLP mapping
+selection prioritizes authenticity. By using scenes that are     the concatenated 16-dimensional extrinsic light code and
+naturally sparse, we ensure that the evaluation closely repre-   75-dimensional per-Gaussian conditioning vector to 75
+spherical-harmonic (SH) coefficients. Hidden layer sizes
+are [256, 512, 512, 256], with nonlinear activations after
+each layer and a linear output layer. This structure allows
+smooth low-frequency appearance modulation while retain-
+ing sufficient capacity to predict per-Gaussian SH lighting
+coefficients for rendering.
+
