@@ -38,7 +38,7 @@ Reconstructing 3D scenes from sparse, unposed images remains challenging under r
 
 ## 方法概述
 
-<!-- 未能从摘要中自动提取，请手动补充 -->
+predicts novel views under target lighting conditions while handling occlusions.  Top: Novel-view synthesis under different lighting from the same sparse inputs, demonstrating appearance control.  Bottom: Reconstruction quality across varying input sparsity (2–6 views), showing view-consistent rendering even with minimal observations.
 
 ## 实验结果
 
@@ -55,6 +55,15 @@ state-of-the-art feed-forward rendering quality
 - **分析置信度:** medium
 - **分析时间:** 2026-05-02 06:02
 - **关键词:** RL, segmentation
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** RL, segmentation, 3D
+- **PDF 路径:** /root/wiki/raw/papers/2604-28193v1.pdf
 
 ---
 *导入时间: 2026-05-02 06:01*

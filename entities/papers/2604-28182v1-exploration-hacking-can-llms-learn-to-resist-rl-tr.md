@@ -67,6 +67,15 @@ Reinforcement learning (RL) has become essential to the post-training of large l
 - **关键词:** 对抗性 RL, 模型生物, 探索黑客, 安全对齐
 - **PDF 路径:** /root/wiki/raw/papers/2604-28182v1.pdf
 
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** LLM, RL, RLHF
+- **PDF 路径:** /root/wiki/raw/papers/2604-28182v1.pdf
+
 ---
 *导入时间: 2026-05-01 19:53*
 *来源: arXiv Daily Digest 2026-05-01*

@@ -38,7 +38,7 @@ Human-robot collaboration has been studied primarily in dyadic or sequential set
 
 ## 方法概述
 
-<!-- 未能从摘要中自动提取，请手动补充 -->
+s condition on predicted contact [48], receiver motion [24], and gaze [35].  Cooperative planners model human motion [6], learn interaction primitives [8], predict intention from skeleton cues [43], and learn strategies via imitation [46].  For safety, reactive [2, 38] and learning-based [10, 55] controllers handle collision avoidance in dynamic settings.
 
 ## 实验结果
 
@@ -55,6 +55,15 @@ that real-time perception and accumulated behavior memory each yield measurable 
 - **分析置信度:** medium
 - **分析时间:** 2026-05-02 06:02
 - **关键词:** RL, PPO
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** RL, PPO, 3D
+- **PDF 路径:** /root/wiki/raw/papers/2604-28197v1.pdf
 
 ---
 *导入时间: 2026-05-02 06:01*

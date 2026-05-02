@@ -38,11 +38,11 @@ Most familiar equilibrium concepts, such as Nash and correlated equilibrium, gua
 
 ## 方法概述
 
-<!-- 未能从摘要中自动提取，请手动补充 -->
+es, such as no-regret learning (Hazan et al. , 2016) and linear programming (Papadimitriou and Roughgarden, 2008), typically scale with the largest action space among the players, so applying them directly is computationally intractable.  To overcome this obstacle, we instantiate no-regret learning with Follow the Perturbed Leader (FTPL) (Hazan et al.
 
 ## 实验结果
 
-<!-- 未能从摘要中自动提取，请手动补充 -->
+<!-- 需要手动补充 -->
 
 ## 相关论文
 
@@ -55,6 +55,15 @@ Most familiar equilibrium concepts, such as Nash and correlated equilibrium, gua
 - **分析置信度:** medium
 - **分析时间:** 2026-05-02 06:02
 - **关键词:** AI, ML
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** AI, ML
+- **PDF 路径:** /root/wiki/raw/papers/2604-28186v1.pdf
 
 ---
 *导入时间: 2026-05-02 06:01*

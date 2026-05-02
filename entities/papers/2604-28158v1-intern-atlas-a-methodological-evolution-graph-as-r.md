@@ -38,7 +38,7 @@ Existing research infrastructure is fundamentally document-centric, providing ci
 
 ## 方法概述
 
-<!-- 未能从摘要中自动提取，请手动补充 -->
+ological Evolution Graph as Research Infrastructure for AI Scientists Yujun Wu1,2∗ , Dongxu Zhang1,3∗ , Xinchen Li1,4∗ , Jinhang Xu1,5∗ , Yiling Duan6 , Yumou Liu1,7 , Jiabao Pan1,8 , Xuanhe Zhou7 , Jingxuan Wei9 , Siyuan Li4 , Jintao Chen4 , Conghui He1 , Cheng Tan1,† 1 Shanghai Artificial Intelligence Laboratory, 2 Peking University, 3 Xi’an Jiaotong University, 4 Zhejiang University, 5 East China Normal University, 6 Hunan University, 7 Shanghai Jiao arXiv:2604. 28158v1 [cs. AI] 30 Apr 2026 Ton.
 
 ## 实验结果
 
@@ -55,6 +55,15 @@ that Intern-Atlas enables downstream applications in idea evaluation and automat
 - **分析置信度:** medium
 - **分析时间:** 2026-05-02 06:02
 - **关键词:** generation
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** transformer, attention, BERT, GPT, LLM, large language model, diffusion, CNN, reinforcement learning, RL, RLHF, object detection, segmentation, generation, vision
+- **PDF 路径:** /root/wiki/raw/papers/2604-28158v1.pdf
 
 ---
 *导入时间: 2026-05-02 06:01*

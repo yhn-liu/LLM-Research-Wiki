@@ -57,6 +57,15 @@ that our approach achieves geometrically faithful reconstruction
 - **分析时间:** 2026-05-02 06:02
 - **关键词:** AI, ML
 
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** RL, PPO
+- **PDF 路径:** /root/wiki/raw/papers/2604-28179v1.pdf
+
 ---
 *导入时间: 2026-05-02 06:01*
 *来源: arXiv Daily Digest 2026-05-02*

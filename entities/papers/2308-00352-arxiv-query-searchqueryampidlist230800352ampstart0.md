@@ -83,6 +83,15 @@ MetaGPT 在多个软件工程基准测试上进行了评估：
 - [智能体](../../concepts/ai-agents.html)
 - [大语言模型](../../concepts/large-language-model.html)
 
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** BERT, GPT, LLM, large language model, GAN, RL, PPO, generation
+- **PDF 路径:** /root/wiki/raw/papers/2308-00352.pdf
+
 ---
 *导入时间: 2026-05-01 23:30*
 *导入方式: url*

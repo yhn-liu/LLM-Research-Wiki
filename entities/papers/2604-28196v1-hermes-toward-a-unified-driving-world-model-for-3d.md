@@ -66,6 +66,15 @@ HERMES++ 是一种统一的驾驶世界模型，旨在同时解决 3D 场景理�
 - **关键词:** 驾驶世界模型, 3D场景理解, 点云预测, LLM
 - **PDF 路径:** /root/wiki/raw/papers/2604-28196v1.pdf
 
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** LLM, large language model, RL, generation, 3D
+- **PDF 路径:** /root/wiki/raw/papers/2604-28196v1.pdf
+
 ---
 *导入时间: 2026-05-01 19:53*
 *来源: arXiv Daily Digest 2026-05-01*

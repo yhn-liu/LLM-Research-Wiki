@@ -66,6 +66,15 @@ Realistic long-horizon productivity work is strongly conditioned on user-specifi
 - **关键词:** 合成数据, 长期模拟, 代理训练, 生产力评估
 - **PDF 路径:** /root/wiki/raw/papers/2604-28181v1.pdf
 
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** GAN, reinforcement learning, RL
+- **PDF 路径:** /root/wiki/raw/papers/2604-28181v1.pdf
+
 ---
 *导入时间: 2026-05-01 19:53*
 *来源: arXiv Daily Digest 2026-05-01*

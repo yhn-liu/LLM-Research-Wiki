@@ -40,7 +40,7 @@ Vision-Language-Action (VLA) models have increasingly incorporated reasoning mec
 
 ## 方法概述
 
-<!-- 未能从摘要中自动提取，请手动补充 -->
+es share a critical limitation: whether employing explicit linguistic reasoning that suffers from latency and discretization, or utilizing more expressive continuous latent reasoning, they are predominantly confined to static imitation learning that limits adaptability and generalization.  While online reinforcement learning (RL) has been introduced to VLAs to enable trial-and-error exploration, current methods exclusively optimize the vanilla action space, bypassing the underlying physical reaso.
 
 ## 实验结果
 
@@ -57,6 +57,15 @@ that LaST-R1 achieves a near-perfect 99
 - **分析置信度:** medium
 - **分析时间:** 2026-05-02 06:02
 - **关键词:** reinforcement learning, RL, generation, vision
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** reinforcement learning, RL, generation, vision
+- **PDF 路径:** /root/wiki/raw/papers/2604-28192v1.pdf
 
 ---
 *导入时间: 2026-05-02 06:01*

@@ -38,7 +38,7 @@ Modern video diffusion models excel at appearance synthesis but still struggle w
 
 ## 方法概述
 
-<!-- 未能从摘要中自动提取，请手动补充 -->
+integrates three key components: (i) a large-scale dataset of over 100K photorealistic simulation videos where friction, restitution, deformation, and force are systematically varied across diverse scenarios; (ii) physics-supervised fine-tuning of a pretrained diffusion model using a Control- Net conditioned on pixel-aligned physical property maps; and (iii) VLM-guided reward optimization, where a finetuned vision–language model evaluates generated videos with targeted physics queries and provid.
 
 ## 实验结果
 
@@ -55,6 +55,15 @@ a scalable path toward physically consistent; a scalable path toward physically 
 - **分析置信度:** medium
 - **分析时间:** 2026-05-02 06:02
 - **关键词:** diffusion, RL, fine-tuning, generation, vision
+
+
+## 分析信息
+
+- **分析来源:** pdf_analysis
+- **分析置信度:** high
+- **分析时间:** 2026-05-02 06:02
+- **关键词:** diffusion, RL, PPO, fine-tuning, generation, vision
+- **PDF 路径:** /root/wiki/raw/papers/2604-28169v1.pdf
 
 ---
 *导入时间: 2026-05-02 06:01*
