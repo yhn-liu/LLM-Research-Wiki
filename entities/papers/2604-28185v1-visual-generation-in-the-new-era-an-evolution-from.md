@@ -28,6 +28,21 @@ status: analyzed
 - **发布日期:** 2026-04-30
 - **分类:** cs.CV
 
+
+## 关键图示
+
+<div class="paper-figure-grid">
+<figure><img src="../../assets/papers/2604-28185v1/fig1.png" alt="Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling Figure 1"><figcaption>Figure 1</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28185v1/fig2.png" alt="Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling Figure 2"><figcaption>Figure 2</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28185v1/fig3.png" alt="Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling Figure 3"><figcaption>Figure 3</figcaption></figure>
+</div>
+
+
+## 今日导读
+
+- **相关主题:** 强化学习 / 基准评估 / 图神经网络 / 世界模型
+- **方法信号:** To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-aware generators.
+
 ## 摘要
 
 Recent visual generation models have made major progress in photorealism, typography, instruction following, and interactive editing, yet they still struggle with spatial reasoning, persistent state, long-horizon consistency, and causal understanding. We argue that the field should move beyond appearance synthesis toward intelligent visual generation: plausible visuals grounded in structure, dynamics, domain knowledge, and causal relations. To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-aware generators. We analyze key technical drivers, including flow matching, unified understanding-and-generation models, improved visual representations, post-training, reward modeling, data curation, synthetic data distillation, and sampling acceleration. We further show that current evaluations often overestimate progress by emphasizing perceptual quality while missing structural, temporal, and causal failures. By combining benchmark review, in-the-wild stress tests, and expert-constrained case studies, this roadmap offers a capability-centered lens for understanding, evaluating, and advancing the next generation of intelligent visual generation systems.

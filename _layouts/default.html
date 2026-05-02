@@ -43,6 +43,14 @@
     .concept-nav h3 { margin-top: 0; color: #0f3460; }
     .related-papers { background: #fff8f0; padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px solid #f0e0d0; }
     .related-concepts { background: #f0fff0; padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px solid #d0f0d0; }
+    .daily-papers { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 20px 0 28px; }
+    .daily-paper-card { display: grid; grid-template-columns: 220px 1fr; gap: 18px; padding: 16px; border: 1px solid #dbe3f0; border-radius: 14px; background: linear-gradient(135deg, #fbfcff 0%, #f7f9ff 100%); box-shadow: 0 4px 14px rgba(15,52,96,0.08); }
+    .daily-paper-card h3 { margin-top: 0; line-height: 1.35; }
+    .daily-meta { color: #667085; font-size: 0.9em; margin-bottom: 8px; }
+    .daily-abstract { color: #475467; font-size: 0.95em; }
+    .daily-thumb { border-bottom: none; display: block; }
+    .daily-thumb img { width: 100%; max-height: 150px; object-fit: contain; border-radius: 10px; background: white; border: 1px solid #eef2f7; }
+    @media (max-width: 700px) { .daily-paper-card { grid-template-columns: 1fr; } .daily-thumb img { max-height: 220px; } }
     @media (max-width: 600px) { body { padding: 10px; } h1 { font-size: 1.4em; } }
   </style>
 </head>

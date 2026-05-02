@@ -28,6 +28,21 @@ status: analyzed
 - **发布日期:** 2026-04-30
 - **分类:** cs.RO, cs.CV
 
+
+## 关键图示
+
+<div class="paper-figure-grid">
+<figure><img src="../../assets/papers/2604-28192v1/fig1.png" alt="LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models Figure 1"><figcaption>Figure 1</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28192v1/fig2.png" alt="LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models Figure 2"><figcaption>Figure 2</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28192v1/fig3.png" alt="LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models Figure 3"><figcaption>Figure 3</figcaption></figure>
+</div>
+
+
+## 今日导读
+
+- **相关主题:** 多模态学习 / 强化学习 / 基准评估 / AI安全与对齐
+- **方法信号:** In this paper, we present \textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (CoT) reasoning over physical dynamics prior to action execution, along with a tailored RL post-training paradigm.
+
 ## 摘要
 
 Vision-Language-Action (VLA) models have increasingly incorporated reasoning mechanisms for complex robotic manipulation. However, existing approaches share a critical limitation: whether employing explicit linguistic reasoning that suffers from latency and discretization, or utilizing more expressive continuous latent reasoning, they are predominantly confined to static imitation learning that limits adaptability and generalization. While online reinforcement learning (RL) has been introduced to VLAs to enable trial-and-error exploration, current methods exclusively optimize the vanilla action space, bypassing the underlying physical reasoning process. In this paper, we present \textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (CoT) reasoning over physical dynamics prior to action execution, along with a tailored RL post-training paradigm. Specifically, we propose \textbf{Latent-to-Action Policy Optimization (LAPO)}, a novel RL algorithm that jointly optimizes the latent reasoning process and the action generation. By bridging reasoning and control, LAPO improves the representation of physical world modeling and enhances robustness in interactive environments. Furthermore, an \textbf{adaptive latent CoT mechanism} is introduced to allow the policy to dynamically adjust its reasoning horizon based on environment complexity. Extensive experiments show that LaST-R1 achieves a near-perfect 99.8\% average success rate on the LIBERO benchmark with only one-shot supervised warm-up, significantly improving convergence speed and performance over prior state-of-the-art methods. In real-world deployments, LAPO post-training yields up to a 44\% improvement over the initial warm-up policy across four complex tasks, including both single-arm and dual-arm settings. Finally, LaST-R1 demonstrates strong generalization across simulated and real-world environments.

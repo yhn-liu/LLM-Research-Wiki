@@ -28,6 +28,21 @@ status: analyzed
 - **发布日期:** 2026-04-30
 - **分类:** cs.GT, cs.AI, cs.CC
 
+
+## 关键图示
+
+<div class="paper-figure-grid">
+<figure><img src="../../assets/papers/2604-28186v1/fig1.png" alt="Computing Equilibrium beyond Unilateral Deviation Figure 1"><figcaption>Figure 1</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28186v1/fig2.png" alt="Computing Equilibrium beyond Unilateral Deviation Figure 2"><figcaption>Figure 2</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28186v1/fig3.png" alt="Computing Equilibrium beyond Unilateral Deviation Figure 3"><figcaption>Figure 3</figcaption></figure>
+</div>
+
+
+## 今日导读
+
+- **相关主题:** 基准评估
+- **方法信号:** Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).
+
 ## 摘要
 
 Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against profitable coordinated deviations by coalitions. Although the literature proposes solution concepts that provide stability against multilateral deviations (\emph{e.g.}, strong Nash and coalition-proof equilibrium), these generally fail to exist. In this paper, we study an alternative solution concept that minimizes coalitional deviation incentives, rather than requiring them to vanish, and is therefore guaranteed to exist. Specifically, we focus on minimizing the average gain of a deviating coalition, and extend the framework to weighted-average and maximum-within-coalition gains. In contrast, the minimum-gain analogue is shown to be computationally intractable. For the average-gain and maximum-gain objectives, we prove a lower bound on the complexity of computing such an equilibrium and present an algorithm that matches this bound. Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).

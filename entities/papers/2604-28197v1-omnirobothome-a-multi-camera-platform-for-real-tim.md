@@ -28,6 +28,21 @@ status: analyzed
 - **发布日期:** 2026-04-30
 - **分类:** cs.RO, cs.CV
 
+
+## 关键图示
+
+<div class="paper-figure-grid">
+<figure><img src="../../assets/papers/2604-28197v1/fig1.png" alt="OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction Figure 1"><figcaption>Figure 1</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28197v1/fig2.png" alt="OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction Figure 2"><figcaption>Figure 2</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28197v1/fig3.png" alt="OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction Figure 3"><figcaption>Figure 3</figcaption></figure>
+</div>
+
+
+## 今日导读
+
+- **相关主题:** AI安全与对齐 / 智能体
+- **方法信号:** We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human and object perception with coordinated multi-robot actuation in a shared world frame.
+
 ## 摘要
 
 Human-robot collaboration has been studied primarily in dyadic or sequential settings. However, real homes require multiadic collaboration, where multiple humans and robots share a workspace, acting concurrently on interleaved subtasks with tight spatial and temporal coupling. This regime remains underexplored because close-proximity interaction between humans, robots, and objects creates persistent occlusion and rapid state changes, making reliable real-time 3D tracking the central bottleneck. No existing platform provides the real-time, occlusion-robust, room-scale perception needed to make this regime experimentally tractable. We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human and object perception with coordinated multi-robot actuation in a shared world frame. The system instruments a natural home environment with 48 hardware-synchronized RGB cameras for markerless, occlusion-robust tracking of multiple humans and objects, temporally aligned with two Franka arms that act on live scene state. Continuous capture within this consistent frame further supports long-horizon human behavior modeling from accumulated trajectories. The platform makes the multiadic collaboration regime experimentally tractable. We focus on two central problems: safety in shared human-robot environments and human-anticipatory robotic assistance, and show that real-time perception and accumulated behavior memory each yield measurable gains in both.

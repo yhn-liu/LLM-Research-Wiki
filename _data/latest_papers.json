@@ -1,0 +1,500 @@
+[
+  {
+    "id": "2604.28179v1",
+    "title": "Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy",
+    "authors": [
+      "Andrea Dunn Beltran",
+      "Daniel Rho",
+      "Aarav Mehta",
+      "Xinqi Xiong",
+      "Raúl San José Estépar",
+      "Ron Alterovitz",
+      "Marc Niethammer",
+      "Roni Sengupta"
+    ],
+    "published": "2026-04-30",
+    "summary": "Bronchoscopic navigation relies on registering endoscopic video to a preoperative CT scan, but respiratory motion deforms the airway by 5-20 mm, creating CT-to-body divergence that limits localization accuracy. In practice, this is mitigated through breath-hold protocols, which attempt to match the intraoperative anatomy to a static CT, but are difficult to reproduce and disrupt clinical workflow. We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling. Paired inhale-exhale CT scans, already acquired for planning, implicitly define the patient-specific deformation space of the breathing airway. By registering these scans, we reduce respiratory motion to a single scalar breathing phase per frame, constraining all reconstructions to anatomically observed configurations. We embed this representation within a mesh-anchored Gaussian splatting framework, where a lightweight estimator infers breathing phase directly from endoscopic RGB, enabling continuous, deformation-aware reconstruction throughout the respiratory cycle without breath-holds or external sensing. To enable quantitative evaluation, we introduce RESPIRE, a physically grounded bronchoscopy simulation pipeline with per-frame ground truth for geometry, pose, breathing phase, and deformation. Experiments on RESPIRE show that our approach achieves geometrically faithful reconstruction, over 20x faster training, and 1.22 mm target localization accuracy (within the 3mm clinically relevant tolerances) outperforming unconstrained single-CT baselines. Please check out our website for additional visuals: https://asdunnbe.github.io/RESPIRE/",
+    "categories": [
+      "cs.CV"
+    ],
+    "comment": "",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla",
+    "rel_path": "entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html",
+    "figures": [
+      "assets/papers/2604-28179v1/fig1.png",
+      "assets/papers/2604-28179v1/fig2.png"
+    ],
+    "concepts": [
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "医学AI",
+        "slug": "medical-ai",
+        "url": "../../concepts/medical-ai.html"
+      },
+      {
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
+      }
+    ],
+    "method_signal": "We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling.",
+    "topic_signal": "多模态学习 / 基准评估 / 医学AI / 世界模型"
+  },
+  {
+    "id": "2604.28185v1",
+    "title": "Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling",
+    "authors": [
+      "Keming Wu",
+      "Zuhao Yang",
+      "Kaichen Zhang",
+      "Shizun Wang",
+      "Haowei Zhu",
+      "Sicong Leng",
+      "Zhongyu Yang",
+      "Qijie Wang",
+      "Sudong Wang",
+      "Ziting Wang",
+      "Zili Wang",
+      "Hui Zhang",
+      "Haonan Wang",
+      "Hang Zhou",
+      "Yifan Pu",
+      "Xingxuan Li",
+      "Fangneng Zhan",
+      "Bo Li",
+      "Lidong Bing",
+      "Yuxin Song",
+      "Ziwei Liu",
+      "Wenhu Chen",
+      "Jingdong Wang",
+      "Xinchao Wang",
+      "Xiaojuan Qi",
+      "Shijian Lu",
+      "Bin Wang"
+    ],
+    "published": "2026-04-30",
+    "summary": "Recent visual generation models have made major progress in photorealism, typography, instruction following, and interactive editing, yet they still struggle with spatial reasoning, persistent state, long-horizon consistency, and causal understanding. We argue that the field should move beyond appearance synthesis toward intelligent visual generation: plausible visuals grounded in structure, dynamics, domain knowledge, and causal relations. To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-aware generators. We analyze key technical drivers, including flow matching, unified understanding-and-generation models, improved visual representations, post-training, reward modeling, data curation, synthetic data distillation, and sampling acceleration. We further show that current evaluations often overestimate progress by emphasizing perceptual quality while missing structural, temporal, and causal failures. By combining benchmark review, in-the-wild stress tests, and expert-constrained case studies, this roadmap offers a capability-centered lens for understanding, evaluating, and advancing the next generation of intelligent visual generation systems.",
+    "categories": [
+      "cs.CV"
+    ],
+    "comment": "Project Page: https://github.com/EvolvingLMMs-Lab/Evolving-Visual-Generation",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28185v1-visual-generation-in-the-new-era-an-evolution-from",
+    "rel_path": "entities/papers/2604-28185v1-visual-generation-in-the-new-era-an-evolution-from.html",
+    "figures": [
+      "assets/papers/2604-28185v1/fig1.png",
+      "assets/papers/2604-28185v1/fig2.png",
+      "assets/papers/2604-28185v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "图神经网络",
+        "slug": "graph-neural-networks",
+        "url": "../../concepts/graph-neural-networks.html"
+      },
+      {
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
+      }
+    ],
+    "method_signal": "To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-aware generators.",
+    "topic_signal": "强化学习 / 基准评估 / 图神经网络 / 世界模型"
+  },
+  {
+    "id": "2604.28190v1",
+    "title": "Representation Fréchet Loss for Visual Generation",
+    "authors": [
+      "Jiawei Yang",
+      "Zhengyang Geng",
+      "Xuan Ju",
+      "Yonglong Tian",
+      "Yue Wang"
+    ],
+    "published": "2026-04-30",
+    "summary": "We show that Fréchet Distance (FD), long considered impractical as a training objective, can in fact be effectively optimized in the representation space. Our idea is simple: decouple the population size for FD estimation (e.g., 50k) from the batch size for gradient computation (e.g., 1024). We term this approach FD-loss. Optimizing FD-loss reveals several surprising findings. First, post-training a base generator with FD-loss in different representation spaces consistently improves visual quality. Under the Inception feature space, a one-step generator achieves0.72 FID on ImageNet 256x256. Second, the same FD-loss repurposes multi-step generators into strong one-step generators without teacher distillation, adversarial training or per-sample targets. Third, FID can misrank visual quality: modern representations can yield better samples despite worse Inception FID. This motivates FDr$^k$, a multi-representation metric. We hope this work will encourage further exploration of distributional distances in diverse representation spaces as both training objectives and evaluation metrics for generative models.",
+    "categories": [
+      "cs.CV"
+    ],
+    "comment": "Code and checkpoints are available at https://github.com/Jiawei-Yang/FD-loss",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28190v1-representation-frchet-loss-for-visual-generation",
+    "rel_path": "entities/papers/2604-28190v1-representation-frchet-loss-for-visual-generation.html",
+    "figures": [
+      "assets/papers/2604-28190v1/fig1.jpg",
+      "assets/papers/2604-28190v1/fig2.png",
+      "assets/papers/2604-28190v1/fig3.jpg"
+    ],
+    "concepts": [
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      }
+    ],
+    "method_signal": "We show that Fréchet Distance (FD), long considered impractical as a training objective, can in fact be effectively optimized in the representation space.",
+    "topic_signal": "多模态学习 / 基准评估 / AI安全与对齐"
+  },
+  {
+    "id": "2604.28192v1",
+    "title": "LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models",
+    "authors": [
+      "Hao Chen",
+      "Jiaming Liu",
+      "Zhonghao Yan",
+      "Nuowei Han",
+      "Renrui Zhang",
+      "Chenyang Gu",
+      "Jialin Gao",
+      "Ziyu Guo",
+      "Siyuan Qian",
+      "Yinxi Wang",
+      "Peng Jia",
+      "Chi-Wing Fu",
+      "Shanghang Zhang",
+      "Pheng-Ann Heng"
+    ],
+    "published": "2026-04-30",
+    "summary": "Vision-Language-Action (VLA) models have increasingly incorporated reasoning mechanisms for complex robotic manipulation. However, existing approaches share a critical limitation: whether employing explicit linguistic reasoning that suffers from latency and discretization, or utilizing more expressive continuous latent reasoning, they are predominantly confined to static imitation learning that limits adaptability and generalization. While online reinforcement learning (RL) has been introduced to VLAs to enable trial-and-error exploration, current methods exclusively optimize the vanilla action space, bypassing the underlying physical reasoning process. In this paper, we present \\textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (CoT) reasoning over physical dynamics prior to action execution, along with a tailored RL post-training paradigm. Specifically, we propose \\textbf{Latent-to-Action Policy Optimization (LAPO)}, a novel RL algorithm that jointly optimizes the latent reasoning process and the action generation. By bridging reasoning and control, LAPO improves the representation of physical world modeling and enhances robustness in interactive environments. Furthermore, an \\textbf{adaptive latent CoT mechanism} is introduced to allow the policy to dynamically adjust its reasoning horizon based on environment complexity. Extensive experiments show that LaST-R1 achieves a near-perfect 99.8\\% average success rate on the LIBERO benchmark with only one-shot supervised warm-up, significantly improving convergence speed and performance over prior state-of-the-art methods. In real-world deployments, LAPO post-training yields up to a 44\\% improvement over the initial warm-up policy across four complex tasks, including both single-arm and dual-arm settings. Finally, LaST-R1 demonstrates strong generalization across simulated and real-world environments.",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "comment": "",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28192v1-last-r1-reinforcing-action-via-adaptive-physical-l",
+    "rel_path": "entities/papers/2604-28192v1-last-r1-reinforcing-action-via-adaptive-physical-l.html",
+    "figures": [
+      "assets/papers/2604-28192v1/fig1.png",
+      "assets/papers/2604-28192v1/fig2.png",
+      "assets/papers/2604-28192v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
+      },
+      {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      }
+    ],
+    "method_signal": "In this paper, we present \\textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (CoT) reasoning over physical dynamics prior to action execution, along with a tailored RL post-training paradigm.",
+    "topic_signal": "多模态学习 / 强化学习 / 基准评估 / AI安全与对齐"
+  },
+  {
+    "id": "2604.28193v1",
+    "title": "Generalizable Sparse-View 3D Reconstruction from Unconstrained Images",
+    "authors": [
+      "Vinayak Gupta",
+      "Chih-Hao Lin",
+      "Shenlong Wang",
+      "Anand Bhattad",
+      "Jia-Bin Huang"
+    ],
+    "published": "2026-04-30",
+    "summary": "Reconstructing 3D scenes from sparse, unposed images remains challenging under real-world conditions with varying illumination and transient occlusions. Existing methods rely on scene-specific optimization using appearance embeddings or dynamic masks, which requires extensive per-scene training and fails under sparse views. Moreover, evaluations on limited scenes raise questions about generalization. We present GenWildSplat, a feed-forward framework for sparse-view outdoor reconstruction that requires no per-scene optimization. Given unposed internet images, GenWildSplat predicts depth, camera parameters, and 3D Gaussians in a canonical space using learned geometric priors. An appearance adapter modulates appearance for target lighting conditions, while semantic segmentation handles transient objects. Through curriculum learning on synthetic and real data, GenWildSplat generalizes across diverse illumination and occlusion patterns. Evaluations on PhotoTourism and MegaScenes benchmark demonstrate state-of-the-art feed-forward rendering quality, achieving real-time inference without test-time optimization",
+    "categories": [
+      "cs.CV"
+    ],
+    "comment": "Project Page: https://genwildsplat.github.io/",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28193v1-generalizable-sparse-view-3d-reconstruction-from-u",
+    "rel_path": "entities/papers/2604-28193v1-generalizable-sparse-view-3d-reconstruction-from-u.html",
+    "figures": [
+      "assets/papers/2604-28193v1/fig1.png",
+      "assets/papers/2604-28193v1/fig2.png",
+      "assets/papers/2604-28193v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "We present GenWildSplat, a feed-forward framework for sparse-view outdoor reconstruction that requires no per-scene optimization.",
+    "topic_signal": "多模态学习 / 基准评估"
+  },
+  {
+    "id": "2604.28075v1",
+    "title": "Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling",
+    "authors": [
+      "Ansar Aynetdinov",
+      "Patrick Haller",
+      "Alan Akbik"
+    ],
+    "published": "2026-04-30",
+    "summary": "Recent research has shown that filtering massive English web corpora into high-quality subsets significantly improves training efficiency. However, for high-resource non-English languages like German, French, or Japanese, aggressive filtering creates a strategic dilemma: should practitioners prioritize diversity by training once on large amounts of lightly filtered web data, or prioritize quality by strictly filtering for a high-quality core and repeating it over multiple epochs? We investigate this trade-off for German by constructing hierarchical quality filters applied to 500M web documents, comparing multi-epoch training on the filtered subsets against single-pass training on a diverse corpus. Our experiments across multiple model scales and token budgets show that repeating high-quality data consistently outperforms single-pass training on larger, less filtered sets. Notably, the performance gap persists even after 7 epochs. Our findings suggest that for non-English LLMs, semantic concentration through quality filtering offers a more viable path to efficient language modeling than simply maximizing unique data volume. We release our German language models (called Boldt), as well as our cleaned evaluation benchmarks to the research community. Our experiments indicate that they achieve state-of-the-art results despite training on 10-360x fewer tokens than comparable models.",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "comment": "",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28075v1-repetition-over-diversity-high-signal-data-filteri",
+    "rel_path": "entities/papers/2604-28075v1-repetition-over-diversity-high-signal-data-filteri.html",
+    "figures": [
+      "assets/papers/2604-28075v1/fig1.png",
+      "assets/papers/2604-28075v1/fig2.png",
+      "assets/papers/2604-28075v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "Recent research has shown that filtering massive English web corpora into high-quality subsets significantly improves training efficiency.",
+    "topic_signal": "大语言模型 / 基准评估"
+  },
+  {
+    "id": "2604.28197v1",
+    "title": "OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction",
+    "authors": [
+      "Junyoung Lee",
+      "Sookwan Han",
+      "Jeonghwan Kim",
+      "Inhee Lee",
+      "Mingi Choi",
+      "Jisoo Kim",
+      "Wonjung Woo",
+      "Hanbyul Joo"
+    ],
+    "published": "2026-04-30",
+    "summary": "Human-robot collaboration has been studied primarily in dyadic or sequential settings. However, real homes require multiadic collaboration, where multiple humans and robots share a workspace, acting concurrently on interleaved subtasks with tight spatial and temporal coupling. This regime remains underexplored because close-proximity interaction between humans, robots, and objects creates persistent occlusion and rapid state changes, making reliable real-time 3D tracking the central bottleneck. No existing platform provides the real-time, occlusion-robust, room-scale perception needed to make this regime experimentally tractable. We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human and object perception with coordinated multi-robot actuation in a shared world frame. The system instruments a natural home environment with 48 hardware-synchronized RGB cameras for markerless, occlusion-robust tracking of multiple humans and objects, temporally aligned with two Franka arms that act on live scene state. Continuous capture within this consistent frame further supports long-horizon human behavior modeling from accumulated trajectories. The platform makes the multiadic collaboration regime experimentally tractable. We focus on two central problems: safety in shared human-robot environments and human-anticipatory robotic assistance, and show that real-time perception and accumulated behavior memory each yield measurable gains in both.",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "comment": "Project Page: https://junc0ng.github.io/omnirobothome",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28197v1-omnirobothome-a-multi-camera-platform-for-real-tim",
+    "rel_path": "entities/papers/2604-28197v1-omnirobothome-a-multi-camera-platform-for-real-tim.html",
+    "figures": [
+      "assets/papers/2604-28197v1/fig1.png",
+      "assets/papers/2604-28197v1/fig2.png",
+      "assets/papers/2604-28197v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human and object perception with coordinated multi-robot actuation in a shared world frame.",
+    "topic_signal": "AI安全与对齐 / 智能体"
+  },
+  {
+    "id": "2604.28186v1",
+    "title": "Computing Equilibrium beyond Unilateral Deviation",
+    "authors": [
+      "Mingyang Liu",
+      "Gabriele Farina",
+      "Asuman Ozdaglar"
+    ],
+    "published": "2026-04-30",
+    "summary": "Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against profitable coordinated deviations by coalitions. Although the literature proposes solution concepts that provide stability against multilateral deviations (\\emph{e.g.}, strong Nash and coalition-proof equilibrium), these generally fail to exist. In this paper, we study an alternative solution concept that minimizes coalitional deviation incentives, rather than requiring them to vanish, and is therefore guaranteed to exist. Specifically, we focus on minimizing the average gain of a deviating coalition, and extend the framework to weighted-average and maximum-within-coalition gains. In contrast, the minimum-gain analogue is shown to be computationally intractable. For the average-gain and maximum-gain objectives, we prove a lower bound on the complexity of computing such an equilibrium and present an algorithm that matches this bound. Finally, we use our framework to solve the \\emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).",
+    "categories": [
+      "cs.GT",
+      "cs.AI",
+      "cs.CC",
+      "cs.LG",
+      "econ.TH"
+    ],
+    "comment": "",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28186v1-computing-equilibrium-beyond-unilateral-deviation",
+    "rel_path": "entities/papers/2604-28186v1-computing-equilibrium-beyond-unilateral-deviation.html",
+    "figures": [
+      "assets/papers/2604-28186v1/fig1.png",
+      "assets/papers/2604-28186v1/fig2.png",
+      "assets/papers/2604-28186v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "Finally, we use our framework to solve the \\emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).",
+    "topic_signal": "基准评估"
+  },
+  {
+    "id": "2604.28158v1",
+    "title": "Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists",
+    "authors": [
+      "Yujun Wu",
+      "Dongxu Zhang",
+      "Xinchen Li",
+      "Jinhang Xu",
+      "Yiling Duan",
+      "Yumou Liu",
+      "Jiabao Pan",
+      "Xuanhe Zhou",
+      "Jingxuan Wei",
+      "Siyuan Li",
+      "Jintao Chen",
+      "Conghui He",
+      "Cheng Tan"
+    ],
+    "published": "2026-04-30",
+    "summary": "Existing research infrastructure is fundamentally document-centric, providing citation links between papers but lacking explicit representations of methodological evolution. In particular, it does not capture the structured relationships that explain how and why research methods emerge, adapt, and build upon one another. With the rise of AI-driven research agents as a new class of consumers of scientific knowledge, this limitation becomes increasingly consequential, as such agents cannot reliably reconstruct method evolution topologies from unstructured text. We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entities, infers lineage relationships among methodologies, and captures the bottlenecks that drive transitions between successive innovations. Built from 1,030,314 papers spanning AI conferences, journals, and arXiv preprints, the resulting graph comprises 9,410,201 semantically typed edges, each grounded in verbatim source evidence, forming a queryable causal network of methodological development. To operationalize this structure, we further propose a self-guided temporal tree search algorithm for constructing evolution chains that trace the progression of methods over time. We evaluate the quality of the resulting graph against expert-curated ground-truth evolution chains and observe strong alignment. In addition, we demonstrate that Intern-Atlas enables downstream applications in idea evaluation and automated idea generation. We position methodological evolution graphs as a foundational data layer for the emerging automated scientific discovery.",
+    "categories": [
+      "cs.AI"
+    ],
+    "comment": "25 pages, 5 figures, 8 tables",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r",
+    "rel_path": "entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html",
+    "figures": [
+      "assets/papers/2604-28158v1/fig1.png",
+      "assets/papers/2604-28158v1/fig2.png",
+      "assets/papers/2604-28158v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      },
+      {
+        "name": "图神经网络",
+        "slug": "graph-neural-networks",
+        "url": "../../concepts/graph-neural-networks.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entities, infers lineage relationships among methodologies, and captures the bottlenecks that drive transitions between successive innovations.",
+    "topic_signal": "基准评估 / AI安全与对齐 / 图神经网络 / 智能体"
+  },
+  {
+    "id": "2604.28169v1",
+    "title": "PhyCo: Learning Controllable Physical Priors for Generative Motion",
+    "authors": [
+      "Sriram Narayanan",
+      "Ziyu Jiang",
+      "Srinivasa Narasimhan",
+      "Manmohan Chandraker"
+    ],
+    "published": "2026-04-30",
+    "summary": "Modern video diffusion models excel at appearance synthesis but still struggle with physical consistency: objects drift, collisions lack realistic rebound, and material responses seldom match their underlying properties. We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into video generation. Our approach integrates three key components: (i) a large-scale dataset of over 100K photorealistic simulation videos where friction, restitution, deformation, and force are systematically varied across diverse scenarios; (ii) physics-supervised fine-tuning of a pretrained diffusion model using a ControlNet conditioned on pixel-aligned physical property maps; and (iii) VLM-guided reward optimization, where a fine-tuned vision-language model evaluates generated videos with targeted physics queries and provides differentiable feedback. This combination enables a generative model to produce physically consistent and controllable outputs through variations in physical attributes-without any simulator or geometry reconstruction at inference. On the Physics-IQ benchmark, PhyCo significantly improves physical realism over strong baselines, and human studies confirm clearer and more faithful control over physical attributes. Our results demonstrate a scalable path toward physically consistent, controllable generative video models that generalize beyond synthetic training environments.",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "comment": "CVPR 2026. Project Page: https://phyco-video.github.io/",
+    "category_en": "",
+    "category_cn": "",
+    "slug": "2604-28169v1-phyco-learning-controllable-physical-priors-for-ge",
+    "rel_path": "entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html",
+    "figures": [
+      "assets/papers/2604-28169v1/fig1.jpg",
+      "assets/papers/2604-28169v1/fig2.jpg",
+      "assets/papers/2604-28169v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
+      },
+      {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into video generation.",
+    "topic_signal": "大语言模型 / 多模态学习 / 强化学习 / 基准评估"
+  }
+]

@@ -74,3 +74,45 @@
 ## [2026-05-02] ingest | arXiv Daily Digest
 - 导入论文数量: 0
 - 来源: /root/.hermes/output/arxiv_2026-05-02.pdf
+
+## [2026-05-02] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 不生成 PDF；论文页面包含摘要、方法信号、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2604.28179v1] Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscop
+  - [2604.28185v1] Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic Wo
+  - [2604.28190v1] Representation Fréchet Loss for Visual Generation
+  - [2604.28192v1] LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Model
+  - [2604.28193v1] Generalizable Sparse-View 3D Reconstruction from Unconstrained Images
+  - [2604.28075v1] Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient Germa
+  - [2604.28197v1] OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Inter
+  - [2604.28186v1] Computing Equilibrium beyond Unilateral Deviation
+  - [2604.28158v1] Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI
+  - [2604.28169v1] PhyCo: Learning Controllable Physical Priors for Generative Motion
+
+## [2026-05-02] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 不生成 PDF；论文页面包含摘要、方法信号、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2604.28179v1] Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscop
+  - [2604.28185v1] Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic Wo
+  - [2604.28190v1] Representation Fréchet Loss for Visual Generation
+  - [2604.28192v1] LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Model
+  - [2604.28193v1] Generalizable Sparse-View 3D Reconstruction from Unconstrained Images
+  - [2604.28075v1] Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient Germa
+  - [2604.28197v1] OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Inter
+  - [2604.28186v1] Computing Equilibrium beyond Unilateral Deviation
+  - [2604.28158v1] Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI
+  - [2604.28169v1] PhyCo: Learning Controllable Physical Priors for Generative Motion
+
+## [2026-05-02] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 不生成 PDF；论文页面包含摘要、方法信号、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2604.28179v1] Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscop
+  - [2604.28185v1] Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic Wo
+  - [2604.28190v1] Representation Fréchet Loss for Visual Generation
+  - [2604.28192v1] LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Model
+  - [2604.28193v1] Generalizable Sparse-View 3D Reconstruction from Unconstrained Images
+  - [2604.28075v1] Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient Germa
+  - [2604.28197v1] OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Inter
+  - [2604.28186v1] Computing Equilibrium beyond Unilateral Deviation
+  - [2604.28158v1] Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI
+  - [2604.28169v1] PhyCo: Learning Controllable Physical Priors for Generative Motion

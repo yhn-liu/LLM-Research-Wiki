@@ -28,6 +28,21 @@ status: analyzed
 - **发布日期:** 2026-04-30
 - **分类:** cs.CV
 
+
+## 关键图示
+
+<div class="paper-figure-grid">
+<figure><img src="../../assets/papers/2604-28193v1/fig1.png" alt="Generalizable Sparse-View 3D Reconstruction from Unconstrained Images Figure 1"><figcaption>Figure 1</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28193v1/fig2.png" alt="Generalizable Sparse-View 3D Reconstruction from Unconstrained Images Figure 2"><figcaption>Figure 2</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28193v1/fig3.png" alt="Generalizable Sparse-View 3D Reconstruction from Unconstrained Images Figure 3"><figcaption>Figure 3</figcaption></figure>
+</div>
+
+
+## 今日导读
+
+- **相关主题:** 多模态学习 / 基准评估
+- **方法信号:** We present GenWildSplat, a feed-forward framework for sparse-view outdoor reconstruction that requires no per-scene optimization.
+
 ## 摘要
 
 Reconstructing 3D scenes from sparse, unposed images remains challenging under real-world conditions with varying illumination and transient occlusions. Existing methods rely on scene-specific optimization using appearance embeddings or dynamic masks, which requires extensive per-scene training and fails under sparse views. Moreover, evaluations on limited scenes raise questions about generalization. We present GenWildSplat, a feed-forward framework for sparse-view outdoor reconstruction that requires no per-scene optimization. Given unposed internet images, GenWildSplat predicts depth, camera parameters, and 3D Gaussians in a canonical space using learned geometric priors. An appearance adapter modulates appearance for target lighting conditions, while semantic segmentation handles transient objects. Through curriculum learning on synthetic and real data, GenWildSplat generalizes across diverse illumination and occlusion patterns. Evaluations on PhotoTourism and MegaScenes benchmark demonstrate state-of-the-art feed-forward rendering quality, achieving real-time inference without test-time optimization

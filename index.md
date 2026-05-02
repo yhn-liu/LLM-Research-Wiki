@@ -6,7 +6,106 @@ title: LLM Research Wiki
 # 🔬 LLM Research Wiki
 
 > AI/ML 领域的维基式知识库。按概念组织，论文为据，持续更新。
-> 最后更新：2026-05-01 | 概念：11 | 论文：17
+> 最后更新：2026-05-02 | 概念：61 | 论文：27
+
+---
+
+## 🌟 今日新论文
+
+> 2026-05-02 自动更新，共 10 篇。这里是网站版每日论文导读；点击标题进入论文页面查看摘要、方法信号、相关主题和关键图示。
+
+<div class="daily-papers">
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html" class="daily-thumb"><img src="assets/papers/2604-28179v1/fig1.png" alt="Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html">Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.CV · 多模态学习 / 基准评估 / 医学AI / 世界模型</div>
+    <p><strong>方法/亮点：</strong>We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling.</p>
+    <p class="daily-abstract">Bronchoscopic navigation relies on registering endoscopic video to a preoperative CT scan, but respiratory motion deforms the airway by 5-20 mm, creating CT-to-body divergence that limits localization accuracy. In practice, this is mitigated through breath-hol...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28185v1-visual-generation-in-the-new-era-an-evolution-from.html" class="daily-thumb"><img src="assets/papers/2604-28185v1/fig1.png" alt="Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28185v1-visual-generation-in-the-new-era-an-evolution-from.html">Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.CV · 强化学习 / 基准评估 / 图神经网络 / 世界模型</div>
+    <p><strong>方法/亮点：</strong>To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-</p>
+    <p class="daily-abstract">Recent visual generation models have made major progress in photorealism, typography, instruction following, and interactive editing, yet they still struggle with spatial reasoning, persistent state, long-horizon consistency, and causal understanding. We argue...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28190v1-representation-frchet-loss-for-visual-generation.html" class="daily-thumb"><img src="assets/papers/2604-28190v1/fig1.jpg" alt="Representation Fréchet Loss for Visual Generation"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28190v1-representation-frchet-loss-for-visual-generation.html">Representation Fréchet Loss for Visual Generation</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.CV · 多模态学习 / 基准评估 / AI安全与对齐</div>
+    <p><strong>方法/亮点：</strong>We show that Fréchet Distance (FD), long considered impractical as a training objective, can in fact be effectively optimized in the representation space.</p>
+    <p class="daily-abstract">We show that Fréchet Distance (FD), long considered impractical as a training objective, can in fact be effectively optimized in the representation space. Our idea is simple: decouple the population size for FD estimation (e.g., 50k) from the batch size for gr...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28192v1-last-r1-reinforcing-action-via-adaptive-physical-l.html" class="daily-thumb"><img src="assets/papers/2604-28192v1/fig1.png" alt="LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28192v1-last-r1-reinforcing-action-via-adaptive-physical-l.html">LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.RO, cs.CV · 多模态学习 / 强化学习 / 基准评估 / AI安全与对齐</div>
+    <p><strong>方法/亮点：</strong>In this paper, we present \textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (CoT) reasoning over physical dynamics prior to action execution, along with a tailored RL post-training paradigm.</p>
+    <p class="daily-abstract">Vision-Language-Action (VLA) models have increasingly incorporated reasoning mechanisms for complex robotic manipulation. However, existing approaches share a critical limitation: whether employing explicit linguistic reasoning that suffers from latency and di...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28193v1-generalizable-sparse-view-3d-reconstruction-from-u.html" class="daily-thumb"><img src="assets/papers/2604-28193v1/fig1.png" alt="Generalizable Sparse-View 3D Reconstruction from Unconstrained Images"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28193v1-generalizable-sparse-view-3d-reconstruction-from-u.html">Generalizable Sparse-View 3D Reconstruction from Unconstrained Images</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.CV · 多模态学习 / 基准评估</div>
+    <p><strong>方法/亮点：</strong>We present GenWildSplat, a feed-forward framework for sparse-view outdoor reconstruction that requires no per-scene optimization.</p>
+    <p class="daily-abstract">Reconstructing 3D scenes from sparse, unposed images remains challenging under real-world conditions with varying illumination and transient occlusions. Existing methods rely on scene-specific optimization using appearance embeddings or dynamic masks, which re...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28075v1-repetition-over-diversity-high-signal-data-filteri.html" class="daily-thumb"><img src="assets/papers/2604-28075v1/fig1.png" alt="Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28075v1-repetition-over-diversity-high-signal-data-filteri.html">Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.CL, cs.AI · 大语言模型 / 基准评估</div>
+    <p><strong>方法/亮点：</strong>Recent research has shown that filtering massive English web corpora into high-quality subsets significantly improves training efficiency.</p>
+    <p class="daily-abstract">Recent research has shown that filtering massive English web corpora into high-quality subsets significantly improves training efficiency. However, for high-resource non-English languages like German, French, or Japanese, aggressive filtering creates a strateg...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28197v1-omnirobothome-a-multi-camera-platform-for-real-tim.html" class="daily-thumb"><img src="assets/papers/2604-28197v1/fig1.png" alt="OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28197v1-omnirobothome-a-multi-camera-platform-for-real-tim.html">OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.RO, cs.CV · AI安全与对齐 / 智能体</div>
+    <p><strong>方法/亮点：</strong>We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human and object perception with coordinated multi-robot actuation in a shared world frame.</p>
+    <p class="daily-abstract">Human-robot collaboration has been studied primarily in dyadic or sequential settings. However, real homes require multiadic collaboration, where multiple humans and robots share a workspace, acting concurrently on interleaved subtasks with tight spatial and t...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28186v1-computing-equilibrium-beyond-unilateral-deviation.html" class="daily-thumb"><img src="assets/papers/2604-28186v1/fig1.png" alt="Computing Equilibrium beyond Unilateral Deviation"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28186v1-computing-equilibrium-beyond-unilateral-deviation.html">Computing Equilibrium beyond Unilateral Deviation</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.GT, cs.AI, cs.CC · 基准评估</div>
+    <p><strong>方法/亮点：</strong>Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).</p>
+    <p class="daily-abstract">Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against profitable coordinated deviations by coalitions. Although th...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html" class="daily-thumb"><img src="assets/papers/2604-28158v1/fig1.png" alt="Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html">Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.AI · 基准评估 / AI安全与对齐 / 图神经网络 / 智能体</div>
+    <p><strong>方法/亮点：</strong>We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entities, infers lineage relationships among methodologies, and captures the bottlenecks that drive transitions between successive innova</p>
+    <p class="daily-abstract">Existing research infrastructure is fundamentally document-centric, providing citation links between papers but lacking explicit representations of methodological evolution. In particular, it does not capture the structured relationships that explain how and w...</p>
+  </div>
+</div>
+<div class="daily-paper-card">
+  <a href="entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html" class="daily-thumb"><img src="assets/papers/2604-28169v1/fig1.jpg" alt="PhyCo: Learning Controllable Physical Priors for Generative Motion"></a>
+  <div class="daily-paper-body">
+    <h3><a href="entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html">PhyCo: Learning Controllable Physical Priors for Generative Motion</a></h3>
+    <div class="daily-meta">2026-04-30 · cs.CV, cs.AI, cs.LG · 大语言模型 / 多模态学习 / 强化学习 / 基准评估</div>
+    <p><strong>方法/亮点：</strong>We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into video generation.</p>
+    <p class="daily-abstract">Modern video diffusion models excel at appearance synthesis but still struggle with physical consistency: objects drift, collisions lack realistic rebound, and material responses seldom match their underlying properties. We present PhyCo, a framework that intr...</p>
+  </div>
+</div>
+</div>
 
 ---
 
@@ -39,6 +138,19 @@ title: LLM Research Wiki
 ## 📄 最新论文
 
 <!-- 按日期倒序排列 -->
+
+<!-- DAILY_LATEST_AUTO -->
+- [**Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy**](entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html) — We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling
+- [**Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling**](entities/papers/2604-28185v1-visual-generation-in-the-new-era-an-evolution-from.html) — To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context
+- [**Representation Fréchet Loss for Visual Generation**](entities/papers/2604-28190v1-representation-frchet-loss-for-visual-generation.html) — We show that Fréchet Distance (FD), long considered impractical as a training objective, can in fact be effect
+- [**LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models**](entities/papers/2604-28192v1-last-r1-reinforcing-action-via-adaptive-physical-l.html) — In this paper, we present \textbf{LaST-R1}, a unified VLA framework that integrates latent Chain-of-Thought (C
+- [**Generalizable Sparse-View 3D Reconstruction from Unconstrained Images**](entities/papers/2604-28193v1-generalizable-sparse-view-3d-reconstruction-from-u.html) — We present GenWildSplat, a feed-forward framework for sparse-view outdoor reconstruction that requires no per-
+- [**Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling**](entities/papers/2604-28075v1-repetition-over-diversity-high-signal-data-filteri.html) — Recent research has shown that filtering massive English web corpora into high-quality subsets significantly i
+- [**OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction**](entities/papers/2604-28197v1-omnirobothome-a-multi-camera-platform-for-real-tim.html) — We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human 
+- [**Computing Equilibrium beyond Unilateral Deviation**](entities/papers/2604-28186v1-computing-equilibrium-beyond-unilateral-deviation.html) — Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainabl
+- [**Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists**](entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html) — We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entitie
+- [**PhyCo: Learning Controllable Physical Priors for Generative Motion**](entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html) — We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into 
+<!-- /DAILY_LATEST_AUTO -->
 
 ### 训练与对齐
 
