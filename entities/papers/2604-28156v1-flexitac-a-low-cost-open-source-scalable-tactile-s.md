@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems"
 created: 2026-05-02
 updated: 2026-05-02

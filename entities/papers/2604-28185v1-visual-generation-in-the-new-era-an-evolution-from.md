@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling"
 created: 2026-05-02
 updated: 2026-05-02

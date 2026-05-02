@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Mapping the Methodological Space of Classroom Interaction Research: Scale, Duration, and Modality in an Age of AI"
 created: 2026-05-01
 updated: 2026-05-01

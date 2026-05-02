@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "PhyCo: Learning Controllable Physical Priors for Generative Motion"
 created: 2026-05-02
 updated: 2026-05-02

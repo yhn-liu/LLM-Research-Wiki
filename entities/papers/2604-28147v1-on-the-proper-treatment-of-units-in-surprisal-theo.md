@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "On the Proper Treatment of Units in Surprisal Theory"
 created: 2026-05-01
 updated: 2026-05-01

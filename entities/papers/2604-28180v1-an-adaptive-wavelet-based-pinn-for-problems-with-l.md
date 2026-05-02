@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "An adaptive wavelet-based PINN for problems with localized high-magnitude source"
 created: 2026-05-02
 updated: 2026-05-02

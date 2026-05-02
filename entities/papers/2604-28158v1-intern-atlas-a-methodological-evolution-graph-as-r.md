@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists"
 created: 2026-05-02
 updated: 2026-05-02

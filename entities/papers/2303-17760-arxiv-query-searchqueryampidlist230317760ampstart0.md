@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "CAMEL: Communicative Agents for \"Mind\" Exploration of Large Language Model Society"
 created: 2026-05-01
 updated: 2026-05-01

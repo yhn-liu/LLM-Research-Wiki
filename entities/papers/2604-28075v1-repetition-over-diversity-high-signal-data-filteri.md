@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling"
 created: 2026-05-02
 updated: 2026-05-02

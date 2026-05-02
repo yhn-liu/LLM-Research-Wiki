@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "LaST-R1: Reinforcing Action via Adaptive Physical Latent Reasoning for VLA Models"
 created: 2026-05-02
 updated: 2026-05-02

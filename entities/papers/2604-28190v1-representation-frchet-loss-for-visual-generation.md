@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Representation Fréchet Loss for Visual Generation"
 created: 2026-05-02
 updated: 2026-05-02

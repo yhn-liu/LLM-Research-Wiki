@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Generalizable Sparse-View 3D Reconstruction from Unconstrained Images"
 created: 2026-05-02
 updated: 2026-05-02

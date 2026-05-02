@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors"
 created: 2026-05-01
 updated: 2026-05-01

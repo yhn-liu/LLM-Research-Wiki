@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy"
 created: 2026-05-02
 updated: 2026-05-02

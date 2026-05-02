@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Computing Equilibrium beyond Unilateral Deviation"
 created: 2026-05-02
 updated: 2026-05-02

@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate"
 created: 2026-05-01
 updated: 2026-05-01

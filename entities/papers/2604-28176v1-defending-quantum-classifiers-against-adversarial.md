@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Defending Quantum Classifiers against Adversarial Perturbations through Quantum Autoencoders"
 created: 2026-05-02
 updated: 2026-05-02

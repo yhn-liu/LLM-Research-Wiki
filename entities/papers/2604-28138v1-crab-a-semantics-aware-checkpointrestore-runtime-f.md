@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes"
 created: 2026-05-02
 updated: 2026-05-02

@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows"
 created: 2026-05-02
 updated: 2026-05-02

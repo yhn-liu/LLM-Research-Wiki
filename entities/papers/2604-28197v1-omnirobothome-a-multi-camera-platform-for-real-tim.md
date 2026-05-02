@@ -1,8 +1,5 @@
 ---
 layout: paper
----
----
-layout: paper
 title: "OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction"
 created: 2026-05-02
 updated: 2026-05-02
