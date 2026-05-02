@@ -16,7 +16,7 @@ source_url: https://arxiv.org/abs/2604.28197v1
 pdf_url: https://arxiv.org/pdf/2604.28197v1
 source_type: arxiv_daily
 confidence: high
-status: analyzed
+status: needs_pdf_lm_analysis
 ---
 
 # OmniRobotHome: A Multi-Camera Platform for Real-Time Multiadic Human-Robot Interaction
@@ -38,11 +38,6 @@ status: analyzed
 </div>
 
 
-## 今日导读
-
-- **相关主题:** AI安全与对齐 / 智能体
-- **方法信号:** We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human and object perception with coordinated multi-robot actuation in a shared world frame.
-
 ## 摘要
 
 Human-robot collaboration has been studied primarily in dyadic or sequential settings. However, real homes require multiadic collaboration, where multiple humans and robots share a workspace, acting concurrently on interleaved subtasks with tight spatial and temporal coupling. This regime remains underexplored because close-proximity interaction between humans, robots, and objects creates persistent occlusion and rapid state changes, making reliable real-time 3D tracking the central bottleneck. No existing platform provides the real-time, occlusion-robust, room-scale perception needed to make this regime experimentally tractable. We present OmniRobotHome, the first room-scale residential platform that unifies wide-area real-time 3D human and object perception with coordinated multi-robot actuation in a shared world frame. The system instruments a natural home environment with 48 hardware-synchronized RGB cameras for markerless, occlusion-robust tracking of multiple humans and objects, temporally aligned with two Franka arms that act on live scene state. Continuous capture within this consistent frame further supports long-horizon human behavior modeling from accumulated trajectories. The platform makes the multiadic collaboration regime experimentally tractable. We focus on two central problems: safety in shared human-robot environments and human-anticipatory robotic assistance, and show that real-time perception and accumulated behavior memory each yield measurable gains in both.
@@ -58,6 +53,10 @@ s condition on predicted contact [48], receiver motion [24], and gaze [35].  Coo
 ## 实验结果
 
 that real-time perception and accumulated behavior memory each yield measurable gains in both
+
+## 深度解读状态
+
+> 待 PDF 下载并由 LM 阅读后补充。本文详情页不会使用 arXiv 元数据或摘要快速导读冒充完整解读。
 
 ## 相关论文
 

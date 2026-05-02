@@ -16,7 +16,7 @@ source_url: https://arxiv.org/abs/2604.28075v1
 pdf_url: https://arxiv.org/pdf/2604.28075v1
 source_type: arxiv_daily
 confidence: high
-status: analyzed
+status: needs_pdf_lm_analysis
 ---
 
 # Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling
@@ -37,11 +37,6 @@ status: analyzed
 <figure><img src="../../assets/papers/2604-28075v1/fig3.png" alt="Repetition over Diversity: High-Signal Data Filtering for Sample-Efficient German Language Modeling Figure 3"><figcaption>Figure 3</figcaption></figure>
 </div>
 
-
-## 今日导读
-
-- **相关主题:** 大语言模型 / 基准评估
-- **方法信号:** Recent research has shown that filtering massive English web corpora into high-quality subsets significantly improves training efficiency.
 
 ## 摘要
 
@@ -65,6 +60,10 @@ that repeating high-quality data consistently outperforms single-pass training; 
 ### 局限性
 
 - validate these findings across diverse language families
+
+## 深度解读状态
+
+> 待 PDF 下载并由 LM 阅读后补充。本文详情页不会使用 arXiv 元数据或摘要快速导读冒充完整解读。
 
 ## 相关论文
 

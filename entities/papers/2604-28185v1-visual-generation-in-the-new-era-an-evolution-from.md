@@ -16,7 +16,7 @@ source_url: https://arxiv.org/abs/2604.28185v1
 pdf_url: https://arxiv.org/pdf/2604.28185v1
 source_type: arxiv_daily
 confidence: high
-status: analyzed
+status: needs_pdf_lm_analysis
 ---
 
 # Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling
@@ -38,11 +38,6 @@ status: analyzed
 </div>
 
 
-## 今日导读
-
-- **相关主题:** 强化学习 / 基准评估 / 图神经网络 / 世界模型
-- **方法信号:** To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-aware generators.
-
 ## 摘要
 
 Recent visual generation models have made major progress in photorealism, typography, instruction following, and interactive editing, yet they still struggle with spatial reasoning, persistent state, long-horizon consistency, and causal understanding. We argue that the field should move beyond appearance synthesis toward intelligent visual generation: plausible visuals grounded in structure, dynamics, domain knowledge, and causal relations. To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-aware generators. We analyze key technical drivers, including flow matching, unified understanding-and-generation models, improved visual representations, post-training, reward modeling, data curation, synthetic data distillation, and sampling acceleration. We further show that current evaluations often overestimate progress by emphasizing perceptual quality while missing structural, temporal, and causal failures. By combining benchmark review, in-the-wild stress tests, and expert-constrained case studies, this roadmap offers a capability-centered lens for understanding, evaluating, and advancing the next generation of intelligent visual generation systems.
@@ -58,6 +53,10 @@ Recent visual generation models have made major progress in photorealism, typogr
 ## 实验结果
 
 that current evaluations often overestimate progress
+
+## 深度解读状态
+
+> 待 PDF 下载并由 LM 阅读后补充。本文详情页不会使用 arXiv 元数据或摘要快速导读冒充完整解读。
 
 ## 相关论文
 

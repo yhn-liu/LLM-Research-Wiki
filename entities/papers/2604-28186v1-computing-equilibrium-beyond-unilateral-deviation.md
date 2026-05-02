@@ -16,7 +16,7 @@ source_url: https://arxiv.org/abs/2604.28186v1
 pdf_url: https://arxiv.org/pdf/2604.28186v1
 source_type: arxiv_daily
 confidence: high
-status: analyzed
+status: needs_pdf_lm_analysis
 ---
 
 # Computing Equilibrium beyond Unilateral Deviation
@@ -38,11 +38,6 @@ status: analyzed
 </div>
 
 
-## 今日导读
-
-- **相关主题:** 基准评估
-- **方法信号:** Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).
-
 ## 摘要
 
 Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against profitable coordinated deviations by coalitions. Although the literature proposes solution concepts that provide stability against multilateral deviations (\emph{e.g.}, strong Nash and coalition-proof equilibrium), these generally fail to exist. In this paper, we study an alternative solution concept that minimizes coalitional deviation incentives, rather than requiring them to vanish, and is therefore guaranteed to exist. Specifically, we focus on minimizing the average gain of a deviating coalition, and extend the framework to weighted-average and maximum-within-coalition gains. In contrast, the minimum-gain analogue is shown to be computationally intractable. For the average-gain and maximum-gain objectives, we prove a lower bound on the complexity of computing such an equilibrium and present an algorithm that matches this bound. Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).
@@ -58,6 +53,10 @@ es, such as no-regret learning (Hazan et al. , 2016) and linear programming (Pap
 ## 实验结果
 
 <!-- 需要手动补充 -->
+
+## 深度解读状态
+
+> 待 PDF 下载并由 LM 阅读后补充。本文详情页不会使用 arXiv 元数据或摘要快速导读冒充完整解读。
 
 ## 相关论文
 

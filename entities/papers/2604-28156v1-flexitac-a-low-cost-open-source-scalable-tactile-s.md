@@ -16,7 +16,7 @@ source_url: https://arxiv.org/abs/2604.28156v1
 pdf_url: https://arxiv.org/pdf/2604.28156v1
 source_type: arxiv_daily
 confidence: medium
-status: partial
+status: needs_pdf_lm_analysis
 key_figures: [assets/papers/2604-28156v1/fig1.png, assets/papers/2604-28156v1/fig2.png, assets/papers/2604-28156v1/fig3.png]
 ---
 
@@ -30,39 +30,13 @@ key_figures: [assets/papers/2604-28156v1/fig1.png, assets/papers/2604-28156v1/fi
 - **分类:** cs.RO, cs.AI, cs.LG
 - **PDF:** [arXiv PDF](https://arxiv.org/pdf/2604.28156v1)
 
-## 今日导读
-
-- **相关主题:** 世界模型
-- **方法信号:** We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors.
-- **阅读优先级:** 中：最新 arXiv 方向论文
-
-## 关键图示
-
-<div class="paper-figure-grid">
-<figure><img src="../../assets/papers/2604-28156v1/fig1.png" alt="FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems Figure 1"><figcaption>Figure 1</figcaption></figure>
-<figure><img src="../../assets/papers/2604-28156v1/fig2.png" alt="FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems Figure 2"><figcaption>Figure 2</figcaption></figure>
-<figure><img src="../../assets/papers/2604-28156v1/fig3.png" alt="FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems Figure 3"><figcaption>Figure 3</figcaption></figure>
-</div>
-
 ## 摘要
 
 We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors. FlexiTac is a practical "plug-in" module consisting of (i) thin, flexible tactile sensor pads that provide dense tactile signals and (ii) a compact multi-channel readout board that streams synchronized measurements for real-time control and large-scale data collection. FlexiTac pads adopt a sealed three-layer laminate stack (FPC-Velostat-FPC) with electrode patterns directly integrated into flexible printed circuits, substantially improving fabrication throughput and repeatability while maintaining mechanical compliance for deployment on both rigid and soft grippers. The readout electronics use widely available, low-cost components and stream tactile signals to a host computer at 100 Hz via serial communication. Across multiple configurations, including fingertip pads and larger tactile mats, FlexiTac can be mounted on diverse platforms without major mechanical redesign. We further show that FlexiTac supports modern tactile learning pipelines, including 3D visuo-tactile fusion for contact-aware decision making, cross-embodiment skill transfer, and real-to-sim-to-real fine-tuning with GPU-parallel tactile simulation. Our project page is available at https://flexitac.github.io/.
 
-## 核心贡献（摘要级初筛）
+## 深度解读状态
 
-- We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors.
-- We further show that FlexiTac supports modern tactile learning pipelines, including 3D visuo-tactile fusion for contact-aware decision making, cross-embodiment skill transfer, and real-to-sim-to-real fine-tuning with GPU-parallel tactile simulation.
-- Our project page is available at https://flexitac.github.io/.
-
-## 方法概述（摘要级初筛）
-
-We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors.
-
-> 注：本页不再依赖 PDF 译文生成；以上为根据 arXiv 元数据和摘要即时生成的快速导读。后续可在阅读全文后升级为 `status: analyzed`。
-
-## 实验结果
-
-We further show that FlexiTac supports modern tactile learning pipelines, including 3D visuo-tactile fusion for contact-aware decision making, cross-embodiment skill transfer, and real-to-sim-to-real fine-tuning with GPU-parallel tactile simulation.
+> 待 PDF 下载并由 LM 阅读后补充。本文详情页不会使用 arXiv 元数据或摘要快速导读冒充完整解读。
 
 ## 相关概念
 
