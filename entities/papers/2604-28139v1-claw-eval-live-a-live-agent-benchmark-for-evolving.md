@@ -74,9 +74,9 @@ LLM agents are expected to complete end-to-end units of work across software too
 ## 相关概念
 
 - [大语言模型](../../concepts/large-language-model.html)
-- [智能体](../../concepts/ai-agents.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
 - [基准评估](../../concepts/benchmarking.html)
-- [工具使用](../../concepts/tool-use.html)
+- [AI安全与对齐](../../concepts/ai-safety-alignment.html)
 
 ---
 *导入时间: 2026-05-02 16:44*

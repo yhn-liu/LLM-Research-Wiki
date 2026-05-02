@@ -72,11 +72,10 @@ Most familiar equilibrium concepts, such as Nash and correlated equilibrium, gua
 
 ## 相关概念
 
-- [博弈论](../../concepts/game-theory.html)
-- [多智能体系统](../../concepts/multi-agent-systems.html)
-- [均衡计算](../../concepts/equilibrium-computation.html)
-- [在线学习](../../concepts/online-learning.html)
-- [社会福利优化](../../concepts/social-welfare-optimization.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [医学AI](../../concepts/medical-ai.html)
+- [图神经网络](../../concepts/graph-neural-networks.html)
+- [智能体](../../concepts/ai-agents.html)
 
 ---
 *导入时间: 2026-05-02 06:01*

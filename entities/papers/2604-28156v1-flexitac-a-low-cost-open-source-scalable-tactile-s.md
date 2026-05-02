@@ -67,12 +67,10 @@ FlexiTac pad 基于压阻式矩阵：上下两层 FPC 的正交电极形成 taxe
 
 ## 相关概念
 
-- [机器人学习](../../concepts/robot-learning.html)
-- [触觉传感](../../concepts/tactile-sensing.html)
-- [具身智能](../../concepts/embodied-ai.html)
-- [模仿学习](../../concepts/imitation-learning.html)
+- [多模态学习](../../concepts/multimodal-learning.html)
 - [强化学习](../../concepts/reinforcement-learning.html)
-
+- [基准评估](../../concepts/benchmarking.html)
+- [医学AI](../../concepts/medical-ai.html)
 
 ---
 *导入时间: 2026-05-02 16:44*

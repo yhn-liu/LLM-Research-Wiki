@@ -67,12 +67,10 @@ C/R Engine 负责在多 sandbox 共置时调度 checkpoint I/O。Scheduler 按�
 
 ## 相关概念
 
-- [智能体](../../concepts/ai-agents.html)
 - [大语言模型](../../concepts/large-language-model.html)
 - [强化学习](../../concepts/reinforcement-learning.html)
-- [操作系统](../../concepts/operating-systems.html)
-- [沙箱环境](../../concepts/sandbox-environments.html)
-
+- [基准评估](../../concepts/benchmarking.html)
+- [AI安全与对齐](../../concepts/ai-safety-alignment.html)
 
 ---
 *导入时间: 2026-05-02 16:44*

@@ -73,11 +73,10 @@ Recent research has shown that filtering massive English web corpora into high-q
 
 ## 相关概念
 
-- [语言模型预训练](../../concepts/language-model-pretraining.html)
-- [数据过滤](../../concepts/data-filtering.html)
-- [样本效率](../../concepts/sample-efficiency.html)
-- [非英语自然语言处理](../../concepts/multilingual-nlp.html)
+- [大语言模型](../../concepts/large-language-model.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
 - [基准评估](../../concepts/benchmarking.html)
+- [AI安全与对齐](../../concepts/ai-safety-alignment.html)
 
 ---
 *导入时间: 2026-05-02 06:01*

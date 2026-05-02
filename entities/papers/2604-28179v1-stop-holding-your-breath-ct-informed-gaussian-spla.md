@@ -77,12 +77,10 @@ RESPIRE 评估管线从 COPDGene paired CT 出发，分割气道、注册 mesh�
 
 ## 相关概念
 
-- [三维高斯泼溅](../../concepts/3d-gaussian-splatting.html)
-- [医学影像](../../concepts/medical-imaging.html)
-- [计算机视觉](../../concepts/computer-vision.html)
-- [可变形配准](../../concepts/deformable-registration.html)
-- [世界模型](../../concepts/world-models.html)
-
+- [多模态学习](../../concepts/multimodal-learning.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [基准评估](../../concepts/benchmarking.html)
+- [医学AI](../../concepts/medical-ai.html)
 
 ---
 *导入时间: 2026-05-02 06:01*

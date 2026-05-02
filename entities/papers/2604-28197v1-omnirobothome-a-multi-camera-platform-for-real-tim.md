@@ -72,11 +72,10 @@ Human-robot collaboration has been studied primarily in dyadic or sequential set
 
 ## 相关概念
 
-- [机器人学习](../../concepts/robot-learning.html)
-- [人机协作](../../concepts/human-robot-interaction.html)
-- [多智能体系统](../../concepts/multi-agent-systems.html)
-- [三维感知](../../concepts/3d-perception.html)
-- [视觉语言模型](../../concepts/vision-language-models.html)
+- [大语言模型](../../concepts/large-language-model.html)
+- [多模态学习](../../concepts/multimodal-learning.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [基准评估](../../concepts/benchmarking.html)
 
 ---
 *导入时间: 2026-05-02 06:01*

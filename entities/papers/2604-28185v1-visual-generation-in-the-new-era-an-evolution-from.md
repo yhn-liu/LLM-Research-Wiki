@@ -77,12 +77,10 @@ Recent visual generation models have made major progress in photorealism, typogr
 
 ## 相关概念
 
-- [视觉生成](../../concepts/visual-generation.html)
-- [扩散模型](../../concepts/diffusion-models.html)
-- [世界模型](../../concepts/world-models.html)
-- [多模态大模型](../../concepts/multimodal-large-language-models.html)
-- [智能体](../../concepts/ai-agents.html)
-
+- [大语言模型](../../concepts/large-language-model.html)
+- [多模态学习](../../concepts/multimodal-learning.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [基准评估](../../concepts/benchmarking.html)
 
 ---
 *导入时间: 2026-05-02 06:01*

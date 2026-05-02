@@ -74,10 +74,10 @@ We show that Fréchet Distance (FD), long considered impractical as a training o
 
 ## 相关概念
 
-- [扩散模型](../../concepts/diffusion-models.html)
-- [视觉生成](../../concepts/visual-generation.html)
-- [表征学习](../../concepts/representation-learning.html)
+- [多模态学习](../../concepts/multimodal-learning.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
 - [基准评估](../../concepts/benchmarking.html)
+- [AI安全与对齐](../../concepts/ai-safety-alignment.html)
 
 ---
 *导入时间: 2026-05-02 16:38*

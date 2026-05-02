@@ -72,10 +72,10 @@ In recent years, physics-informed neural networks (PINNs) have gained significan
 
 ## 相关概念
 
-- [物理信息神经网络](../../concepts/physics-informed-neural-networks.html)
-- [科学机器学习](../../concepts/scientific-machine-learning.html)
-- [神经切线核](../../concepts/neural-tangent-kernel.html)
-- [小波变换](../../concepts/wavelet-transform.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [医学AI](../../concepts/medical-ai.html)
+- [图神经网络](../../concepts/graph-neural-networks.html)
+- [世界模型](../../concepts/world-models.html)
 
 ---
 *导入时间: 2026-05-02 16:44*

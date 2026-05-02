@@ -71,10 +71,10 @@ Machine learning models can learn from data samples to carry out various tasks e
 
 ## 相关概念
 
-- [量子机器学习](../../concepts/quantum-machine-learning.html)
-- [对抗鲁棒性](../../concepts/adversarial-robustness.html)
-- [AI安全与对齐](../../concepts/ai-safety-alignment.html)
+- [多模态学习](../../concepts/multimodal-learning.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
 - [基准评估](../../concepts/benchmarking.html)
+- [AI安全与对齐](../../concepts/ai-safety-alignment.html)
 
 ---
 *导入时间: 2026-05-02 16:44*

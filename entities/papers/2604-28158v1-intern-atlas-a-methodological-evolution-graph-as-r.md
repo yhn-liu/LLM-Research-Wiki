@@ -72,15 +72,10 @@ Existing research infrastructure is fundamentally document-centric, providing ci
 
 ## 相关概念
 
-- [知识图谱](../../concepts/knowledge-graphs.html)
-- [文献综述自动化](../../concepts/literature-review-automation.html)
-- [智能体](../../concepts/ai-agents.html)
-- [检索增强生成](../../concepts/retrieval-augmented-generation.html)
-- [自动科学发现](../../concepts/automated-scientific-discovery.html)
-
-## 相关论文
-
-<!-- 待填充：添加相关论文链接 -->
+- [大语言模型](../../concepts/large-language-model.html)
+- [多模态学习](../../concepts/multimodal-learning.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [基准评估](../../concepts/benchmarking.html)
 
 ---
 *导入时间: 2026-05-02 06:01*

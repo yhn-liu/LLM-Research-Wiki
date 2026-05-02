@@ -72,11 +72,10 @@ Reconstructing 3D scenes from sparse, unposed images remains challenging under r
 
 ## 相关概念
 
-- [三维重建](../../concepts/3d-reconstruction.html)
-- [高斯泼溅](../../concepts/gaussian-splatting.html)
-- [新视角合成](../../concepts/novel-view-synthesis.html)
-- [稀疏视角重建](../../concepts/sparse-view-reconstruction.html)
-- [计算机视觉](../../concepts/computer-vision.html)
+- [大语言模型](../../concepts/large-language-model.html)
+- [多模态学习](../../concepts/multimodal-learning.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [基准评估](../../concepts/benchmarking.html)
 
 ---
 *导入时间: 2026-05-02 06:01*

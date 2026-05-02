@@ -68,15 +68,10 @@ Modern video diffusion models excel at appearance synthesis but still struggle w
 
 ## 相关概念
 
-- [视频生成](../../concepts/video-generation.html)
-- [扩散模型](../../concepts/diffusion-models.html)
-- [世界模型](../../concepts/world-models.html)
+- [大语言模型](../../concepts/large-language-model.html)
 - [多模态学习](../../concepts/multimodal-learning.html)
-- [物理信息神经网络](../../concepts/physics-informed-neural-networks.html)
-
-## 相关论文
-
-<!-- 待填充：添加相关论文链接 -->
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [基准评估](../../concepts/benchmarking.html)
 
 ---
 *导入时间: 2026-05-02 06:01*

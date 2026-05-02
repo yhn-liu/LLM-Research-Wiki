@@ -75,12 +75,10 @@ adaptive latent CoT 把停止推理也看作策略决策。作者设定最多 8 
 
 ## 相关概念
 
-- [视觉语言动作模型](../../concepts/vision-language-action-models.html)
-- [机器人学习](../../concepts/robot-learning.html)
-- [强化学习](../../concepts/reinforcement-learning.html)
 - [大语言模型](../../concepts/large-language-model.html)
-- [具身智能](../../concepts/embodied-ai.html)
-
+- [多模态学习](../../concepts/multimodal-learning.html)
+- [强化学习](../../concepts/reinforcement-learning.html)
+- [基准评估](../../concepts/benchmarking.html)
 
 ---
 *导入时间: 2026-05-02 06:01*
