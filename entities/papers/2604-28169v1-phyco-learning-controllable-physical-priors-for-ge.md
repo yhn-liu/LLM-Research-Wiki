@@ -15,7 +15,7 @@ tags: [cv, ml, ai]
 source_url: https://arxiv.org/abs/2604.28169v1
 pdf_url: https://arxiv.org/pdf/2604.28169v1
 source_type: arxiv_daily
-confidence: high
+confidence: medium
 status: needs_pdf_lm_analysis
 ---
 
