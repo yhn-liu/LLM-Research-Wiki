@@ -1,5 +1,8 @@
 ---
 layout: paper
+---
+---
+layout: paper
 title: "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework"
 created: 2026-05-01
 updated: 2026-05-01

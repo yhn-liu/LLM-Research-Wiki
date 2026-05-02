@@ -1,5 +1,8 @@
 ---
 layout: paper
+---
+---
+layout: paper
 title: "Measuring research data reuse in scholarly publications using generative artificial intelligence: Open Science Indicator development and preliminary results"
 created: 2026-05-01
 updated: 2026-05-01

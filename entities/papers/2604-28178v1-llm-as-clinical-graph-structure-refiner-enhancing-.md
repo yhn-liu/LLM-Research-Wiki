@@ -1,5 +1,8 @@
 ---
 layout: paper
+---
+---
+layout: paper
 title: "LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis"
 created: 2026-05-01
 updated: 2026-05-01

@@ -66,3 +66,11 @@
 - 作者: Tian Liang, Zhiwei He, Wenxiang Jiao, Xing Wang, Y...
 - 导入方式: url
 - 状态: unread
+
+## [2026-05-02] ingest | arXiv Daily Digest
+- 导入论文数量: 10
+- 来源: /root/.hermes/output/arxiv_2026-05-02.pdf
+
+## [2026-05-02] ingest | arXiv Daily Digest
+- 导入论文数量: 0
+- 来源: /root/.hermes/output/arxiv_2026-05-02.pdf
