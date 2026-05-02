@@ -42,17 +42,6 @@ status: needs_pdf_lm_analysis
 
 Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against profitable coordinated deviations by coalitions. Although the literature proposes solution concepts that provide stability against multilateral deviations (\emph{e.g.}, strong Nash and coalition-proof equilibrium), these generally fail to exist. In this paper, we study an alternative solution concept that minimizes coalitional deviation incentives, rather than requiring them to vanish, and is therefore guaranteed to exist. Specifically, we focus on minimizing the average gain of a deviating coalition, and extend the framework to weighted-average and maximum-within-coalition gains. In contrast, the minimum-gain analogue is shown to be computationally intractable. For the average-gain and maximum-gain objectives, we prove a lower bound on the complexity of computing such an equilibrium and present an algorithm that matches this bound. Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).
 
-## 核心贡献
-
-- Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally
-
-## 方法概述
-
-es, such as no-regret learning (Hazan et al. , 2016) and linear programming (Papadimitriou and Roughgarden, 2008), typically scale with the largest action space among the players, so applying them directly is computationally intractable.  To overcome this obstacle, we instantiate no-regret learning with Follow the Perturbed Leader (FTPL) (Hazan et al.
-
-## 实验结果
-
-<!-- 需要手动补充 -->
 
 ## 深度解读状态
 
@@ -62,22 +51,6 @@ es, such as no-regret learning (Hazan et al. , 2016) and linear programming (Pap
 
 <!-- 待填充：添加相关论文链接 -->
 
-
-## 分析信息
-
-- **分析来源:** summary_extract
-- **分析置信度:** medium
-- **分析时间:** 2026-05-02 06:02
-- **关键词:** AI, ML
-
-
-## 分析信息
-
-- **分析来源:** pdf_analysis
-- **分析置信度:** high
-- **分析时间:** 2026-05-02 06:02
-- **关键词:** AI, ML
-- **PDF 路径:** /root/wiki/raw/papers/2604-28186v1.pdf
 
 ---
 *导入时间: 2026-05-02 06:01*
