@@ -42,6 +42,17 @@ status: needs_pdf_lm_analysis
 
 Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against profitable coordinated deviations by coalitions. Although the literature proposes solution concepts that provide stability against multilateral deviations (\emph{e.g.}, strong Nash and coalition-proof equilibrium), these generally fail to exist. In this paper, we study an alternative solution concept that minimizes coalitional deviation incentives, rather than requiring them to vanish, and is therefore guaranteed to exist. Specifically, we focus on minimizing the average gain of a deviating coalition, and extend the framework to weighted-average and maximum-within-coalition gains. In contrast, the minimum-gain analogue is shown to be computationally intractable. For the average-gain and maximum-gain objectives, we prove a lower bound on the complexity of computing such an equilibrium and present an algorithm that matches this bound. Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).
 
+## 核心贡献
+
+- Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally
+
+## 方法概述
+
+es, such as no-regret learning (Hazan et al. , 2016) and linear programming (Papadimitriou and Roughgarden, 2008), typically scale with the largest action space among the players, so applying them directly is computationally intractable.  To overcome this obstacle, we instantiate no-regret learning with Follow the Perturbed Leader (FTPL) (Hazan et al.
+
+## 实验结果
+
+<!-- 需要手动补充 -->
 
 ## 深度解读状态
 
