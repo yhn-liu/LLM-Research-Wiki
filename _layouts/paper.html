@@ -22,6 +22,9 @@
     .tag { display: inline-block; background: #0f3460; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
     pre { background: #f8f9fa; padding: 15px; border-radius: 8px; overflow-x: auto; margin: 15px 0; }
     code { background: #f8f9fa; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    mjx-container { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    mjx-container[display="true"] { margin: 1em 0; padding: 0.5em 0; }
+    .math-inline { white-space: nowrap; }
     blockquote { border-left: 4px solid #e94560; padding: 10px 15px; color: #666; margin: 15px 0; background: #fef6f8; border-radius: 0 8px 8px 0; }
     ul, ol { padding-left: 25px; margin: 10px 0; }
     li { margin: 5px 0; }
@@ -34,6 +37,64 @@
     .paper-figure-grid figcaption { margin-top: 8px; color: #667085; font-size: 0.9em; text-align: center; }
     @media (max-width: 600px) { body { padding: 10px; } }
   </style>
+  <script>
+    window.normalizeWikiMath = function(root) {
+      root = root || document.body;
+      var skipTags = new Set(['SCRIPT', 'STYLE', 'TEXTAREA', 'PRE', 'CODE', 'A', 'MJX-CONTAINER']);
+      var mathPattern = /([A-Z][A-Za-z0-9]*(?:_[A-Za-z0-9]+)?\s*=\s*[A-Za-z0-9]+(?:_[A-Za-z0-9]+)?(?:\s*,\s*[A-Z][A-Za-z0-9]*(?:_[A-Za-z0-9]+)?\s*=\s*[A-Za-z0-9]+(?:_[A-Za-z0-9]+)?)+)/g;
+      function texify(expr) {
+        return expr
+          .replace(/([A-Za-z])_([A-Za-z0-9]+)/g, '$1_{$2}')
+          .replace(/\s*=\s*/g, '=')
+          .replace(/\s*,\s*/g, ',\\; ');
+      }
+      var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode: function(node) {
+          var parent = node.parentElement;
+          if (!parent || skipTags.has(parent.tagName)) return NodeFilter.FILTER_REJECT;
+          if (parent.closest('pre, code, script, style, textarea, a, mjx-container')) return NodeFilter.FILTER_REJECT;
+          if (!mathPattern.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+          mathPattern.lastIndex = 0;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function(node) {
+        var frag = document.createDocumentFragment();
+        var text = node.nodeValue;
+        var last = 0;
+        text.replace(mathPattern, function(match, expr, offset) {
+          if (offset > last) frag.appendChild(document.createTextNode(text.slice(last, offset)));
+          var span = document.createElement('span');
+          span.className = 'math-inline';
+          span.textContent = '\\(' + texify(expr) + '\\)';
+          frag.appendChild(span);
+          last = offset + match.length;
+        });
+        if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+        node.parentNode.replaceChild(frag, node);
+      });
+    };
+    window.MathJax = {
+      loader: { load: ['[tex]/ams', '[tex]/noerrors', '[tex]/noundefined'] },
+      tex: {
+        packages: { '[+]': ['ams', 'noerrors', 'noundefined'] },
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] },
+      startup: {
+        pageReady: function() {
+          window.normalizeWikiMath(document.body);
+          return MathJax.startup.defaultPageReady();
+        }
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
   <nav>

@@ -31,9 +31,9 @@ key_figures: [assets/papers/2605-00803v1/fig1.png, assets/papers/2605-00803v1/fi
 ## 关键图示
 
 <div class="paper-figure-grid">
-<figure><img src="../../assets/papers/2605-00803v1/fig1.png" alt="Figure 1: AutoMat benchmark overview"><figcaption>Figure 1: AutoMat 概览。领域专家标注的科学声明被打包成可运行任务，由复现智能体在 HPC 环境中执行，独立的评估智能体检查执行轨迹和产出物进行复现性判断。</figcaption></figure>
-<figure><img src="../../assets/papers/2605-00803v1/fig2.png" alt="Figure 2: Example claim reproduction package"><figcaption>Figure 2: AutoMat 中的一个示例声明复现任务包，包含声明文本、论文、元数据和可选代码工件。</figcaption></figure>
-<figure><img src="../../assets/papers/2605-00803v1/fig3.png" alt="Figure 3: Claim distribution by reproduction type and verification category"><figcaption>Figure 3: AutoMat 中声明的分布，按复现类型（从论文复现、从工件复现、从工件解释）和验证类别分类。</figcaption></figure>
+<figure><img src="../../assets/papers/2605-00803v1/fig1.png" alt="Figure 1"><figcaption>Figure 1</figcaption></figure>
+<figure><img src="../../assets/papers/2605-00803v1/fig2.png" alt="Figure 2"><figcaption>Figure 2</figcaption></figure>
+<figure><img src="../../assets/papers/2605-00803v1/fig3.png" alt="Figure 3"><figcaption>Figure 3</figcaption></figure>
 </div>
 
 ## 摘要

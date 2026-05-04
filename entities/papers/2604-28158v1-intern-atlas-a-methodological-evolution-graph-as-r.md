@@ -28,9 +28,9 @@ status: analyzed
 ## 关键图示
 
 <div class="paper-figure-grid">
-<figure><img src="../../assets/papers/2604-28158v1/fig1.png" alt="Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists Figure 1"><figcaption>Figure 1</figcaption></figure>
-<figure><img src="../../assets/papers/2604-28158v1/fig2.png" alt="Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists Figure 2"><figcaption>Figure 2</figcaption></figure>
-<figure><img src="../../assets/papers/2604-28158v1/fig3.png" alt="Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists Figure 3"><figcaption>Figure 3</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28158v1/fig1.png" alt="Figure 1"><figcaption>Figure 1</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28158v1/fig2.png" alt="Figure 2"><figcaption>Figure 2</figcaption></figure>
+<figure><img src="../../assets/papers/2604-28158v1/fig3.png" alt="Figure 3"><figcaption>Figure 3</figcaption></figure>
 </div>
 
 ## 摘要
