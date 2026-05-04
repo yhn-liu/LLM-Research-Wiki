@@ -1,190 +1,27 @@
 [
   {
-    "id": "2604.28185v1",
-    "title": "Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling",
+    "id": "2605.00817v1",
+    "title": "When LLMs Stop Following Steps: A Diagnostic Study of Procedural Execution in Language Models",
     "authors": [
-      "Keming Wu",
-      "Zuhao Yang",
-      "Kaichen Zhang",
-      "Shizun Wang",
-      "Haowei Zhu",
-      "Sicong Leng",
-      "Zhongyu Yang",
-      "Qijie Wang",
-      "Sudong Wang",
-      "Ziting Wang",
-      "Zili Wang",
-      "Hui Zhang",
-      "Haonan Wang",
-      "Hang Zhou",
-      "Yifan Pu",
-      "Xingxuan Li",
-      "Fangneng Zhan",
-      "Bo Li",
-      "Lidong Bing",
-      "Yuxin Song",
-      "Ziwei Liu",
-      "Wenhu Chen",
-      "Jingdong Wang",
-      "Xinchao Wang",
-      "Xiaojuan Qi",
-      "Shijian Lu",
-      "Bin Wang"
+      "Sailesh Panda",
+      "Pritam Kadasi",
+      "Abhishek Upperwal",
+      "Mayank Singh"
     ],
-    "published": "2026-04-30",
-    "summary": "Recent visual generation models have made major progress in photorealism, typography, instruction following, and interactive editing, yet they still struggle with spatial reasoning, persistent state, long-horizon consistency, and causal understanding. We argue that the field should move beyond appearance synthesis toward intelligent visual generation: plausible visuals grounded in structure, dynamics, domain knowledge, and causal relations. To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-aware generators. We analyze key technical drivers, including flow matching, unified understanding-and-generation models, improved visual representations, post-training, reward modeling, data curation, synthetic data distillation, and sampling acceleration. We further show that current evaluations often overestimate progress by emphasizing perceptual quality while missing structural, temporal, and causal failures. By combining benchmark review, in-the-wild stress tests, and expert-constrained case studies, this roadmap offers a capability-centered lens for understanding, evaluating, and advancing the next generation of intelligent visual generation systems.",
+    "published": "2026-05-01",
+    "summary": "Large language models (LLMs) often achieve strong performance on reasoning benchmarks, but final-answer accuracy alone does not show whether they faithfully execute the procedure specified in a prompt. We study this question through a controlled diagnostic benchmark for procedural execution, where models are given a step-wise arithmetic algorithm and two numeric inputs, and must return the final computed value. The benchmark uses simple arithmetic operations but increases complexity through algorithm length and look-back dependencies over intermediate variables. Across 14 models and 55 datasets, average first-answer accuracy drops from 61% on 5-step procedures to 20% on 95-step procedures. Generation-level analysis shows that failures often involve missing answers, premature answers, self-correction after an initial error, under-executed traces, and hallucinated extra steps. These findings suggest that apparent reasoning ability can mask substantial weaknesses in faithful instruction execution.",
     "categories": [
-      "cs.CV"
+      "cs.CL"
     ],
-    "comment": "Project Page: https://github.com/EvolvingLMMs-Lab/Evolving-Visual-Generation",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2604-28185v1-visual-generation-in-the-new-era-an-evolution-from",
-    "rel_path": "entities/papers/2604-28185v1-visual-generation-in-the-new-era-an-evolution-from.html",
+    "comment": "77 pages, 109 figures",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-00817v1-when-llms-stop-following-steps-a-diagnostic-study",
+    "rel_path": "entities/papers/2605-00817v1-when-llms-stop-following-steps-a-diagnostic-study.html",
     "figures": [
-      "assets/papers/2604-28185v1/fig1.png",
-      "assets/papers/2604-28185v1/fig2.png",
-      "assets/papers/2604-28185v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "强化学习",
-        "slug": "reinforcement-learning",
-        "url": "../../concepts/reinforcement-learning.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "图神经网络",
-        "slug": "graph-neural-networks",
-        "url": "../../concepts/graph-neural-networks.html"
-      },
-      {
-        "name": "世界模型",
-        "slug": "world-models",
-        "url": "../../concepts/world-models.html"
-      }
-    ],
-    "method_signal": "To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-aware generators.",
-    "topic_signal": "强化学习 / 基准评估 / 图神经网络 / 世界模型"
-  },
-  {
-    "id": "2604.28179v1",
-    "title": "Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy",
-    "authors": [
-      "Andrea Dunn Beltran",
-      "Daniel Rho",
-      "Aarav Mehta",
-      "Xinqi Xiong",
-      "Raúl San José Estépar",
-      "Ron Alterovitz",
-      "Marc Niethammer",
-      "Roni Sengupta"
-    ],
-    "published": "2026-04-30",
-    "summary": "Bronchoscopic navigation relies on registering endoscopic video to a preoperative CT scan, but respiratory motion deforms the airway by 5-20 mm, creating CT-to-body divergence that limits localization accuracy. In practice, this is mitigated through breath-hold protocols, which attempt to match the intraoperative anatomy to a static CT, but are difficult to reproduce and disrupt clinical workflow. We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling. Paired inhale-exhale CT scans, already acquired for planning, implicitly define the patient-specific deformation space of the breathing airway. By registering these scans, we reduce respiratory motion to a single scalar breathing phase per frame, constraining all reconstructions to anatomically observed configurations. We embed this representation within a mesh-anchored Gaussian splatting framework, where a lightweight estimator infers breathing phase directly from endoscopic RGB, enabling continuous, deformation-aware reconstruction throughout the respiratory cycle without breath-holds or external sensing. To enable quantitative evaluation, we introduce RESPIRE, a physically grounded bronchoscopy simulation pipeline with per-frame ground truth for geometry, pose, breathing phase, and deformation. Experiments on RESPIRE show that our approach achieves geometrically faithful reconstruction, over 20x faster training, and 1.22 mm target localization accuracy (within the 3mm clinically relevant tolerances) outperforming unconstrained single-CT baselines. Please check out our website for additional visuals: https://asdunnbe.github.io/RESPIRE/",
-    "categories": [
-      "cs.CV"
-    ],
-    "comment": "",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla",
-    "rel_path": "entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html",
-    "figures": [
-      "assets/papers/2604-28179v1/fig1.png",
-      "assets/papers/2604-28179v1/fig2.png"
-    ],
-    "concepts": [
-      {
-        "name": "多模态学习",
-        "slug": "multimodal-learning",
-        "url": "../../concepts/multimodal-learning.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "医学AI",
-        "slug": "medical-ai",
-        "url": "../../concepts/medical-ai.html"
-      },
-      {
-        "name": "世界模型",
-        "slug": "world-models",
-        "url": "../../concepts/world-models.html"
-      }
-    ],
-    "method_signal": "We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling.",
-    "topic_signal": "多模态学习 / 基准评估 / 医学AI / 世界模型"
-  },
-  {
-    "id": "2604.28186v1",
-    "title": "Computing Equilibrium beyond Unilateral Deviation",
-    "authors": [
-      "Mingyang Liu",
-      "Gabriele Farina",
-      "Asuman Ozdaglar"
-    ],
-    "published": "2026-04-30",
-    "summary": "Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against profitable coordinated deviations by coalitions. Although the literature proposes solution concepts that provide stability against multilateral deviations (\\emph{e.g.}, strong Nash and coalition-proof equilibrium), these generally fail to exist. In this paper, we study an alternative solution concept that minimizes coalitional deviation incentives, rather than requiring them to vanish, and is therefore guaranteed to exist. Specifically, we focus on minimizing the average gain of a deviating coalition, and extend the framework to weighted-average and maximum-within-coalition gains. In contrast, the minimum-gain analogue is shown to be computationally intractable. For the average-gain and maximum-gain objectives, we prove a lower bound on the complexity of computing such an equilibrium and present an algorithm that matches this bound. Finally, we use our framework to solve the \\emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).",
-    "categories": [
-      "cs.GT",
-      "cs.AI",
-      "cs.CC",
-      "cs.LG",
-      "econ.TH"
-    ],
-    "comment": "",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2604-28186v1-computing-equilibrium-beyond-unilateral-deviation",
-    "rel_path": "entities/papers/2604-28186v1-computing-equilibrium-beyond-unilateral-deviation.html",
-    "figures": [
-      "assets/papers/2604-28186v1/fig1.png",
-      "assets/papers/2604-28186v1/fig2.png",
-      "assets/papers/2604-28186v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "Finally, we use our framework to solve the \\emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).",
-    "topic_signal": "基准评估"
-  },
-  {
-    "id": "2604.28169v1",
-    "title": "PhyCo: Learning Controllable Physical Priors for Generative Motion",
-    "authors": [
-      "Sriram Narayanan",
-      "Ziyu Jiang",
-      "Srinivasa Narasimhan",
-      "Manmohan Chandraker"
-    ],
-    "published": "2026-04-30",
-    "summary": "Modern video diffusion models excel at appearance synthesis but still struggle with physical consistency: objects drift, collisions lack realistic rebound, and material responses seldom match their underlying properties. We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into video generation. Our approach integrates three key components: (i) a large-scale dataset of over 100K photorealistic simulation videos where friction, restitution, deformation, and force are systematically varied across diverse scenarios; (ii) physics-supervised fine-tuning of a pretrained diffusion model using a ControlNet conditioned on pixel-aligned physical property maps; and (iii) VLM-guided reward optimization, where a fine-tuned vision-language model evaluates generated videos with targeted physics queries and provides differentiable feedback. This combination enables a generative model to produce physically consistent and controllable outputs through variations in physical attributes-without any simulator or geometry reconstruction at inference. On the Physics-IQ benchmark, PhyCo significantly improves physical realism over strong baselines, and human studies confirm clearer and more faithful control over physical attributes. Our results demonstrate a scalable path toward physically consistent, controllable generative video models that generalize beyond synthetic training environments.",
-    "categories": [
-      "cs.CV",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "comment": "CVPR 2026. Project Page: https://phyco-video.github.io/",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2604-28169v1-phyco-learning-controllable-physical-priors-for-ge",
-    "rel_path": "entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html",
-    "figures": [
-      "assets/papers/2604-28169v1/fig1.jpg",
-      "assets/papers/2604-28169v1/fig2.jpg",
-      "assets/papers/2604-28169v1/fig3.png"
+      "assets/papers/2605-00817v1/fig1.png",
+      "assets/papers/2605-00817v1/fig2.png",
+      "assets/papers/2605-00817v1/fig3.png"
     ],
     "concepts": [
       {
@@ -193,147 +30,53 @@
         "url": "../../concepts/large-language-model.html"
       },
       {
-        "name": "多模态学习",
-        "slug": "multimodal-learning",
-        "url": "../../concepts/multimodal-learning.html"
-      },
-      {
-        "name": "强化学习",
-        "slug": "reinforcement-learning",
-        "url": "../../concepts/reinforcement-learning.html"
-      },
-      {
         "name": "基准评估",
         "slug": "benchmarking",
         "url": "../../concepts/benchmarking.html"
       }
     ],
-    "method_signal": "We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into video generation.",
-    "topic_signal": "大语言模型 / 多模态学习 / 强化学习 / 基准评估"
+    "method_signal": "Large language models (LLMs) often achieve strong performance on reasoning benchmarks, but final-answer accuracy alone does not show whether they faithfully execute the procedure specified in a prompt.",
+    "topic_signal": "大语言模型 / 基准评估"
   },
   {
-    "id": "2604.28158v1",
-    "title": "Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists",
+    "id": "2605.00803v1",
+    "title": "Can Coding Agents Reproduce Findings in Computational Materials Science?",
     "authors": [
-      "Yujun Wu",
-      "Dongxu Zhang",
-      "Xinchen Li",
-      "Jinhang Xu",
-      "Yiling Duan",
-      "Yumou Liu",
-      "Jiabao Pan",
-      "Xuanhe Zhou",
-      "Jingxuan Wei",
-      "Siyuan Li",
-      "Jintao Chen",
-      "Conghui He",
-      "Cheng Tan"
+      "Ziyang Huang",
+      "Yi Cao",
+      "Ali K. Shargh",
+      "Jing Luo",
+      "Ruidong Mei",
+      "Mohd Zaki",
+      "Zhan Liu",
+      "Wyatt Bunstine",
+      "William Jurayj",
+      "Somdatta Goswami",
+      "Tyrel McQueen",
+      "Michael Shields",
+      "Jaafar El-Awady",
+      "Paulette Clancy",
+      "Benjamin Van Durme",
+      "Nicholas Andrews",
+      "William Walden",
+      "Daniel Khashabi"
     ],
-    "published": "2026-04-30",
-    "summary": "Existing research infrastructure is fundamentally document-centric, providing citation links between papers but lacking explicit representations of methodological evolution. In particular, it does not capture the structured relationships that explain how and why research methods emerge, adapt, and build upon one another. With the rise of AI-driven research agents as a new class of consumers of scientific knowledge, this limitation becomes increasingly consequential, as such agents cannot reliably reconstruct method evolution topologies from unstructured text. We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entities, infers lineage relationships among methodologies, and captures the bottlenecks that drive transitions between successive innovations. Built from 1,030,314 papers spanning AI conferences, journals, and arXiv preprints, the resulting graph comprises 9,410,201 semantically typed edges, each grounded in verbatim source evidence, forming a queryable causal network of methodological development. To operationalize this structure, we further propose a self-guided temporal tree search algorithm for constructing evolution chains that trace the progression of methods over time. We evaluate the quality of the resulting graph against expert-curated ground-truth evolution chains and observe strong alignment. In addition, we demonstrate that Intern-Atlas enables downstream applications in idea evaluation and automated idea generation. We position methodological evolution graphs as a foundational data layer for the emerging automated scientific discovery.",
-    "categories": [
-      "cs.AI"
-    ],
-    "comment": "25 pages, 5 figures, 8 tables",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r",
-    "rel_path": "entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html",
-    "figures": [
-      "assets/papers/2604-28158v1/fig1.png",
-      "assets/papers/2604-28158v1/fig2.png",
-      "assets/papers/2604-28158v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      },
-      {
-        "name": "图神经网络",
-        "slug": "graph-neural-networks",
-        "url": "../../concepts/graph-neural-networks.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entities, infers lineage relationships among methodologies, and captures the bottlenecks that drive transitions between successive innovations.",
-    "topic_signal": "基准评估 / AI安全与对齐 / 图神经网络 / 智能体"
-  },
-  {
-    "id": "2604.28156v1",
-    "title": "FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems",
-    "authors": [
-      "Binghao Huang",
-      "Yunzhu Li"
-    ],
-    "published": "2026-04-30",
-    "summary": "We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors. FlexiTac is a practical \"plug-in\" module consisting of (i) thin, flexible tactile sensor pads that provide dense tactile signals and (ii) a compact multi-channel readout board that streams synchronized measurements for real-time control and large-scale data collection. FlexiTac pads adopt a sealed three-layer laminate stack (FPC-Velostat-FPC) with electrode patterns directly integrated into flexible printed circuits, substantially improving fabrication throughput and repeatability while maintaining mechanical compliance for deployment on both rigid and soft grippers. The readout electronics use widely available, low-cost components and stream tactile signals to a host computer at 100 Hz via serial communication. Across multiple configurations, including fingertip pads and larger tactile mats, FlexiTac can be mounted on diverse platforms without major mechanical redesign. We further show that FlexiTac supports modern tactile learning pipelines, including 3D visuo-tactile fusion for contact-aware decision making, cross-embodiment skill transfer, and real-to-sim-to-real fine-tuning with GPU-parallel tactile simulation. Our project page is available at https://flexitac.github.io/.",
-    "categories": [
-      "cs.RO",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "comment": "Website: https://flexitac.github.io/",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2604-28156v1-flexitac-a-low-cost-open-source-scalable-tactile-s",
-    "rel_path": "entities/papers/2604-28156v1-flexitac-a-low-cost-open-source-scalable-tactile-s.html",
-    "figures": [
-      "assets/papers/2604-28156v1/fig1.png",
-      "assets/papers/2604-28156v1/fig2.png",
-      "assets/papers/2604-28156v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "世界模型",
-        "slug": "world-models",
-        "url": "../../concepts/world-models.html"
-      }
-    ],
-    "method_signal": "We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors.",
-    "topic_signal": "世界模型"
-  },
-  {
-    "id": "2604.28139v1",
-    "title": "Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows",
-    "authors": [
-      "Chenxin Li",
-      "Zhengyang Tang",
-      "Huangxin Lin",
-      "Yunlong Lin",
-      "Shijue Huang",
-      "Shengyuan Liu",
-      "Bowen Ye",
-      "Rang Li",
-      "Lei Li",
-      "Benyou Wang",
-      "Yixuan Yuan"
-    ],
-    "published": "2026-04-30",
-    "summary": "LLM agents are expected to complete end-to-end units of work across software tools, business services, and local workspaces. Yet many agent benchmarks freeze a curated task set at release time and grade mainly the final response, making it difficult to evaluate agents against evolving workflow demand or verify whether a task was executed. We introduce Claw-Eval-Live, a live benchmark for workflow agents that separates a refreshable signal layer, updated across releases from public workflow-demand signals, from a reproducible, time-stamped release snapshot. Each release is constructed from public workflow-demand signals, with ClawHub Top-500 skills used in the current release, and materialized as controlled tasks with fixed fixtures, services, workspaces, and graders. For grading, Claw-Eval-Live records execution traces, audit logs, service state, and post-run workspace artifacts, using deterministic checks when evidence is sufficient and structured LLM judging only for semantic dimensions. The release contains 105 tasks spanning controlled business services and local workspace repair, and evaluates 13 frontier models under a shared public pass rule. Experiments reveal that reliable workflow automation remains far from solved: the leading model passes only 66.7% of tasks and no model reaches 70%. Failures are structured by task family and execution surface, with HR, management, and multi-system business workflows as persistent bottlenecks and local workspace repair comparatively easier but unsaturated. Leaderboard rank alone is insufficient because models with similar pass rates can diverge in overall completion, and task-level discrimination concentrates in a middle band of tasks. Claw-Eval-Live suggests that workflow-agent evaluation should be grounded twice, in fresh external demand and in verifiable agent action.",
+    "published": "2026-05-01",
+    "summary": "Large language models are increasingly deployed as autonomous coding agents and have achieved remarkably strong performance on software engineering benchmarks. However, it is unclear whether such success transfers to computational scientific workflows, where tasks require not only strong coding ability, but also the ability to navigate complex, domain-specific procedures and to interpret results in the context of scientific claims. To address this question, we present AutoMat, a benchmark for evaluating LLM-based agents' ability to reproduce claims from computational materials science. AutoMat poses three interrelated challenges: recovering underspecified computational procedures, navigating specialized toolchains, and determining whether the resulting evidence supports a claim. By working closely with subject matter experts, we curate a set of claims from real materials science papers to test whether coding agents can recover and execute the end-to-end workflow needed to support (or undermine) such claims. We then evaluate multiple representative coding agent settings across several foundation models. Our results show that current LLM-based agents obtain low overall success rates on AutoMat, with the best-performing setting achieving a success rate of only 54.1%. Error analysis further reveals that agents perform worst when workflows must be reconstructed from paper text alone and that they fail primarily due to incomplete procedures, methodological deviations, and execution fragility. Taken together, these findings position AutoMat as both a benchmark for computational scientific reproducibility and a tool for diagnosing the current limitations of agentic systems in AI-for-science settings.",
     "categories": [
       "cs.SE",
-      "cs.AI"
+      "cs.AI",
+      "cs.CL"
     ],
-    "comment": "Project page: https://claw-eval-live.github.io",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2604-28139v1-claw-eval-live-a-live-agent-benchmark-for-evolving",
-    "rel_path": "entities/papers/2604-28139v1-claw-eval-live-a-live-agent-benchmark-for-evolving.html",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-00803v1-can-coding-agents-reproduce-findings-in-computatio",
+    "rel_path": "entities/papers/2605-00803v1-can-coding-agents-reproduce-findings-in-computatio.html",
     "figures": [
-      "assets/papers/2604-28139v1/fig1.png",
-      "assets/papers/2604-28139v1/fig2.png",
-      "assets/papers/2604-28139v1/fig3.png"
+      "assets/papers/2605-00803v1/fig1.png",
+      "assets/papers/2605-00803v1/fig2.png",
+      "assets/papers/2605-00803v1/fig3.png"
     ],
     "concepts": [
       {
@@ -345,52 +88,6 @@
         "name": "基准评估",
         "slug": "benchmarking",
         "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "We introduce Claw-Eval-Live, a live benchmark for workflow agents that separates a refreshable signal layer, updated across releases from public workflow-demand signals, from a reproducible, time-stamped release snapshot.",
-    "topic_signal": "大语言模型 / 基准评估 / 智能体"
-  },
-  {
-    "id": "2604.28138v1",
-    "title": "Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes",
-    "authors": [
-      "Tianyuan Wu",
-      "Chaokun Chang",
-      "Lunxi Cao",
-      "Wei Gao",
-      "Wei Wang"
-    ],
-    "published": "2026-04-30",
-    "summary": "Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and runtime artifacts. Checkpoint and restore (C/R) of this state is needed for fault tolerance, spot execution, RL rollout branching, and safe rollback-yet existing approaches fall into two extremes: application-level recovery preserves chat history but misses OS-side effects, while full per-turn checkpointing is correct but too expensive under dense co-location. The root cause is an agent-OS semantic gap: agent frameworks see tool calls but not their OS effects; the OS sees state changes but lacks turn-level context to judge recovery relevance. This gap hides massive sparsity: over 75% of agent turns produce no recovery-relevant state, so most checkpoints are unnecessary. Crab (Checkpoint-and-Restore for Agent SandBoxes) is a transparent host-side runtime that bridges this gap without modifying agents or C/R backends. An eBPF-based inspector classifies each turn's OS-visible effects to decide checkpoint granularity; a coordinator aligns checkpoints with turn boundaries and overlaps C/R with LLM wait time; and a host-scoped engine schedules checkpoint traffic across co-located sandboxes. On shell-intensive and code-repair workloads, Crab raises recovery correctness from 8% (chat-only) to 100%, cuts checkpoint traffic by up to 87%, and stays within 1.9% of fault-free execution time.",
-    "categories": [
-      "cs.OS",
-      "cs.AI"
-    ],
-    "comment": "15 pages, 21 figures",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2604-28138v1-crab-a-semantics-aware-checkpointrestore-runtime-f",
-    "rel_path": "entities/papers/2604-28138v1-crab-a-semantics-aware-checkpointrestore-runtime-f.html",
-    "figures": [
-      "assets/papers/2604-28138v1/fig1.png",
-      "assets/papers/2604-28138v1/fig2.png",
-      "assets/papers/2604-28138v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "强化学习",
-        "slug": "reinforcement-learning",
-        "url": "../../concepts/reinforcement-learning.html"
       },
       {
         "name": "自动驾驶",
@@ -403,64 +100,283 @@
         "url": "../../concepts/ai-agents.html"
       }
     ],
-    "method_signal": "Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and runtime artifacts.",
-    "topic_signal": "大语言模型 / 强化学习 / 自动驾驶 / 智能体"
+    "method_signal": "To address this question, we present AutoMat, a benchmark for evaluating LLM-based agents' ability to reproduce claims from computational materials science.",
+    "topic_signal": "大语言模型 / 基准评估 / 自动驾驶 / 智能体"
   },
   {
-    "id": "2604.28180v1",
-    "title": "An adaptive wavelet-based PINN for problems with localized high-magnitude source",
+    "id": "2605.00798v1",
+    "title": "RunAgent: Interpreting Natural-Language Plans with Constraint-Guided Execution",
     "authors": [
-      "Himanshu Pandey",
-      "Ratikanta Behera"
+      "Arunabh Srivastava",
+      "Mohammad A.",
+      " Khojastepour",
+      "Srimat Chakradhar",
+      "Sennur Ulukus"
     ],
-    "published": "2026-04-30",
-    "summary": "In recent years, physics-informed neural networks (PINNs) have gained significant attention for solving differential equations, although they suffer from two fundamental limitations, namely, spectral bias inherent in neural networks and loss imbalance arising from multiscale phenomena. This paper proposes an adaptive wavelet-based PINN (AW-PINN) to address the extreme loss imbalance characteristic of problems with localized high-magnitude source terms. Such problems frequently arise in various physical applications, such as thermal processing, electro-magnetics, impact mechanics, and fluid dynamics involving localized forcing. The proposed framework dynamically adjusts the wavelet basis function based on residual and supervised loss. This adaptive nature makes AW-PINN handle problems with high-scale features effectively without being memory-intensive. Additionally, AW-PINN does not rely on automatic differentiation to obtain derivatives involved in the loss function, which accelerates the training process. The method operates in two stages, an initial short pre-training phase with fixed bases to select physically relevant wavelet families, followed by an adaptive refinement that adapts scales and translations without populating high-resolution bases across entire domains. Theoretically, we show that under certain assumptions, AW-PINN admits a Gaussian process limit and derive its associated NTK structure. We evaluate AW-PINN on several challenging PDEs featuring localized high-magnitude source terms with extreme loss imbalances having ratios up to $10^{10}:1$. Across these PDEs, including transient heat conduction, highly localized Poisson problems, oscillatory flow equations, and Maxwell equations with a point charge source, AW-PINN consistently outperforms existing methods in its class.",
+    "published": "2026-05-01",
+    "summary": "Humans solve problems by executing targeted plans, yet large language models (LLMs) remain unreliable for structured workflow execution. We propose RunAgent, a multi-agent plan execution platform that interprets natural-language plans while enforcing stepwise execution through constraints and rubrics. RunAgent bridges the expressiveness of natural language with the determinism of programming via an agentic language with explicit control constructs (e.g., \\texttt{IF}, \\texttt{GOTO}, \\texttt{FORALL}). Beyond verifying syntactic and semantic verification of the step output, which is performed based on the specific instruction of each step, RunAgent autonomously derives and validates constraints based on the description of the task and its instance at each step. RunAgent also dynamically selects among LLM-based reasoning, tool usage, and code generation and execution (e.g., in Python), and incorporates error correction mechanisms to ensure correctness. Finally, RunAgent filters the context history by retaining only relevant information during the execution of each step. Evaluations on Natural-plan and SciBench Datasets demonstrate that RunAgent outperforms baseline LLMs and state-of-the-art PlanGEN methods.",
     "categories": [
-      "cs.LG"
+      "cs.LG",
+      "cs.CL",
+      "cs.MA"
     ],
     "comment": "",
-    "category_en": "Machine Learning",
-    "category_cn": "机器学习",
-    "slug": "2604-28180v1-an-adaptive-wavelet-based-pinn-for-problems-with-l",
-    "rel_path": "entities/papers/2604-28180v1-an-adaptive-wavelet-based-pinn-for-problems-with-l.html",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-00798v1-runagent-interpreting-natural-language-plans-with",
+    "rel_path": "entities/papers/2605-00798v1-runagent-interpreting-natural-language-plans-with.html",
     "figures": [
-      "assets/papers/2604-28180v1/fig1.png",
-      "assets/papers/2604-28180v1/fig2.png",
-      "assets/papers/2604-28180v1/fig3.png"
+      "assets/papers/2605-00798v1/fig1.png",
+      "assets/papers/2605-00798v1/fig2.png",
+      "assets/papers/2605-00798v1/fig3.png"
     ],
     "concepts": [
       {
-        "name": "世界模型",
-        "slug": "world-models",
-        "url": "../../concepts/world-models.html"
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
       }
     ],
-    "method_signal": "In recent years, physics-informed neural networks (PINNs) have gained significant attention for solving differential equations, although they suffer from two fundamental limitations, namely, spectral bias inherent in neural networks and loss imbalance arising from multiscale phenomena.",
-    "topic_signal": "世界模型"
+    "method_signal": "We propose RunAgent, a multi-agent plan execution platform that interprets natural-language plans while enforcing stepwise execution through constraints and rubrics.",
+    "topic_signal": "大语言模型 / 基准评估 / 自动驾驶 / 智能体"
   },
   {
-    "id": "2604.28176v1",
-    "title": "Defending Quantum Classifiers against Adversarial Perturbations through Quantum Autoencoders",
+    "id": "2605.00796v1",
+    "title": "When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI",
     "authors": [
-      "Emma Andrews",
-      "Sahan Sanjaya",
-      "Prabhat Mishra"
+      "Alfredo Madrid-García",
+      "Miguel Rujas"
     ],
-    "published": "2026-04-30",
-    "summary": "Machine learning models can learn from data samples to carry out various tasks efficiently. When data samples are adversarially manipulated, such as by insertion of carefully crafted noise, it can cause the model to make mistakes. Quantum machine learning models are also vulnerable to such adversarial attacks, especially in image classification using variational quantum classifiers. While there are promising defenses against these adversarial perturbations, such as training with adversarial samples, they face practical limitations. For example, they are not applicable in scenarios where training with adversarial samples is either not possible or can overfit the models on one type of attack. In this paper, we propose an adversarial training-free defense framework that utilizes a quantum autoencoder to purify the adversarial samples through reconstruction. Moreover, our defense framework provides a confidence metric to identify potentially adversarial samples that cannot be purified the quantum autoencoder. Extensive evaluation demonstrates that our defense framework can significantly outperform state-of-the-art in prediction accuracy (up to 68%) under adversarial attacks.",
+    "published": "2026-05-01",
+    "summary": "Background: Patient-facing medical chatbots based on retrieval-augmented generation (RAG) are increasingly promoted to deliver accessible, grounded health information. AI-assisted development lowers the barrier to building them, but they still demand rigorous security, privacy, and governance controls. Objective: To report an anonymized, non-destructive security assessment of a publicly accessible patient-facing medical RAG chatbot and identify governance lessons for safe deployment of generative AI in health. Methods: We used a two-stage strategy. First, Claude Opus 4.6 supported exploratory prompt-based testing and structured vulnerability hypotheses. Second, candidate findings were manually verified using Chrome Developer Tools, inspecting browser-visible network traffic, payloads, API schemas, configuration objects, and stored interaction data. Results: The LLM-assisted phase identified a critical vulnerability: sensitive system and RAG configuration appeared exposed through client-server communication rather than restricted server-side. Manual verification confirmed that ordinary browser inspection allowed collection of the system prompt, model and embedding configuration, retrieval parameters, backend endpoints, API schema, document and chunk metadata, knowledge-base content, and the 1,000 most recent patient-chatbot conversations. The deployment also contradicted its privacy assurances: full conversation records, including health-related queries, were retrievable without authentication. Conclusions: Serious privacy and security failures in patient-facing RAG chatbots can be identified with standard browser tools, without specialist skills or authentication; independent review should be a prerequisite for deployment. Commercial LLMs accelerated this assessment, including under a false developer persona; assistance available to auditors is equally available to adversaries.",
     "categories": [
-      "quant-ph",
-      "cs.LG"
+      "cs.CR",
+      "cs.AI",
+      "cs.CL"
     ],
     "comment": "",
-    "category_en": "Machine Learning",
-    "category_cn": "机器学习",
-    "slug": "2604-28176v1-defending-quantum-classifiers-against-adversarial",
-    "rel_path": "entities/papers/2604-28176v1-defending-quantum-classifiers-against-adversarial.html",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-00796v1-when-rag-chatbots-expose-their-backend-an-anonymiz",
+    "rel_path": "entities/papers/2605-00796v1-when-rag-chatbots-expose-their-backend-an-anonymiz.html",
     "figures": [
-      "assets/papers/2604-28176v1/fig1.png",
-      "assets/papers/2604-28176v1/fig2.png",
-      "assets/papers/2604-28176v1/fig3.png"
+      "assets/papers/2605-00796v1/fig1.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "医学AI",
+        "slug": "medical-ai",
+        "url": "../../concepts/medical-ai.html"
+      }
+    ],
+    "method_signal": "Methods: We used a two-stage strategy.",
+    "topic_signal": "大语言模型 / 医学AI"
+  },
+  {
+    "id": "2605.00777v1",
+    "title": "LASE: Language-Adversarial Speaker Encoding for Indic Cross-Script Identity Preservation",
+    "authors": [
+      "Venkata Pushpak Teja Menta"
+    ],
+    "published": "2026-05-01",
+    "summary": "A speaker encoder used in multilingual voice cloning should treat the same speaker identically regardless of which script the audio was uttered in. Off-the-shelf encoders do not, and the failure is accent-conditional. On a 1043-pair Western-accented voice corpus across English, Hindi, Telugu, and Tamil, WavLM-base-plus-sv loses 0.082 absolute cosine similarity when the same voice changes script and ECAPA-TDNN loses 0.105. On a 1369-pair Indian-accented voice corpus, the gap shrinks to 0.006 (WavLM-SV) and 0.044 (ECAPA-TDNN). The leak is largest where it matters most for cross-script TTS: when a system projects a non-Indic-trained voice into Indic scripts. We present LASE (Language-Adversarial Speaker Encoder), a small projection head over frozen WavLM-base-plus trained with two losses: a supervised contrastive loss over voice identity, and a gradient-reversal cross-entropy against a 4-language classifier that pushes the embedding to be language-uninformative while remaining speaker-informative. Trained on 1118 quality-gated cross-script pairs synthesised from 8 commercial multilingual voices, LASE's residual gap is consistent with zero on both corpora (Delta = 0.013 Western, Delta = 0.026 Indian; both bootstrap 95% CIs include zero) and amplifies the cross-script-vs-floor margin 2.4-2.7x over both baselines. An ECAPA+GRL ablation shows the GRL objective improves either backbone but the WavLM choice contributes too. In synthetic multi-speaker diarisation, LASE matches ECAPA-TDNN on cross-script speaker recall (0.788 vs 0.789) with ~100x less training data. We release the r1 checkpoint, both corpora, and the bootstrap recipe.",
+    "categories": [
+      "cs.SD",
+      "cs.CL",
+      "eess.AS"
+    ],
+    "comment": "7 pages, 2 figures, 2 tables. Code, model, and datasets at https://github.com/praxelhq/lase",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-00777v1-lase-language-adversarial-speaker-encoding-for-ind",
+    "rel_path": "entities/papers/2605-00777v1-lase-language-adversarial-speaker-encoding-for-ind.html",
+    "figures": [
+      "assets/papers/2605-00777v1/fig1.png",
+      "assets/papers/2605-00777v1/fig2.png"
+    ],
+    "concepts": [
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      }
+    ],
+    "method_signal": "We present LASE (Language-Adversarial Speaker Encoder), a small projection head over frozen WavLM-base-plus trained with two losses: a supervised contrastive loss over voice identity, and a gradient-reversal cross-entropy against a 4-language classifier that pushes the embedding to be language-uninformative while remaining speaker-informative.",
+    "topic_signal": "AI安全与对齐"
+  },
+  {
+    "id": "2605.00776v1",
+    "title": "Directed Social Regard: Surfacing Targeted Advocacy, Opposition, Aid, Harms, and Victimization in Online Media",
+    "authors": [
+      "Scott Friedman",
+      "Ruta Wheelock",
+      "Sonja Schmer-Galunder",
+      "Drisana Iverson",
+      "Jake Vasilakes",
+      "Joan Zheng",
+      "Jeffrey Rye",
+      "Vasanth Sarathy",
+      "Christopher Miller"
+    ],
+    "published": "2026-05-01",
+    "summary": "The language in online platforms, influence operations, and political rhetoric frequently directs a mix of pro-social sentiment (e.g., advocacy, helpfulness, compassion) and anti-social sentiment (e.g., threats, opposition, blame) at different topics, all in the same message. While many natural language processing (NLP) tools classify or score a text's overall sentiment as positive, neutral, or negative, these tools cannot report that positive and negative sentiments coexist, and they cannot report the target of those sentiments. This paper presents the Directed Social Regard (DSR) approach to multi-dimensional, multi-valence sentiment analysis, comprised of a pair of transformer-based models that (1) detects span-level targets of sentiment in a message and then (2) scores all spans within the message context along three (-1, 1) axes of regard that are motivated by social science theories of moral disengagement and moral framing. We present a data collection and annotation strategy for DSR dataset construction, a transformer-based architecture for span-level scoring, and a validation study with promising results. We apply the validated DSR model on six third-party datasets of online media and report meaningful correlations between DSR outputs and the labels and topics in these pre-existing social science datasets.",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "comment": "32 pages, 12 figures, 7 tables",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-00776v1-directed-social-regard-surfacing-targeted-advocacy",
+    "rel_path": "entities/papers/2605-00776v1-directed-social-regard-surfacing-targeted-advocacy.html",
+    "figures": [
+      "assets/papers/2605-00776v1/fig1.png",
+      "assets/papers/2605-00776v1/fig2.png",
+      "assets/papers/2605-00776v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "We present a data collection and annotation strategy for DSR dataset construction, a transformer-based architecture for span-level scoring, and a validation study with promising results.",
+    "topic_signal": "大语言模型 / 基准评估"
+  },
+  {
+    "id": "2605.00768v1",
+    "title": "Characterizing the Expressivity of Local Attention in Transformers",
+    "authors": [
+      "Jiaoda Li",
+      "Ryan Cotterell"
+    ],
+    "published": "2026-05-01",
+    "summary": "The transformer is the most popular neural architecture for language modeling. The cornerstone of the transformer is its global attention mechanism, which lets the model aggregate information from all preceding tokens before generating the next token. One common variant of attention is called local attention, which restricts each token to aggregating information from a bounded window of predecessors, reducing the quadratic cost of global attention to linear. Although this restriction is usually motivated by efficiency, it has also been found to improve model quality, a phenomenon that has so far lacked a satisfactory explanation. We provide a formal account of this phenomenon in terms of recognizer expressivity. It has been shown that fixed-precision transformers with global attention correspond to a fragment of linear temporal logic containing a single past operator. We additionally prove that adding local attention introduces a second temporal operator, strictly enlarging the class of recognizable regular languages. Moreover, global and local attention are expressively complementary: neither subsumes the other, and combining them yields the richest fragment. Experiments on formal language recognition and natural language modeling corroborate the theory, showing that hybrid global--local transformers outperform their global-only counterparts.",
+    "categories": [
+      "cs.CL"
+    ],
+    "comment": "ACL 2026",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-00768v1-characterizing-the-expressivity-of-local-attention",
+    "rel_path": "entities/papers/2605-00768v1-characterizing-the-expressivity-of-local-attention.html",
+    "figures": [
+      "assets/papers/2605-00768v1/fig1.png",
+      "assets/papers/2605-00768v1/fig2.png",
+      "assets/papers/2605-00768v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      }
+    ],
+    "method_signal": "The transformer is the most popular neural architecture for language modeling.",
+    "topic_signal": "大语言模型"
+  },
+  {
+    "id": "2605.00706v1",
+    "title": "FinSafetyBench: Evaluating LLM Safety in Real-World Financial Scenarios",
+    "authors": [
+      "Yutao Hou",
+      "Yihan Jiang",
+      "Yuhan Xie",
+      "Jian Yang",
+      "Liwen Zhang",
+      "Hailiang Huang",
+      "Guanhua Chen",
+      "Yun Chen"
+    ],
+    "published": "2026-05-01",
+    "summary": "Large language models (LLMs) are increasingly applied in financial scenarios. However, they may produce harmful outputs, including facilitating illegal activities or unethical behavior, posing serious compliance risks. To systematically evaluate LLM safety in finance, we propose FinSafetyBench, a bilingual (English-Chinese) red-teaming benchmark designed to test an LLM's refusal of requests that violate financial compliance. Grounded in real-world financial crime cases and ethics standards, the benchmark comprises 14 subcategories spanning financial crimes and ethical violations. Through extensive experiments on general-purpose and finance-specialized LLMs under three representative attack settings, we identify critical vulnerabilities that allow adversarial prompts to bypass compliance safeguards. Further analysis reveals stronger susceptibility in Chinese contexts and highlights the limitations of prompt-level defenses against sophisticated or implicit manipulation strategies.",
+    "categories": [
+      "cs.CL"
+    ],
+    "comment": "Accepted by Findings of ACL2026",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-00706v1-finsafetybench-evaluating-llm-safety-in-real-world",
+    "rel_path": "entities/papers/2605-00706v1-finsafetybench-evaluating-llm-safety-in-real-world.html",
+    "figures": [
+      "assets/papers/2605-00706v1/fig1.png",
+      "assets/papers/2605-00706v1/fig2.png",
+      "assets/papers/2605-00706v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      }
+    ],
+    "method_signal": "To systematically evaluate LLM safety in finance, we propose FinSafetyBench, a bilingual (English-Chinese) red-teaming benchmark designed to test an LLM's refusal of requests that violate financial compliance.",
+    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐"
+  },
+  {
+    "id": "2605.00825v1",
+    "title": "Posterior Augmented Flow Matching",
+    "authors": [
+      "George Stoica",
+      "Sayak Paul",
+      "Matthew Wallingford",
+      "Vivek Ramanujan",
+      "Abhay Nori",
+      "Winson Han",
+      "Ali Farhadi",
+      "Ranjay Krishna",
+      "Judy Hoffman"
+    ],
+    "published": "2026-05-01",
+    "summary": "Flow matching (FM) trains a time-dependent vector field that transports samples from a simple prior to a complex data distribution. However, for high-dimensional images, each training sample supervises only a single trajectory and intermediate point, yielding an extremely sparse and high-variance training signal. This under-constrained supervision can cause flow collapse, where the learned dynamics memorize specific source-target pairings, mapping diverse inputs to overly similar outputs, failing to generalize. We introduce Posterior-Augmented Flow Matching (PAFM), a theoretically grounded generalization of FM that replaces single-target supervision with an expectation over an approximate posterior of valid target completions for a given intermediate state and condition. PAFM factorizes this intractable posterior into (i) the likelihood of the intermediate under a hypothesized endpoint and (ii) the prior probability of that endpoint under the condition, and uses an importance sampling scheme to construct a mixture over multiple candidate targets. We prove that PAFM yields an unbiased estimator of the original FM objective while substantially reducing gradient variance during training by aggregating information from many plausible continuation trajectories per intermediate. Finally, we show that PAFM improves over FM by up to 3.4 FID50K across different model scales (SiT-B/2 and SiT-XL/2), different architectures (SiT and MMDiT), and in both class and text conditioned benchmarks (ImageNet and CC12M), with a negligible increase in the compute overhead. Code: https://github.com/gstoica27/PAFM.git.",
+    "categories": [
+      "cs.CV"
+    ],
+    "comment": "",
+    "category_en": "Computer Vision",
+    "category_cn": "计算机视觉",
+    "slug": "2605-00825v1-posterior-augmented-flow-matching",
+    "rel_path": "entities/papers/2605-00825v1-posterior-augmented-flow-matching.html",
+    "figures": [
+      "assets/papers/2605-00825v1/fig1.png",
+      "assets/papers/2605-00825v1/fig2.png",
+      "assets/papers/2605-00825v1/fig3.png"
     ],
     "concepts": [
       {
@@ -474,12 +390,62 @@
         "url": "../../concepts/benchmarking.html"
       },
       {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
+      },
+      {
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
       }
     ],
-    "method_signal": "In this paper, we propose an adversarial training-free defense framework that utilizes a quantum autoencoder to purify the adversarial samples through reconstruction.",
-    "topic_signal": "多模态学习 / 基准评估 / AI安全与对齐"
+    "method_signal": "We introduce Posterior-Augmented Flow Matching (PAFM), a theoretically grounded generalization of FM that replaces single-target supervision with an expectation over an approximate posterior of valid target completions for a given intermediate state and condition.",
+    "topic_signal": "多模态学习 / 基准评估 / 自动驾驶 / 世界模型"
+  },
+  {
+    "id": "2605.00814v1",
+    "title": "Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs",
+    "authors": [
+      "Siyuan Huang",
+      "Xiaoye Qu",
+      "Yafu Li",
+      "Tong Zhu",
+      "Zefeng He",
+      "Muxin Fu",
+      "Daizong Liu",
+      "Wei-Long Zheng",
+      "Yu Cheng"
+    ],
+    "published": "2026-05-01",
+    "summary": "While autoregressive Large Vision-Language Models (LVLMs) demonstrate remarkable proficiency in multimodal tasks, they face a \"Visual Signal Dilution\" phenomenon, where the accumulation of textual history expands the attention partition function, causing visual attention to decay inversely with generated sequence length. To counteract this, we propose Persistent Visual Memory (PVM), a lightweight learnable module designed to ensure sustained, on-demand visual perception. Integrated as a parallel branch alongside the Feed-Forward Network (FFN) in LVLMs, PVM establishes a distance-agnostic retrieval pathway that directly provides visual embeddings for precise visual perception, thereby structurally mitigating the signal suppression inherent to deep generation. Extensive experiments on Qwen3-VL models demonstrate that PVM brings notable improvements with negligible parameter overhead, delivering consistent average accuracy gains across both 4B and 8B scales, particularly in complex reasoning tasks that demand persistent visual perception. Furthermore, in-depth analysis reveals that PVM can resist length-induced signal decay and accelerate internal prediction convergence.",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "comment": "",
+    "category_en": "Computer Vision",
+    "category_cn": "计算机视觉",
+    "slug": "2605-00814v1-persistent-visual-memory-sustaining-perception-for",
+    "rel_path": "entities/papers/2605-00814v1-persistent-visual-memory-sustaining-perception-for.html",
+    "figures": [
+      "assets/papers/2605-00814v1/fig1.png",
+      "assets/papers/2605-00814v1/fig2.png",
+      "assets/papers/2605-00814v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
+      }
+    ],
+    "method_signal": "To counteract this, we propose Persistent Visual Memory (PVM), a lightweight learnable module designed to ensure sustained, on-demand visual perception.",
+    "topic_signal": "大语言模型 / 多模态学习"
   }
 ]

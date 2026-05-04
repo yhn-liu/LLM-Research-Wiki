@@ -134,3 +134,17 @@
 - 对当前待解读论文执行 PDF 文本提取与 LM 深度解读，移除公开页面中的“深度解读状态/待 PDF 下载”提示。
 - 论文页发布标准更新为 `status: analyzed` / `confidence: high`，并包含核心贡献、方法概述、实验结果、局限性与注意点、相关概念。
 - 每日 arXiv 流程更新为：脚本先下载 PDF 和准备页面，cron 完成 PDF+LM 深度解读后再同步 GitHub Pages。
+
+## [2026-05-04] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 不生成 PDF；论文页面包含摘要、方法信号、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.00817v1] When LLMs Stop Following Steps: A Diagnostic Study of Procedural Execution in La
+  - [2605.00803v1] Can Coding Agents Reproduce Findings in Computational Materials Science?
+  - [2605.00798v1] RunAgent: Interpreting Natural-Language Plans with Constraint-Guided Execution
+  - [2605.00796v1] When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and 
+  - [2605.00777v1] LASE: Language-Adversarial Speaker Encoding for Indic Cross-Script Identity Pres
+  - [2605.00776v1] Directed Social Regard: Surfacing Targeted Advocacy, Opposition, Aid, Harms, and
+  - [2605.00768v1] Characterizing the Expressivity of Local Attention in Transformers
+  - [2605.00706v1] FinSafetyBench: Evaluating LLM Safety in Real-World Financial Scenarios
+  - [2605.00825v1] Posterior Augmented Flow Matching
+  - [2605.00814v1] Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs

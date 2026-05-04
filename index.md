@@ -6,103 +6,103 @@ title: LLM Research Wiki
 # 🔬 LLM Research Wiki
 
 > AI/ML 领域的维基式知识库。按概念组织，论文为据，持续更新。
-> 最后更新：2026-05-02 | 概念：61 | 论文：32
+> 最后更新：2026-05-04 | 概念：61 | 论文：42
 
 ---
 
 ## 🌟 今日新论文
 
-> 2026-05-02 自动更新，共 10 篇。这里是网站版每日论文导读；点击标题进入论文页面查看摘要、方法信号、相关主题和关键图示。
+> 2026-05-04 自动更新，共 10 篇。这里是网站版每日论文导读；点击标题进入论文页面查看摘要、方法信号、相关主题和关键图示。
 
 <div class="daily-papers">
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28185v1-visual-generation-in-the-new-era-an-evolution-from.html" class="daily-thumb"><img src="assets/papers/2604-28185v1/fig1.png" alt="Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling"></a>
+  <a href="entities/papers/2605-00817v1-when-llms-stop-following-steps-a-diagnostic-study.html" class="daily-thumb"><img src="assets/papers/2605-00817v1/fig1.png" alt="When LLMs Stop Following Steps: A Diagnostic Study of Procedural Execution in Language Models"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28185v1-visual-generation-in-the-new-era-an-evolution-from.html">Visual Generation in the New Era: An Evolution from Atomic Mapping to Agentic World Modeling</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.CV · 强化学习 / 基准评估 / 图神经网络 / 世界模型</div>
-    <p><strong>方法/亮点：</strong>To frame this shift, we introduce a five-level taxonomy: Atomic Generation, Conditional Generation, In-Context Generation, Agentic Generation, and World-Modeling Generation, progressing from passive renderers to interactive, agentic, world-</p>
-    <p class="daily-abstract">Recent visual generation models have made major progress in photorealism, typography, instruction following, and interactive editing, yet they still struggle with spatial reasoning, persistent state, long-horizon consistency, and causal understanding. We argue...</p>
+    <h3><a href="entities/papers/2605-00817v1-when-llms-stop-following-steps-a-diagnostic-study.html">When LLMs Stop Following Steps: A Diagnostic Study of Procedural Execution in Language Models</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.CL · 大语言模型 / 基准评估</div>
+    <p><strong>方法/亮点：</strong>Large language models (LLMs) often achieve strong performance on reasoning benchmarks, but final-answer accuracy alone does not show whether they faithfully execute the procedure specified in a prompt.</p>
+    <p class="daily-abstract">Large language models (LLMs) often achieve strong performance on reasoning benchmarks, but final-answer accuracy alone does not show whether they faithfully execute the procedure specified in a prompt. We study this question through a controlled diagnostic ben...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html" class="daily-thumb"><img src="assets/papers/2604-28179v1/fig1.png" alt="Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy"></a>
+  <a href="entities/papers/2605-00803v1-can-coding-agents-reproduce-findings-in-computatio.html" class="daily-thumb"><img src="assets/papers/2605-00803v1/fig1.png" alt="Can Coding Agents Reproduce Findings in Computational Materials Science?"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28179v1-stop-holding-your-breath-ct-informed-gaussian-spla.html">Stop Holding Your Breath: CT-Informed Gaussian Splatting for Dynamic Bronchoscopy</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.CV · 多模态学习 / 基准评估 / 医学AI / 世界模型</div>
-    <p><strong>方法/亮点：</strong>We propose to eliminate the need for breath-hold protocols by leveraging patient-specific respiratory modeling.</p>
-    <p class="daily-abstract">Bronchoscopic navigation relies on registering endoscopic video to a preoperative CT scan, but respiratory motion deforms the airway by 5-20 mm, creating CT-to-body divergence that limits localization accuracy. In practice, this is mitigated through breath-hol...</p>
+    <h3><a href="entities/papers/2605-00803v1-can-coding-agents-reproduce-findings-in-computatio.html">Can Coding Agents Reproduce Findings in Computational Materials Science?</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.SE, cs.AI, cs.CL · 大语言模型 / 基准评估 / 自动驾驶 / 智能体</div>
+    <p><strong>方法/亮点：</strong>To address this question, we present AutoMat, a benchmark for evaluating LLM-based agents&#x27; ability to reproduce claims from computational materials science.</p>
+    <p class="daily-abstract">Large language models are increasingly deployed as autonomous coding agents and have achieved remarkably strong performance on software engineering benchmarks. However, it is unclear whether such success transfers to computational scientific workflows, where t...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28186v1-computing-equilibrium-beyond-unilateral-deviation.html" class="daily-thumb"><img src="assets/papers/2604-28186v1/fig1.png" alt="Computing Equilibrium beyond Unilateral Deviation"></a>
+  <a href="entities/papers/2605-00798v1-runagent-interpreting-natural-language-plans-with.html" class="daily-thumb"><img src="assets/papers/2605-00798v1/fig1.png" alt="RunAgent: Interpreting Natural-Language Plans with Constraint-Guided Execution"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28186v1-computing-equilibrium-beyond-unilateral-deviation.html">Computing Equilibrium beyond Unilateral Deviation</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.GT, cs.AI, cs.CC · 基准评估</div>
-    <p><strong>方法/亮点：</strong>Finally, we use our framework to solve the \emph{Exploitability Welfare Frontier} (EWF), the maximum attainable social welfare subject to a given exploitability (the maximum gain over all unilateral deviations).</p>
-    <p class="daily-abstract">Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against profitable coordinated deviations by coalitions. Although th...</p>
+    <h3><a href="entities/papers/2605-00798v1-runagent-interpreting-natural-language-plans-with.html">RunAgent: Interpreting Natural-Language Plans with Constraint-Guided Execution</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.LG, cs.CL, cs.MA · 大语言模型 / 基准评估 / 自动驾驶 / 智能体</div>
+    <p><strong>方法/亮点：</strong>We propose RunAgent, a multi-agent plan execution platform that interprets natural-language plans while enforcing stepwise execution through constraints and rubrics.</p>
+    <p class="daily-abstract">Humans solve problems by executing targeted plans, yet large language models (LLMs) remain unreliable for structured workflow execution. We propose RunAgent, a multi-agent plan execution platform that interprets natural-language plans while enforcing stepwise ...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html" class="daily-thumb"><img src="assets/papers/2604-28169v1/fig1.jpg" alt="PhyCo: Learning Controllable Physical Priors for Generative Motion"></a>
+  <a href="entities/papers/2605-00796v1-when-rag-chatbots-expose-their-backend-an-anonymiz.html" class="daily-thumb"><img src="assets/papers/2605-00796v1/fig1.png" alt="When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28169v1-phyco-learning-controllable-physical-priors-for-ge.html">PhyCo: Learning Controllable Physical Priors for Generative Motion</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.CV, cs.AI, cs.LG · 大语言模型 / 多模态学习 / 强化学习 / 基准评估</div>
-    <p><strong>方法/亮点：</strong>We present PhyCo, a framework that introduces continuous, interpretable, and physically grounded control into video generation.</p>
-    <p class="daily-abstract">Modern video diffusion models excel at appearance synthesis but still struggle with physical consistency: objects drift, collisions lack realistic rebound, and material responses seldom match their underlying properties. We present PhyCo, a framework that intr...</p>
+    <h3><a href="entities/papers/2605-00796v1-when-rag-chatbots-expose-their-backend-an-anonymiz.html">When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.CR, cs.AI, cs.CL · 大语言模型 / 医学AI</div>
+    <p><strong>方法/亮点：</strong>Methods: We used a two-stage strategy.</p>
+    <p class="daily-abstract">Background: Patient-facing medical chatbots based on retrieval-augmented generation (RAG) are increasingly promoted to deliver accessible, grounded health information. AI-assisted development lowers the barrier to building them, but they still demand rigorous ...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html" class="daily-thumb"><img src="assets/papers/2604-28158v1/fig1.png" alt="Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists"></a>
+  <a href="entities/papers/2605-00777v1-lase-language-adversarial-speaker-encoding-for-ind.html" class="daily-thumb"><img src="assets/papers/2605-00777v1/fig1.png" alt="LASE: Language-Adversarial Speaker Encoding for Indic Cross-Script Identity Preservation"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28158v1-intern-atlas-a-methodological-evolution-graph-as-r.html">Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.AI · 基准评估 / AI安全与对齐 / 图神经网络 / 智能体</div>
-    <p><strong>方法/亮点：</strong>We introduce Intern-Atlas, a methodological evolution graph that automatically identifies method-level entities, infers lineage relationships among methodologies, and captures the bottlenecks that drive transitions between successive innova</p>
-    <p class="daily-abstract">Existing research infrastructure is fundamentally document-centric, providing citation links between papers but lacking explicit representations of methodological evolution. In particular, it does not capture the structured relationships that explain how and w...</p>
+    <h3><a href="entities/papers/2605-00777v1-lase-language-adversarial-speaker-encoding-for-ind.html">LASE: Language-Adversarial Speaker Encoding for Indic Cross-Script Identity Preservation</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.SD, cs.CL, eess.AS · AI安全与对齐</div>
+    <p><strong>方法/亮点：</strong>We present LASE (Language-Adversarial Speaker Encoder), a small projection head over frozen WavLM-base-plus trained with two losses: a supervised contrastive loss over voice identity, and a gradient-reversal cross-entropy against a 4-langua</p>
+    <p class="daily-abstract">A speaker encoder used in multilingual voice cloning should treat the same speaker identically regardless of which script the audio was uttered in. Off-the-shelf encoders do not, and the failure is accent-conditional. On a 1043-pair Western-accented voice corp...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28156v1-flexitac-a-low-cost-open-source-scalable-tactile-s.html" class="daily-thumb"><img src="assets/papers/2604-28156v1/fig1.png" alt="FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems"></a>
+  <a href="entities/papers/2605-00776v1-directed-social-regard-surfacing-targeted-advocacy.html" class="daily-thumb"><img src="assets/papers/2605-00776v1/fig1.png" alt="Directed Social Regard: Surfacing Targeted Advocacy, Opposition, Aid, Harms, and Victimization in Online Media"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28156v1-flexitac-a-low-cost-open-source-scalable-tactile-s.html">FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.RO, cs.AI, cs.LG · 世界模型</div>
-    <p><strong>方法/亮点：</strong>We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors.</p>
-    <p class="daily-abstract">We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors. FlexiTac is a practical &quot;plug-in&quot; module consisting of (i) thin, flexible tactile sensor pads that provide dense tactile sign...</p>
+    <h3><a href="entities/papers/2605-00776v1-directed-social-regard-surfacing-targeted-advocacy.html">Directed Social Regard: Surfacing Targeted Advocacy, Opposition, Aid, Harms, and Victimization in Online Media</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.CL, cs.AI · 大语言模型 / 基准评估</div>
+    <p><strong>方法/亮点：</strong>We present a data collection and annotation strategy for DSR dataset construction, a transformer-based architecture for span-level scoring, and a validation study with promising results.</p>
+    <p class="daily-abstract">The language in online platforms, influence operations, and political rhetoric frequently directs a mix of pro-social sentiment (e.g., advocacy, helpfulness, compassion) and anti-social sentiment (e.g., threats, opposition, blame) at different topics, all in t...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28139v1-claw-eval-live-a-live-agent-benchmark-for-evolving.html" class="daily-thumb"><img src="assets/papers/2604-28139v1/fig1.png" alt="Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows"></a>
+  <a href="entities/papers/2605-00768v1-characterizing-the-expressivity-of-local-attention.html" class="daily-thumb"><img src="assets/papers/2605-00768v1/fig1.png" alt="Characterizing the Expressivity of Local Attention in Transformers"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28139v1-claw-eval-live-a-live-agent-benchmark-for-evolving.html">Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.SE, cs.AI · 大语言模型 / 基准评估 / 智能体</div>
-    <p><strong>方法/亮点：</strong>We introduce Claw-Eval-Live, a live benchmark for workflow agents that separates a refreshable signal layer, updated across releases from public workflow-demand signals, from a reproducible, time-stamped release snapshot.</p>
-    <p class="daily-abstract">LLM agents are expected to complete end-to-end units of work across software tools, business services, and local workspaces. Yet many agent benchmarks freeze a curated task set at release time and grade mainly the final response, making it difficult to evaluat...</p>
+    <h3><a href="entities/papers/2605-00768v1-characterizing-the-expressivity-of-local-attention.html">Characterizing the Expressivity of Local Attention in Transformers</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.CL · 大语言模型</div>
+    <p><strong>方法/亮点：</strong>The transformer is the most popular neural architecture for language modeling.</p>
+    <p class="daily-abstract">The transformer is the most popular neural architecture for language modeling. The cornerstone of the transformer is its global attention mechanism, which lets the model aggregate information from all preceding tokens before generating the next token. One comm...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28138v1-crab-a-semantics-aware-checkpointrestore-runtime-f.html" class="daily-thumb"><img src="assets/papers/2604-28138v1/fig1.png" alt="Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes"></a>
+  <a href="entities/papers/2605-00706v1-finsafetybench-evaluating-llm-safety-in-real-world.html" class="daily-thumb"><img src="assets/papers/2605-00706v1/fig1.png" alt="FinSafetyBench: Evaluating LLM Safety in Real-World Financial Scenarios"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28138v1-crab-a-semantics-aware-checkpointrestore-runtime-f.html">Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.OS, cs.AI · 大语言模型 / 强化学习 / 自动驾驶 / 智能体</div>
-    <p><strong>方法/亮点：</strong>Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and runtime artifacts.</p>
-    <p class="daily-abstract">Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and runtime artifacts. Checkpoint and restore (C/R) of this state is needed for fault tolerance, spot execution, RL rollout branching, and safe rollback-y...</p>
+    <h3><a href="entities/papers/2605-00706v1-finsafetybench-evaluating-llm-safety-in-real-world.html">FinSafetyBench: Evaluating LLM Safety in Real-World Financial Scenarios</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.CL · 大语言模型 / 基准评估 / AI安全与对齐</div>
+    <p><strong>方法/亮点：</strong>To systematically evaluate LLM safety in finance, we propose FinSafetyBench, a bilingual (English-Chinese) red-teaming benchmark designed to test an LLM&#x27;s refusal of requests that violate financial compliance.</p>
+    <p class="daily-abstract">Large language models (LLMs) are increasingly applied in financial scenarios. However, they may produce harmful outputs, including facilitating illegal activities or unethical behavior, posing serious compliance risks. To systematically evaluate LLM safety in ...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28180v1-an-adaptive-wavelet-based-pinn-for-problems-with-l.html" class="daily-thumb"><img src="assets/papers/2604-28180v1/fig1.png" alt="An adaptive wavelet-based PINN for problems with localized high-magnitude source"></a>
+  <a href="entities/papers/2605-00825v1-posterior-augmented-flow-matching.html" class="daily-thumb"><img src="assets/papers/2605-00825v1/fig1.png" alt="Posterior Augmented Flow Matching"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28180v1-an-adaptive-wavelet-based-pinn-for-problems-with-l.html">An adaptive wavelet-based PINN for problems with localized high-magnitude source</a></h3>
-    <div class="daily-meta">2026-04-30 · cs.LG · 世界模型</div>
-    <p><strong>方法/亮点：</strong>In recent years, physics-informed neural networks (PINNs) have gained significant attention for solving differential equations, although they suffer from two fundamental limitations, namely, spectral bias inherent in neural networks and los</p>
-    <p class="daily-abstract">In recent years, physics-informed neural networks (PINNs) have gained significant attention for solving differential equations, although they suffer from two fundamental limitations, namely, spectral bias inherent in neural networks and loss imbalance arising ...</p>
+    <h3><a href="entities/papers/2605-00825v1-posterior-augmented-flow-matching.html">Posterior Augmented Flow Matching</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.CV · 多模态学习 / 基准评估 / 自动驾驶 / 世界模型</div>
+    <p><strong>方法/亮点：</strong>We introduce Posterior-Augmented Flow Matching (PAFM), a theoretically grounded generalization of FM that replaces single-target supervision with an expectation over an approximate posterior of valid target completions for a given intermedi</p>
+    <p class="daily-abstract">Flow matching (FM) trains a time-dependent vector field that transports samples from a simple prior to a complex data distribution. However, for high-dimensional images, each training sample supervises only a single trajectory and intermediate point, yielding ...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2604-28176v1-defending-quantum-classifiers-against-adversarial.html" class="daily-thumb"><img src="assets/papers/2604-28176v1/fig1.png" alt="Defending Quantum Classifiers against Adversarial Perturbations through Quantum Autoencoders"></a>
+  <a href="entities/papers/2605-00814v1-persistent-visual-memory-sustaining-perception-for.html" class="daily-thumb"><img src="assets/papers/2605-00814v1/fig1.png" alt="Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2604-28176v1-defending-quantum-classifiers-against-adversarial.html">Defending Quantum Classifiers against Adversarial Perturbations through Quantum Autoencoders</a></h3>
-    <div class="daily-meta">2026-04-30 · quant-ph, cs.LG · 多模态学习 / 基准评估 / AI安全与对齐</div>
-    <p><strong>方法/亮点：</strong>In this paper, we propose an adversarial training-free defense framework that utilizes a quantum autoencoder to purify the adversarial samples through reconstruction.</p>
-    <p class="daily-abstract">Machine learning models can learn from data samples to carry out various tasks efficiently. When data samples are adversarially manipulated, such as by insertion of carefully crafted noise, it can cause the model to make mistakes. Quantum machine learning mode...</p>
+    <h3><a href="entities/papers/2605-00814v1-persistent-visual-memory-sustaining-perception-for.html">Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs</a></h3>
+    <div class="daily-meta">2026-05-01 · cs.CV, cs.AI · 大语言模型 / 多模态学习</div>
+    <p><strong>方法/亮点：</strong>To counteract this, we propose Persistent Visual Memory (PVM), a lightweight learnable module designed to ensure sustained, on-demand visual perception.</p>
+    <p class="daily-abstract">While autoregressive Large Vision-Language Models (LVLMs) demonstrate remarkable proficiency in multimodal tasks, they face a &quot;Visual Signal Dilution&quot; phenomenon, where the accumulation of textual history expands the attention partition function, causing visua...</p>
   </div>
 </div>
 </div>
