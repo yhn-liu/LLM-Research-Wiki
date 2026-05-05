@@ -2,7 +2,7 @@
 layout: concept
 title: 大语言模型
 created: 2026-05-01
-updated: 2026-05-01
+updated: 2026-05-05
 type: concept
 tags: [LLM, transformer, scaling, NLP, deep-learning]
 papers:
@@ -23,6 +23,40 @@ papers:
 大语言模型（Large Language Model, LLM）是基于 Transformer 架构、通过海量文本预训练的大规模神经网络，能够执行文本生成、理解、推理等多种任务。自 GPT-3 展示涌现能力以来，LLM 已成为 AI 研究的核心范式，本库中有 8 篇论文从不同角度对其进行研究。
 
 ## 关键文献与发现
+
+- [SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection](../entities/papers/2605-02888v1-speckv-adaptive-speculative-decoding-with-compress.html)（2026-05-04）：提出轻量级自适应控制器，利用草稿模型信号动态选择推测长度 γ，在压缩模型上实现 56% 吞吐量提升。
+
+- [Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces](../entities/papers/2605-02801v1-reinforcement-learning-for-llm-based-multi-agent-s.html)（2026-05-04）：综述论文，通过编排轨迹框架系统梳理多智能体 RL 的奖励设计、信用分配和编排学习三个维度。
+
+- [FunFuzz: An LLM-Powered Evolutionary Fuzzing Framework](../entities/papers/2605-02789v1-funfuzz-an-llm-powered-evolutionary-fuzzing-framew.html)（2026-05-04）：多岛演化模糊测试框架，结合 LLM 生成与演化搜索，在编译器模糊测试中超越先前基线。
+
+- [When Audio-Language Models Fail to Leverage Multimodal Context for Dysarthric Speech Recognition](../entities/papers/2605-02782v1-when-audio-language-models-fail-to-leverage-multim.html)（2026-05-04）：发现冻结音频语言模型无法利用临床上下文改善构音障碍语音识别，但 LoRA 微调可教会模型利用上下文。
+
+- [Mitigating Misalignment Contagion by Steering with Implicit Traits](../entities/papers/2605-02751v1-mitigating-misalignment-contagion-by-steering-with.html)（2026-05-04）：发现多智能体交互中的错位传染现象，提出隐式特质引导（SIT）黑盒方法有效缓解此问题。
+
+- [Foundation Models to Unlock Real-World Evidence from Nationwide Medical Claims](../entities/papers/2605-02740v1-foundation-models-to-unlock-real-world-evidence-fr.html)（2026-05-04）：ReClaim 在 438 亿医疗索赔事件上训练 Transformer，在疾病预测和支出预测上超越 LightGBM 等基线。
+
+- [PubMed-Ophtha: An open resource for training ophthalmology vision-language models](../entities/papers/2605-02720v1-pubmed-ophtha-an-open-resource-for-training-ophtha.html)（2026-05-04）：从 PubMed Central 提取 102K 眼科图像-标题对，全分辨率 PDF 提取与 LLM 驱动的面板级标题分割。
+
+- [AlbumFill: Album-Guided Reasoning and Retrieval for Personalized Image Completion](../entities/papers/2605-02892v1-albumfill-album-guided-reasoning-and-retrieval-for.html)（2026-05-04）：免训练框架，用 VLM 语义推理从个人相册检索身份一致参考实现个性化图像补全。
+
+- [Laplacian Frequency Interaction Network for Rural Thematic Road Extraction](../entities/papers/2605-02866v1-laplacian-frequency-interaction-network-for-rural.html)（2026-05-04）：通过拉普拉斯频率解耦-交互-重建策略从农机轨迹图像中提取农村道路网络，F1 达 92.54%。
+
+- [AlbumFill: Album-Guided Reasoning and Retrieval for Personalized Image Completion](../entities/papers/2605-02892v1-albumfill-album-guided-reasoning-and-retrieval-for.html)（2026-05-04）：个性化图像补全旨在恢复个人照片中的遮挡区域，同时保留身份和外观。
+
+- [PubMed-Ophtha: An open resource for training ophthalmology vision-language models on scientific literature](../entities/papers/2605-02720v1-pubmed-ophtha-an-open-resource-for-training-ophtha.html)（2026-05-04）：视觉语言模型为眼科带来了巨大的希望，但其发展依赖于仍然稀缺的大规模、高质量的图像文本数据集。
+
+- [Foundation Models to Unlock Real-World Evidence from Nationwide Medical Claims](../entities/papers/2605-02740v1-foundation-models-to-unlock-real-world-evidence-fr.html)（2026-05-04）：来自大规模现实世界数据 (RWD) 的证据越来越多地为监管评估和医疗保健决策提供信息。
+
+- [Mitigating Misalignment Contagion by Steering with Implicit Traits](../entities/papers/2605-02751v1-mitigating-misalignment-contagion-by-steering-with.html)（2026-05-04）：语言模型 (LM) 越来越多地用于高风险、多代理环境，在这些环境中，遵循指令和保持价值一致性至关重要。
+
+- [When Audio-Language Models Fail to Leverage Multimodal Context for Dysarthric Speech Recognition](../entities/papers/2605-02782v1-when-audio-language-models-fail-to-leverage-multim.html)（2026-05-04）：自动语音识别（ASR）系统对于构音障碍和其他非典型语音仍然很脆弱。
+
+- [FunFuzz: An LLM-Powered Evolutionary Fuzzing Framework](../entities/papers/2605-02789v1-funfuzz-an-llm-powered-evolutionary-fuzzing-framew.html)（2026-05-04）：Modern fuzzers increasingly use Large Language Models (LLMs) to generate structured inputs, but LLM-driven fuzzing is sensitive to prompt initializati…
+
+- [Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces](../entities/papers/2605-02801v1-reinforcement-learning-for-llm-based-multi-agent-s.html)（2026-05-04）：随着大型语言模型 (LLM) 代理从孤立的工具用户发展为协调的团队，强化学习 (RL) 不仅必须优化个人操作，还必须优化工作的产生、委托、沟通、聚合和停止方式。
+
+- [SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection](../entities/papers/2605-02888v1-speckv-adaptive-speculative-decoding-with-compress.html)（2026-05-04）：推测性解码通过使用小型草稿模型提出供较大目标模型验证的候选标记来加速大型语言模型 (LLM) 推理。
 
 ### 训练与效率
 

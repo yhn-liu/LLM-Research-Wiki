@@ -148,3 +148,18 @@
   - [2605.00706v1] FinSafetyBench: Evaluating LLM Safety in Real-World Financial Scenarios
   - [2605.00825v1] Posterior Augmented Flow Matching
   - [2605.00814v1] Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs
+
+## [2026-05-05] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 更新相关概念页提及: 28 处
+- 不生成 PDF；论文页面包含英文摘要、中文摘要、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.02888v1] SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection
+  - [2605.02815v1] FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents
+  - [2605.02801v1] Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration T
+  - [2605.02789v1] FunFuzz: An LLM-Powered Evolutionary Fuzzing Framework
+  - [2605.02782v1] When Audio-Language Models Fail to Leverage Multimodal Context for Dysarthric Sp
+  - [2605.02751v1] Mitigating Misalignment Contagion by Steering with Implicit Traits
+  - [2605.02740v1] Foundation Models to Unlock Real-World Evidence from Nationwide Medical Claims
+  - [2605.02720v1] PubMed-Ophtha: An open resource for training ophthalmology vision-language model
+  - [2605.02892v1] AlbumFill: Album-Guided Reasoning and Retrieval for Personalized Image Completio
+  - [2605.02866v1] Laplacian Frequency Interaction Network for Rural Thematic Road Extraction

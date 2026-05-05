@@ -2,7 +2,7 @@
 layout: concept
 title: 自动驾驶
 created: 2026-05-01
-updated: 2026-05-01
+updated: 2026-05-05
 type: concept
 tags: [autonomous-driving, perception, prediction, planning, 3D, world-model]
 papers:
@@ -16,6 +16,8 @@ papers:
 自动驾驶（Autonomous Driving）是指通过传感器感知、环境理解、行为预测和路径规划等技术，使车辆能够在无人干预或最小干预的情况下自主行驶的系统。现代自动驾驶系统深度依赖人工智能技术，包括计算机视觉、深度学习、强化学习和世界模型等。随着端到端学习和世界模型的发展，自动驾驶正从模块化架构向统一感知-预测-规划的端到端架构演进。
 
 ## 关键文献与发现
+
+- [Laplacian Frequency Interaction Network for Rural Thematic Road Extraction](../entities/papers/2605-02866v1-laplacian-frequency-interaction-network-for-rural.html)（2026-05-04）：农村专题路网建设旨在从农机运动轨迹图像中提取拓扑道路结构。
 
 ### HERMES++: 统一的驾驶世界模型
 

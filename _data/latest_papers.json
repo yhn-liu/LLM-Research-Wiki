@@ -1,140 +1,107 @@
 [
   {
-    "id": "2605.00817v1",
-    "title": "When LLMs Stop Following Steps: A Diagnostic Study of Procedural Execution in Language Models",
+    "id": "2605.02888v1",
+    "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
     "authors": [
-      "Sailesh Panda",
-      "Pritam Kadasi",
-      "Abhishek Upperwal",
-      "Mayank Singh"
+      "Shikhar Shukla"
     ],
-    "published": "2026-05-01",
-    "summary": "Large language models (LLMs) often achieve strong performance on reasoning benchmarks, but final-answer accuracy alone does not show whether they faithfully execute the procedure specified in a prompt. We study this question through a controlled diagnostic benchmark for procedural execution, where models are given a step-wise arithmetic algorithm and two numeric inputs, and must return the final computed value. The benchmark uses simple arithmetic operations but increases complexity through algorithm length and look-back dependencies over intermediate variables. Across 14 models and 55 datasets, average first-answer accuracy drops from 61% on 5-step procedures to 20% on 95-step procedures. Generation-level analysis shows that failures often involve missing answers, premature answers, self-correction after an initial error, under-executed traces, and hallucinated extra steps. These findings suggest that apparent reasoning ability can mask substantial weaknesses in faithful instruction execution.",
-    "categories": [
-      "cs.CL"
-    ],
-    "comment": "77 pages, 109 figures",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-00817v1-when-llms-stop-following-steps-a-diagnostic-study",
-    "rel_path": "entities/papers/2605-00817v1-when-llms-stop-following-steps-a-diagnostic-study.html",
-    "figures": [
-      "assets/papers/2605-00817v1/fig1.png",
-      "assets/papers/2605-00817v1/fig2.png",
-      "assets/papers/2605-00817v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "Large language models (LLMs) often achieve strong performance on reasoning benchmarks, but final-answer accuracy alone does not show whether they faithfully execute the procedure specified in a prompt.",
-    "topic_signal": "大语言模型 / 基准评估"
-  },
-  {
-    "id": "2605.00803v1",
-    "title": "Can Coding Agents Reproduce Findings in Computational Materials Science?",
-    "authors": [
-      "Ziyang Huang",
-      "Yi Cao",
-      "Ali K. Shargh",
-      "Jing Luo",
-      "Ruidong Mei",
-      "Mohd Zaki",
-      "Zhan Liu",
-      "Wyatt Bunstine",
-      "William Jurayj",
-      "Somdatta Goswami",
-      "Tyrel McQueen",
-      "Michael Shields",
-      "Jaafar El-Awady",
-      "Paulette Clancy",
-      "Benjamin Van Durme",
-      "Nicholas Andrews",
-      "William Walden",
-      "Daniel Khashabi"
-    ],
-    "published": "2026-05-01",
-    "summary": "Large language models are increasingly deployed as autonomous coding agents and have achieved remarkably strong performance on software engineering benchmarks. However, it is unclear whether such success transfers to computational scientific workflows, where tasks require not only strong coding ability, but also the ability to navigate complex, domain-specific procedures and to interpret results in the context of scientific claims. To address this question, we present AutoMat, a benchmark for evaluating LLM-based agents' ability to reproduce claims from computational materials science. AutoMat poses three interrelated challenges: recovering underspecified computational procedures, navigating specialized toolchains, and determining whether the resulting evidence supports a claim. By working closely with subject matter experts, we curate a set of claims from real materials science papers to test whether coding agents can recover and execute the end-to-end workflow needed to support (or undermine) such claims. We then evaluate multiple representative coding agent settings across several foundation models. Our results show that current LLM-based agents obtain low overall success rates on AutoMat, with the best-performing setting achieving a success rate of only 54.1%. Error analysis further reveals that agents perform worst when workflows must be reconstructed from paper text alone and that they fail primarily due to incomplete procedures, methodological deviations, and execution fragility. Taken together, these findings position AutoMat as both a benchmark for computational scientific reproducibility and a tool for diagnosing the current limitations of agentic systems in AI-for-science settings.",
-    "categories": [
-      "cs.SE",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "comment": "",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-00803v1-can-coding-agents-reproduce-findings-in-computatio",
-    "rel_path": "entities/papers/2605-00803v1-can-coding-agents-reproduce-findings-in-computatio.html",
-    "figures": [
-      "assets/papers/2605-00803v1/fig1.png",
-      "assets/papers/2605-00803v1/fig2.png",
-      "assets/papers/2605-00803v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "自动驾驶",
-        "slug": "autonomous-driving",
-        "url": "../../concepts/autonomous-driving.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "To address this question, we present AutoMat, a benchmark for evaluating LLM-based agents' ability to reproduce claims from computational materials science.",
-    "topic_signal": "大语言模型 / 基准评估 / 自动驾驶 / 智能体"
-  },
-  {
-    "id": "2605.00798v1",
-    "title": "RunAgent: Interpreting Natural-Language Plans with Constraint-Guided Execution",
-    "authors": [
-      "Arunabh Srivastava",
-      "Mohammad A.",
-      " Khojastepour",
-      "Srimat Chakradhar",
-      "Sennur Ulukus"
-    ],
-    "published": "2026-05-01",
-    "summary": "Humans solve problems by executing targeted plans, yet large language models (LLMs) remain unreliable for structured workflow execution. We propose RunAgent, a multi-agent plan execution platform that interprets natural-language plans while enforcing stepwise execution through constraints and rubrics. RunAgent bridges the expressiveness of natural language with the determinism of programming via an agentic language with explicit control constructs (e.g., \\texttt{IF}, \\texttt{GOTO}, \\texttt{FORALL}). Beyond verifying syntactic and semantic verification of the step output, which is performed based on the specific instruction of each step, RunAgent autonomously derives and validates constraints based on the description of the task and its instance at each step. RunAgent also dynamically selects among LLM-based reasoning, tool usage, and code generation and execution (e.g., in Python), and incorporates error correction mechanisms to ensure correctness. Finally, RunAgent filters the context history by retaining only relevant information during the execution of each step. Evaluations on Natural-plan and SciBench Datasets demonstrate that RunAgent outperforms baseline LLMs and state-of-the-art PlanGEN methods.",
+    "published": "2026-05-04",
+    "summary": "Speculative decoding accelerates large language model (LLM) inference by using a small draft model to propose candidate tokens that a larger target model verifies. A critical hyperparameter in this process is the speculation length~$γ$, which determines how many tokens the draft model proposes per step. Nearly all existing systems use a fixed~$γ$ (typically~4), yet empirical evidence suggests that the optimal value varies across task types and, crucially, depends on the compression level applied to the target model. In this paper, we present \\textbf{SpecKV}, a lightweight adaptive controller that selects~$γ$ per speculation step using signals extracted from the draft model itself. We profile speculative decoding across 4~task categories, 4~speculation lengths, and 3~compression levels (FP16, INT8, NF4), collecting 5,112 step-level records with per-step acceptance rates, draft entropy, and draft confidence. We demonstrate that the optimal~$γ$ shifts across compression regimes and that draft model confidence and entropy are strong predictors of acceptance rate (correlation~$\\approx 0.56$). SpecKV uses a small MLP trained on these signals to maximize expected tokens per speculation step, achieving a 56.0\\% improvement over the fixed-$γ$=4 baseline with only 0.34\\,ms overhead per decision ($<$0.5\\% of step time). The improvement is statistically significant ($p < 0.001$, paired bootstrap test). We release all profiling data, trained models, and notebooks as open-source artifacts.",
     "categories": [
       "cs.LG",
+      "cs.AI",
       "cs.CL",
-      "cs.MA"
+      "cs.DC",
+      "eess.SY"
     ],
-    "comment": "",
+    "summary_cn": "推测性解码通过使用小型草稿模型提出供较大目标模型验证的候选标记来加速大型语言模型 (LLM) 推理。此过程中的一个关键超参数是推测长度~$γ$，它决定草稿模型每一步提出多少个令牌。 Nearly all existing systems use a fixed~$γ$ (typically~4), yet empirical evidence suggests that the optimal value varies across task types and, crucially, depends on the compression level applied to the target model. In this paper, we present \\textbf{SpecKV}, a lightweight adaptive controller that selects~$γ$ per speculation step using signals extracted from the draft model itself. We profile speculative decoding across 4~task categories, 4~speculation lengths, and 3~compression levels (FP16, INT8, NF4), collecting 5,112 step-level records with per-step acceptance rates, draft entropy, and draft confidence. We demonstrate that the optimal~$γ$ shifts across compression regimes and that draft model confidence and entropy are strong predictors of acceptance rate (correlation~$\\approx 0.56$). SpecKV uses a small MLP trained on these signals to maximize expected tokens per speculation step, achieving a 56.0\\% improvement over the fixed-$γ$=4 baseline with only 0.34\\,ms overhead per decision ($<$0.5\\% of step time).该改进具有统计显着性（$p < 0.001$，配对引导测试）。我们将所有分析数据、经过训练的模型和笔记本作为开源工件发布。",
+    "comment": "11 pages, 8 figures, 7 tables. Code and data available at: https://github.com/Amorfati123/SpecKV",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-00798v1-runagent-interpreting-natural-language-plans-with",
-    "rel_path": "entities/papers/2605-00798v1-runagent-interpreting-natural-language-plans-with.html",
+    "slug": "2605-02888v1-speckv-adaptive-speculative-decoding-with-compress",
+    "rel_path": "entities/papers/2605-02888v1-speckv-adaptive-speculative-decoding-with-compress.html",
     "figures": [
-      "assets/papers/2605-00798v1/fig1.png",
-      "assets/papers/2605-00798v1/fig2.png",
-      "assets/papers/2605-00798v1/fig3.png"
+      "assets/papers/2605-02888v1/fig1.png",
+      "assets/papers/2605-02888v1/fig2.png",
+      "assets/papers/2605-02888v1/fig3.png"
     ],
     "concepts": [
       {
         "name": "大语言模型",
         "slug": "large-language-model",
         "url": "../../concepts/large-language-model.html"
+      }
+    ],
+    "method_signal": "In this paper, we present \\textbf{SpecKV}, a lightweight adaptive controller that selects~$γ$ per speculation step using signals extracted from the draft model itself.",
+    "topic_signal": "大语言模型"
+  },
+  {
+    "id": "2605.02815v1",
+    "title": "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents",
+    "authors": [
+      "Quang Hieu Pham",
+      "Yang He",
+      "Ping Nie",
+      "Canwen Xu",
+      "Davood Rafiei",
+      "Yuepeng Wang",
+      "Xi Ye",
+      "Jocelyn Qiaochu Chen"
+    ],
+    "published": "2026-05-04",
+    "summary": "Text-to-SQL over large analytical databases requires navigating complex schemas, resolving ambiguous queries, and grounding decisions in actual data. Most current systems follow a fixed pipeline where schema elements are retrieved once upfront and the database is only revisited for post-hoc repair, limiting recovery from early mistakes. We present FlexSQL, a text-to-SQL agent whose core design principle is flexible database interaction: the agent can explore schema structure, inspect data values, and run verification queries at any point during reasoning. FlexSQL generates diverse execution plans to cover multiple query interpretations, implements each plan in either SQL or Python depending on the task, and uses a two-tiered repair mechanism that can backtrack from code-level errors to plan-level revisions. On Spider2-Snow, using gpt-oss-120b, FlexSQL achieves a 65.4\\% score, outperforming strong open-source baselines that use stronger, larger models such as gpt-o3 and DeepSeek-R1. When integrated into a general-purpose coding agent (as skills in Claude Code), our approach yields over 10\\% relative improvement on Spider2-Snow. Further analysis shows that flexible exploration and flexible execution jointly contribute to the effectiveness of our approach, highlighting flexibility as a key design principle. Our code is available at: https://github.com/StringNLPLAB/FlexSQL",
+    "categories": [
+      "cs.CL"
+    ],
+    "summary_cn": "Text-to-SQL over large analytical databases requires navigating complex schemas, resolving ambiguous queries, and grounding decisions in actual data. Most current systems follow a fixed pipeline where schema elements are retrieved once upfront and the database is only revisited for post-hoc repair, limiting recovery from early mistakes. We present FlexSQL, a text-to-SQL agent whose core design principle is flexible database interaction: the agent can explore schema structure, inspect data values, and run verification queries at any point during reasoning. FlexSQL generates diverse execution plans to cover multiple query interpretations, implements each plan in either SQL or Python depending on the task, and uses a two-tiered repair mechanism that can backtrack from code-level errors to plan-level revisions. On Spider2-Snow, using gpt-oss-120b, FlexSQL achieves a 65.4\\% score, outperforming strong open-source baselines that use stronger, larger models such as gpt-o3 and DeepSeek-R1. When integrated into a general-purpose coding agent (as skills in Claude Code), our approach yields over 10\\% relative improvement on Spider2-Snow. Further analysis shows that flexible exploration and flexible execution jointly contribute to the effectiveness of our approach, highlighting flexibility as a key design principle.我们的代码位于：https://github.com/StringNLPLAB/FlexSQL",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-02815v1-flexsql-flexible-exploration-and-execution-make-be",
+    "rel_path": "entities/papers/2605-02815v1-flexsql-flexible-exploration-and-execution-make-be.html",
+    "figures": [
+      "assets/papers/2605-02815v1/fig1.png",
+      "assets/papers/2605-02815v1/fig2.png",
+      "assets/papers/2605-02815v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "We present FlexSQL, a text-to-SQL agent whose core design principle is flexible database interaction: the agent can explore schema structure, inspect data values, and run verification queries at any point during reasoning.",
+    "topic_signal": "智能体"
+  },
+  {
+    "id": "2605.02801v1",
+    "title": "Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces",
+    "authors": [
+      "Chenchen Zhang"
+    ],
+    "published": "2026-05-04",
+    "summary": "As large language model (LLM) agents evolve from isolated tool users into coordinated teams, reinforcement learning (RL) must optimize not only individual actions but also how work is spawned, delegated, communicated, aggregated, and stopped. This paper studies RL for LLM-based multi-agent systems through orchestration traces: temporal interaction graphs whose events include sub-agent spawning, delegation, communication, tool use, return, aggregation, and stopping decisions.   Using this lens, we identify three technical axes. First, reward design spans eight families, including orchestration rewards for parallelism speedup, split correctness, and aggregation quality. Second, reward and credit signals attach to eight credit- or signal-bearing units from token to team; explicit counterfactual message-level credit remains especially sparse in our curated pool. Third, orchestration learning decomposes into five sub-decisions: when to spawn, whom to delegate to, how to communicate, how to aggregate, and when to stop. In our curated pool as of May 4, 2026, we found no explicit RL training method for the stopping decision.   We connect academic methods to public industrial evidence from Kimi Agent Swarm, OpenAI Codex, and Anthropic Claude Code. The resulting scale gap is a gap between publicly reported deployment envelopes and open academic evaluation regimes, not independent verification of industrial training traces. We release the artifact at https://github.com/xxzcc/awesome-llm-mas-rl, including an 84-entry tagged paper pool, a 32-record exclusion log, scripted corpus statistics, and a minimal JSON schema for replayable orchestration traces.",
+    "categories": [
+      "cs.CL"
+    ],
+    "summary_cn": "随着大型语言模型 (LLM) 代理从孤立的工具用户发展为协调的团队，强化学习 (RL) 不仅必须优化个人操作，还必须优化工作的产生、委托、沟通、聚合和停止方式。本文通过编排跟踪研究基于 LLM 的多智能体系统的强化学习：时间交互图，其事件包括子智能体生成、委托、通信、工具使用、返回、聚合和停止决策。使用这个镜头，我们确定了三个技术轴。首先，奖励设计涵盖八个系列，包括针对并行加速、分割正确性和聚合质量的编排奖励。其次，奖励和信用信号附加到从代币到团队的八个信用或信号承载单元；在我们策划的池中，明确的反事实消息级信用仍然特别稀疏。第三，编排学习分解为五个子决策：何时产生、委托给谁、如何沟通、如何聚合以及何时停止。截至 2026 年 5 月 4 日，在我们策划的池中，我们没有发现用于停止决策的明确 RL 训练方法。我们将学术方法与来自 Kimi Agent Swarm、OpenAI Codex 和 Anthropic Claude Code 的公共工业证据联系起来。由此产生的规模差距是公开报告的部署范围与开放学术评估制度之间的差距，而不是工业培训痕迹的独立验证。我们在 https://github.com/xxzcc/awesome-llm-mas-rl 上发布了该工件，包括 84 个条目标记的纸质池、32 条记录的排除日志、脚本化语料库统计数据以及用于可重播编排跟踪的最小 JSON 模式。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-02801v1-reinforcement-learning-for-llm-based-multi-agent-s",
+    "rel_path": "entities/papers/2605-02801v1-reinforcement-learning-for-llm-based-multi-agent-s.html",
+    "figures": [],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
       },
       {
         "name": "基准评估",
@@ -142,46 +109,90 @@
         "url": "../../concepts/benchmarking.html"
       },
       {
-        "name": "自动驾驶",
-        "slug": "autonomous-driving",
-        "url": "../../concepts/autonomous-driving.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
+        "name": "图神经网络",
+        "slug": "graph-neural-networks",
+        "url": "../../concepts/graph-neural-networks.html"
       }
     ],
-    "method_signal": "We propose RunAgent, a multi-agent plan execution platform that interprets natural-language plans while enforcing stepwise execution through constraints and rubrics.",
-    "topic_signal": "大语言模型 / 基准评估 / 自动驾驶 / 智能体"
+    "method_signal": "As large language model (LLM) agents evolve from isolated tool users into coordinated teams, reinforcement learning (RL) must optimize not only individual actions but also how work is spawned, delegated, communicated, aggregated, and stopped.",
+    "topic_signal": "大语言模型 / 强化学习 / 基准评估 / 图神经网络"
   },
   {
-    "id": "2605.00796v1",
-    "title": "When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI",
+    "id": "2605.02789v1",
+    "title": "FunFuzz: An LLM-Powered Evolutionary Fuzzing Framework",
     "authors": [
-      "Alfredo Madrid-García",
-      "Miguel Rujas"
+      "Mario Rodríguez Béjar",
+      "B. Romera-Paredes",
+      "Jose L. Hernández-Ramos"
     ],
-    "published": "2026-05-01",
-    "summary": "Background: Patient-facing medical chatbots based on retrieval-augmented generation (RAG) are increasingly promoted to deliver accessible, grounded health information. AI-assisted development lowers the barrier to building them, but they still demand rigorous security, privacy, and governance controls. Objective: To report an anonymized, non-destructive security assessment of a publicly accessible patient-facing medical RAG chatbot and identify governance lessons for safe deployment of generative AI in health. Methods: We used a two-stage strategy. First, Claude Opus 4.6 supported exploratory prompt-based testing and structured vulnerability hypotheses. Second, candidate findings were manually verified using Chrome Developer Tools, inspecting browser-visible network traffic, payloads, API schemas, configuration objects, and stored interaction data. Results: The LLM-assisted phase identified a critical vulnerability: sensitive system and RAG configuration appeared exposed through client-server communication rather than restricted server-side. Manual verification confirmed that ordinary browser inspection allowed collection of the system prompt, model and embedding configuration, retrieval parameters, backend endpoints, API schema, document and chunk metadata, knowledge-base content, and the 1,000 most recent patient-chatbot conversations. The deployment also contradicted its privacy assurances: full conversation records, including health-related queries, were retrievable without authentication. Conclusions: Serious privacy and security failures in patient-facing RAG chatbots can be identified with standard browser tools, without specialist skills or authentication; independent review should be a prerequisite for deployment. Commercial LLMs accelerated this assessment, including under a false developer persona; assistance available to auditors is equally available to adversaries.",
+    "published": "2026-05-04",
+    "summary": "Modern fuzzers increasingly use Large Language Models (LLMs) to generate structured inputs, but LLM-driven fuzzing is sensitive to prompt initialization and sampling variance, which can reduce exploration efficiency and lead to redundant inputs. We present FunFuzz, a multi-island evolutionary fuzzing framework that runs several isolated searches in parallel and periodically migrates high-value candidates to maintain diversity. FunFuzz derives initial generation prompts from documentation and initializes islands with topic-specific instructions, then continuously adapts prompts using feedback-guided selection. During fuzzing, candidates are prioritized by incremental compiler coverage, while compiler-internal failure signals are used to identify crash-inducing inputs. We evaluate FunFuzz on compiler fuzzing, where inputs are source programs and success is measured by compiler coverage and unique compiler-internal failures. Across repeated 24-hour campaigns on GCC and Clang, FunFuzz achieves higher compiler coverage than previous LLM-driven baselines and discovers more unique failure-triggering inputs.",
     "categories": [
       "cs.CR",
-      "cs.AI",
       "cs.CL"
     ],
-    "comment": "",
+    "summary_cn": "",
+    "comment": "19 pages, 12 figures, 12 tables",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-00796v1-when-rag-chatbots-expose-their-backend-an-anonymiz",
-    "rel_path": "entities/papers/2605-00796v1-when-rag-chatbots-expose-their-backend-an-anonymiz.html",
+    "slug": "2605-02789v1-funfuzz-an-llm-powered-evolutionary-fuzzing-framew",
+    "rel_path": "entities/papers/2605-02789v1-funfuzz-an-llm-powered-evolutionary-fuzzing-framew.html",
     "figures": [
-      "assets/papers/2605-00796v1/fig1.png"
+      "assets/papers/2605-02789v1/fig1.png",
+      "assets/papers/2605-02789v1/fig2.png",
+      "assets/papers/2605-02789v1/fig3.png"
     ],
     "concepts": [
       {
         "name": "大语言模型",
         "slug": "large-language-model",
         "url": "../../concepts/large-language-model.html"
+      }
+    ],
+    "method_signal": "We present FunFuzz, a multi-island evolutionary fuzzing framework that runs several isolated searches in parallel and periodically migrates high-value candidates to maintain diversity.",
+    "topic_signal": "大语言模型"
+  },
+  {
+    "id": "2605.02782v1",
+    "title": "When Audio-Language Models Fail to Leverage Multimodal Context for Dysarthric Speech Recognition",
+    "authors": [
+      "Pehuén Moure",
+      "Niclas Pokel",
+      "Bilal Bounajma",
+      "Yingqiang Gao",
+      "Roman Boehringer",
+      "Longbiao Cheng",
+      "Shih-Chii Liu"
+    ],
+    "published": "2026-05-04",
+    "summary": "Automatic speech recognition (ASR) systems remain brittle on dysarthric and other atypical speech. Recent audio-language models raise the possibility of improving performance by conditioning on additional clinical context at inference time, but it is unclear whether these models can make use of such information. We introduce a benchmark built on the Speech Accessibility Project (SAP) dataset that tests whether diagnosis labels, clinician-derived speech ratings, and progressively richer clinical descriptions improve transcription accuracy for dysarthric speech. Across matched comparisons on nine models, we find that current models do not meaningfully use this context: diagnosis-informed and clinically detailed prompts yield negligible improvements and often degrade word error rate. We complement the prompting analysis with context-dependent fine-tuning, showing that LoRA adaptation with a mixture of clinical prompt formats achieves a WER of 0.066, a 52% relative reduction over the frozen baseline, while preserving performance when context is unavailable. Subgroup analyses reveal significant gains for Down syndrome and mild-severity speakers. These results clarify where current models fall short and provide a testbed for measuring progress toward more inclusive ASR.",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "eess.AS"
+    ],
+    "summary_cn": "自动语音识别（ASR）系统对于构音障碍和其他非典型语音仍然很脆弱。最近的音频语言模型提高了通过在推理时调节额外的临床背景来提高性能的可能性，但尚不清楚这些模型是否可以利用这些信息。我们引入了一个基于语音无障碍项目 (SAP) 数据集的基准，该基准测试诊断标签、临床医生得出的语音评级以及逐渐丰富的临床描述是否可以提高构音障碍语音的转录准确性。通过对九个模型的匹配比较，我们发现当前模型并没有有意义地使用这种上下文：诊断信息和临床详细的提示产生的改进可以忽略不计，并且经常降低单词错误率。我们通过上下文相关的微调来补充提示分析，结果表明 LoRA 适应与临床提示格式的混合实现了 0.066 的 WER，比冻结基线相对降低了 52%，同时在上下文不可用时保持性能。亚组分析显示，唐氏综合症和轻度严重程度的说话者的进步显着。这些结果阐明了当前模型的不足之处，并为衡量更具包容性的 ASR 进展提供了一个测试平台。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-02782v1-when-audio-language-models-fail-to-leverage-multim",
+    "rel_path": "entities/papers/2605-02782v1-when-audio-language-models-fail-to-leverage-multim.html",
+    "figures": [],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
       },
       {
         "name": "医学AI",
@@ -189,70 +200,36 @@
         "url": "../../concepts/medical-ai.html"
       }
     ],
-    "method_signal": "Methods: We used a two-stage strategy.",
-    "topic_signal": "大语言模型 / 医学AI"
+    "method_signal": "We introduce a benchmark built on the Speech Accessibility Project (SAP) dataset that tests whether diagnosis labels, clinician-derived speech ratings, and progressively richer clinical descriptions improve transcription accuracy for dysarthric speech.",
+    "topic_signal": "大语言模型 / 多模态学习 / 基准评估 / 医学AI"
   },
   {
-    "id": "2605.00777v1",
-    "title": "LASE: Language-Adversarial Speaker Encoding for Indic Cross-Script Identity Preservation",
+    "id": "2605.02751v1",
+    "title": "Mitigating Misalignment Contagion by Steering with Implicit Traits",
     "authors": [
-      "Venkata Pushpak Teja Menta"
+      "Maria Chang",
+      "Ronny Luss",
+      "Miao Lui",
+      "Keerthiram Murugesan",
+      "Karthikeyan Ramamurthy",
+      "Djallel Bouneffouf"
     ],
-    "published": "2026-05-01",
-    "summary": "A speaker encoder used in multilingual voice cloning should treat the same speaker identically regardless of which script the audio was uttered in. Off-the-shelf encoders do not, and the failure is accent-conditional. On a 1043-pair Western-accented voice corpus across English, Hindi, Telugu, and Tamil, WavLM-base-plus-sv loses 0.082 absolute cosine similarity when the same voice changes script and ECAPA-TDNN loses 0.105. On a 1369-pair Indian-accented voice corpus, the gap shrinks to 0.006 (WavLM-SV) and 0.044 (ECAPA-TDNN). The leak is largest where it matters most for cross-script TTS: when a system projects a non-Indic-trained voice into Indic scripts. We present LASE (Language-Adversarial Speaker Encoder), a small projection head over frozen WavLM-base-plus trained with two losses: a supervised contrastive loss over voice identity, and a gradient-reversal cross-entropy against a 4-language classifier that pushes the embedding to be language-uninformative while remaining speaker-informative. Trained on 1118 quality-gated cross-script pairs synthesised from 8 commercial multilingual voices, LASE's residual gap is consistent with zero on both corpora (Delta = 0.013 Western, Delta = 0.026 Indian; both bootstrap 95% CIs include zero) and amplifies the cross-script-vs-floor margin 2.4-2.7x over both baselines. An ECAPA+GRL ablation shows the GRL objective improves either backbone but the WavLM choice contributes too. In synthetic multi-speaker diarisation, LASE matches ECAPA-TDNN on cross-script speaker recall (0.788 vs 0.789) with ~100x less training data. We release the r1 checkpoint, both corpora, and the bootstrap recipe.",
+    "published": "2026-05-04",
+    "summary": "Language models (LMs) are increasingly used in high-stakes, multi-agent settings, where following instructions and maintaining value alignment are critical. Most alignment research focuses on interactions between a single LM and a single user, failing to address the risk of misaligned behavior spreading between multiple LMs in multi-turn interactions. We find evidence of this phenomenon, which we call misalignment contagion, across multiple LMs as they engage multi-turn conversational social dilemma games. Specifically, we find that LMs become more anti-social after gameplay and that this effect is intensified when other players are steered to act maliciously. We explore different steering techniques to mitigate such misalignment contagion and find that reinforcing an LM's system prompt is insufficient and often harmful. Instead, we propose steering with implicit traits: a technique that intermittently injects system prompts with statements that reinforce an LMs initial traits and is more effective than system prompt repetition at keeping models in line with their initial pro-social behaviors. Importantly, this method does not require access to model parameters or internal model states, making it suitable for increasingly common use cases where complex multi-agent workflows are being designed with black box models.",
     "categories": [
-      "cs.SD",
-      "cs.CL",
-      "eess.AS"
+      "cs.AI",
+      "cs.CL"
     ],
-    "comment": "7 pages, 2 figures, 2 tables. Code, model, and datasets at https://github.com/praxelhq/lase",
+    "summary_cn": "语言模型 (LM) 越来越多地用于高风险、多代理环境，在这些环境中，遵循指令和保持价值一致性至关重要。大多数对齐研究都集中在单个 LM 和单个用户之间的交互，未能解决多轮交互中多个 LM 之间错位行为传播的风险。当多个语言模型参与多回合对话式社交困境游戏时，我们在多个语言模型中发现了这种现象的证据，我们将这种现象称为错位传染。具体来说，我们发现 LM 在游戏结束后变得更加反社会，并且当其他玩家被引导进行恶意行为时，这种影响会加剧。我们探索了不同的转向技术来减轻这种错位蔓延，并发现加强LM的系统提示是不够的，而且往往是有害的。相反，我们建议使用隐式特征进行引导：一种间歇性地向系统提示注入强化 LM 初始特征的语句的技术，并且比系统提示重复更有效地保持模型与其最初的亲社会行为保持一致。重要的是，此方法不需要访问模型参数或内部模型状态，使其适用于使用黑盒模型设计复杂的多代理工作流的日益常见的用例。",
+    "comment": "",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-00777v1-lase-language-adversarial-speaker-encoding-for-ind",
-    "rel_path": "entities/papers/2605-00777v1-lase-language-adversarial-speaker-encoding-for-ind.html",
+    "slug": "2605-02751v1-mitigating-misalignment-contagion-by-steering-with",
+    "rel_path": "entities/papers/2605-02751v1-mitigating-misalignment-contagion-by-steering-with.html",
     "figures": [
-      "assets/papers/2605-00777v1/fig1.png",
-      "assets/papers/2605-00777v1/fig2.png"
-    ],
-    "concepts": [
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      }
-    ],
-    "method_signal": "We present LASE (Language-Adversarial Speaker Encoder), a small projection head over frozen WavLM-base-plus trained with two losses: a supervised contrastive loss over voice identity, and a gradient-reversal cross-entropy against a 4-language classifier that pushes the embedding to be language-uninformative while remaining speaker-informative.",
-    "topic_signal": "AI安全与对齐"
-  },
-  {
-    "id": "2605.00776v1",
-    "title": "Directed Social Regard: Surfacing Targeted Advocacy, Opposition, Aid, Harms, and Victimization in Online Media",
-    "authors": [
-      "Scott Friedman",
-      "Ruta Wheelock",
-      "Sonja Schmer-Galunder",
-      "Drisana Iverson",
-      "Jake Vasilakes",
-      "Joan Zheng",
-      "Jeffrey Rye",
-      "Vasanth Sarathy",
-      "Christopher Miller"
-    ],
-    "published": "2026-05-01",
-    "summary": "The language in online platforms, influence operations, and political rhetoric frequently directs a mix of pro-social sentiment (e.g., advocacy, helpfulness, compassion) and anti-social sentiment (e.g., threats, opposition, blame) at different topics, all in the same message. While many natural language processing (NLP) tools classify or score a text's overall sentiment as positive, neutral, or negative, these tools cannot report that positive and negative sentiments coexist, and they cannot report the target of those sentiments. This paper presents the Directed Social Regard (DSR) approach to multi-dimensional, multi-valence sentiment analysis, comprised of a pair of transformer-based models that (1) detects span-level targets of sentiment in a message and then (2) scores all spans within the message context along three (-1, 1) axes of regard that are motivated by social science theories of moral disengagement and moral framing. We present a data collection and annotation strategy for DSR dataset construction, a transformer-based architecture for span-level scoring, and a validation study with promising results. We apply the validated DSR model on six third-party datasets of online media and report meaningful correlations between DSR outputs and the labels and topics in these pre-existing social science datasets.",
-    "categories": [
-      "cs.CL",
-      "cs.AI"
-    ],
-    "comment": "32 pages, 12 figures, 7 tables",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-00776v1-directed-social-regard-surfacing-targeted-advocacy",
-    "rel_path": "entities/papers/2605-00776v1-directed-social-regard-surfacing-targeted-advocacy.html",
-    "figures": [
-      "assets/papers/2605-00776v1/fig1.png",
-      "assets/papers/2605-00776v1/fig2.png",
-      "assets/papers/2605-00776v1/fig3.png"
+      "assets/papers/2605-02751v1/fig1.png",
+      "assets/papers/2605-02751v1/fig2.png",
+      "assets/papers/2605-02751v1/fig3.png"
     ],
     "concepts": [
       {
@@ -261,73 +238,64 @@
         "url": "../../concepts/large-language-model.html"
       },
       {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "We present a data collection and annotation strategy for DSR dataset construction, a transformer-based architecture for span-level scoring, and a validation study with promising results.",
-    "topic_signal": "大语言模型 / 基准评估"
-  },
-  {
-    "id": "2605.00768v1",
-    "title": "Characterizing the Expressivity of Local Attention in Transformers",
-    "authors": [
-      "Jiaoda Li",
-      "Ryan Cotterell"
-    ],
-    "published": "2026-05-01",
-    "summary": "The transformer is the most popular neural architecture for language modeling. The cornerstone of the transformer is its global attention mechanism, which lets the model aggregate information from all preceding tokens before generating the next token. One common variant of attention is called local attention, which restricts each token to aggregating information from a bounded window of predecessors, reducing the quadratic cost of global attention to linear. Although this restriction is usually motivated by efficiency, it has also been found to improve model quality, a phenomenon that has so far lacked a satisfactory explanation. We provide a formal account of this phenomenon in terms of recognizer expressivity. It has been shown that fixed-precision transformers with global attention correspond to a fragment of linear temporal logic containing a single past operator. We additionally prove that adding local attention introduces a second temporal operator, strictly enlarging the class of recognizable regular languages. Moreover, global and local attention are expressively complementary: neither subsumes the other, and combining them yields the richest fragment. Experiments on formal language recognition and natural language modeling corroborate the theory, showing that hybrid global--local transformers outperform their global-only counterparts.",
-    "categories": [
-      "cs.CL"
-    ],
-    "comment": "ACL 2026",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-00768v1-characterizing-the-expressivity-of-local-attention",
-    "rel_path": "entities/papers/2605-00768v1-characterizing-the-expressivity-of-local-attention.html",
-    "figures": [
-      "assets/papers/2605-00768v1/fig1.png",
-      "assets/papers/2605-00768v1/fig2.png",
-      "assets/papers/2605-00768v1/fig3.png"
-    ],
-    "concepts": [
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      },
       {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
       }
     ],
-    "method_signal": "The transformer is the most popular neural architecture for language modeling.",
-    "topic_signal": "大语言模型"
+    "method_signal": "Instead, we propose steering with implicit traits: a technique that intermittently injects system prompts with statements that reinforce an LMs initial traits and is more effective than system prompt repetition at keeping models in line with their initial pro-social behaviors.",
+    "topic_signal": "大语言模型 / AI安全与对齐 / 智能体"
   },
   {
-    "id": "2605.00706v1",
-    "title": "FinSafetyBench: Evaluating LLM Safety in Real-World Financial Scenarios",
+    "id": "2605.02740v1",
+    "title": "Foundation Models to Unlock Real-World Evidence from Nationwide Medical Claims",
     "authors": [
-      "Yutao Hou",
-      "Yihan Jiang",
-      "Yuhan Xie",
-      "Jian Yang",
-      "Liwen Zhang",
-      "Hailiang Huang",
-      "Guanhua Chen",
-      "Yun Chen"
+      "Fan Ma",
+      "Yuntian Liu",
+      "Xiang Lan",
+      "Weipeng Zhou",
+      "Jun Ni",
+      "Mauro Giuffrè",
+      "Lingfei Qian",
+      "Xueqing Peng",
+      "Yujia Zhou",
+      "Ruey-Ling Weng",
+      "Huan He",
+      "Lu Li",
+      "Qingyu Chen",
+      "Andrew Loza",
+      "Laila Rasmy",
+      "Degui Zhi",
+      "Yuan Lu",
+      "Chenjie Zeng",
+      "Joshua C Denny",
+      "Lee Schwamm",
+      "Daniella Meeker",
+      "Lucila Ohno-Machado",
+      "Yong Chen",
+      "Hua Xu"
     ],
-    "published": "2026-05-01",
-    "summary": "Large language models (LLMs) are increasingly applied in financial scenarios. However, they may produce harmful outputs, including facilitating illegal activities or unethical behavior, posing serious compliance risks. To systematically evaluate LLM safety in finance, we propose FinSafetyBench, a bilingual (English-Chinese) red-teaming benchmark designed to test an LLM's refusal of requests that violate financial compliance. Grounded in real-world financial crime cases and ethics standards, the benchmark comprises 14 subcategories spanning financial crimes and ethical violations. Through extensive experiments on general-purpose and finance-specialized LLMs under three representative attack settings, we identify critical vulnerabilities that allow adversarial prompts to bypass compliance safeguards. Further analysis reveals stronger susceptibility in Chinese contexts and highlights the limitations of prompt-level defenses against sophisticated or implicit manipulation strategies.",
+    "published": "2026-05-04",
+    "summary": "Evidence derived from large-scale real-world data (RWD) is increasingly informing regulatory evaluation and healthcare decision-making. Administrative claims provide population-scale, longitudinal records of healthcare utilization, expenditure, and detailed coding of diagnoses, procedures, and medications, yet their potential as a substrate for healthcare foundation models remains largely unexplored. Here we present ReClaim, a generative transformer trained from scratch on 43.8 billion medical events from more than 200 million enrollees in the MarketScan claims data spanning 2008-2022. ReClaim models longitudinal trajectories across diagnoses, procedures, medications, and expenditure, and was scaled to 140 million, 700 million, and 1.7 billion parameters. Across over 1,000 disease-onset prediction tasks, ReClaim achieved a mean AUC of 75.6%, substantially outperforming disease-specific LightGBM (66.3%) and the transformer-based Delphi model (69.4%), with the largest gains for rare diseases. These advantages held across retrospective and prospective evaluations and in external validation on two independent datasets. Performance improved monotonically with scale, and post-training added 13.8 percentage points over pre-training alone. Beyond disease prediction, ReClaim captured financial outcomes and improved real-world evidence (RWE) analyses: for healthcare expenditure forecasting it increased explained variance from 0.28 to 0.37 relative to LightGBM, and in a target trial emulation it reduced systematic bias by 72% on average relative to Delphi. Together, these results establish administrative claims as a scalable substrate for healthcare foundation models and show that learned representations generalize across time periods and data sources, supporting disease surveillance, expenditure forecasting, and RWE generation.",
     "categories": [
+      "cs.AI",
       "cs.CL"
     ],
-    "comment": "Accepted by Findings of ACL2026",
+    "summary_cn": "来自大规模现实世界数据 (RWD) 的证据越来越多地为监管评估和医疗保健决策提供信息。行政索赔提供了人口规模的医疗保健利用、支出的纵向记录以及诊断、程序和药物的详细编码，但它们作为医疗保健基础模型基础的潜力在很大程度上仍未被开发。在这里，我们介绍 ReClaim，这是一个生成转换器，它根据 2008 年至 2022 年 MarketScan 索赔数据中超过 2 亿名参与者的 438 亿个医疗事件进行了训练。 ReClaim 对诊断、手术、药物和支出的纵向轨迹进行建模，并扩展到 1.4 亿、7 亿和 17 亿个参数。在 1,000 多个疾病发作预测任务中，ReClaim 的平均 AUC 为 75.6%，大大优于特定疾病的 LightGBM (66.3%) 和基于 Transformer 的 Delphi 模型 (69.4%)，其中罕见疾病的收益最大。这些优势在回顾性和前瞻性评估以及两个独立数据集的外部验证中都存在。性能随着规模的增加而单调提高，训练后比训练前提高了 13.8 个百分点。除了疾病预测之外，ReClaim 还捕获了财务结果并改进了现实世界证据 (RWE) 分析：对于医疗保健支出预测，它相对于 LightGBM 将解释方差从 0.28 增加到 0.37，并且在目标试验模拟中，相对于 Delphi，它平均将系统偏差减少了 72%。总之，这些结果将行政索赔确立为医疗保健基础模型的可扩展基础，并表明学习的表示可以跨时间段和数据源进行泛化，支持疾病监测、支出预测和 RWE 生成。",
+    "comment": "",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-00706v1-finsafetybench-evaluating-llm-safety-in-real-world",
-    "rel_path": "entities/papers/2605-00706v1-finsafetybench-evaluating-llm-safety-in-real-world.html",
+    "slug": "2605-02740v1-foundation-models-to-unlock-real-world-evidence-fr",
+    "rel_path": "entities/papers/2605-02740v1-foundation-models-to-unlock-real-world-evidence-fr.html",
     "figures": [
-      "assets/papers/2605-00706v1/fig1.png",
-      "assets/papers/2605-00706v1/fig2.png",
-      "assets/papers/2605-00706v1/fig3.png"
+      "assets/papers/2605-02740v1/fig1.png",
+      "assets/papers/2605-02740v1/fig2.png",
+      "assets/papers/2605-02740v1/fig3.png"
     ],
     "concepts": [
       {
@@ -341,44 +309,141 @@
         "url": "../../concepts/benchmarking.html"
       },
       {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
+        "name": "医学AI",
+        "slug": "medical-ai",
+        "url": "../../concepts/medical-ai.html"
       }
     ],
-    "method_signal": "To systematically evaluate LLM safety in finance, we propose FinSafetyBench, a bilingual (English-Chinese) red-teaming benchmark designed to test an LLM's refusal of requests that violate financial compliance.",
-    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐"
+    "method_signal": "Here we present ReClaim, a generative transformer trained from scratch on 43.8 billion medical events from more than 200 million enrollees in the MarketScan claims data spanning 2008-2022.",
+    "topic_signal": "大语言模型 / 基准评估 / 医学AI"
   },
   {
-    "id": "2605.00825v1",
-    "title": "Posterior Augmented Flow Matching",
+    "id": "2605.02720v1",
+    "title": "PubMed-Ophtha: An open resource for training ophthalmology vision-language models on scientific literature",
     "authors": [
-      "George Stoica",
-      "Sayak Paul",
-      "Matthew Wallingford",
-      "Vivek Ramanujan",
-      "Abhay Nori",
-      "Winson Han",
-      "Ali Farhadi",
-      "Ranjay Krishna",
-      "Judy Hoffman"
+      "Verena Jasmin Hallitschke",
+      "Carsten Eickhoff",
+      "Philipp Berens"
     ],
-    "published": "2026-05-01",
-    "summary": "Flow matching (FM) trains a time-dependent vector field that transports samples from a simple prior to a complex data distribution. However, for high-dimensional images, each training sample supervises only a single trajectory and intermediate point, yielding an extremely sparse and high-variance training signal. This under-constrained supervision can cause flow collapse, where the learned dynamics memorize specific source-target pairings, mapping diverse inputs to overly similar outputs, failing to generalize. We introduce Posterior-Augmented Flow Matching (PAFM), a theoretically grounded generalization of FM that replaces single-target supervision with an expectation over an approximate posterior of valid target completions for a given intermediate state and condition. PAFM factorizes this intractable posterior into (i) the likelihood of the intermediate under a hypothesized endpoint and (ii) the prior probability of that endpoint under the condition, and uses an importance sampling scheme to construct a mixture over multiple candidate targets. We prove that PAFM yields an unbiased estimator of the original FM objective while substantially reducing gradient variance during training by aggregating information from many plausible continuation trajectories per intermediate. Finally, we show that PAFM improves over FM by up to 3.4 FID50K across different model scales (SiT-B/2 and SiT-XL/2), different architectures (SiT and MMDiT), and in both class and text conditioned benchmarks (ImageNet and CC12M), with a negligible increase in the compute overhead. Code: https://github.com/gstoica27/PAFM.git.",
+    "published": "2026-05-04",
+    "summary": "Vision-language models hold considerable promise for ophthalmology, but their development depends on large-scale, high-quality image-text datasets that remain scarce. We present PubMed-Ophtha, a hierarchical dataset of 102,023 ophthalmological image-caption pairs extracted from 15,842 open-access articles in PubMed Central. Unlike existing datasets, figures are extracted directly from article PDFs at full resolution and decomposed into their constituent panels, panel identifiers, and individual images. Each image is annotated with its imaging modality -- color fundus photography, optical coherence tomography, retinal imaging, or other -- and a mark status indicating the presence of annotation marks such as arrows. Figure captions are split into panel-level subcaptions using a two-step LLM approach, achieving a mean average sentence BLEU score of 0.913 on human-annotated data. Panel and image detection models reach a mAP@0.50 of 0.909 and 0.892, respectively, and figure extraction achieves a median IoU of 0.997. To support reproducibility, we additionally release the human-annotated ground-truth data, all trained models, and the full dataset generation pipeline.",
+    "categories": [
+      "cs.CV",
+      "cs.CL"
+    ],
+    "summary_cn": "视觉语言模型为眼科带来了巨大的希望，但其发展依赖于仍然稀缺的大规模、高质量的图像文本数据集。我们提出了 PubMed-Ophtha，这是一个从 PubMed Central 的 15,842 篇开放获取文章中提取的 102,023 个眼科图像标题对的分层数据集。与现有数据集不同，图表是直接从全分辨率文章 PDF 中提取的，并分解为其组成面板、面板标识符和单个图像。每个图像都用其成像方式（彩色眼底摄影、光学相干断层扫描、视网膜成像或其他）以及指示注释标记（例如箭头）存在的标记状态进行注释。使用两步法学硕士方法将图形标题拆分为面板级子标题，在人工注释数据上实现平均句子 BLEU 得分为 0.913。面板和图像检测模型的 mAP@0.50 分别达到 0.909 和 0.892，图形提取的中值 IoU 达到 0.997。为了支持可重复性，我们还发布了人工注释的真实数据、所有经过训练的模型以及完整的数据集生成管道。",
+    "comment": "12 pages, 4 figures, 3 supplementary figures. Dataset available at https://huggingface.co/datasets/pubmed-ophtha/PubMed-Ophtha. Code available at https://github.com/berenslab/pubmed-ophtha",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-02720v1-pubmed-ophtha-an-open-resource-for-training-ophtha",
+    "rel_path": "entities/papers/2605-02720v1-pubmed-ophtha-an-open-resource-for-training-ophtha.html",
+    "figures": [
+      "assets/papers/2605-02720v1/fig1.png",
+      "assets/papers/2605-02720v1/fig2.png",
+      "assets/papers/2605-02720v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "图神经网络",
+        "slug": "graph-neural-networks",
+        "url": "../../concepts/graph-neural-networks.html"
+      }
+    ],
+    "method_signal": "We present PubMed-Ophtha, a hierarchical dataset of 102,023 ophthalmological image-caption pairs extracted from 15,842 open-access articles in PubMed Central.",
+    "topic_signal": "大语言模型 / 多模态学习 / 基准评估 / 图神经网络"
+  },
+  {
+    "id": "2605.02892v1",
+    "title": "AlbumFill: Album-Guided Reasoning and Retrieval for Personalized Image Completion",
+    "authors": [
+      "Yu-Ju Tsai",
+      "Brian Price",
+      "Qing Liu",
+      "Luis Figueroa",
+      "Daniil Pakhomov",
+      "Zhihong Ding",
+      "Scott Cohen",
+      "Ming-Hsuan Yang"
+    ],
+    "published": "2026-05-04",
+    "summary": "Personalized image completion aims to restore occluded regions in personal photos while preserving identity and appearance. Existing methods either rely on generic inpainting models that often fail to maintain identity consistency, or assume that suitable reference images are explicitly provided. In practice, suitable references are often not explicitly provided, requiring the system to search for identity-consistent images within personal photo collections. We present AlbumFill, a training-free framework that retrieves identity-consistent references from personal albums for personalized completion. Given an occluded image and a personal album, a vision-language model infers missing semantic cues to guide composed image retrieval, and the retrieved references are used by reference-based completion models. To facilitate this task, we introduce a dataset containing 54K human-centric samples with associated album images. Experiments across multiple baselines demonstrate the difficulty of personalized completion and highlight the importance of identity-consistent reference retrieval. Project Page: https://liagm.github.io/AlbumFill/",
+    "categories": [
+      "cs.CV",
+      "cs.IR"
+    ],
+    "summary_cn": "个性化图像补全旨在恢复个人照片中的遮挡区域，同时保留身份和外观。现有方法要么依赖于通常无法保持身份一致性的通用修复模型，要么假设明确提供了合适的参考图像。在实践中，通常不会明确提供合适的参考，从而要求系统在个人照片集中搜索身份一致的图像。我们提出了 AlbumFill，这是一个免培训的框架，可以从个人相册中检索身份一致的参考以进行个性化完成。给定一个被遮挡的图像和一个个人相册，视觉语言模型会推断缺失的语义线索来指导组合图像检索，并且检索到的参考由基于参考的补全模型使用。为了促进这项任务，我们引入了一个数据集，其中包含 54K 以人类为中心的样本以及相关的相册图像。跨多个基线的实验证明了个性化完成的难度，并强调了身份一致的参考检索的重要性。项目页面：https://liagm.github.io/AlbumFill/",
+    "comment": "Project Page: https://liagm.github.io/AlbumFill/",
+    "category_en": "Computer Vision",
+    "category_cn": "计算机视觉",
+    "slug": "2605-02892v1-albumfill-album-guided-reasoning-and-retrieval-for",
+    "rel_path": "entities/papers/2605-02892v1-albumfill-album-guided-reasoning-and-retrieval-for.html",
+    "figures": [
+      "assets/papers/2605-02892v1/fig1.png",
+      "assets/papers/2605-02892v1/fig2.png",
+      "assets/papers/2605-02892v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "We present AlbumFill, a training-free framework that retrieves identity-consistent references from personal albums for personalized completion.",
+    "topic_signal": "大语言模型 / 多模态学习 / 基准评估"
+  },
+  {
+    "id": "2605.02866v1",
+    "title": "Laplacian Frequency Interaction Network for Rural Thematic Road Extraction",
+    "authors": [
+      "Baiyan Chen",
+      "Weixin Zhai"
+    ],
+    "published": "2026-05-04",
+    "summary": "Rural thematic road network construction aims to extract topological road structures from movement trajectory images of agricultural machinery. However, this task faces challenges where downsampling methods commonly used in existing studies tend to blur the sparse high-frequency road structures, and the heavy noise from dense field operations often leads to fragmented or redundant topologies in the extracted networks. To address these challenges, we propose LFINet, a Laplacian Frequency Interaction Network. The network begins with a Laplacian Multi-scale Separator (LMS) to decouple the image into low-frequency semantic contexts and high-frequency structural details. These components are then processed by the Cross-Frequency Interaction Block (CFIB) through a dual-pathway architecture in which a High-Frequency Block (HFB) refines local structures while a Spatial Transformer (ST) captures global semantics. Subsequently, a Frequency Gated Modulation (FGM) mechanism integrates the features from pathways by leveraging semantic contexts to calibrate the structural details. Finally, a Progressive Reconstruction Decoder iteratively fuses multi-scale features to ensure topological consistency. Experiments conducted on a real-world agricultural trajectories dataset from Henan Province, China, show that LFINet establishes a new state-of-the-art. Specifically, it achieves an F1-score of 92.54% and an IoU of 86.12%, surpassing the second-ranked method by 0.64% and 1.1%, respectively. This confirms its capability to effectively construct topological road networks from noisy and sparse field data.",
     "categories": [
       "cs.CV"
     ],
+    "summary_cn": "农村专题路网建设旨在从农机运动轨迹图像中提取拓扑道路结构。然而，这项任务面临着挑战，现有研究中常用的下采样方法往往会模糊稀疏的高频道路结构，而密集现场操作产生的重噪声往往会导致提取的网络中出现碎片或冗余拓扑。为了应对这些挑战，我们提出了 LFINet，一种拉普拉斯频率交互网络。该网络从拉普拉斯多尺度分离器（LMS）开始，将图像解耦为低频语义上下文和高频结构细节。然后，跨频率交互模块 (CFIB) 通过双通道架构处理这些组件，其中高频模块 (HFB) 细化局部结构，而空间变换器 (ST) 捕获全局语义。随后，频率门控调制（FGM）机制通过利用语义上下文来校准结构细节，从而集成路径的特征。最后，渐进重建解码器迭代地融合多尺度特征以确保拓扑一致性。在中国河南省的真实农业轨迹数据集上进行的实验表明，LFINet 建立了新的最先进技术。具体来说，它的 F1 分数为 92.54%，IoU 为 86.12%，分别超过第二名的方法 0.64% 和 1.1%。这证实了其从嘈杂和稀疏的现场数据有效构建拓扑道路网络的能力。",
     "comment": "",
     "category_en": "Computer Vision",
     "category_cn": "计算机视觉",
-    "slug": "2605-00825v1-posterior-augmented-flow-matching",
-    "rel_path": "entities/papers/2605-00825v1-posterior-augmented-flow-matching.html",
+    "slug": "2605-02866v1-laplacian-frequency-interaction-network-for-rural",
+    "rel_path": "entities/papers/2605-02866v1-laplacian-frequency-interaction-network-for-rural.html",
     "figures": [
-      "assets/papers/2605-00825v1/fig1.png",
-      "assets/papers/2605-00825v1/fig2.png",
-      "assets/papers/2605-00825v1/fig3.png"
+      "assets/papers/2605-02866v1/fig1.png"
     ],
     "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
       {
         "name": "多模态学习",
         "slug": "multimodal-learning",
@@ -393,59 +458,9 @@
         "name": "自动驾驶",
         "slug": "autonomous-driving",
         "url": "../../concepts/autonomous-driving.html"
-      },
-      {
-        "name": "世界模型",
-        "slug": "world-models",
-        "url": "../../concepts/world-models.html"
       }
     ],
-    "method_signal": "We introduce Posterior-Augmented Flow Matching (PAFM), a theoretically grounded generalization of FM that replaces single-target supervision with an expectation over an approximate posterior of valid target completions for a given intermediate state and condition.",
-    "topic_signal": "多模态学习 / 基准评估 / 自动驾驶 / 世界模型"
-  },
-  {
-    "id": "2605.00814v1",
-    "title": "Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs",
-    "authors": [
-      "Siyuan Huang",
-      "Xiaoye Qu",
-      "Yafu Li",
-      "Tong Zhu",
-      "Zefeng He",
-      "Muxin Fu",
-      "Daizong Liu",
-      "Wei-Long Zheng",
-      "Yu Cheng"
-    ],
-    "published": "2026-05-01",
-    "summary": "While autoregressive Large Vision-Language Models (LVLMs) demonstrate remarkable proficiency in multimodal tasks, they face a \"Visual Signal Dilution\" phenomenon, where the accumulation of textual history expands the attention partition function, causing visual attention to decay inversely with generated sequence length. To counteract this, we propose Persistent Visual Memory (PVM), a lightweight learnable module designed to ensure sustained, on-demand visual perception. Integrated as a parallel branch alongside the Feed-Forward Network (FFN) in LVLMs, PVM establishes a distance-agnostic retrieval pathway that directly provides visual embeddings for precise visual perception, thereby structurally mitigating the signal suppression inherent to deep generation. Extensive experiments on Qwen3-VL models demonstrate that PVM brings notable improvements with negligible parameter overhead, delivering consistent average accuracy gains across both 4B and 8B scales, particularly in complex reasoning tasks that demand persistent visual perception. Furthermore, in-depth analysis reveals that PVM can resist length-induced signal decay and accelerate internal prediction convergence.",
-    "categories": [
-      "cs.CV",
-      "cs.AI"
-    ],
-    "comment": "",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2605-00814v1-persistent-visual-memory-sustaining-perception-for",
-    "rel_path": "entities/papers/2605-00814v1-persistent-visual-memory-sustaining-perception-for.html",
-    "figures": [
-      "assets/papers/2605-00814v1/fig1.png",
-      "assets/papers/2605-00814v1/fig2.png",
-      "assets/papers/2605-00814v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "多模态学习",
-        "slug": "multimodal-learning",
-        "url": "../../concepts/multimodal-learning.html"
-      }
-    ],
-    "method_signal": "To counteract this, we propose Persistent Visual Memory (PVM), a lightweight learnable module designed to ensure sustained, on-demand visual perception.",
-    "topic_signal": "大语言模型 / 多模态学习"
+    "method_signal": "To address these challenges, we propose LFINet, a Laplacian Frequency Interaction Network.",
+    "topic_signal": "大语言模型 / 多模态学习 / 基准评估 / 自动驾驶"
   }
 ]
