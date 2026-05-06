@@ -2,7 +2,7 @@
 layout: concept
 title: 基准评估
 created: 2026-05-01
-updated: 2026-05-05
+updated: 2026-05-06
 type: concept
 tags: [benchmark, evaluation, testing, metrics, domain-specific, assessment]
 papers:
@@ -17,6 +17,20 @@ papers:
 基准评估（Benchmarking）是通过设计标准化的测试任务和评估指标来系统性地衡量 AI 模型能力的研究方法。一个好的基准测试需要具备区分度、公平性、可复现性和时效性，能够真实反映模型在特定领域或通用任务上的性能水平。随着 AI 模型能力的快速提升，基准评估本身也面临着被"饱和"或被"游戏化"的挑战。
 
 ## 关键文献与发现
+
+- [Transformers with Selective Access to Early Representations](../entities/papers/2605-03953v1-transformers-with-selective-access-to-early-repres.html)（2026-05-05）：最近的几个 Transformer 架构将后面的层暴露给在最早的层中计算的表示，这是由于观察到随着残余流在深度上反复转换，低级特征可能变得更难恢复。
+
+- [Feature-Augmented Transformers for Robust AI-Text Detection Across Domains and Generators](../entities/papers/2605-03969v1-feature-augmented-transformers-for-robust-ai-text.html)（2026-05-05）：如今，人工智能生成的文本是跨领域和异构生成管道大规模生成的，这使得分布式转变的鲁棒性成为监督二进制检测器的核心要求。
+
+- [Logical Consistency as a Bridge: Improving LLM Hallucination Detection via Label Constraint Modeling between Responses and Self-Judgments](../entities/papers/2605-03971v1-logical-consistency-as-a-bridge-improving-llm-hall.html)（2026-05-05）：大型语言模型 (LLM) 很容易出现事实幻觉，从而影响其在现实应用中的可靠性。
+
+- [EQUITRIAGE: A Fairness Audit of Gender Bias in LLM-Based Emergency Department Triage](../entities/papers/2605-03998v1-equitriage-a-fairness-audit-of-gender-bias-in-llm.html)（2026-05-05）：急诊科分诊为患者分配一个视力评分，以确定治疗的优先顺序，临床证据记录了人类视力评估中持续存在的性别差异。
+
+- [Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems](../entities/papers/2605-04018v1-rethinking-reasoning-intensive-retrieval-evaluatin.html)（2026-05-05）：推理密集型检索旨在找出支持下游推理的证据，而不仅仅是匹配主题相似性。
+
+- [OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories](../entities/papers/2605-04036v1-openseeker-v2-pushing-the-limits-of-search-agents.html)（2026-05-05）：深度搜索能力已经成为前沿大语言模型（LLM）代理不可或缺的能力，但其发展仍然由工业巨头主导。
+
+- [Safety and accuracy follow different scaling laws in clinical large language models](../entities/papers/2605-04039v1-safety-and-accuracy-follow-different-scaling-laws.html)（2026-05-05）：临床法学硕士通常通过增加模型大小、上下文长度、检索复杂性或推理时间计算来扩展，隐含的期望是更高的准确性意味着更安全的行为。
 
 - [Laplacian Frequency Interaction Network for Rural Thematic Road Extraction](../entities/papers/2605-02866v1-laplacian-frequency-interaction-network-for-rural.html)（2026-05-04）：农村专题路网建设旨在从农机运动轨迹图像中提取拓扑道路结构。
 

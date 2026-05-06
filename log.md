@@ -163,3 +163,16 @@
   - [2605.02720v1] PubMed-Ophtha: An open resource for training ophthalmology vision-language model
   - [2605.02892v1] AlbumFill: Album-Guided Reasoning and Retrieval for Personalized Image Completio
   - [2605.02866v1] Laplacian Frequency Interaction Network for Rural Thematic Road Extraction
+
+## [2026-05-06] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 8 篇
+- 更新相关概念页提及: 22 处
+- 不生成 PDF；论文页面包含英文摘要、中文摘要、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.04039v1] Safety and accuracy follow different scaling laws in clinical large language mod
+  - [2605.04036v1] OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Dif
+  - [2605.04018v1] Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in
+  - [2605.03998v1] EQUITRIAGE: A Fairness Audit of Gender Bias in LLM-Based Emergency Department Tr
+  - [2605.03971v1] Logical Consistency as a Bridge: Improving LLM Hallucination Detection via Label
+  - [2605.03969v1] Feature-Augmented Transformers for Robust AI-Text Detection Across Domains and G
+  - [2605.03953v1] Transformers with Selective Access to Early Representations
+  - [2605.03936v1] The Counterexample Game: Iterated Conceptual Analysis and Repair in Language Mod

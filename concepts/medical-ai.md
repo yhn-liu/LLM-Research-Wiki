@@ -2,7 +2,7 @@
 layout: concept
 title: 医学AI
 created: 2026-05-01
-updated: 2026-05-05
+updated: 2026-05-06
 type: concept
 tags: [medical-ai, clinical, eeg, seizure-detection, healthcare]
 papers:
@@ -16,6 +16,10 @@ papers:
 医学AI是将人工智能技术应用于医疗健康领域的研究方向，涵盖医学影像分析、临床辅助诊断、生物信号处理等。本库中有 1 篇论文探索了 LLM 在临床信号处理中的跨领域应用。
 
 ## 关键文献与发现
+
+- [EQUITRIAGE: A Fairness Audit of Gender Bias in LLM-Based Emergency Department Triage](../entities/papers/2605-03998v1-equitriage-a-fairness-audit-of-gender-bias-in-llm.html)（2026-05-05）：急诊科分诊为患者分配一个视力评分，以确定治疗的优先顺序，临床证据记录了人类视力评估中持续存在的性别差异。
+
+- [Safety and accuracy follow different scaling laws in clinical large language models](../entities/papers/2605-04039v1-safety-and-accuracy-follow-different-scaling-laws.html)（2026-05-05）：临床法学硕士通常通过增加模型大小、上下文长度、检索复杂性或推理时间计算来扩展，隐含的期望是更高的准确性意味着更安全的行为。
 
 - [Foundation Models to Unlock Real-World Evidence from Nationwide Medical Claims](../entities/papers/2605-02740v1-foundation-models-to-unlock-real-world-evidence-fr.html)（2026-05-04）：来自大规模现实世界数据 (RWD) 的证据越来越多地为监管评估和医疗保健决策提供信息。
 

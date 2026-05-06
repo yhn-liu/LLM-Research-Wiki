@@ -2,7 +2,7 @@
 layout: concept
 title: AI安全与对齐
 created: 2026-05-01
-updated: 2026-05-05
+updated: 2026-05-06
 type: concept
 tags: [safety, alignment, RLHF, adversarial, model-organism, evaluation]
 papers:
@@ -17,6 +17,10 @@ papers:
 AI 安全与对齐（AI Safety and Alignment）是确保人工智能系统的行为与人类意图、价值观和利益保持一致的研究领域。对齐问题的核心挑战在于：如何让 AI 系统真正理解和遵循人类的目标，而不是仅仅在表面上满足指标要求。随着大语言模型能力的快速提升，AI 安全与对齐已成为 AI 研究中最重要的方向之一，涉及技术、伦理和社会等多个层面。
 
 ## 关键文献与发现
+
+- [Feature-Augmented Transformers for Robust AI-Text Detection Across Domains and Generators](../entities/papers/2605-03969v1-feature-augmented-transformers-for-robust-ai-text.html)（2026-05-05）：如今，人工智能生成的文本是跨领域和异构生成管道大规模生成的，这使得分布式转变的鲁棒性成为监督二进制检测器的核心要求。
+
+- [Safety and accuracy follow different scaling laws in clinical large language models](../entities/papers/2605-04039v1-safety-and-accuracy-follow-different-scaling-laws.html)（2026-05-05）：临床法学硕士通常通过增加模型大小、上下文长度、检索复杂性或推理时间计算来扩展，隐含的期望是更高的准确性意味着更安全的行为。
 
 - [Mitigating Misalignment Contagion by Steering with Implicit Traits](../entities/papers/2605-02751v1-mitigating-misalignment-contagion-by-steering-with.html)（2026-05-04）：语言模型 (LM) 越来越多地用于高风险、多代理环境，在这些环境中，遵循指令和保持价值一致性至关重要。
 

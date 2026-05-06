@@ -2,7 +2,7 @@
 layout: concept
 title: 大语言模型
 created: 2026-05-01
-updated: 2026-05-05
+updated: 2026-05-06
 type: concept
 tags: [LLM, transformer, scaling, NLP, deep-learning]
 papers:
@@ -23,6 +23,20 @@ papers:
 大语言模型（Large Language Model, LLM）是基于 Transformer 架构、通过海量文本预训练的大规模神经网络，能够执行文本生成、理解、推理等多种任务。自 GPT-3 展示涌现能力以来，LLM 已成为 AI 研究的核心范式，本库中有 8 篇论文从不同角度对其进行研究。
 
 ## 关键文献与发现
+
+- [The Counterexample Game: Iterated Conceptual Analysis and Repair in Language Models](../entities/papers/2605-03936v1-the-counterexample-game-iterated-conceptual-analys.html)（2026-05-05）：概念分析——提出定义并通过反例完善它们——是哲学方法论的核心。
+
+- [Transformers with Selective Access to Early Representations](../entities/papers/2605-03953v1-transformers-with-selective-access-to-early-repres.html)（2026-05-05）：最近的几个 Transformer 架构将后面的层暴露给在最早的层中计算的表示，这是由于观察到随着残余流在深度上反复转换，低级特征可能变得更难恢复。
+
+- [Feature-Augmented Transformers for Robust AI-Text Detection Across Domains and Generators](../entities/papers/2605-03969v1-feature-augmented-transformers-for-robust-ai-text.html)（2026-05-05）：如今，人工智能生成的文本是跨领域和异构生成管道大规模生成的，这使得分布式转变的鲁棒性成为监督二进制检测器的核心要求。
+
+- [Logical Consistency as a Bridge: Improving LLM Hallucination Detection via Label Constraint Modeling between Responses and Self-Judgments](../entities/papers/2605-03971v1-logical-consistency-as-a-bridge-improving-llm-hall.html)（2026-05-05）：大型语言模型 (LLM) 很容易出现事实幻觉，从而影响其在现实应用中的可靠性。
+
+- [EQUITRIAGE: A Fairness Audit of Gender Bias in LLM-Based Emergency Department Triage](../entities/papers/2605-03998v1-equitriage-a-fairness-audit-of-gender-bias-in-llm.html)（2026-05-05）：急诊科分诊为患者分配一个视力评分，以确定治疗的优先顺序，临床证据记录了人类视力评估中持续存在的性别差异。
+
+- [OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories](../entities/papers/2605-04036v1-openseeker-v2-pushing-the-limits-of-search-agents.html)（2026-05-05）：深度搜索能力已经成为前沿大语言模型（LLM）代理不可或缺的能力，但其发展仍然由工业巨头主导。
+
+- [Safety and accuracy follow different scaling laws in clinical large language models](../entities/papers/2605-04039v1-safety-and-accuracy-follow-different-scaling-laws.html)（2026-05-05）：临床法学硕士通常通过增加模型大小、上下文长度、检索复杂性或推理时间计算来扩展，隐含的期望是更高的准确性意味着更安全的行为。
 
 - [SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection](../entities/papers/2605-02888v1-speckv-adaptive-speculative-decoding-with-compress.html)（2026-05-04）：提出轻量级自适应控制器，利用草稿模型信号动态选择推测长度 γ，在压缩模型上实现 56% 吞吐量提升。
 
