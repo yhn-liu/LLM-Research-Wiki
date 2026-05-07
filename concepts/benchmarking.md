@@ -2,7 +2,7 @@
 layout: concept
 title: 基准评估
 created: 2026-05-01
-updated: 2026-05-06
+updated: 2026-05-07
 type: concept
 tags: [benchmark, evaluation, testing, metrics, domain-specific, assessment]
 papers:
@@ -17,6 +17,16 @@ papers:
 基准评估（Benchmarking）是通过设计标准化的测试任务和评估指标来系统性地衡量 AI 模型能力的研究方法。一个好的基准测试需要具备区分度、公平性、可复现性和时效性，能够真实反映模型在特定领域或通用任务上的性能水平。随着 AI 模型能力的快速提升，基准评估本身也面临着被"饱和"或被"游戏化"的挑战。
 
 ## 关键文献与发现
+
+- [Automatically Finding and Validating Unexpected Side-Effects of Interventions on Language Models](../entities/papers/2605-05090v1-automatically-finding-and-validating-unexpected-si.html)（2026-05-06）：我们提出了一个自动化的对比评估流程，用于审核干预措施对大型语言模型的行为影响。
+
+- [Beyond Semantics: An Evidential Reasoning-Aware Multi-View Learning Framework for Trustworthy Mental Health Prediction](../entities/papers/2605-05121v1-beyond-semantics-an-evidential-reasoning-aware-mul.html)（2026-05-06）：使用文本数据进行的自动心理健康预测通过深度学习和大型语言模型显示出了有希望的结果。
+
+- [The First Token Knows: Single-Decode Confidence for Hallucination Detection](../entities/papers/2605-05166v1-the-first-token-knows-single-decode-confidence-for.html)（2026-05-06）：自我一致性通过生成问题的多个采样答案并测量一致性来检测幻觉，但这需要重复解码，并且可能对词汇变化敏感。
+
+- [MRI-Eval: A Tiered Benchmark for Evaluating LLM Performance on MRI Physics and GE Scanner Operations Knowledge](../entities/papers/2605-05175v1-mri-eval-a-tiered-benchmark-for-evaluating-llm-per.html)（2026-05-06）：背景：现有的 MRI LLM 基准主要依赖于复习书籍的多项选择题，其中顶级专有模型已经得分很高，限制了歧视。
+
+- [Implicit Representations of Grammaticality in Language Models](../entities/papers/2605-05197v1-implicit-representations-of-grammaticality-in-lang.html)（2026-05-06）：语法性和可能性是人类语言中不同的概念。
 
 - [Transformers with Selective Access to Early Representations](../entities/papers/2605-03953v1-transformers-with-selective-access-to-early-repres.html)（2026-05-05）：最近的几个 Transformer 架构将后面的层暴露给在最早的层中计算的表示，这是由于观察到随着残余流在深度上反复转换，低级特征可能变得更难恢复。
 

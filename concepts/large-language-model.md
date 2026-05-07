@@ -2,7 +2,7 @@
 layout: concept
 title: 大语言模型
 created: 2026-05-01
-updated: 2026-05-06
+updated: 2026-05-07
 type: concept
 tags: [LLM, transformer, scaling, NLP, deep-learning]
 papers:
@@ -23,6 +23,24 @@ papers:
 大语言模型（Large Language Model, LLM）是基于 Transformer 架构、通过海量文本预训练的大规模神经网络，能够执行文本生成、理解、推理等多种任务。自 GPT-3 展示涌现能力以来，LLM 已成为 AI 研究的核心范式，本库中有 8 篇论文从不同角度对其进行研究。
 
 ## 关键文献与发现
+
+- [Taming Outlier Tokens in Diffusion Transformers](../entities/papers/2605-05206v1-taming-outlier-tokens-in-diffusion-transformers.html)（2026-05-06）：发现离群 token 同时存在于 DiT 编码器和去噪器，提出双阶段寄存器（DSR）统一解决，RAE-DiT FID 从 5.89 降至 4.58。
+
+- [Automatically Finding and Validating Unexpected Side-Effects of Interventions on Language Models](../entities/papers/2605-05090v1-automatically-finding-and-validating-unexpected-si.html)（2026-05-06）：我们提出了一个自动化的对比评估流程，用于审核干预措施对大型语言模型的行为影响。
+
+- [Continual Knowledge Updating in LLM Systems: Learning Through Multi-Timescale Memory Dynamics](../entities/papers/2605-05097v1-continual-knowledge-updating-in-llm-systems-learni.html)（2026-05-06）：提出 Memini 系统，基于 Benna-Fusi 突触巩固模型的多时间尺度耦合动力学，将 LLM 外部记忆重构为通过自身动态重组的持续学习基质。
+
+- [Text Corpora as Concept Fields: Black-Box Hallucination and Novelty Measurement](../entities/papers/2605-05103v1-text-corpora-as-concept-fields-black-box-hallucina.html)（2026-05-06）：我们引入文本语料库的**概念场**：具有逐点不确定性的局部漂移场，根据连续句子之间的增量在句子嵌入空间中估计。
+
+- [Beyond Semantics: An Evidential Reasoning-Aware Multi-View Learning Framework for Trustworthy Mental Health Prediction](../entities/papers/2605-05121v1-beyond-semantics-an-evidential-reasoning-aware-mul.html)（2026-05-06）：使用文本数据进行的自动心理健康预测通过深度学习和大型语言模型显示出了有希望的结果。
+
+- [PSK at SemEval-2026 Task 9: Multilingual Polarization Detection Using Ensemble Gemma Models with Synthetic Data Augmentation](../entities/papers/2605-05159v1-psk-at-semeval-2026-task-9-multilingual-polarizati.html)（2026-05-06）：我们展示了用于 SemEval-2026 任务 9 的系统：多语言极化检测，这是一项涵盖 22 种语言的二元分类任务。
+
+- [The First Token Knows: Single-Decode Confidence for Hallucination Detection](../entities/papers/2605-05166v1-the-first-token-knows-single-decode-confidence-for.html)（2026-05-06）：自我一致性通过生成问题的多个采样答案并测量一致性来检测幻觉，但这需要重复解码，并且可能对词汇变化敏感。
+
+- [MRI-Eval: A Tiered Benchmark for Evaluating LLM Performance on MRI Physics and GE Scanner Operations Knowledge](../entities/papers/2605-05175v1-mri-eval-a-tiered-benchmark-for-evaluating-llm-per.html)（2026-05-06）：背景：现有的 MRI LLM 基准主要依赖于复习书籍的多项选择题，其中顶级专有模型已经得分很高，限制了歧视。
+
+- [Implicit Representations of Grammaticality in Language Models](../entities/papers/2605-05197v1-implicit-representations-of-grammaticality-in-lang.html)（2026-05-06）：语法性和可能性是人类语言中不同的概念。
 
 - [The Counterexample Game: Iterated Conceptual Analysis and Repair in Language Models](../entities/papers/2605-03936v1-the-counterexample-game-iterated-conceptual-analys.html)（2026-05-05）：概念分析——提出定义并通过反例完善它们——是哲学方法论的核心。
 

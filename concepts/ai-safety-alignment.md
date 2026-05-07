@@ -2,7 +2,7 @@
 layout: concept
 title: AI安全与对齐
 created: 2026-05-01
-updated: 2026-05-06
+updated: 2026-05-07
 type: concept
 tags: [safety, alignment, RLHF, adversarial, model-organism, evaluation]
 papers:
@@ -17,6 +17,10 @@ papers:
 AI 安全与对齐（AI Safety and Alignment）是确保人工智能系统的行为与人类意图、价值观和利益保持一致的研究领域。对齐问题的核心挑战在于：如何让 AI 系统真正理解和遵循人类的目标，而不是仅仅在表面上满足指标要求。随着大语言模型能力的快速提升，AI 安全与对齐已成为 AI 研究中最重要的方向之一，涉及技术、伦理和社会等多个层面。
 
 ## 关键文献与发现
+
+- [Text Corpora as Concept Fields: Black-Box Hallucination and Novelty Measurement](../entities/papers/2605-05103v1-text-corpora-as-concept-fields-black-box-hallucina.html)（2026-05-06）：我们引入文本语料库的**概念场**：具有逐点不确定性的局部漂移场，根据连续句子之间的增量在句子嵌入空间中估计。
+
+- [Beyond Semantics: An Evidential Reasoning-Aware Multi-View Learning Framework for Trustworthy Mental Health Prediction](../entities/papers/2605-05121v1-beyond-semantics-an-evidential-reasoning-aware-mul.html)（2026-05-06）：使用文本数据进行的自动心理健康预测通过深度学习和大型语言模型显示出了有希望的结果。
 
 - [Feature-Augmented Transformers for Robust AI-Text Detection Across Domains and Generators](../entities/papers/2605-03969v1-feature-augmented-transformers-for-robust-ai-text.html)（2026-05-05）：如今，人工智能生成的文本是跨领域和异构生成管道大规模生成的，这使得分布式转变的鲁棒性成为监督二进制检测器的核心要求。
 

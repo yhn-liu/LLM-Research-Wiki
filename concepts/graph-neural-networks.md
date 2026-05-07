@@ -2,7 +2,7 @@
 layout: concept
 title: 图神经网络
 created: 2026-05-01
-updated: 2026-05-06
+updated: 2026-05-07
 type: concept
 tags: [GNN, graph, neural-network, biomedical, representation-learning, message-passing]
 papers:
@@ -62,6 +62,8 @@ LLM 细化后的图结构更清晰、更具可解释性，这对生物医学等�
 - [知识蒸馏](knowledge-distillation.html) — GNN 模型的压缩与迁移
 
 ## 本库相关论文
+
+- [Continual Knowledge Updating in LLM Systems: Learning Through Multi-Timescale Memory Dynamics](../entities/papers/2605-05097v1-continual-knowledge-updating-in-llm-systems-learni.html)（2026-05-06）：法学硕士接受一次培训，然后部署到一个永不停息变化的世界。
 
 - [EQUITRIAGE: A Fairness Audit of Gender Bias in LLM-Based Emergency Department Triage](../entities/papers/2605-03998v1-equitriage-a-fairness-audit-of-gender-bias-in-llm.html)（2026-05-05）：急诊科分诊为患者分配一个视力评分，以确定治疗的优先顺序，临床证据记录了人类视力评估中持续存在的性别差异。
 

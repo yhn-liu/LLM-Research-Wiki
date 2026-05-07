@@ -1,38 +1,177 @@
 [
   {
-    "id": "2605.04039v1",
-    "title": "Safety and accuracy follow different scaling laws in clinical large language models",
+    "id": "2605.05197v1",
+    "title": "Implicit Representations of Grammaticality in Language Models",
     "authors": [
-      "Sebastian Wind",
-      "Tri-Thien Nguyen",
-      "Jeta Sopa",
-      "Mahshad Lotfinia",
-      "Sebastian Bickelhaup",
-      "Michael Uder",
-      "Harald Köstler",
-      "Gerhard Wellein",
-      "Sven Nebelung",
-      "Daniel Truhn",
-      "Andreas Maier",
-      "Soroosh Tayebi Arasteh"
+      "Yingshan Susan Wang",
+      "Linlu Qiu",
+      "Zhaofeng Wu",
+      "Roger P. Levy",
+      "Yoon Kim"
     ],
-    "published": "2026-05-05",
-    "summary": "Clinical LLMs are often scaled by increasing model size, context length, retrieval complexity, or inference-time compute, with the implicit expectation that higher accuracy implies safer behavior. This assumption is incomplete in medicine, where a few confident, high-risk, or evidence-contradicting errors can matter more than average benchmark performance. We introduce SaFE-Scale, a framework for measuring how clinical LLM safety changes across model scale, evidence quality, retrieval strategy, context exposure, and inference-time compute. To instantiate this framework, we introduce RadSaFE-200, a Radiology Safety-Focused Evaluation benchmark of 200 multiple-choice questions with clinician-defined clean evidence, conflict evidence, and option-level labels for high-risk error, unsafe answer, and evidence contradiction. We evaluated 34 locally deployed LLMs across six deployment conditions: closed-book prompting (zero-shot), clean evidence, conflict evidence, standard RAG, agentic RAG, and max-context prompting. Clean evidence produced the strongest improvement, increasing mean accuracy from 73.5% to 94.1%, while reducing high-risk error from 12.0% to 2.6%, contradiction from 12.7% to 2.3%, and dangerous overconfidence from 8.0% to 1.6%. Standard RAG and agentic RAG did not reproduce this safety profile: agentic RAG improved accuracy over standard RAG and reduced contradiction, but high-risk error and dangerous overconfidence remained elevated. Max-context prompting increased latency without closing the safety gap, and additional inference-time compute produced only limited gains. Worst-case analysis showed that clinically consequential errors concentrated in a small subset of questions. Clinical LLM safety is therefore not a passive consequence of scaling, but a deployment property shaped by evidence quality, retrieval design, context construction, and collective failure behavior.",
+    "published": "2026-05-06",
+    "summary": "Grammaticality and likelihood are distinct notions in human language. Pretrained language models (LMs), which are probabilistic models of language fitted to maximize corpus likelihood, generate grammatically well-formed text and discriminate well between grammatical and ungrammatical sentences in tightly controlled minimal pairs. However, their string probabilities do not sharply discriminate between grammatical and ungrammatical sentences overall. But do LMs implicitly acquire a grammaticality distinction distinct from string probability? We explore this question through studying internal representations of LMs, by training a linear probe on a dataset of grammatical and (synthetic) ungrammatical sentences obtained by applying perturbations to a naturalistic text corpus. We find that this simple grammaticality probe generalizes to human-curated grammaticality judgment benchmarks and outperforms LM probability-based grammaticality judgments. When applied to semantic plausibility benchmarks, in which both members of a minimal pair are grammatical and differ in only plausibility, the probe however performs worse than string probability. The English-trained probe also exhibits nontrivial cross-lingual generalization, outperforming string probabilities on grammaticality benchmarks in numerous other languages. Additionally, probe scores correlate only weakly with string probabilities. These results collectively suggest that LMs acquire to some extent an implicit grammaticality distinction within their hidden layers.",
+    "categories": [
+      "cs.CL"
+    ],
+    "summary_cn": "语法性和可能性是人类语言中不同的概念。预训练语言模型 (LM) 是一种适合最大化语料库可能性的语言概率模型，生成语法良好的文本，并在严格控制的最小对中很好地区分语法句子和不语法句子。然而，它们的字符串概率总体上并不能严格区分语法句子和非语法句子。但是 LM 是否隐含地获得了与字符串概率不同的语法区别？我们通过研究 LM 的内部表示来探索这个问题，方法是在通过对自然文本语料库应用扰动而获得的语法和（合成）非语法句子数据集上训练线性探针。我们发现这个简单的语法性探测可以推广到人类策划的语法性判断基准，并且优于 LM 基于概率的语法性判断。当应用于语义合理性基准时，其中最小对的两个成员都是语法上的并且仅在合理性上有所不同，但是探针的性能比字符串概率更差。经过英语训练的探针还表现出非凡的跨语言泛化能力，在许多其他语言的语法基准上优于字符串概率。此外，探测分数与字符串概率的相关性很弱。这些结果共同表明语言模型在其隐藏层中获得了一定程度的隐式语法区别。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-05197v1-implicit-representations-of-grammaticality-in-lang",
+    "rel_path": "entities/papers/2605-05197v1-implicit-representations-of-grammaticality-in-lang.html",
+    "figures": [
+      "assets/papers/2605-05197v1/fig1.png",
+      "assets/papers/2605-05197v1/fig2.png",
+      "assets/papers/2605-05197v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "Grammaticality and likelihood are distinct notions in human language.",
+    "topic_signal": "大语言模型 / 基准评估"
+  },
+  {
+    "id": "2605.05175v1",
+    "title": "MRI-Eval: A Tiered Benchmark for Evaluating LLM Performance on MRI Physics and GE Scanner Operations Knowledge",
+    "authors": [
+      "Perry E. Radau"
+    ],
+    "published": "2026-05-06",
+    "summary": "Background: Existing MRI LLM benchmarks rely mainly on review-book multiple-choice questions, where top proprietary models already score highly, limiting discrimination. No systematic benchmark has evaluated vendor-specific scanner operational knowledge central to research MRI practice. Purpose: We developed MRI-Eval, a tiered benchmark for relative model comparison on MRI physics and GE scanner operations knowledge using primary multiple-choice questions (MCQ), with stem-only and primed diagnostic conditions as complementary analyses. Methods: MRI-Eval includes 1365 scored items across nine categories and three difficulty tiers from textbooks, GE scanner manuals, programming course materials, and expert-generated questions. Five model families were evaluated (GPT-5.4, Claude Opus 4.6, Claude Sonnet 4.6, Gemini 2.5 Pro, Llama 3.3 70B). MCQ was primary; stem-only removed options and used an independent LLM judge; primed stem-only tested responses to incorrect user claims. Results: Overall MCQ accuracy was 93.2% to 97.1%. GE scanner operations was the lowest category for every model (88.2% to 94.6%). In stem-only, frontier-model accuracy fell to 58.4% to 61.1%, and Llama 3.3 70B fell to 37.1%; GE scanner operations stem-only accuracy was 13.8% to 29.8%. Conclusion: High MCQ performance can mask weak free-text recall, especially for vendor-specific operational knowledge. MRI-Eval is most informative as a relative comparison benchmark rather than an absolute competency measure and supports caution in using raw LLM outputs for GE-specific protocol guidance.",
+    "categories": [
+      "eess.IV",
+      "cs.CL",
+      "physics.med-ph"
+    ],
+    "summary_cn": "背景：现有的 MRI LLM 基准主要依赖于复习书籍的多项选择题，其中顶级专有模型已经得分很高，限制了歧视。没有系统的基准评估对研究 MRI 实践至关重要的特定供应商扫描仪操作知识。目的：我们开发了 MRI-Eval，这是一种使用初级多项选择题 (MCQ) 进行 MRI 物理和 GE 扫描仪操作知识的相对模型比较的分层基准，并以纯干和启动诊断条件作为补充分析。方法：MRI-Eval 包括来自教科书、GE 扫描仪手册、编程课程材料和专家生成的问题的 9 个类别和 3 个难度等级的 1365 个评分项目。评估了五个模型系列（GPT-5.4、Claude Opus 4.6、Claude Sonnet 4.6、Gemini 2.5 Pro、Llama 3.3 70B）。 MCQ 是主要的； Stem-only 删除了选项并使用了独立的 LLM 法官；对不正确的用户声明进行仅干测试的响应。结果：MCQ 总体准确率为 93.2% 至 97.1%。 GE 扫描仪操作是所有型号中最低的类别（88.2% 至 94.6%）。在纯干分析中，前沿模型准确率下降至 58.4% 至 61.1%，Llama 3.3 70B 下降至 37.1%； GE 扫描仪操作的仅干准确度为 13.8% 至 29.8%。结论：高 MCQ 性能可以掩盖较弱的自由文本回忆，尤其是对于特定于供应商的操作知识。 MRI-Eval 作为相对比较基准而不是绝对能力衡量标准提供了最丰富的信息，并且支持谨慎使用原始 LLM 输出进行 GE 特定协议指导。",
+    "comment": "21 pages, 4 figures, 10 tables",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-05175v1-mri-eval-a-tiered-benchmark-for-evaluating-llm-per",
+    "rel_path": "entities/papers/2605-05175v1-mri-eval-a-tiered-benchmark-for-evaluating-llm-per.html",
+    "figures": [
+      "assets/papers/2605-05175v1/fig1.png",
+      "assets/papers/2605-05175v1/fig2.png",
+      "assets/papers/2605-05175v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "Purpose: We developed MRI-Eval, a tiered benchmark for relative model comparison on MRI physics and GE scanner operations knowledge using primary multiple-choice questions (MCQ), with stem-only and primed diagnostic conditions as complementary analyses.",
+    "topic_signal": "大语言模型 / 基准评估"
+  },
+  {
+    "id": "2605.05166v1",
+    "title": "The First Token Knows: Single-Decode Confidence for Hallucination Detection",
+    "authors": [
+      "Mina Gabriel"
+    ],
+    "published": "2026-05-06",
+    "summary": "Self-consistency detects hallucinations by generating multiple sampled answers to a question and measuring agreement, but this requires repeated decoding and can be sensitive to lexical variation. Semantic self-consistency improves this by clustering sampled answers by meaning using natural language inference, but it adds both sampling cost and external inference overhead. We show that first-token confidence, phi_first, computed from the normalized entropy of the top-K logits at the first content-bearing answer token of a single greedy decode, matches or modestly exceeds semantic self-consistency on closed-book short-answer factual question answering. Across three 7-8B instruction-tuned models and two benchmarks, phi_first achieves a mean AUROC of 0.820, compared with 0.793 for semantic agreement and 0.791 for standard surface-form self-consistency. A subsumption test shows that phi_first is moderately to strongly correlated with semantic agreement, and combining the two signals yields only a small AUROC improvement over phi_first alone. These results suggest that much of the uncertainty information captured by multi-sample agreement is already available in the model's initial token distribution. We argue that phi_first should be reported as a default low-cost baseline before invoking sampling-based uncertainty estimation.",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "summary_cn": "自我一致性通过生成问题的多个采样答案并测量一致性来检测幻觉，但这需要重复解码，并且可能对词汇变化敏感。语义自一致性通过使用自然语言推理对采样答案进行聚类来改善这一点，但它增加了采样成本和外部推理开销。我们表明，第一个令牌置信度 phi_first 是根据单个贪婪解码的第一个内容承载答案令牌处的前 K 个逻辑的归一化熵计算得出的，匹配或适度超过了闭卷简答事实问答的语义自洽性。在三个 7-8B 指令调整模型和两个基准测试中，phi_first 的平均 AUROC 为 0.820，而语义一致性为 0.793，标准表面形式自一致性为 0.791。包含测试表明 phi_first 与语义一致性具有中度至强相关性，并且结合两个信号仅比单独使用 phi_first 产生较小的 AUROC 改进。这些结果表明，多样本一致性捕获的大部分不确定性信息已经在模型的初始令牌分布中可用。我们认为，在调用基于采样的不确定性估计之前，应将 phi_first 报告为默认的低成本基线。",
+    "comment": "6 pages, 1 figure",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-05166v1-the-first-token-knows-single-decode-confidence-for",
+    "rel_path": "entities/papers/2605-05166v1-the-first-token-knows-single-decode-confidence-for.html",
+    "figures": [
+      "assets/papers/2605-05166v1/fig1.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "Self-consistency detects hallucinations by generating multiple sampled answers to a question and measuring agreement, but this requires repeated decoding and can be sensitive to lexical variation.",
+    "topic_signal": "大语言模型 / 基准评估"
+  },
+  {
+    "id": "2605.05159v1",
+    "title": "PSK at SemEval-2026 Task 9: Multilingual Polarization Detection Using Ensemble Gemma Models with Synthetic Data Augmentation",
+    "authors": [
+      "Srikar Kashyap Pulipaka"
+    ],
+    "published": "2026-05-06",
+    "summary": "We present our system for SemEval-2026 Task 9: Multilingual Polarization Detection, a binary classification task spanning 22 languages. Our approach fine-tunes separate Gemma~3 models (12B and 27B parameters) per language using Low-Rank Adaptation (LoRA), augmented with synthetic data generated by a large language model (LLM). We employ three synthetic data strategies (direct generation, paraphrasing, and contrastive pair creation) using GPT-4o-mini, with a multi-stage quality filtering pipeline including embedding-based deduplication. We find that per-language threshold tuning on the development set yields 2 to 4\\% F1 improvements without retraining. We also use weighted ensembles of 12B and 27B model predictions with per-language strategy selection. Our final system achieves a mean macro-F1 of 0.811 across all 22 languages, ranking 2nd overall of the participating teams, with 1st place finishes in 3 languages and top-3 in 8 languages. We also find that alternative architectures (XLM-RoBERTa, Qwen3) that showed strong development set performance suffered 30 to 50\\% F1 drops on the test set, highlighting the importance of generalization.",
     "categories": [
       "cs.CL",
       "cs.AI",
       "cs.LG"
     ],
-    "summary_cn": "临床法学硕士通常通过增加模型大小、上下文长度、检索复杂性或推理时间计算来扩展，隐含的期望是更高的准确性意味着更安全的行为。这种假设在医学领域是不完整的，在医学领域，一些自信、高风险或证据矛盾的错误可能比平均基准表现更重要。我们引入了 SaFE-Scale，这是一个用于衡量临床 LLM 安全性在模型规模、证据质量、检索策略、上下文暴露和推理时间计算方面如何变化的框架。为了实例化该框架，我们引入了 RadSaFE-200，这是一个以放射安全为中心的评估基准，包含 200 个多项选择问题，其中包含临床医生定义的干净证据、冲突证据以及针对高风险错误、不安全答案和证据矛盾的选项级标签。我们在六种部署条件下评估了 34 个本地部署的 LLM：闭卷提示（零样本）、干净证据、冲突证据、标准 RAG、代理 RAG 和最大上下文提示。干净的证据产生了最强的改进，将平均准确度从 73.5% 提高到 94.1%，同时将高风险错误从 12.0% 降低到 2.6%，矛盾从 12.7% 降低到 2.3%，危险的过度自信从 8.0% 降低到 1.6%。标准 RAG 和代理 RAG 没有重现这种安全性：代理 RAG 比标准 RAG 提高了准确性并减少了矛盾，但高风险错误和危险的过度自信仍然较高。最大上下文提示增加了延迟，但没有缩小安全差距，而额外的推理时间计算仅产生有限的收益。最坏情况分析表明，临床后果性错误集中在一小部分问题中。因此，临床 LLM 安全性不是扩展的被动结果，而是由证据质量、检索设计、背景构建和集体失败行为塑造的部署属性。",
+    "summary_cn": "我们展示了用于 SemEval-2026 任务 9 的系统：多语言极化检测，这是一项涵盖 22 种语言的二元分类任务。我们的方法使用低秩适应 (LoRA) 微调每种语言的单独 Gemma~3 模型（12B 和 27B 参数），并通过大型语言模型 (LLM) 生成的合成数据进行增强。我们使用 GPT-4o-mini 采用三种合成数据策略（直接生成、释义和对比对创建），并具有多级质量过滤管道，包括基于嵌入的重复数据删除。我们发现，在开发集上对每种语言的阈值进行调整可在无需重新训练的情况下产生 2 至 4% 的 F1 改进。我们还使用 12B 和 27B 模型预测的加权集成以及每种语言的策略选择。我们的最终系统在所有 22 种语言中实现了 0.811 的平均宏 F1，在参赛团队中排名第二，其中 3 种语言获得第一名，8 种语言获得前三名。我们还发现，表现出强大开发集性能的替代架构（XLM-RoBERTa、Qwen3）在测试集上的 F1 下降了 30 到 50%，这凸显了泛化的重要性。",
     "comment": "",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-04039v1-safety-and-accuracy-follow-different-scaling-laws",
-    "rel_path": "entities/papers/2605-04039v1-safety-and-accuracy-follow-different-scaling-laws.html",
+    "slug": "2605-05159v1-psk-at-semeval-2026-task-9-multilingual-polarizati",
+    "rel_path": "entities/papers/2605-05159v1-psk-at-semeval-2026-task-9-multilingual-polarizati.html",
     "figures": [
-      "assets/papers/2605-04039v1/fig1.png",
-      "assets/papers/2605-04039v1/fig2.png",
-      "assets/papers/2605-04039v1/fig3.png"
+      "assets/papers/2605-05159v1/fig1.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      }
+    ],
+    "method_signal": "We present our system for SemEval-2026 Task 9: Multilingual Polarization Detection, a binary classification task spanning 22 languages.",
+    "topic_signal": "大语言模型"
+  },
+  {
+    "id": "2605.05121v1",
+    "title": "Beyond Semantics: An Evidential Reasoning-Aware Multi-View Learning Framework for Trustworthy Mental Health Prediction",
+    "authors": [
+      "Yucheng Ruan",
+      "Ling Huang",
+      "Qika Lin",
+      "Kai He",
+      "Mengling Feng"
+    ],
+    "published": "2026-05-06",
+    "summary": "Automated mental health prediction using textual data has shown promising results with deep learning and large language models. However, deploying these models in high-stakes real-world settings remains challenging, as existing approaches largely rely on semantic representations and often produce overconfident predictions under ambiguous, noisy, or shifted data. Moreover, most methods lack reliable uncertainty estimation, undermining trust in risk-sensitive mental health applications. To address these limitations, we formulate the task as a multi-view learning problem that integrates semantic information from encoder-only models with higher-level reasoning information from decoder-only models, where reasoning-aware representations and uncertainty modeling are obtained in a trustworthy manner. To ensure reliable fusion, we adopt an evidential learning framework based on Subjective Logic to explicitly model uncertainty and introduce an evidential fusion strategy that balances complementary views while discounting unreliable evidence. Benchmarking on three real-world datasets, Dreaddit, SDCNL, and DepSeverity, reports accuracies of 0.835, 0.731, and 0.751, respectively, demonstrating its potential for reliable mental health prediction. Additional experiments on robustness to noise and case studies for interpretability confirm that our proposed framework not only improves predictive performance but also provides trustworthy uncertainty estimates and human-understandable reasoning signals, making it suitable for risk-sensitive applications in mental health assessment.",
+    "categories": [
+      "cs.CL"
+    ],
+    "summary_cn": "使用文本数据进行的自动心理健康预测通过深度学习和大型语言模型显示出了有希望的结果。然而，在高风险的现实环境中部署这些模型仍然具有挑战性，因为现有的方法在很大程度上依赖于语义表示，并且经常在模糊、噪声或变化的数据下产生过度自信的预测。此外，大多数方法缺乏可靠的不确定性估计，破坏了对风险敏感的心理健康应用的信任。为了解决这些限制，我们将该任务制定为一个多视图学习问题，它将来自仅编码器模型的语义信息与来自仅解码器模型的高级推理信息集成在一起，其中推理感知表示和不确定性建模是以值得信赖的方式获得的。为了确保可靠的融合，我们采用基于主观逻辑的证据学习框架来明确建模不确定性，并引入一种证据融合策略，在平衡互补观点的同时忽略不可靠的证据。对三个现实世界数据集 Dreaddit、SDCNL 和 DepSeverity 进行基准测试，报告的准确度分别为 0.835、0.731 和 0.751，展示了其可靠的心理健康预测的潜力。关于噪声鲁棒性和可解释性案例研究的其他实验证实，我们提出的框架不仅提高了预测性能，而且还提供了值得信赖的不确定性估计和人类可理解的推理信号，使其适合心理健康评估中的风险敏感应用。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-05121v1-beyond-semantics-an-evidential-reasoning-aware-mul",
+    "rel_path": "entities/papers/2605-05121v1-beyond-semantics-an-evidential-reasoning-aware-mul.html",
+    "figures": [
+      "assets/papers/2605-05121v1/fig1.png",
+      "assets/papers/2605-05121v1/fig2.png",
+      "assets/papers/2605-05121v1/fig3.png"
     ],
     "concepts": [
       {
@@ -56,36 +195,36 @@
         "url": "../../concepts/medical-ai.html"
       }
     ],
-    "method_signal": "We introduce SaFE-Scale, a framework for measuring how clinical LLM safety changes across model scale, evidence quality, retrieval strategy, context exposure, and inference-time compute.",
+    "method_signal": "Automated mental health prediction using textual data has shown promising results with deep learning and large language models.",
     "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐 / 医学AI"
   },
   {
-    "id": "2605.04036v1",
-    "title": "OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories",
+    "id": "2605.05103v1",
+    "title": "Text Corpora as Concept Fields: Black-Box Hallucination and Novelty Measurement",
     "authors": [
-      "Yuwen Du",
-      "Rui Ye",
-      "Shuo Tang",
-      "Keduan Huang",
-      "Xinyu Zhu",
-      "Yuzhu Cai",
-      "Siheng Chen"
+      "Nicholas S. Kersting",
+      "Vittorio Castelli",
+      "Chieh Ting Yeh",
+      "Xinzhu Wang",
+      "Saad Taame"
     ],
-    "published": "2026-05-05",
-    "summary": "Deep search capabilities have become an indispensable competency for frontier Large Language Model (LLM) agents, yet their development remains dominated by industrial giants. The typical industry recipe involves a highly resource-intensive pipeline spanning pre-training, continual pre-training (CPT), supervised fine-tuning (SFT), and reinforcement learning (RL). In this report, we show that when fueled with informative and high-difficulty trajectories, a simple SFT approach could be surprisingly powerful for training frontier search agents. By introducing three simple data synthesis modifications: scaling knowledge graph size for richer exploration, expanding the tool set size for broader functionality, and strict low-step filtering, we establish a stronger baseline. Trained on merely 10.6k data points, our OpenSeeker-v2 achieves state-of-the-art performance across 4 benchmarks (30B-sized agents with ReAct paradigm): 46.0% on BrowseComp, 58.1% on BrowseComp-ZH, 34.6% on Humanity's Last Exam, and 78.0% on xbench, surpassing even Tongyi DeepResearch trained with heavy CPT+SFT+RL pipeline, which achieves 43.4%, 46.7%, 32.9%, and 75.0%, respectively. Notably, OpenSeeker-v2 represents the first state-of-the-art search agent within its model scale and paradigm to be developed by a purely academic team using only SFT. We are excited to open-source the OpenSeeker-v2 model weights and share our simple yet effective findings to make frontier search agent research more accessible to the community.",
+    "published": "2026-05-06",
+    "summary": "We introduce the **Concept Field** of a text corpus: a local drift field with pointwise uncertainty, estimated in sentence-embedding space from the deltas between consecutive sentences. Given a candidate sentence transition, we score its agreement with the field by $ζ$, the mean absolute z-distance between the observed delta and the field's local Gaussian estimate. The score is black-box (no model internals), corpus-attributable (every score traces to nearby corpus sentences), and admits a direct probabilistic reading. We support the computation with the introduction of a **Vector Sequence Database (VSDB)** that stores embeddings together with sequence-position and next-delta metadata. We evaluate this approach on two large-scale settings: hallucination-style groundedness detection over the U.S. Code of Federal Regulations, and novelty detection over Project Gutenberg. Using controlled LLM-generated rewrites, Concept Fields achieve strong selective classification performance under a grounded / ungrounded / unsure triage policy, which unlike retrieval-centric baselines have similar coverage-risk behavior across both domains, supporting a probability-based interpretation that transfers across domains. We also sketch how divergence and curl of the Concept Field, computed on dense clusters, surface qualitatively meaningful semantic patterns (logic sources, sinks, and implicit topics), which we offer as hypothesis-generating rather than as a quantitative result. Concept Fields provide a fast, lightweight, and interpretable signal for groundedness and novelty, complementary to LLM-as-judge and white-box detectors.",
     "categories": [
+      "cs.CL",
       "cs.AI",
-      "cs.CL"
+      "cs.CY"
     ],
-    "summary_cn": "深度搜索能力已经成为前沿大语言模型（LLM）代理不可或缺的能力，但其发展仍然由工业巨头主导。典型的行业配方涉及资源高度密集的管道，涵盖预训练、持续预训练 (CPT)、监督微调 (SFT) 和强化学习 (RL)。在本报告中，我们表明，当提供信息丰富且高难度的轨迹时，简单的 SFT 方法对于训练前沿搜索代理可能会非常强大。通过引入三个简单的数据合成修改：缩放知识图大小以实现更丰富的探索、扩展工具集大小以实现更广泛的功能以及严格的低步过滤，我们建立了更强大的基线。仅在 10.6k 个数据点上进行训练，我们的 OpenSeeker-v2 在 4 个基准测试（具有 ReAct 范式的 30B 大小的代理）中实现了最先进的性能：在 BrowseComp 上为 46.0%，在 BrowseComp-ZH 上为 58.1%，在 Humanity's Last Exam 上为 34.6%，在 xbench 上为 78.0%，甚至超过了使用大量 CPT+SFT+RL 训练的 Tongyi DeepResearch管道，分别达到43.4%、46.7%、32.9%和75.0%。值得注意的是，OpenSeeker-v2 代表了第一个在其模型规模和范例中最先进的搜索代理，由纯学术团队仅使用 SFT 开发。我们很高兴能够开源 OpenSeeker-v2 模型权重，并分享我们简单而有效的发现，以使社区更容易理解前沿搜索代理研究。",
-    "comment": "7 pages",
+    "summary_cn": "我们引入文本语料库的**概念场**：具有逐点不确定性的局部漂移场，根据连续句子之间的增量在句子嵌入空间中估计。给定一个候选句子转换，我们通过 $z$ 对其与场的一致性进行评分，$z$ 是观察到的增量与场的局部高斯估计之间的平均绝对 z 距离。分数是黑盒的（没有模型内部），可归因于语料库（每个分数都追溯到附近的语料库句子），并且允许直接概率阅读。我们通过引入**向量序列数据库（VSDB）**来支持计算，该数据库将嵌入以及序列位置和下一个增量元数据存储在一起。我们在两个大规模环境中评估这种方法：对美国联邦法规的幻觉式接地性检测，以及对古腾堡计划的新颖性检测。使用受控的 LLM 生成的重写，概念字段在有根据/无根据/不确定的分类策略下实现了强大的选择性分类性能，与以检索为中心的基线不同，它在两个领域具有类似的覆盖风险行为，支持跨领域转移的基于概率的解释。我们还概述了在密集集群上计算的概念场的散度和旋度如何呈现定性有意义的语义模式（逻辑源、汇和隐含主题），我们将其作为假设生成而不是作为定量结果提供。 Concept Fields 提供快速、轻量且可解释的信号，以实现接地性和新颖性，与法学硕士作为法官和白盒检测器互补。",
+    "comment": "25 pages, 8 figures",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-04036v1-openseeker-v2-pushing-the-limits-of-search-agents",
-    "rel_path": "entities/papers/2605-04036v1-openseeker-v2-pushing-the-limits-of-search-agents.html",
+    "slug": "2605-05103v1-text-corpora-as-concept-fields-black-box-hallucina",
+    "rel_path": "entities/papers/2605-05103v1-text-corpora-as-concept-fields-black-box-hallucina.html",
     "figures": [
-      "assets/papers/2605-04036v1/fig1.png",
-      "assets/papers/2605-04036v1/fig2.png"
+      "assets/papers/2605-05103v1/fig1.png",
+      "assets/papers/2605-05103v1/fig2.png",
+      "assets/papers/2605-05103v1/fig3.png"
     ],
     "concepts": [
       {
@@ -99,44 +238,86 @@
         "url": "../../concepts/reinforcement-learning.html"
       },
       {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      }
+    ],
+    "method_signal": "We introduce the **Concept Field** of a text corpus: a local drift field with pointwise uncertainty, estimated in sentence-embedding space from the deltas between consecutive sentences.",
+    "topic_signal": "大语言模型 / 强化学习 / AI安全与对齐"
+  },
+  {
+    "id": "2605.05097v1",
+    "title": "Continual Knowledge Updating in LLM Systems: Learning Through Multi-Timescale Memory Dynamics",
+    "authors": [
+      "Andreas Pattichis",
+      "Constantine Dovrolis"
+    ],
+    "published": "2026-05-06",
+    "summary": "LLMs are trained once, then deployed into a world that never stops changing. External memory compensates for this, but most systems manage it explicitly rather than letting it adapt on its own. Biological memory works differently: coupled multi-timescale dynamics make new associations immediately usable, strengthen what repetition confirms, and let the rest fade. We argue that external memory should follow a similar principle. In Memini, this view takes the form of an associative memory that organizes knowledge as a directed graph. Each edge carries two coupled internal variables, one fast and one slow, following the Benna-Fusi model of synaptic consolidation. From this coupling, episodic sensitivity, gradual consolidation, and selective forgetting emerge as facets of a single mechanism, reframing external memory as a learning substrate that reorganizes through its own dynamics.",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "summary_cn": "法学硕士接受一次培训，然后部署到一个永不停息变化的世界。外部存储器弥补了这一点，但大多数系统显式管理它而不是让它自行适应。生物记忆的工作方式有所不同：耦合的多时间尺度动态使新的联想立即可用，加强重复所确认的内容，并让其余的消失。我们认为外部记忆应该遵循类似的原则。在 Memini 中，这种视图采用联想记忆的形式，将知识组织为有向图。每条边都带有两个耦合的内部变量，一个快，一个慢，遵循突触巩固的 Benna-Fusi 模型。在这种耦合中，情景敏感性、逐渐巩固和选择性遗忘作为单一机制的各个方面出现，将外部记忆重新构建为通过自身动态进行重组的学习基质。",
+    "comment": "Preprint. 9 pages, 2 figures",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-05097v1-continual-knowledge-updating-in-llm-systems-learni",
+    "rel_path": "entities/papers/2605-05097v1-continual-knowledge-updating-in-llm-systems-learni.html",
+    "figures": [
+      "assets/papers/2605-05097v1/fig1.png",
+      "assets/papers/2605-05097v1/fig2.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
       },
       {
         "name": "图神经网络",
         "slug": "graph-neural-networks",
         "url": "../../concepts/graph-neural-networks.html"
+      },
+      {
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
       }
     ],
-    "method_signal": "Deep search capabilities have become an indispensable competency for frontier Large Language Model (LLM) agents, yet their development remains dominated by industrial giants.",
-    "topic_signal": "大语言模型 / 强化学习 / 基准评估 / 图神经网络"
+    "method_signal": "LLMs are trained once, then deployed into a world that never stops changing.",
+    "topic_signal": "大语言模型 / 图神经网络 / 世界模型"
   },
   {
-    "id": "2605.04018v1",
-    "title": "Rethinking Reasoning-Intensive Retrieval: Evaluating and Advancing Retrievers in Agentic Search Systems",
+    "id": "2605.05090v1",
+    "title": "Automatically Finding and Validating Unexpected Side-Effects of Interventions on Language Models",
     "authors": [
-      "Yilun Zhao",
-      "Jinbiao Wei",
-      "Tingyu Song",
-      "Siyue Zhang",
-      "Chen Zhao",
-      "Arman Cohan"
+      "Quintin Pope",
+      "Ajay Hayagreeve Balaji",
+      "Jacques Thibodeau",
+      "Xiaoli Fern"
     ],
-    "published": "2026-05-05",
-    "summary": "Reasoning-intensive retrieval aims to surface evidence that supports downstream reasoning rather than merely matching topical similarity. This capability is increasingly important for agentic search systems, where retrievers must provide complementary evidence across iterative search and synthesis. However, existing work remains limited on both evaluation and training: benchmarks such as BRIGHT provide narrow gold sets and evaluate retrievers in isolation, while synthetic training corpora often optimize single-passage relevance rather than evidence portfolio construction. We introduce BRIGHT-Pro, an expert-annotated benchmark that expands each query with multi-aspect gold evidence and evaluates retrievers under both static and agentic search protocols. We further construct RTriever-Synth, an aspect-decomposed synthetic corpus that generates complementary positives and positive-conditioned hard negatives, and use it to LoRA fine-tune RTriever-4B from Qwen3-Embedding-4B. Experiments across lexical, general-purpose, and reasoning-intensive retrievers show that aspect-aware and agentic evaluation expose behaviors hidden by standard metrics, while RTriever-4B substantially improves over its base model.",
+    "published": "2026-05-06",
+    "summary": "We present an automated, contrastive evaluation pipeline for auditing the behavioral impact of interventions on large language models. Given a base model $M_1$ and an intervention model $M_2$, our method compares their free-form, multi-token generations across aligned prompt contexts and produces human-readable, statistically validated natural-language hypotheses describing how the models differ, along with recurring themes that summarize patterns across validated hypotheses.   We evaluate the approach in synthetic setting by injecting known behavioral changes and showing that the pipeline reliably recovers them. We then apply it to three real-world interventions, reasoning distillation, knowledge editing and unlearning, demonstrating that the method surfaces both intended and unexpected behavioral shifts, distinguishes large from subtle interventions, and does not hallucinate differences when effects are absent or misaligned with the prompt bank. Overall, the pipeline provides a statistically grounded and interpretable tool for post-hoc auditing of intervention-induced changes in model behavior.",
     "categories": [
       "cs.CL",
-      "cs.IR"
+      "cs.AI"
     ],
-    "summary_cn": "推理密集型检索旨在找出支持下游推理的证据，而不仅仅是匹配主题相似性。这种能力对于代理搜索系统越来越重要，检索器必须在迭代搜索和合成中提供补充证据。然而，现有的工作在评估和训练方面仍然有限：诸如 BRIGHT 之类的基准提供了狭窄的黄金集并单独评估检索器，而综合训练语料库通常优化单通道相关性而不是证据组合构建。我们推出了 BRIGHT-Pro，这是一个专家注释的基准测试，它通过多方面的黄金证据扩展每个查询，并在静态和代理搜索协议下评估检索器。我们进一步构建了 RTriever-Synth，一个方面分解的合成语料库，可生成互补的正例和正条件硬负例，并用它来 LoRA 从 Qwen3-Embedding-4B 微调 RTriever-4B。词汇、通用和推理密集型检索器的实验表明，方面感知和代理评估暴露了标准指标隐藏的行为，而 RTriever-4B 比其基本模型有了显着改进。",
-    "comment": "ACL 2026",
+    "summary_cn": "我们提出了一个自动化的对比评估流程，用于审核干预措施对大型语言模型的行为影响。给定基本模型 $M_1$ 和干预模型 $M_2$，我们的方法在对齐的提示上下文中比较它们的自由形式、多标记生成，并生成人类可读的、经统计验证的自然语言假设，描述模型的差异，以及总结经过验证的假设的模式的重复主题。我们通过注入已知的行为变化并表明管道可靠地恢复它们来评估合成环境中的方法。然后，我们将其应用于三种现实世界的干预措施：推理蒸馏、知识编辑和忘却，证明该方法可以显示有意的和意外的行为变化，区分大的干预措施和微妙的干预措施，并且当效果不存在或与提示库不一致时，不会产生幻觉差异。总体而言，该管道提供了一个基于统计且可解释的工具，用于对干预引起的模型行为变化进行事后审核。",
+    "comment": "33 pages, 4 figures, 20 tables, targeting EMNLP submission",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-04018v1-rethinking-reasoning-intensive-retrieval-evaluatin",
-    "rel_path": "entities/papers/2605-04018v1-rethinking-reasoning-intensive-retrieval-evaluatin.html",
+    "slug": "2605-05090v1-automatically-finding-and-validating-unexpected-si",
+    "rel_path": "entities/papers/2605-05090v1-automatically-finding-and-validating-unexpected-si.html",
     "figures": [],
     "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
       {
         "name": "基准评估",
         "slug": "benchmarking",
@@ -148,32 +329,37 @@
         "url": "../../concepts/ai-agents.html"
       }
     ],
-    "method_signal": "We introduce BRIGHT-Pro, an expert-annotated benchmark that expands each query with multi-aspect gold evidence and evaluates retrievers under both static and agentic search protocols.",
-    "topic_signal": "基准评估 / 智能体"
+    "method_signal": "We present an automated, contrastive evaluation pipeline for auditing the behavioral impact of interventions on large language models.",
+    "topic_signal": "大语言模型 / 基准评估 / 智能体"
   },
   {
-    "id": "2605.03998v1",
-    "title": "EQUITRIAGE: A Fairness Audit of Gender Bias in LLM-Based Emergency Department Triage",
+    "id": "2605.05206v1",
+    "title": "Taming Outlier Tokens in Diffusion Transformers",
     "authors": [
-      "Richard J. Young",
-      "Alice M. Matthews"
+      "Xiaoyu Wu",
+      "Yifei Wang",
+      "Tsu-Jui Fu",
+      "Liang-Chieh Chen",
+      "Zhe Gan",
+      "Chen Wei"
     ],
-    "published": "2026-05-05",
-    "summary": "Emergency department triage assigns patients an acuity score that determines treatment priority, and clinical evidence documents persistent gender disparities in human acuity assessment. As hospitals pilot large language models (LLMs) as triage decision support, a critical question is whether these models reproduce or mitigate known biases. We present EQUITRIAGE, a fairness audit of LLM-based ESI assignment evaluating five models (Gemini-3-Flash, Nemotron-3-Super, DeepSeek-V3.1, Mistral-Small-3.2, GPT-4.1-Nano) across 374,275 evaluations on 18,714 MIMIC-IV-ED vignettes under four prompt strategies. Of 9,368 originals, 9,346 are paired with a gender-swapped counterfactual. All five models produced flip rates above a pre-registered 5% threshold (9.9% to 43.8%). Two showed directional female undertriage (DeepSeek F/M 2.15:1, Gemini 1.34:1); two were near-parity; one had high sensitivity with weak male-direction asymmetry. DeepSeek's directional bias coexisted with a low outcome-linked calibration gap (0.013 against MIMIC-IV admission), a Chouldechova-style dissociation between within-group calibration and between-pair counterfactual invariance. Demographic blinding reduced Gemini's flip rate to 0.5%; an age-preserving blind variant left DeepSeek with residual F/M 1.25, implicating age as a residual channel. Chain-of-thought prompting degraded accuracy for all five models. A two-model ablation reveals opposite underlying mechanisms for the same directional phenotype: in Gemini the signal is emergent in the combined name+gender swap, while in DeepSeek the gender token alone carries it. EQUITRIAGE shows that group parity, counterfactual invariance, and gender calibration are distinct fairness properties, that intervention effectiveness is model-dependent, and that per-model counterfactual auditing should precede clinical deployment.",
+    "published": "2026-05-06",
+    "summary": "We study outlier tokens in Diffusion Transformers (DiTs) for image generation. Prior work has shown that Vision Transformers (ViTs) can produce a small number of high-norm tokens that attract disproportionate attention while carrying limited local information, but their role in generative models remains underexplored. We show that this phenomenon appears in both the encoder and denoiser of modern Representation Autoencoder (RAE)-DiT pipelines: pretrained ViT encoders can produce outlier representations, and DiTs themselves can develop internal outlier tokens, especially in intermediate layers. Moreover, simply masking high-norm tokens does not improve performance, indicating that the problem is not only caused by a few extreme values, but is more closely related to corrupted local patch semantics. To address this issue, we introduce Dual-Stage Registers (DSR), a register-based intervention for both components: trained registers when available, recursive test-time registers otherwise, and diffusion registers for the denoiser. Across ImageNet and large-scale text-to-image generation, these interventions consistently reduce outlier artifacts and improve generation quality. Our results highlight outlier-token control as an important ingredient in building stronger DiTs.",
     "categories": [
-      "cs.CL",
-      "cs.CY"
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
     ],
-    "summary_cn": "急诊科分诊为患者分配一个视力评分，以确定治疗的优先顺序，临床证据记录了人类视力评估中持续存在的性别差异。当医院试点大型语言模型（LLM）作为分诊决策支持时，一个关键问题是这些模型是否会重现或减轻已知的偏差。我们提出了 EQUITRIAGE，这是一项基于 LLM 的 ESI 作业的公平性审计，在四种提示策略下对 18,714 个 MIMIC-IV-ED 插图进行了 374,275 次评估，评估了五种模型（Gemini-3-Flash、Nemotron-3-Super、DeepSeek-V3.1、Mistral-Small-3.2、GPT-4.1-Nano）。在 9,368 个原件中，有 9,346 个与性别互换的反事实配对。所有五个模型的翻转率均高于预先注册的 5% 阈值（9.9% 至 43.8%）。其中两个显示定向女性分类不足（DeepSeek F/M 2.15:1，Gemini 1.34:1）；两者几乎持平；一种具有较高的敏感性，但男性方向的不对称性较弱。 DeepSeek 的方向偏差与较低的结果相关校准差距（相对于 MIMIC-IV 录取为 0.013）共存，这是组内校准和对间反事实不变性之间的 Choouldechova 式分离。人口统计致盲将 Gemini 的翻转率降低至 0.5%；保留年龄的盲变体使 DeepSeek 的残余 F/M 为 1.25，这表明年龄是残余通道。思想链导致所有五个模型的准确性下降。两种模型消融揭示了相同方向表型的相反的潜在机制：在 Gemini 中，信号出现在组合名称+性别交换中，而在 DeepSeek 中，性别标记单独携带它。 EQUITRIAGE 表明，群体平等、反事实不变性和性别校准是独特的公平属性，干预效果取决于模型，并且每个模型的反事实审核应先于临床部署。",
-    "comment": "37 pages, 10 figures, 13 tables. Code and analysis scripts available upon publication. Data: PhysioNet credentialed access (MIMIC-IV-ED v2.2 and MIMIC-IV v3.1, BIDMC IRB #2001P001699)",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-03998v1-equitriage-a-fairness-audit-of-gender-bias-in-llm",
-    "rel_path": "entities/papers/2605-03998v1-equitriage-a-fairness-audit-of-gender-bias-in-llm.html",
+    "summary_cn": "我们研究用于图像生成的扩散变压器（DiT）中的异常标记。先前的工作表明，视觉变压器（ViT）可以产生少量高规范令牌，这些令牌在携带有限的本地信息的同时吸引了过多的注意力，但它们在生成模型中的作用仍未得到充分探索。我们证明这种现象出现在现代表示自动编码器（RAE）-DiT 管道的编码器和降噪器中：预训练的 ViT 编码器可以产生离群表示，而 DiT 本身可以开发内部离群标记，尤其是在中间层。此外，简单地屏蔽高范数标记并不能提高性能，这表明问题不仅是由少数极值引起的，而且与损坏的本地补丁语义更密切相关。为了解决这个问题，我们引入了双级寄存器（DSR），这是一种针对两个组件的基于寄存器的干预：可用时训练寄存器，否则递归测试时间寄存器，以及用于降噪器的扩散寄存器。在 ImageNet 和大规模文本到图像生成中，这些干预措施不断减少异常伪影并提高生成质量。我们的结果强调了异常值令牌控制是构建更强大 DiT 的重要组成部分。",
+    "comment": "Under review",
+    "category_en": "Artificial Intelligence",
+    "category_cn": "人工智能",
+    "slug": "2605-05206v1-taming-outlier-tokens-in-diffusion-transformers",
+    "rel_path": "entities/papers/2605-05206v1-taming-outlier-tokens-in-diffusion-transformers.html",
     "figures": [
-      "assets/papers/2605-03998v1/fig1.png",
-      "assets/papers/2605-03998v1/fig2.png",
-      "assets/papers/2605-03998v1/fig3.png"
+      "assets/papers/2605-05206v1/fig1.png",
+      "assets/papers/2605-05206v1/fig2.png",
+      "assets/papers/2605-05206v1/fig3.png"
     ],
     "concepts": [
       {
@@ -182,184 +368,39 @@
         "url": "../../concepts/large-language-model.html"
       },
       {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "医学AI",
-        "slug": "medical-ai",
-        "url": "../../concepts/medical-ai.html"
-      },
-      {
-        "name": "图神经网络",
-        "slug": "graph-neural-networks",
-        "url": "../../concepts/graph-neural-networks.html"
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
       }
     ],
-    "method_signal": "We present EQUITRIAGE, a fairness audit of LLM-based ESI assignment evaluating five models (Gemini-3-Flash, Nemotron-3-Super, DeepSeek-V3.1, Mistral-Small-3.2, GPT-4.1-Nano) across 374,275 evaluations on 18,714 MIMIC-IV-ED vignettes under four prompt strategies.",
-    "topic_signal": "大语言模型 / 基准评估 / 医学AI / 图神经网络"
+    "method_signal": "To address this issue, we introduce Dual-Stage Registers (DSR), a register-based intervention for both components: trained registers when available, recursive test-time registers otherwise, and diffusion registers for the denoiser.",
+    "topic_signal": "大语言模型 / 多模态学习"
   },
   {
-    "id": "2605.03971v1",
-    "title": "Logical Consistency as a Bridge: Improving LLM Hallucination Detection via Label Constraint Modeling between Responses and Self-Judgments",
+    "id": "2605.05193v1",
+    "title": "Grokability in five inequalities",
     "authors": [
-      "Hao Mi",
-      "Qiang Sheng",
-      "Shaofei Wang",
-      "Beizhe Hu",
-      "Yifan Sun",
-      "Zhengjia Wang",
-      "Hengqi Zeng",
-      "Yang Li",
-      "Danding Wang",
-      "Juan Cao"
+      "Paata Ivanisvili",
+      "Xinyuan Xie"
     ],
-    "published": "2026-05-05",
-    "summary": "Large Language Models (LLMs) are prone to factual hallucinations, risking their reliability in real-world applications. Existing hallucination detectors mainly extract micro-level intrinsic patterns for uncertainty quantification or elicit macro-level self-judgments through verbalized prompts. However, these methods address only a single facet of the hallucination, focusing either on implicit neural uncertainty or explicit symbolic reasoning, thereby treating these inherently coupled behaviors in isolation and failing to exploit their interdependence for a holistic view. In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection. LaaB introduces a \"meta-judgment\" process to map symbolic labels back into the feature space. By leveraging the inherent logical bridge where response and meta-judgment labels are either the same or opposite based on the self-judgment's semantics, LaaB aligns and integrates dual-view signals via mutual learning and enhances the hallucination detection. Extensive experiments on 4 public datasets, across 4 LLMs, against 8 baselines demonstrate the superiority of LaaB.",
+    "published": "2026-05-06",
+    "summary": "In this note, we report five mathematical discoveries made in collaboration with Grok, all of which have been subsequently verified by the authors. These include an improved lower bound on the maximal Gaussian perimeter of convex sets in $\\mathbb{R}^n$, sharper $L_2$-$L_1$ moment comparison inequalities on the Hamming cube $\\{-1,1\\}^n$, a strengthened autoconvolution inequality, improved asymptotic bounds on the size of the largest $g$-Sidon sets in $\\{1,\\dots,n\\}$, and an optimal balanced Szarek's inequality.",
     "categories": [
-      "cs.CL"
+      "math.PR",
+      "cs.AI",
+      "math.AP",
+      "math.CA",
+      "math.FA"
     ],
-    "summary_cn": "大型语言模型 (LLM) 很容易出现事实幻觉，从而影响其在现实应用中的可靠性。现有的幻觉检测器主要提取微观层面的内在模式进行不确定性量化或通过语言提示引发宏观层面的自我判断。然而，这些方法只解决幻觉的一个方面，要么关注隐含的神经不确定性，要么关注明确的符号推理，从而孤立地处理这些固有耦合的行为，而未能利用它们的相互依赖关系来获得整体观点。在本文中，我们提出了 LaaB（逻辑一致性桥），这是一个连接神经特征和符号判断以进行幻觉检测的框架。 LaaB 引入了“元判断”过程，将符号标签映射回特征空间。 LaaB利用固有的逻辑桥梁，根据自我判断的语义，响应和元判断标签相同或相反，通过相互学习对齐和集成双视图信号，增强幻觉检测。针对 8 个基线、跨 4 个法学硕士的 4 个公共数据集进行的广泛实验证明了 LaaB 的优越性。",
-    "comment": "ACL 2026 Main Conference",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-03971v1-logical-consistency-as-a-bridge-improving-llm-hall",
-    "rel_path": "entities/papers/2605-03971v1-logical-consistency-as-a-bridge-improving-llm-hall.html",
-    "figures": [
-      "assets/papers/2605-03971v1/fig1.png",
-      "assets/papers/2605-03971v1/fig2.png",
-      "assets/papers/2605-03971v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection.",
-    "topic_signal": "大语言模型 / 基准评估"
-  },
-  {
-    "id": "2605.03969v1",
-    "title": "Feature-Augmented Transformers for Robust AI-Text Detection Across Domains and Generators",
-    "authors": [
-      "Mohamed Mady",
-      "Johannes Reschke",
-      "Björn Schuller"
-    ],
-    "published": "2026-05-05",
-    "summary": "AI-generated text is nowadays produced at scale across domains and heterogeneous generation pipelines, making robustness to distribution shift a central requirement for supervised binary detectors. We train transformer-based detectors on HC3 PLUS and calibrate a single decision threshold by maximising balanced accuracy on held-out validation; this threshold is then kept fixed for all downstream test distributions, revealing domain- and generator-dependent error asymmetries under shift. We evaluate in-domain on HC3 PLUS, under cross-dataset transfer to the multi-domain, multi-generator M4 benchmark, and on the external AI-Text-Detection-Pile. Although base models achieve near-ceiling in-domain performance (up to 99.5% balanced accuracy), performance under shift is brittle and strongly model-dependent. Feature augmentation via attention-based linguistic feature fusion improves transfer, with our best model (DeBERTa-v3-base+FeatAttn) achieving 85.9% balanced accuracy on M4. Multi-seed experiments confirm high stability. Under the same fixed-threshold protocol, our model outperforms strong zero-shot baselines by up to +7.22 points. Category-level ablations further show that readability and vocabulary features contribute most to robustness under shift. Overall, these results demonstrate that feature augmentation and a modern DeBERTa backbone significantly outperform earlier BERT/RoBERTa models, while the fixed-threshold protocol provides a more realistic and informative assessment of practical detector robustness.",
-    "categories": [
-      "cs.CL",
-      "cs.AI"
-    ],
-    "summary_cn": "如今，人工智能生成的文本是跨领域和异构生成管道大规模生成的，这使得分布式转变的鲁棒性成为监督二进制检测器的核心要求。我们在 HC3 PLUS 上训练基于变压器的检测器，并通过最大化保留验证的平衡精度来校准单个决策阈值；然后，对于所有下游测试分布，该阈值保持固定，从而揭示偏移下与域和生成器相关的误差不对称性。我们在 HC3 PLUS 上进行域内评估，在跨数据集传输到多域、多生成器 M4 基准测试的情况下，以及在外部 AI-Text-Detection-Pile 上进行评估。尽管基础模型实现了接近上限的域内性能（高达 99.5% 的平衡精度），但移位下的性能很脆弱并且强烈依赖于模型。通过基于注意力的语言特征融合进行特征增强可改善迁移，我们的最佳模型 (DeBERTa-v3-base+FeatAttn) 在 M4 上实现了 85.9% 的平衡准确率。多种子实验证实了高稳定性。在相同的固定阈值协议下，我们的模型比强大的零样本基线高出 7.22 个点。类别级别的消融进一步表明，可读性和词汇特征对转变下的稳健性贡献最大。总体而言，这些结果表明，特征增强和现代 DeBERTa 主干明显优于早期的 BERT/RoBERTa 模型，而固定阈值协议提供了对实际检测器鲁棒性的更现实和信息丰富的评估。",
-    "comment": "8 pages, 4 figures, 5 tables. Submitted to ICML 2026",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-03969v1-feature-augmented-transformers-for-robust-ai-text",
-    "rel_path": "entities/papers/2605-03969v1-feature-augmented-transformers-for-robust-ai-text.html",
+    "summary_cn": "在这篇文章中，我们报告了与 Grok 合作的五项数学发现，所有这些发现都随后得到了作者的验证。其中包括 $\\mathbb{R}^n$ 中凸集最大高斯周长的改进下界、汉明立方 $\\{-1,1\\}^n$ 上更尖锐的 $L_2$-$L_1$ 矩比较不等式、强化的自卷积不等式、$\\{1,\\dots,n\\}$ 中最大 $g$-Sidon 集大小的改进渐近边界，以及最佳平衡萨雷克不等式。",
+    "comment": "",
+    "category_en": "Artificial Intelligence",
+    "category_cn": "人工智能",
+    "slug": "2605-05193v1-grokability-in-five-inequalities",
+    "rel_path": "entities/papers/2605-05193v1-grokability-in-five-inequalities.html",
     "figures": [],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      }
-    ],
-    "method_signal": "AI-generated text is nowadays produced at scale across domains and heterogeneous generation pipelines, making robustness to distribution shift a central requirement for supervised binary detectors.",
-    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐"
-  },
-  {
-    "id": "2605.03953v1",
-    "title": "Transformers with Selective Access to Early Representations",
-    "authors": [
-      "Skye Gunasekaran",
-      "Téa Wright",
-      "Rui-Jie Zhu",
-      "Jason Eshraghian"
-    ],
-    "published": "2026-05-05",
-    "summary": "Several recent Transformer architectures expose later layers to representations computed in the earliest layers, motivated by the observation that low-level features can become harder to recover as the residual stream is repeatedly transformed through depth. The cheapest among these methods add static value residuals: learned mixing coefficients that expose the first-layer value projection V_1 uniformly across tokens and heads. More expressive dense or dynamic alternatives recover finer-grained access, but at higher memory cost and lower throughput. The usefulness of V_1 is unlikely to be constant across tokens, heads, and contexts; different positions plausibly require different amounts of access to early lexical or semantic information. We therefore treat early-representation reuse as a retrieval problem rather than a connectivity problem, and introduce Selective Access Transformer (SATFormer), which preserves the first-layer value pathway while controlling access with a context-dependent gate. Across models from 130M to 1.3B parameters, SATFormer consistently improves validation loss and zero-shot accuracy over the static value-residual and Transformer baselines. Its strongest gains appear on retrieval-intensive benchmarks, where it improves over static value residuals by approximately 1.5 average points, while maintaining throughput and memory usage close to the baseline Transformer. Gate analyses suggest sparse, depth-dependent, head-specific, and category-sensitive access patterns, supporting the interpretation that SATFormer learns selective reuse of early representations rather than uniform residual copying. Our code is available at https://github.com/SkyeGunasekaran/SATFormer.",
-    "categories": [
-      "cs.LG",
-      "cs.CL"
-    ],
-    "summary_cn": "最近的几个 Transformer 架构将后面的层暴露给在最早的层中计算的表示，这是由于观察到随着残余流在深度上反复转换，低级特征可能变得更难恢复。这些方法中最便宜的添加静态值残差：学习混合系数，在令牌和头之间均匀地暴露第一层值投影 V_1。更具表现力的密集或动态替代方案可以恢复更细粒度的访问，但内存成本更高，吞吐量更低。 V_1 的有用性在 token、heads 和 context 中不太可能保持不变；不同的立场似乎需要不同数量的早期词汇或语义信息的访问。因此，我们将早期表示重用视为检索问题而不是连接问题，并引入选择性访问转换器（SATFormer），它保留第一层价值路径，同时使用上下文相关的门控制访问。在从 130M 到 1.3B 参数的模型中，SATFormer 在静态残差值和 Transformer 基线上持续改进了验证损失和零样本精度。其最大的收益出现在检索密集型基准测试中，它比静态值残差提高了大约 1.5 个平均点，同时保持吞吐量和内存使用量接近基线 Transformer。门分析表明稀疏、深度相关、头部特定和类别敏感的访问模式，支持 SATFormer 学习选择性重用早期表示而不是统一残留复制的解释。我们的代码可从 https://github.com/SkyeGunasekaran/SATFormer 获取。",
-    "comment": "",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-03953v1-transformers-with-selective-access-to-early-repres",
-    "rel_path": "entities/papers/2605-03953v1-transformers-with-selective-access-to-early-repres.html",
-    "figures": [
-      "assets/papers/2605-03953v1/fig1.png",
-      "assets/papers/2605-03953v1/fig2.png",
-      "assets/papers/2605-03953v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "Several recent Transformer architectures expose later layers to representations computed in the earliest layers, motivated by the observation that low-level features can become harder to recover as the residual stream is repeatedly transformed through depth.",
-    "topic_signal": "大语言模型 / 基准评估"
-  },
-  {
-    "id": "2605.03936v1",
-    "title": "The Counterexample Game: Iterated Conceptual Analysis and Repair in Language Models",
-    "authors": [
-      "Daniel Drucker",
-      "Kyle Mahowald"
-    ],
-    "published": "2026-05-05",
-    "summary": "Conceptual analysis -- proposing definitions and refining them through counterexamples -- is central to philosophical methodology. We study whether language models can perform this task through iterated analysis and repair chains: one model instance generates counterexamples to a proposed definition, another repairs the definition, and the process repeats. Across 20 concepts and thousands of counterexample-repair cycles, we find that, although many LM-generated counterexamples are judged invalid by both expert humans and an LM judge, the LM judge accepts roughly twice as many as humans do. Nonetheless, per-item validity judgments are moderately consistent across humans and between humans and the LM. We further find that extended iteration produces increasingly verbose definitions without improving accuracy. We also see that some concepts resist stable definitions in general. These findings suggest that while LMs can engage in philosophical reasoning, the counterexample-repair loop hits diminishing returns quickly and could be a fruitful test case for evaluating whether LMs can sustain high-level iterated philosophical reasoning.",
-    "categories": [
-      "cs.CL",
-      "cs.AI"
-    ],
-    "summary_cn": "概念分析——提出定义并通过反例完善它们——是哲学方法论的核心。我们研究语言模型是否可以通过迭代分析和修复链来执行此任务：一个模型实例生成建议定义的反例，另一个模型实例修复定义，然后重复该过程。在 20 个概念和数千个反例修复周期中，我们发现，尽管许多 LM 生成的反例被人类专家和 LM 法官判定为无效，但 LM 法官接受的反例数量大约是人类的两倍。尽管如此，每个项目的有效性判断在人类之间以及人类与 LM 之间是适度一致的。我们进一步发现，扩展迭代会产生越来越冗长的定义，而不会提高准确性。我们还看到一些概念通常抵制稳定的定义。这些发现表明，虽然 LM 可以进行哲学推理，但反例修复循环很快就会出现收益递减，并且可能是评估 LM 是否能够维持高水平迭代哲学推理的富有成效的测试用例。",
-    "comment": "",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-03936v1-the-counterexample-game-iterated-conceptual-analys",
-    "rel_path": "entities/papers/2605-03936v1-the-counterexample-game-iterated-conceptual-analys.html",
-    "figures": [
-      "assets/papers/2605-03936v1/fig1.png",
-      "assets/papers/2605-03936v1/fig2.png",
-      "assets/papers/2605-03936v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      }
-    ],
-    "method_signal": "Conceptual analysis -- proposing definitions and refining them through counterexamples -- is central to philosophical methodology.",
-    "topic_signal": "大语言模型"
+    "concepts": [],
+    "method_signal": "In this note, we report five mathematical discoveries made in collaboration with Grok, all of which have been subsequently verified by the authors.",
+    "topic_signal": "math.PR, cs.AI, math.AP"
   }
 ]

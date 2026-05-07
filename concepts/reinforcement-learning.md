@@ -2,7 +2,7 @@
 layout: concept
 title: 强化学习
 created: 2026-05-01
-updated: 2026-05-06
+updated: 2026-05-07
 type: concept
 tags: [RL, RLHF, RLVR, DPO, GRPO, DAPO, alignment]
 papers:
@@ -17,6 +17,8 @@ papers:
 强化学习（Reinforcement Learning, RL）是通过与环境交互、根据奖励信号优化策略的机器学习范式。在 LLM 领域，RL 被广泛应用于后训练阶段，通过 RLHF、RLVR、DPO、GRPO 等方法对模型进行对齐和能力增强。本库中有 2 篇论文从正反两面研究了 LLM 训练中的强化学习。
 
 ## 关键文献与发现
+
+- [Text Corpora as Concept Fields: Black-Box Hallucination and Novelty Measurement](../entities/papers/2605-05103v1-text-corpora-as-concept-fields-black-box-hallucina.html)（2026-05-06）：我们引入文本语料库的**概念场**：具有逐点不确定性的局部漂移场，根据连续句子之间的增量在句子嵌入空间中估计。
 
 - [OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories](../entities/papers/2605-04036v1-openseeker-v2-pushing-the-limits-of-search-agents.html)（2026-05-05）：深度搜索能力已经成为前沿大语言模型（LLM）代理不可或缺的能力，但其发展仍然由工业巨头主导。
 

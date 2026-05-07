@@ -2,7 +2,7 @@
 layout: concept
 title: 多模态学习
 created: 2026-05-01
-updated: 2026-05-05
+updated: 2026-05-07
 type: concept
 tags: [multimodal, vision-language, cross-modal, perception, reasoning]
 papers:
@@ -17,6 +17,8 @@ papers:
 多模态学习是让模型同时处理和理解多种数据类型（如文本、图像、3D 点云）的 AI 研究方向。在 LLM 时代，多模态学习的核心挑战是如何将视觉感知与语言推理有效融合。本库中有 2 篇论文从训练方法和应用场景两个角度研究了这一问题。
 
 ## 关键文献与发现
+
+- [Taming Outlier Tokens in Diffusion Transformers](../entities/papers/2605-05206v1-taming-outlier-tokens-in-diffusion-transformers.html)（2026-05-06）：研究 DiT 中离群 token 的扩散特性（中间层集中、随噪声水平增大），提出双阶段寄存器统一解决编码器和去噪器两端的离群问题。
 
 - [Laplacian Frequency Interaction Network for Rural Thematic Road Extraction](../entities/papers/2605-02866v1-laplacian-frequency-interaction-network-for-rural.html)（2026-05-04）：农村专题路网建设旨在从农机运动轨迹图像中提取拓扑道路结构。
 

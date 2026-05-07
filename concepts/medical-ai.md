@@ -2,7 +2,7 @@
 layout: concept
 title: 医学AI
 created: 2026-05-01
-updated: 2026-05-06
+updated: 2026-05-07
 type: concept
 tags: [medical-ai, clinical, eeg, seizure-detection, healthcare]
 papers:
@@ -16,6 +16,8 @@ papers:
 医学AI是将人工智能技术应用于医疗健康领域的研究方向，涵盖医学影像分析、临床辅助诊断、生物信号处理等。本库中有 1 篇论文探索了 LLM 在临床信号处理中的跨领域应用。
 
 ## 关键文献与发现
+
+- [Beyond Semantics: An Evidential Reasoning-Aware Multi-View Learning Framework for Trustworthy Mental Health Prediction](../entities/papers/2605-05121v1-beyond-semantics-an-evidential-reasoning-aware-mul.html)（2026-05-06）：使用文本数据进行的自动心理健康预测通过深度学习和大型语言模型显示出了有希望的结果。
 
 - [EQUITRIAGE: A Fairness Audit of Gender Bias in LLM-Based Emergency Department Triage](../entities/papers/2605-03998v1-equitriage-a-fairness-audit-of-gender-bias-in-llm.html)（2026-05-05）：急诊科分诊为患者分配一个视力评分，以确定治疗的优先顺序，临床证据记录了人类视力评估中持续存在的性别差异。
 

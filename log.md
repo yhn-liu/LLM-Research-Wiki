@@ -176,3 +176,18 @@
   - [2605.03969v1] Feature-Augmented Transformers for Robust AI-Text Detection Across Domains and G
   - [2605.03953v1] Transformers with Selective Access to Early Representations
   - [2605.03936v1] The Counterexample Game: Iterated Conceptual Analysis and Repair in Language Mod
+
+## [2026-05-07] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 更新相关概念页提及: 22 处
+- 不生成 PDF；论文页面包含英文摘要、中文摘要、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.05197v1] Implicit Representations of Grammaticality in Language Models
+  - [2605.05175v1] MRI-Eval: A Tiered Benchmark for Evaluating LLM Performance on MRI Physics and G
+  - [2605.05166v1] The First Token Knows: Single-Decode Confidence for Hallucination Detection
+  - [2605.05159v1] PSK at SemEval-2026 Task 9: Multilingual Polarization Detection Using Ensemble G
+  - [2605.05121v1] Beyond Semantics: An Evidential Reasoning-Aware Multi-View Learning Framework fo
+  - [2605.05103v1] Text Corpora as Concept Fields: Black-Box Hallucination and Novelty Measurement
+  - [2605.05097v1] Continual Knowledge Updating in LLM Systems: Learning Through Multi-Timescale Me
+  - [2605.05090v1] Automatically Finding and Validating Unexpected Side-Effects of Interventions on
+  - [2605.05206v1] Taming Outlier Tokens in Diffusion Transformers
+  - [2605.05193v1] Grokability in five inequalities
