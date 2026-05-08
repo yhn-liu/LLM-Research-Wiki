@@ -2,12 +2,18 @@
 layout: concept
 title: 基准评估
 created: 2026-05-01
-updated: 2026-05-07
+updated: 2026-05-08
 type: concept
 tags: [benchmark, evaluation, testing, metrics, domain-specific, assessment]
 papers:
   - 2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic
   - 2604-28076v1-topbench-a-benchmark-for-implicit-prediction-and-r
+  - 2605-06660v1-verifier-backed-hard-problem-generation-for-mathem
+  - 2605-06652v1-when-no-benchmark-exists-validating-comparative-ll
+  - 2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti
+  - 2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres
+  - 2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour
+  - 2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro
 ---
 
 # 基准评估
@@ -17,6 +23,18 @@ papers:
 基准评估（Benchmarking）是通过设计标准化的测试任务和评估指标来系统性地衡量 AI 模型能力的研究方法。一个好的基准测试需要具备区分度、公平性、可复现性和时效性，能够真实反映模型在特定领域或通用任务上的性能水平。随着 AI 模型能力的快速提升，基准评估本身也面临着被"饱和"或被"游戏化"的挑战。
 
 ## 关键文献与发现
+
+- [ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)（2026-05-07）：对于艺术应用，视频生成需要对表演和摄影进行精细控制，即演员的动作和摄像机轨迹。
+
+- [Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)（2026-05-07）：大型语言模型 (LLM) 为深度研究代理提供支持，将来自数百个网络资源的信息合成为引用的报告，但这些引文无法得到可靠验证。
+
+- [Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)（2026-05-07）：强化学习 (RL) 已被应用于改进大型语言模型 (LLM) 推理，但由于缺乏受控、可扩展的环境，对训练如何随任务难度进行扩展的系统研究受到了阻碍。
+
+- [Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients](../entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html)（2026-05-07）：由于确定性验证，具有可验证奖励的强化学习（RLVR）成为增强大型语言模型（LLM）推理能力的主导范式。
+
+- [When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels](../entities/papers/2605-06652v1-when-no-benchmark-exists-validating-comparative-ll.html)（2026-05-07）：在相关语言、部门或监管制度存在标记基准之前，许多部署必须比较候选语言模型的安全性。
+
+- [Verifier-Backed Hard Problem Generation for Mathematical Reasoning](../entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html)（2026-05-07）：大型语言模型（LLM）展示了解决科学和数学问题的强大能力，但它们难以产生有效的、具有挑战性的和新颖的问题——这是推进 LLM 培训和实现自主科学研究的重要组成部分。
 
 - [Automatically Finding and Validating Unexpected Side-Effects of Interventions on Language Models](../entities/papers/2605-05090v1-automatically-finding-and-validating-unexpected-si.html)（2026-05-06）：我们提出了一个自动化的对比评估流程，用于审核干预措施对大型语言模型的行为影响。
 
@@ -139,3 +157,9 @@ AEGIS 和 TopBench 代表了基准评估从通用向领域专用深化的趋势�
 - [AI安全与对齐](ai-safety-alignment.html) — 安全性评估是基准设计的重要维度
 - [图神经网络](graph-neural-networks.html) — 图结构数据的评估方法
 - [智能体](ai-agents.html) — 智能体能力的评估框架
+- **VHG**（[2605.06660](../entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html)）：在不定积分和通用数学基准上验证问题生成质量，VHG 显著优于 R-Zero。
+- **SimpleAudit**（[2605.06652](../entities/papers/2605-06652v1-when-no-benchmark-exists-validating-comparative-ll.html)）：定义无基准安全评分类别，在挪威安全包上验证工具有效性链。
+- **POPO**（[2605.06650](../entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html)）：在 MATH-500、AMC、AIME 和 Olympiad 基准上系统比较仅正向 RL 与 GRPO 等基线。
+- **ScaleLogic**（[2605.06638](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)）：通过可控合成逻辑框架系统评估推理深度与表达能力的缩放行为。
+- **Cited but Not Verified**（[2605.06635](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)）：建立首个 LLM 深度研究引用归因评估框架，沿三个维度评估 14 个模型。
+- **ActCam**（[2605.06667](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)）：在 RealisDance-Val 和移动摄像机基准上与 Uni3C 进行运动/摄像机联合控制比较。

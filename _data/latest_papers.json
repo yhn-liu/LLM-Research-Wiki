@@ -1,141 +1,25 @@
 [
   {
-    "id": "2605.05197v1",
-    "title": "Implicit Representations of Grammaticality in Language Models",
+    "id": "2605.06663v1",
+    "title": "EMO: Pretraining Mixture of Experts for Emergent Modularity",
     "authors": [
-      "Yingshan Susan Wang",
-      "Linlu Qiu",
-      "Zhaofeng Wu",
-      "Roger P. Levy",
-      "Yoon Kim"
+      "Ryan Wang",
+      "Akshita Bhagia",
+      "Sewon Min"
     ],
-    "published": "2026-05-06",
-    "summary": "Grammaticality and likelihood are distinct notions in human language. Pretrained language models (LMs), which are probabilistic models of language fitted to maximize corpus likelihood, generate grammatically well-formed text and discriminate well between grammatical and ungrammatical sentences in tightly controlled minimal pairs. However, their string probabilities do not sharply discriminate between grammatical and ungrammatical sentences overall. But do LMs implicitly acquire a grammaticality distinction distinct from string probability? We explore this question through studying internal representations of LMs, by training a linear probe on a dataset of grammatical and (synthetic) ungrammatical sentences obtained by applying perturbations to a naturalistic text corpus. We find that this simple grammaticality probe generalizes to human-curated grammaticality judgment benchmarks and outperforms LM probability-based grammaticality judgments. When applied to semantic plausibility benchmarks, in which both members of a minimal pair are grammatical and differ in only plausibility, the probe however performs worse than string probability. The English-trained probe also exhibits nontrivial cross-lingual generalization, outperforming string probabilities on grammaticality benchmarks in numerous other languages. Additionally, probe scores correlate only weakly with string probabilities. These results collectively suggest that LMs acquire to some extent an implicit grammaticality distinction within their hidden layers.",
+    "published": "2026-05-07",
+    "summary": "Large language models are typically deployed as monolithic systems, requiring the full model even when applications need only a narrow subset of capabilities, e.g., code, math, or domain-specific knowledge. Mixture-of-Experts (MoEs) seemingly offer a potential alternative by activating only a subset of experts per input, but in practice, restricting inference to a subset of experts for a given domain leads to severe performance degradation. This limits their practicality in memory-constrained settings, especially as models grow larger and sparser. We introduce EMO, an MoE designed for modularity-the independent use and composition of expert subsets-without requiring human-defined priors. Our key idea is to encourage tokens from similar domains to rely on similar experts. Since tokens within a document often share a domain, EMO restricts them to select experts from a shared pool, while allowing different documents to use different pools. This simple constraint enables coherent expert groupings to emerge during pretraining using document boundaries alone. We pretrain a 1B-active, 14B-total EMO on 1T tokens. As a full model, it matches standard MoE performance. Crucially, it enables selective expert use: retaining only 25% (12.5%) of experts incurs just a 1% (3%) absolute drop, whereas standard MoEs break under the same setting. We further find that expert subsets in EMO specialize at semantic levels (e.g., domains such as math or code), in contrast to the low-level syntactic specialization observed in standard MoEs. Altogether, our results demonstrate a path toward modular, memory-efficient deployment of large, sparse models and open new opportunities for composable architectures.",
     "categories": [
       "cs.CL"
     ],
-    "summary_cn": "语法性和可能性是人类语言中不同的概念。预训练语言模型 (LM) 是一种适合最大化语料库可能性的语言概率模型，生成语法良好的文本，并在严格控制的最小对中很好地区分语法句子和不语法句子。然而，它们的字符串概率总体上并不能严格区分语法句子和非语法句子。但是 LM 是否隐含地获得了与字符串概率不同的语法区别？我们通过研究 LM 的内部表示来探索这个问题，方法是在通过对自然文本语料库应用扰动而获得的语法和（合成）非语法句子数据集上训练线性探针。我们发现这个简单的语法性探测可以推广到人类策划的语法性判断基准，并且优于 LM 基于概率的语法性判断。当应用于语义合理性基准时，其中最小对的两个成员都是语法上的并且仅在合理性上有所不同，但是探针的性能比字符串概率更差。经过英语训练的探针还表现出非凡的跨语言泛化能力，在许多其他语言的语法基准上优于字符串概率。此外，探测分数与字符串概率的相关性很弱。这些结果共同表明语言模型在其隐藏层中获得了一定程度的隐式语法区别。",
+    "summary_cn": "大型语言模型通常部署为整体系统，即使应用程序只需要一小部分功能（例如代码、数学或特定领域的知识），也需要完整的模型。专家混合 (MoE) 似乎提供了一种潜在的替代方案，即每个输入仅激活一部分专家，但实际上，将推理限制为给定领域的一部分专家会导致性能严重下降。这限制了它们在内存受限环境中的实用性，尤其是当模型变得更大、更稀疏时。我们引入了 EMO，这是一种为模块化而设计的 MoE，即专家子集的独立使用和组合，而不需要人类定义的先验。我们的主要想法是鼓励来自相似领域的代币依赖相似的专家。由于文档中的代币通常共享一个域，因此 EMO 限制它们从共享池中选择专家，同时允许不同的文档使用不同的池。这个简单的约束使得在预训练期间仅使用文档边界就可以出现一致的专家分组。我们在 1T 代币上预训练 1B 活跃、总 14B 的 EMO。作为完整型号，它符合标准的 MoE 性能。至关重要的是，它可以选择性地使用专家：仅保留 25% (12.5%) 的专家只会导致 1% (3%) 的绝对下降，而标准 MoE 在相同设置下就会崩溃。我们进一步发现，EMO 中的专家子集专注于语义级别（例如，数学或代码等领域），这与标准 MoE 中观察到的低级句法专业化形成鲜明对比。总而言之，我们的结果展示了一条通往大型稀疏模型的模块化、内存高效部署的道路，并为可组合架构开辟了新的机会。",
     "comment": "",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-05197v1-implicit-representations-of-grammaticality-in-lang",
-    "rel_path": "entities/papers/2605-05197v1-implicit-representations-of-grammaticality-in-lang.html",
+    "slug": "2605-06663v1-emo-pretraining-mixture-of-experts-for-emergent-mo",
+    "rel_path": "entities/papers/2605-06663v1-emo-pretraining-mixture-of-experts-for-emergent-mo.html",
     "figures": [
-      "assets/papers/2605-05197v1/fig1.png",
-      "assets/papers/2605-05197v1/fig2.png",
-      "assets/papers/2605-05197v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "Grammaticality and likelihood are distinct notions in human language.",
-    "topic_signal": "大语言模型 / 基准评估"
-  },
-  {
-    "id": "2605.05175v1",
-    "title": "MRI-Eval: A Tiered Benchmark for Evaluating LLM Performance on MRI Physics and GE Scanner Operations Knowledge",
-    "authors": [
-      "Perry E. Radau"
-    ],
-    "published": "2026-05-06",
-    "summary": "Background: Existing MRI LLM benchmarks rely mainly on review-book multiple-choice questions, where top proprietary models already score highly, limiting discrimination. No systematic benchmark has evaluated vendor-specific scanner operational knowledge central to research MRI practice. Purpose: We developed MRI-Eval, a tiered benchmark for relative model comparison on MRI physics and GE scanner operations knowledge using primary multiple-choice questions (MCQ), with stem-only and primed diagnostic conditions as complementary analyses. Methods: MRI-Eval includes 1365 scored items across nine categories and three difficulty tiers from textbooks, GE scanner manuals, programming course materials, and expert-generated questions. Five model families were evaluated (GPT-5.4, Claude Opus 4.6, Claude Sonnet 4.6, Gemini 2.5 Pro, Llama 3.3 70B). MCQ was primary; stem-only removed options and used an independent LLM judge; primed stem-only tested responses to incorrect user claims. Results: Overall MCQ accuracy was 93.2% to 97.1%. GE scanner operations was the lowest category for every model (88.2% to 94.6%). In stem-only, frontier-model accuracy fell to 58.4% to 61.1%, and Llama 3.3 70B fell to 37.1%; GE scanner operations stem-only accuracy was 13.8% to 29.8%. Conclusion: High MCQ performance can mask weak free-text recall, especially for vendor-specific operational knowledge. MRI-Eval is most informative as a relative comparison benchmark rather than an absolute competency measure and supports caution in using raw LLM outputs for GE-specific protocol guidance.",
-    "categories": [
-      "eess.IV",
-      "cs.CL",
-      "physics.med-ph"
-    ],
-    "summary_cn": "背景：现有的 MRI LLM 基准主要依赖于复习书籍的多项选择题，其中顶级专有模型已经得分很高，限制了歧视。没有系统的基准评估对研究 MRI 实践至关重要的特定供应商扫描仪操作知识。目的：我们开发了 MRI-Eval，这是一种使用初级多项选择题 (MCQ) 进行 MRI 物理和 GE 扫描仪操作知识的相对模型比较的分层基准，并以纯干和启动诊断条件作为补充分析。方法：MRI-Eval 包括来自教科书、GE 扫描仪手册、编程课程材料和专家生成的问题的 9 个类别和 3 个难度等级的 1365 个评分项目。评估了五个模型系列（GPT-5.4、Claude Opus 4.6、Claude Sonnet 4.6、Gemini 2.5 Pro、Llama 3.3 70B）。 MCQ 是主要的； Stem-only 删除了选项并使用了独立的 LLM 法官；对不正确的用户声明进行仅干测试的响应。结果：MCQ 总体准确率为 93.2% 至 97.1%。 GE 扫描仪操作是所有型号中最低的类别（88.2% 至 94.6%）。在纯干分析中，前沿模型准确率下降至 58.4% 至 61.1%，Llama 3.3 70B 下降至 37.1%； GE 扫描仪操作的仅干准确度为 13.8% 至 29.8%。结论：高 MCQ 性能可以掩盖较弱的自由文本回忆，尤其是对于特定于供应商的操作知识。 MRI-Eval 作为相对比较基准而不是绝对能力衡量标准提供了最丰富的信息，并且支持谨慎使用原始 LLM 输出进行 GE 特定协议指导。",
-    "comment": "21 pages, 4 figures, 10 tables",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-05175v1-mri-eval-a-tiered-benchmark-for-evaluating-llm-per",
-    "rel_path": "entities/papers/2605-05175v1-mri-eval-a-tiered-benchmark-for-evaluating-llm-per.html",
-    "figures": [
-      "assets/papers/2605-05175v1/fig1.png",
-      "assets/papers/2605-05175v1/fig2.png",
-      "assets/papers/2605-05175v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "Purpose: We developed MRI-Eval, a tiered benchmark for relative model comparison on MRI physics and GE scanner operations knowledge using primary multiple-choice questions (MCQ), with stem-only and primed diagnostic conditions as complementary analyses.",
-    "topic_signal": "大语言模型 / 基准评估"
-  },
-  {
-    "id": "2605.05166v1",
-    "title": "The First Token Knows: Single-Decode Confidence for Hallucination Detection",
-    "authors": [
-      "Mina Gabriel"
-    ],
-    "published": "2026-05-06",
-    "summary": "Self-consistency detects hallucinations by generating multiple sampled answers to a question and measuring agreement, but this requires repeated decoding and can be sensitive to lexical variation. Semantic self-consistency improves this by clustering sampled answers by meaning using natural language inference, but it adds both sampling cost and external inference overhead. We show that first-token confidence, phi_first, computed from the normalized entropy of the top-K logits at the first content-bearing answer token of a single greedy decode, matches or modestly exceeds semantic self-consistency on closed-book short-answer factual question answering. Across three 7-8B instruction-tuned models and two benchmarks, phi_first achieves a mean AUROC of 0.820, compared with 0.793 for semantic agreement and 0.791 for standard surface-form self-consistency. A subsumption test shows that phi_first is moderately to strongly correlated with semantic agreement, and combining the two signals yields only a small AUROC improvement over phi_first alone. These results suggest that much of the uncertainty information captured by multi-sample agreement is already available in the model's initial token distribution. We argue that phi_first should be reported as a default low-cost baseline before invoking sampling-based uncertainty estimation.",
-    "categories": [
-      "cs.CL",
-      "cs.AI"
-    ],
-    "summary_cn": "自我一致性通过生成问题的多个采样答案并测量一致性来检测幻觉，但这需要重复解码，并且可能对词汇变化敏感。语义自一致性通过使用自然语言推理对采样答案进行聚类来改善这一点，但它增加了采样成本和外部推理开销。我们表明，第一个令牌置信度 phi_first 是根据单个贪婪解码的第一个内容承载答案令牌处的前 K 个逻辑的归一化熵计算得出的，匹配或适度超过了闭卷简答事实问答的语义自洽性。在三个 7-8B 指令调整模型和两个基准测试中，phi_first 的平均 AUROC 为 0.820，而语义一致性为 0.793，标准表面形式自一致性为 0.791。包含测试表明 phi_first 与语义一致性具有中度至强相关性，并且结合两个信号仅比单独使用 phi_first 产生较小的 AUROC 改进。这些结果表明，多样本一致性捕获的大部分不确定性信息已经在模型的初始令牌分布中可用。我们认为，在调用基于采样的不确定性估计之前，应将 phi_first 报告为默认的低成本基线。",
-    "comment": "6 pages, 1 figure",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-05166v1-the-first-token-knows-single-decode-confidence-for",
-    "rel_path": "entities/papers/2605-05166v1-the-first-token-knows-single-decode-confidence-for.html",
-    "figures": [
-      "assets/papers/2605-05166v1/fig1.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "Self-consistency detects hallucinations by generating multiple sampled answers to a question and measuring agreement, but this requires repeated decoding and can be sensitive to lexical variation.",
-    "topic_signal": "大语言模型 / 基准评估"
-  },
-  {
-    "id": "2605.05159v1",
-    "title": "PSK at SemEval-2026 Task 9: Multilingual Polarization Detection Using Ensemble Gemma Models with Synthetic Data Augmentation",
-    "authors": [
-      "Srikar Kashyap Pulipaka"
-    ],
-    "published": "2026-05-06",
-    "summary": "We present our system for SemEval-2026 Task 9: Multilingual Polarization Detection, a binary classification task spanning 22 languages. Our approach fine-tunes separate Gemma~3 models (12B and 27B parameters) per language using Low-Rank Adaptation (LoRA), augmented with synthetic data generated by a large language model (LLM). We employ three synthetic data strategies (direct generation, paraphrasing, and contrastive pair creation) using GPT-4o-mini, with a multi-stage quality filtering pipeline including embedding-based deduplication. We find that per-language threshold tuning on the development set yields 2 to 4\\% F1 improvements without retraining. We also use weighted ensembles of 12B and 27B model predictions with per-language strategy selection. Our final system achieves a mean macro-F1 of 0.811 across all 22 languages, ranking 2nd overall of the participating teams, with 1st place finishes in 3 languages and top-3 in 8 languages. We also find that alternative architectures (XLM-RoBERTa, Qwen3) that showed strong development set performance suffered 30 to 50\\% F1 drops on the test set, highlighting the importance of generalization.",
-    "categories": [
-      "cs.CL",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "summary_cn": "我们展示了用于 SemEval-2026 任务 9 的系统：多语言极化检测，这是一项涵盖 22 种语言的二元分类任务。我们的方法使用低秩适应 (LoRA) 微调每种语言的单独 Gemma~3 模型（12B 和 27B 参数），并通过大型语言模型 (LLM) 生成的合成数据进行增强。我们使用 GPT-4o-mini 采用三种合成数据策略（直接生成、释义和对比对创建），并具有多级质量过滤管道，包括基于嵌入的重复数据删除。我们发现，在开发集上对每种语言的阈值进行调整可在无需重新训练的情况下产生 2 至 4% 的 F1 改进。我们还使用 12B 和 27B 模型预测的加权集成以及每种语言的策略选择。我们的最终系统在所有 22 种语言中实现了 0.811 的平均宏 F1，在参赛团队中排名第二，其中 3 种语言获得第一名，8 种语言获得前三名。我们还发现，表现出强大开发集性能的替代架构（XLM-RoBERTa、Qwen3）在测试集上的 F1 下降了 30 到 50%，这凸显了泛化的重要性。",
-    "comment": "",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-05159v1-psk-at-semeval-2026-task-9-multilingual-polarizati",
-    "rel_path": "entities/papers/2605-05159v1-psk-at-semeval-2026-task-9-multilingual-polarizati.html",
-    "figures": [
-      "assets/papers/2605-05159v1/fig1.png"
+      "assets/papers/2605-06663v1/fig1.png"
     ],
     "concepts": [
       {
@@ -144,87 +28,35 @@
         "url": "../../concepts/large-language-model.html"
       }
     ],
-    "method_signal": "We present our system for SemEval-2026 Task 9: Multilingual Polarization Detection, a binary classification task spanning 22 languages.",
+    "method_signal": "We introduce EMO, an MoE designed for modularity-the independent use and composition of expert subsets-without requiring human-defined priors.",
     "topic_signal": "大语言模型"
   },
   {
-    "id": "2605.05121v1",
-    "title": "Beyond Semantics: An Evidential Reasoning-Aware Multi-View Learning Framework for Trustworthy Mental Health Prediction",
+    "id": "2605.06660v1",
+    "title": "Verifier-Backed Hard Problem Generation for Mathematical Reasoning",
     "authors": [
-      "Yucheng Ruan",
-      "Ling Huang",
-      "Qika Lin",
-      "Kai He",
-      "Mengling Feng"
+      "Yuhang Lai",
+      "Jiazhan Feng",
+      "Yee Whye Teh",
+      "Ning Miao"
     ],
-    "published": "2026-05-06",
-    "summary": "Automated mental health prediction using textual data has shown promising results with deep learning and large language models. However, deploying these models in high-stakes real-world settings remains challenging, as existing approaches largely rely on semantic representations and often produce overconfident predictions under ambiguous, noisy, or shifted data. Moreover, most methods lack reliable uncertainty estimation, undermining trust in risk-sensitive mental health applications. To address these limitations, we formulate the task as a multi-view learning problem that integrates semantic information from encoder-only models with higher-level reasoning information from decoder-only models, where reasoning-aware representations and uncertainty modeling are obtained in a trustworthy manner. To ensure reliable fusion, we adopt an evidential learning framework based on Subjective Logic to explicitly model uncertainty and introduce an evidential fusion strategy that balances complementary views while discounting unreliable evidence. Benchmarking on three real-world datasets, Dreaddit, SDCNL, and DepSeverity, reports accuracies of 0.835, 0.731, and 0.751, respectively, demonstrating its potential for reliable mental health prediction. Additional experiments on robustness to noise and case studies for interpretability confirm that our proposed framework not only improves predictive performance but also provides trustworthy uncertainty estimates and human-understandable reasoning signals, making it suitable for risk-sensitive applications in mental health assessment.",
+    "published": "2026-05-07",
+    "summary": "Large Language Models (LLMs) demonstrate strong capabilities for solving scientific and mathematical problems, yet they struggle to produce valid, challenging, and novel problems - an essential component for advancing LLM training and enabling autonomous scientific research. Existing problem generation approaches either depend on expensive human expert involvement or adopt naive self-play paradigms, which frequently yield invalid problems due to reward hacking. This work introduces VHG, a verifier-enhanced hard problem generation framework built upon three-party self-play. By integrating an independent verifier into the conventional setter-solver duality, our design constrains the setter's reward to be jointly determined by problem validity (evaluated by the verifier) and difficulty (assessed by the solver). We instantiate two verifier variants: a Hard symbolic verifier and a Soft LLM-based verifier, with evaluations conducted on indefinite integral tasks and general mathematical reasoning tasks. Experimental results show that VHG substantially outperforms all baseline methods by a clear margin.",
     "categories": [
+      "cs.LG",
+      "cs.AI",
       "cs.CL"
     ],
-    "summary_cn": "使用文本数据进行的自动心理健康预测通过深度学习和大型语言模型显示出了有希望的结果。然而，在高风险的现实环境中部署这些模型仍然具有挑战性，因为现有的方法在很大程度上依赖于语义表示，并且经常在模糊、噪声或变化的数据下产生过度自信的预测。此外，大多数方法缺乏可靠的不确定性估计，破坏了对风险敏感的心理健康应用的信任。为了解决这些限制，我们将该任务制定为一个多视图学习问题，它将来自仅编码器模型的语义信息与来自仅解码器模型的高级推理信息集成在一起，其中推理感知表示和不确定性建模是以值得信赖的方式获得的。为了确保可靠的融合，我们采用基于主观逻辑的证据学习框架来明确建模不确定性，并引入一种证据融合策略，在平衡互补观点的同时忽略不可靠的证据。对三个现实世界数据集 Dreaddit、SDCNL 和 DepSeverity 进行基准测试，报告的准确度分别为 0.835、0.731 和 0.751，展示了其可靠的心理健康预测的潜力。关于噪声鲁棒性和可解释性案例研究的其他实验证实，我们提出的框架不仅提高了预测性能，而且还提供了值得信赖的不确定性估计和人类可理解的推理信号，使其适合心理健康评估中的风险敏感应用。",
+    "summary_cn": "大型语言模型（LLM）展示了解决科学和数学问题的强大能力，但它们难以产生有效的、具有挑战性的和新颖的问题——这是推进 LLM 培训和实现自主科学研究的重要组成部分。现有的问题生成方法要么依赖于昂贵的人类专家参与，要么采用幼稚的自我博弈范式，这些范式经常因奖励黑客而产生无效问题。这项工作介绍了 VHG，一种基于三方自博构建的验证者增强型难题生成框架。通过将独立验证者集成到传统的设置器-求解器二元性中，我们的设计将设置器的奖励限制为由问题有效性（由验证器评估）和难度（由求解器评估）共同确定。我们实例化了两个验证器变体：硬符号验证器和基于 LLM 的软验证器，并对不定积分任务和一般数学推理任务进行评估。实验结果表明，VHG 明显优于所有基线方法。",
     "comment": "",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-05121v1-beyond-semantics-an-evidential-reasoning-aware-mul",
-    "rel_path": "entities/papers/2605-05121v1-beyond-semantics-an-evidential-reasoning-aware-mul.html",
+    "slug": "2605-06660v1-verifier-backed-hard-problem-generation-for-mathem",
+    "rel_path": "entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html",
     "figures": [
-      "assets/papers/2605-05121v1/fig1.png",
-      "assets/papers/2605-05121v1/fig2.png",
-      "assets/papers/2605-05121v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      },
-      {
-        "name": "医学AI",
-        "slug": "medical-ai",
-        "url": "../../concepts/medical-ai.html"
-      }
-    ],
-    "method_signal": "Automated mental health prediction using textual data has shown promising results with deep learning and large language models.",
-    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐 / 医学AI"
-  },
-  {
-    "id": "2605.05103v1",
-    "title": "Text Corpora as Concept Fields: Black-Box Hallucination and Novelty Measurement",
-    "authors": [
-      "Nicholas S. Kersting",
-      "Vittorio Castelli",
-      "Chieh Ting Yeh",
-      "Xinzhu Wang",
-      "Saad Taame"
-    ],
-    "published": "2026-05-06",
-    "summary": "We introduce the **Concept Field** of a text corpus: a local drift field with pointwise uncertainty, estimated in sentence-embedding space from the deltas between consecutive sentences. Given a candidate sentence transition, we score its agreement with the field by $ζ$, the mean absolute z-distance between the observed delta and the field's local Gaussian estimate. The score is black-box (no model internals), corpus-attributable (every score traces to nearby corpus sentences), and admits a direct probabilistic reading. We support the computation with the introduction of a **Vector Sequence Database (VSDB)** that stores embeddings together with sequence-position and next-delta metadata. We evaluate this approach on two large-scale settings: hallucination-style groundedness detection over the U.S. Code of Federal Regulations, and novelty detection over Project Gutenberg. Using controlled LLM-generated rewrites, Concept Fields achieve strong selective classification performance under a grounded / ungrounded / unsure triage policy, which unlike retrieval-centric baselines have similar coverage-risk behavior across both domains, supporting a probability-based interpretation that transfers across domains. We also sketch how divergence and curl of the Concept Field, computed on dense clusters, surface qualitatively meaningful semantic patterns (logic sources, sinks, and implicit topics), which we offer as hypothesis-generating rather than as a quantitative result. Concept Fields provide a fast, lightweight, and interpretable signal for groundedness and novelty, complementary to LLM-as-judge and white-box detectors.",
-    "categories": [
-      "cs.CL",
-      "cs.AI",
-      "cs.CY"
-    ],
-    "summary_cn": "我们引入文本语料库的**概念场**：具有逐点不确定性的局部漂移场，根据连续句子之间的增量在句子嵌入空间中估计。给定一个候选句子转换，我们通过 $z$ 对其与场的一致性进行评分，$z$ 是观察到的增量与场的局部高斯估计之间的平均绝对 z 距离。分数是黑盒的（没有模型内部），可归因于语料库（每个分数都追溯到附近的语料库句子），并且允许直接概率阅读。我们通过引入**向量序列数据库（VSDB）**来支持计算，该数据库将嵌入以及序列位置和下一个增量元数据存储在一起。我们在两个大规模环境中评估这种方法：对美国联邦法规的幻觉式接地性检测，以及对古腾堡计划的新颖性检测。使用受控的 LLM 生成的重写，概念字段在有根据/无根据/不确定的分类策略下实现了强大的选择性分类性能，与以检索为中心的基线不同，它在两个领域具有类似的覆盖风险行为，支持跨领域转移的基于概率的解释。我们还概述了在密集集群上计算的概念场的散度和旋度如何呈现定性有意义的语义模式（逻辑源、汇和隐含主题），我们将其作为假设生成而不是作为定量结果提供。 Concept Fields 提供快速、轻量且可解释的信号，以实现接地性和新颖性，与法学硕士作为法官和白盒检测器互补。",
-    "comment": "25 pages, 8 figures",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-05103v1-text-corpora-as-concept-fields-black-box-hallucina",
-    "rel_path": "entities/papers/2605-05103v1-text-corpora-as-concept-fields-black-box-hallucina.html",
-    "figures": [
-      "assets/papers/2605-05103v1/fig1.png",
-      "assets/papers/2605-05103v1/fig2.png",
-      "assets/papers/2605-05103v1/fig3.png"
+      "assets/papers/2605-06660v1/fig1.png",
+      "assets/papers/2605-06660v1/fig2.png",
+      "assets/papers/2605-06660v1/fig3.png"
     ],
     "concepts": [
       {
@@ -238,80 +70,51 @@
         "url": "../../concepts/reinforcement-learning.html"
       },
       {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
       }
     ],
-    "method_signal": "We introduce the **Concept Field** of a text corpus: a local drift field with pointwise uncertainty, estimated in sentence-embedding space from the deltas between consecutive sentences.",
-    "topic_signal": "大语言模型 / 强化学习 / AI安全与对齐"
+    "method_signal": "Large Language Models (LLMs) demonstrate strong capabilities for solving scientific and mathematical problems, yet they struggle to produce valid, challenging, and novel problems - an essential component for advancing LLM training and enabling autonomous scientific research.",
+    "topic_signal": "大语言模型 / 强化学习 / 基准评估 / 自动驾驶"
   },
   {
-    "id": "2605.05097v1",
-    "title": "Continual Knowledge Updating in LLM Systems: Learning Through Multi-Timescale Memory Dynamics",
+    "id": "2605.06652v1",
+    "title": "When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels",
     "authors": [
-      "Andreas Pattichis",
-      "Constantine Dovrolis"
+      "Sushant Gautam",
+      "Finn Schwall",
+      "Annika Willoch Olstad",
+      "Fernando Vallecillos Ruiz",
+      "Birk Torpmann-Hagen",
+      "Sunniva Maria Stordal Bjørklund",
+      "Leon Moonen",
+      "Klas Pettersen",
+      "Michael A. Riegler"
     ],
-    "published": "2026-05-06",
-    "summary": "LLMs are trained once, then deployed into a world that never stops changing. External memory compensates for this, but most systems manage it explicitly rather than letting it adapt on its own. Biological memory works differently: coupled multi-timescale dynamics make new associations immediately usable, strengthen what repetition confirms, and let the rest fade. We argue that external memory should follow a similar principle. In Memini, this view takes the form of an associative memory that organizes knowledge as a directed graph. Each edge carries two coupled internal variables, one fast and one slow, following the Benna-Fusi model of synaptic consolidation. From this coupling, episodic sensitivity, gradual consolidation, and selective forgetting emerge as facets of a single mechanism, reframing external memory as a learning substrate that reorganizes through its own dynamics.",
+    "published": "2026-05-07",
+    "summary": "Many deployments must compare candidate language models for safety before a labeled benchmark exists for the relevant language, sector, or regulatory regime. We formalize this setting as benchmarkless comparative safety scoring and specify the contract under which a scenario-based audit can be interpreted as deployment evidence. Scores are valid only under a fixed scenario pack, rubric, auditor, judge, sampling configuration, and rerun budget. Because no labels are available, we replace ground-truth agreement with an instrumental-validity chain: responsiveness to a controlled safe-versus-abliterated contrast, dominance of target-driven variance over auditor and judge artifacts, and stability across reruns.   We instantiate the chain in SimpleAudit, a local-first scoring instrument, and validate it on a Norwegian safety pack. Safe and abliterated targets separate with AUROC values between 0.89 and 1.00, target identity is the dominant variance component ($η^2 \\approx 0.52$), and severity profiles stabilize by ten reruns. Applying the same chain to Petri shows that it admits both tools. The substantial differences arise upstream of the chain, in claim-contract enforcement and deployment fit. A Norwegian public-sector procurement case comparing Borealis and Gemma 3 demonstrates the resulting evidence in practice: the safer model depends on scenario category and risk measure. Consequently, scores, matched deltas, critical rates, uncertainty, and the auditor and judge used must be reported together rather than collapsed into a single ranking.",
     "categories": [
       "cs.LG",
       "cs.AI",
       "cs.CL"
     ],
-    "summary_cn": "法学硕士接受一次培训，然后部署到一个永不停息变化的世界。外部存储器弥补了这一点，但大多数系统显式管理它而不是让它自行适应。生物记忆的工作方式有所不同：耦合的多时间尺度动态使新的联想立即可用，加强重复所确认的内容，并让其余的消失。我们认为外部记忆应该遵循类似的原则。在 Memini 中，这种视图采用联想记忆的形式，将知识组织为有向图。每条边都带有两个耦合的内部变量，一个快，一个慢，遵循突触巩固的 Benna-Fusi 模型。在这种耦合中，情景敏感性、逐渐巩固和选择性遗忘作为单一机制的各个方面出现，将外部记忆重新构建为通过自身动态进行重组的学习基质。",
-    "comment": "Preprint. 9 pages, 2 figures",
+    "summary_cn": "在相关语言、部门或监管制度存在标记基准之前，许多部署必须比较候选语言模型的安全性。我们将这种设置正式化为无基准比较安全评分，并指定基于场景的审计可以解释为部署证据的合同。分数仅在固定场景包、评分标准、审核员、法官、抽样配置和重新运行预算下有效。由于没有可用的标签，我们用工具有效性链取代了基本事实协议：对受控安全与消除对比的响应、目标驱动方差对审计和判断工件的主导地位以及重新运行的稳定性。我们在 SimpleAudit（本地优先的评分工具）中实例化该链，并在挪威安全包上对其进行验证。安全目标和消除目标分开，AUROC 值在 0.89 到 1.00 之间，目标身份是主要方差分量 ($η^2 \\approx 0.52$)，并且严重性概况在十次重新运行后稳定下来。将相同的链应用于 Petri 表明它承认这两种工具。巨大的差异出现在链条的上游，即索赔合同的执行和部署的配合方面。比较 Borealis 和 Gemma 3 的挪威公共部门采购案例在实践中证明了所得证据：更安全的模型取决于情景类别和风险衡量标准。因此，分数、匹配增量、临界率、不确定性以及所使用的审核员和法官必须一起报告，而不是合并为一个排名。",
+    "comment": "SimpleAudit Repository: https://github.com/kelkalot/simpleaudit",
     "category_en": "Natural Language Processing",
     "category_cn": "自然语言处理",
-    "slug": "2605-05097v1-continual-knowledge-updating-in-llm-systems-learni",
-    "rel_path": "entities/papers/2605-05097v1-continual-knowledge-updating-in-llm-systems-learni.html",
+    "slug": "2605-06652v1-when-no-benchmark-exists-validating-comparative-ll",
+    "rel_path": "entities/papers/2605-06652v1-when-no-benchmark-exists-validating-comparative-ll.html",
     "figures": [
-      "assets/papers/2605-05097v1/fig1.png",
-      "assets/papers/2605-05097v1/fig2.png"
+      "assets/papers/2605-06652v1/fig1.png",
+      "assets/papers/2605-06652v1/fig2.png",
+      "assets/papers/2605-06652v1/fig3.png"
     ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "图神经网络",
-        "slug": "graph-neural-networks",
-        "url": "../../concepts/graph-neural-networks.html"
-      },
-      {
-        "name": "世界模型",
-        "slug": "world-models",
-        "url": "../../concepts/world-models.html"
-      }
-    ],
-    "method_signal": "LLMs are trained once, then deployed into a world that never stops changing.",
-    "topic_signal": "大语言模型 / 图神经网络 / 世界模型"
-  },
-  {
-    "id": "2605.05090v1",
-    "title": "Automatically Finding and Validating Unexpected Side-Effects of Interventions on Language Models",
-    "authors": [
-      "Quintin Pope",
-      "Ajay Hayagreeve Balaji",
-      "Jacques Thibodeau",
-      "Xiaoli Fern"
-    ],
-    "published": "2026-05-06",
-    "summary": "We present an automated, contrastive evaluation pipeline for auditing the behavioral impact of interventions on large language models. Given a base model $M_1$ and an intervention model $M_2$, our method compares their free-form, multi-token generations across aligned prompt contexts and produces human-readable, statistically validated natural-language hypotheses describing how the models differ, along with recurring themes that summarize patterns across validated hypotheses.   We evaluate the approach in synthetic setting by injecting known behavioral changes and showing that the pipeline reliably recovers them. We then apply it to three real-world interventions, reasoning distillation, knowledge editing and unlearning, demonstrating that the method surfaces both intended and unexpected behavioral shifts, distinguishes large from subtle interventions, and does not hallucinate differences when effects are absent or misaligned with the prompt bank. Overall, the pipeline provides a statistically grounded and interpretable tool for post-hoc auditing of intervention-induced changes in model behavior.",
-    "categories": [
-      "cs.CL",
-      "cs.AI"
-    ],
-    "summary_cn": "我们提出了一个自动化的对比评估流程，用于审核干预措施对大型语言模型的行为影响。给定基本模型 $M_1$ 和干预模型 $M_2$，我们的方法在对齐的提示上下文中比较它们的自由形式、多标记生成，并生成人类可读的、经统计验证的自然语言假设，描述模型的差异，以及总结经过验证的假设的模式的重复主题。我们通过注入已知的行为变化并表明管道可靠地恢复它们来评估合成环境中的方法。然后，我们将其应用于三种现实世界的干预措施：推理蒸馏、知识编辑和忘却，证明该方法可以显示有意的和意外的行为变化，区分大的干预措施和微妙的干预措施，并且当效果不存在或与提示库不一致时，不会产生幻觉差异。总体而言，该管道提供了一个基于统计且可解释的工具，用于对干预引起的模型行为变化进行事后审核。",
-    "comment": "33 pages, 4 figures, 20 tables, targeting EMNLP submission",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-05090v1-automatically-finding-and-validating-unexpected-si",
-    "rel_path": "entities/papers/2605-05090v1-automatically-finding-and-validating-unexpected-si.html",
-    "figures": [],
     "concepts": [
       {
         "name": "大语言模型",
@@ -324,42 +127,35 @@
         "url": "../../concepts/benchmarking.html"
       },
       {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
       }
     ],
-    "method_signal": "We present an automated, contrastive evaluation pipeline for auditing the behavioral impact of interventions on large language models.",
-    "topic_signal": "大语言模型 / 基准评估 / 智能体"
+    "method_signal": "Many deployments must compare candidate language models for safety before a labeled benchmark exists for the relevant language, sector, or regulatory regime.",
+    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐"
   },
   {
-    "id": "2605.05206v1",
-    "title": "Taming Outlier Tokens in Diffusion Transformers",
+    "id": "2605.06650v1",
+    "title": "Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients",
     "authors": [
-      "Xiaoyu Wu",
-      "Yifei Wang",
-      "Tsu-Jui Fu",
-      "Liang-Chieh Chen",
-      "Zhe Gan",
-      "Chen Wei"
+      "Mingwei Xu",
+      "Hao Fang"
     ],
-    "published": "2026-05-06",
-    "summary": "We study outlier tokens in Diffusion Transformers (DiTs) for image generation. Prior work has shown that Vision Transformers (ViTs) can produce a small number of high-norm tokens that attract disproportionate attention while carrying limited local information, but their role in generative models remains underexplored. We show that this phenomenon appears in both the encoder and denoiser of modern Representation Autoencoder (RAE)-DiT pipelines: pretrained ViT encoders can produce outlier representations, and DiTs themselves can develop internal outlier tokens, especially in intermediate layers. Moreover, simply masking high-norm tokens does not improve performance, indicating that the problem is not only caused by a few extreme values, but is more closely related to corrupted local patch semantics. To address this issue, we introduce Dual-Stage Registers (DSR), a register-based intervention for both components: trained registers when available, recursive test-time registers otherwise, and diffusion registers for the denoiser. Across ImageNet and large-scale text-to-image generation, these interventions consistently reduce outlier artifacts and improve generation quality. Our results highlight outlier-token control as an important ingredient in building stronger DiTs.",
+    "published": "2026-05-07",
+    "summary": "Reinforcement learning with verifiable rewards (RLVR), due to the deterministic verification, becomes a dominant paradigm for enhancing the reasoning ability of large language models (LLMs). The community witnesses the rapid change from the Proximal Policy Optimization (PPO) to Group Relative Policy Optimization (GRPO), in which GRPO reduces the complicated advantage estimation with simple estimation over grouped positive and negative rollouts. However, we note that negative rollouts may admit no gradation of failure severity, and the combinatorial vastness makes penalizing a few sampled negatives unlikely to cover a meaningful reward signal under sparse binary rewards. In this work, we propose Positive-Only Policy Optimization (POPO), a novel RLVR framework in which learning can occur exclusively via online positive rollouts. Specifically, POPO utilizes bounded importance sampling over the positive rollout set. Thus, no disjoint negative rollouts are used for the gradient guidance. We show that implicit negative gradients can emerge naturally through reinforcing the positive probability via rollouts redistribution. Next, POPO stabilizes the policy optimization through two mechanisms. First, it applies a siamese policy network with a momentum-based adaptation law for stabilized policy evolution. Second, we replace the KL-divergence with a bounded similarity penalty term in the siamese representation space. We conduct extensive experiments using publicly available, well-established text-LLM models, e.g., the Qwen family, across all-level mathematical benchmarks. Our experiment demonstrates that POPO achieves performance comparable to, or even superior to GRPO. Notably, we show that POPO can achieve 36.67% in AIME 2025 with Qwen-Math-7B, outperforming GRPO 30.00%. Our ablation and sweep studies further illustrate the necessity and robustness of POPO components.",
     "categories": [
-      "cs.CV",
-      "cs.AI",
-      "cs.LG"
+      "cs.CL"
     ],
-    "summary_cn": "我们研究用于图像生成的扩散变压器（DiT）中的异常标记。先前的工作表明，视觉变压器（ViT）可以产生少量高规范令牌，这些令牌在携带有限的本地信息的同时吸引了过多的注意力，但它们在生成模型中的作用仍未得到充分探索。我们证明这种现象出现在现代表示自动编码器（RAE）-DiT 管道的编码器和降噪器中：预训练的 ViT 编码器可以产生离群表示，而 DiT 本身可以开发内部离群标记，尤其是在中间层。此外，简单地屏蔽高范数标记并不能提高性能，这表明问题不仅是由少数极值引起的，而且与损坏的本地补丁语义更密切相关。为了解决这个问题，我们引入了双级寄存器（DSR），这是一种针对两个组件的基于寄存器的干预：可用时训练寄存器，否则递归测试时间寄存器，以及用于降噪器的扩散寄存器。在 ImageNet 和大规模文本到图像生成中，这些干预措施不断减少异常伪影并提高生成质量。我们的结果强调了异常值令牌控制是构建更强大 DiT 的重要组成部分。",
-    "comment": "Under review",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-05206v1-taming-outlier-tokens-in-diffusion-transformers",
-    "rel_path": "entities/papers/2605-05206v1-taming-outlier-tokens-in-diffusion-transformers.html",
+    "summary_cn": "由于确定性验证，具有可验证奖励的强化学习（RLVR）成为增强大型语言模型（LLM）推理能力的主导范式。社区见证了从近端策略优化（PPO）到组相对策略优化（GRPO）的快速变化，其中GRPO通过对分组正向和负向推出的简单估计来减少复杂的优势估计。然而，我们注意到，负数推出可能不承认失败严重程度的分级，并且组合的巨大性使得惩罚一些采样负数不太可能在稀疏的二元奖励下覆盖有意义的奖励信号。在这项工作中，我们提出了仅正向策略优化（POPO），这是一种新颖的 RLVR 框架，其中学习可以完全通过在线正向推出进行。具体来说，POPO 在正推出集上利用有限重要性采样。因此，不相交的负推出用于梯度引导。我们表明，通过推出重新分配来增强正概率，隐式负梯度可以自然出现。接下来，POPO通过两种机制来稳定策略优化。首先，它应用具有基于动量的适应律的连体政策网络来稳定政策演变。其次，我们用暹罗表示空间中的有界相似性惩罚项替换 KL 散度。我们使用公开的、完善的文本法学硕士模型（例如 Qwen 系列）在所有级别的数学基准上进行了广泛的实验。我们的实验表明，POPO 的性能与 GRPO 相当，甚至优于 GRPO。值得注意的是，我们表明 POPO 在 Qwen-Math-7B 的 AIME 2025 中可以达到 36.67%，优于 GRPO 30.00%。我们的消融和扫描研究进一步说明了 POPO 组件的必要性和稳健性。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti",
+    "rel_path": "entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html",
     "figures": [
-      "assets/papers/2605-05206v1/fig1.png",
-      "assets/papers/2605-05206v1/fig2.png",
-      "assets/papers/2605-05206v1/fig3.png"
+      "assets/papers/2605-06650v1/fig1.png",
+      "assets/papers/2605-06650v1/fig2.png"
     ],
     "concepts": [
       {
@@ -368,39 +164,315 @@
         "url": "../../concepts/large-language-model.html"
       },
       {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      }
+    ],
+    "method_signal": "In this work, we propose Positive-Only Policy Optimization (POPO), a novel RLVR framework in which learning can occur exclusively via online positive rollouts.",
+    "topic_signal": "大语言模型 / 强化学习 / 基准评估 / AI安全与对齐"
+  },
+  {
+    "id": "2605.06642v1",
+    "title": "StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction",
+    "authors": [
+      "Xiangyuan Xue",
+      "Yifan Zhou",
+      "Zidong Wang",
+      "Shengji Tang",
+      "Philip Torr",
+      "Wanli Ouyang",
+      "Lei Bai",
+      "Zhenfei Yin"
+    ],
+    "published": "2026-05-07",
+    "summary": "Large language models (LLMs) are increasingly used as interactive agents, but optimizing them for long-horizon decision making remains difficult because current methods are largely purely reactive, which weakens both exploration and credit assignment over extended trajectories. In this work, we present Strategic Trajectory Abstraction (StraTA), a simple framework that introduces an explicit trajectory-level strategy into agentic reinforcement learning (RL). StraTA samples a compact strategy from the initial task state, conditions subsequent actions on that strategy, and trains strategy generation and action execution jointly with a hierarchical GRPO-style rollout design, further enhanced by diverse strategy rollout and critical self-judgment. Experiments on ALFWorld, WebShop, and SciWorld show that StraTA consistently improves both sample efficiency and final performance over strong baselines. StraTA reaches success rates of 93.1% on ALFWorld and 84.2% on WebShop. On SciWorld, StraTA attains a 63.5% overall score, outperforming frontier closed-source models.",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "summary_cn": "大型语言模型（LLM）越来越多地用作交互式代理，但优化它们以进行长期决策仍然很困难，因为当前的方法很大程度上纯粹是反应性的，这削弱了扩展轨迹上的探索和信用分配。在这项工作中，我们提出了策略轨迹抽象（StraTA），这是一个简单的框架，它将显式轨迹级策略引入代理强化学习（RL）中。 StraTA 从初始任务状态中采样紧凑策略，根据该策略调整后续操作，并与分层 GRPO 式推出设计联合训练策略生成和操作执行，并通过多样化策略推出和关键自我判断进一步增强。 ALFWorld、WebShop 和 SciWorld 上的实验表明，与强大的基线相比，StraTA 持续提高了样本效率和最终性能。 StraTA 在 ALFWorld 上的成功率达到 93.1%，在 WebShop 上的成功率达到 84.2%。在 SciWorld 上，StraTA 获得了 63.5% 的总分，优于前沿闭源模型。",
+    "comment": "26 pages, 4 figures, 7 tables",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin",
+    "rel_path": "entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html",
+    "figures": [],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "In this work, we present Strategic Trajectory Abstraction (StraTA), a simple framework that introduces an explicit trajectory-level strategy into agentic reinforcement learning (RL).",
+    "topic_signal": "大语言模型 / 强化学习 / 自动驾驶 / 智能体"
+  },
+  {
+    "id": "2605.06639v1",
+    "title": "Recursive Agent Optimization",
+    "authors": [
+      "Apurva Gandhi",
+      "Satyaki Chakraborty",
+      "Xiangjun Wang",
+      "Aviral Kumar",
+      "Graham Neubig"
+    ],
+    "published": "2026-05-07",
+    "summary": "We introduce Recursive Agent Optimization (RAO), a reinforcement learning approach for training recursive agents: agents that can spawn and delegate sub-tasks to new instantiations of themselves recursively. Recursive agents implement an inference-time scaling algorithm that naturally allows agents to scale to longer contexts and generalize to more difficult problems via divide-and-conquer. RAO provides a method to train models to best take advantage of such recursive inference, teaching agents when and how to delegate and communicate. We find that recursive agents trained in this way enjoy better training efficiency, can scale to tasks that go beyond the model's context window, generalize to tasks much harder than the ones the agent was trained on, and can enjoy reduced wall-clock time compared to single-agent systems.",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.MA"
+    ],
+    "summary_cn": "我们引入了递归代理优化（RAO），这是一种用于训练递归代理的强化学习方法：可以递归地生成子任务并将其委托给自身的新实例的代理。递归代理实现了推理时间缩放算法，该算法自然地允许代理扩展到更长的上下文，并通过分治法推广到更困难的问题。 RAO 提供了一种训练模型的方法，以最好地利用这种递归推理，指导代理何时以及如何进行委派和通信。我们发现，以这种方式训练的递归代理具有更好的训练效率，可以扩展到超出模型上下文窗口的任务，泛化到比代理训练的任务难得多的任务，并且与单代理系统相比可以减少挂钟时间。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-06639v1-recursive-agent-optimization",
+    "rel_path": "entities/papers/2605-06639v1-recursive-agent-optimization.html",
+    "figures": [],
+    "concepts": [
+      {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "We introduce Recursive Agent Optimization (RAO), a reinforcement learning approach for training recursive agents: agents that can spawn and delegate sub-tasks to new instantiations of themselves recursively.",
+    "topic_signal": "强化学习 / 智能体"
+  },
+  {
+    "id": "2605.06638v1",
+    "title": "Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key",
+    "authors": [
+      "Tianle Wang",
+      "Zhaoyang Wang",
+      "Guangchen Lan",
+      "Xinpeng Wei",
+      "Sipeng Zhang",
+      "Guanwen Qiu",
+      "Abulhair Saparov"
+    ],
+    "published": "2026-05-07",
+    "summary": "Reinforcement learning (RL) has been applied to improve large language model (LLM) reasoning, yet the systematic study of how training scales with task difficulty has been hampered by the lack of controlled, scalable environments. We introduce ScaleLogic, a synthetic logical reasoning framework that offers independent control over two axes of difficulty: the depth of the required proof planning (i.e., the horizon) and the expressiveness of the underlying logic. Our proposed framework supports a wide range of logics: from simple implication-only logic (\"if-then\") towards more expressive first-order reasoning with conjunction (\"and\"), disjunction (\"or\"), negation (\"not\"), and universal quantification (\"for all\"). Using this framework, we show that the RL training compute $T$ follows a power law with respect to reasoning depth $D$ ($T \\propto D^γ$, $R^{2} > 0.99$), and that the scaling exponent $γ$ increases monotonically with logical expressiveness, from $1.04$ to $2.60$. On downstream mathematics and general reasoning benchmarks, more expressive training settings yield both larger performance gains (up to $+10.66$ points) and more compute-efficient transfer compared to less expressive settings, demonstrating that what a model is trained on, not just how much it is trained, shapes downstream transfer. We further show that the power-law relationship holds across multiple RL methods, and curriculum-based training substantially improves scaling efficiency.",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "summary_cn": "强化学习 (RL) 已被应用于改进大型语言模型 (LLM) 推理，但由于缺乏受控、可扩展的环境，对训练如何随任务难度进行扩展的系统研究受到了阻碍。我们引入了 ScaleLogic，一个综合逻辑推理框架，它提供对两个难度轴的独立控制：所需证明计划的深度（即范围）和底层逻辑的表达能力。我们提出的框架支持广泛的逻辑：从简单的仅蕴涵逻辑（“if-then”）到更具表现力的一阶推理，包括合取（“and”）、析取（“or”）、否定（“not”）和通用量化（“for all”）。使用这个框架，我们证明了 RL 训练计算 $T$ 遵循关于推理深度 $D$ 的幂律（$T \\propto D^γ$, $R^{2} > 0.99$），并且缩放指数 $γ$ 随着逻辑表达能力单调增加，从 $1.04$ 到 $2.60$。在下游数学和一般推理基准上，与表达能力较低的设置相比，更具表达能力的训练设置会产生更大的性能增益（高达 $+10.66$ 点）和更高的计算效率，这表明模型的训练内容（而不仅仅是训练的程度）决定了下游传输。我们进一步表明，幂律关系在多种强化学习方法中都成立，并且基于课程的培训大大提高了扩展效率。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres",
+    "rel_path": "entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html",
+    "figures": [
+      "assets/papers/2605-06638v1/fig1.png",
+      "assets/papers/2605-06638v1/fig2.png",
+      "assets/papers/2605-06638v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
+      }
+    ],
+    "method_signal": "We introduce ScaleLogic, a synthetic logical reasoning framework that offers independent control over two axes of difficulty: the depth of the required proof planning (i.e., the horizon) and the expressiveness of the underlying logic.",
+    "topic_signal": "大语言模型 / 强化学习 / 基准评估 / 世界模型"
+  },
+  {
+    "id": "2605.06635v1",
+    "title": "Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents",
+    "authors": [
+      "Hailey Onweller",
+      "Elias Lumer",
+      "Austin Huber",
+      "Pia Ramchandani",
+      "Vamse Kumar Subbiah",
+      "Corey Feld"
+    ],
+    "published": "2026-05-07",
+    "summary": "Large language models (LLMs) power deep research agents that synthesize information from hundreds of web sources into cited reports, yet these citations cannot be reliably verified. Current approaches either trust models to self-cite accurately, risking bias, or employ retrieval-augmented generation (RAG) that does not validate source accessibility, relevance, or factual consistency. We introduce the first source attribution evaluation framework that uses a reproducible AST parser to extract and evaluate inline citations from LLM-generated Markdown reports at scale. Unlike methods that verify claims in isolation, our framework closes the loop by retrieving the actual cited content, enabling human or model evaluators to judge each citation against its source. Citations are evaluated along three dimensions. (1) Link Works verifies URL accessibility, (2) Relevant Content measures topical alignment, and (3) Fact Check validates factual accuracy against source content. We benchmark 14 closed-source and open-source LLMs across three evaluation dimensions using rubric-based LLM-as-a-judge evaluators calibrated through human review. Our results reveal that even the strongest frontier models maintain link validity above 94% and relevance above 80%, yet achieve only 39-77% factual accuracy, while fewer than half of open-source models successfully generate cited reports in a one-shot setting. Ablation studies on research depth show that Fact Check accuracy drops by approximately 42% on average across two frontier models as tool calls scale from 2 to 150, demonstrating that more retrieval does not produce more accurate citations. These findings reveal a critical disconnect between surface-level citation quality and factual reliability, and our framework provides the evaluation infrastructure to assess the disconnect.",
+    "categories": [
+      "cs.CL"
+    ],
+    "summary_cn": "大型语言模型 (LLM) 为深度研究代理提供支持，将来自数百个网络资源的信息合成为引用的报告，但这些引文无法得到可靠验证。当前的方法要么信任模型准确自引，但存在偏见，要么采用检索增强生成（RAG），但不验证来源的可访问性、相关性或事实一致性。我们引入了第一个来源归因评估框架，该框架使用可重复的 AST 解析器从 LLM 生成的 Markdown 报告中大规模提取和评估内联引用。与单独验证声明的方法不同，我们的框架通过检索实际引用的内容来闭合循环，使人类或模型评估者能够根据其来源来判断每个引用。引用沿着三个维度进行评估。 (1) Link Works 验证 URL 可访问性，(2) 相关内容衡量主题一致性，(3) 事实检查根据源内容验证事实准确性。我们使用通过人工审核校准的基于标题的法学硕士作为法官评估者，在三个评估维度上对 14 个闭源和开源法学硕士进行了基准测试。我们的结果表明，即使是最强大的前沿模型也能保持 94% 以上的链接有效性和 80% 以上的相关性，但事实准确性仅达到 39-77%，而只有不到一半的开源模型一次性成功生成引用的报告。关于研究深度的消融研究表明，随着工具调用范围从 2 到 150，事实检查准确性在两个前沿模型中平均下降约 42%，这表明更多的检索并不会产生更准确的引用。这些发现揭示了表面引用质量和事实可靠性之间的严重脱节，我们的框架提供了评估基础设施来评估这种脱节。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour",
+    "rel_path": "entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html",
+    "figures": [
+      "assets/papers/2605-06635v1/fig1.png",
+      "assets/papers/2605-06635v1/fig2.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "We introduce the first source attribution evaluation framework that uses a reproducible AST parser to extract and evaluate inline citations from LLM-generated Markdown reports at scale.",
+    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐 / 智能体"
+  },
+  {
+    "id": "2605.06667v1",
+    "title": "ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation",
+    "authors": [
+      "Omar El Khalifi",
+      "Thomas Rossi",
+      "Oscar Fossey",
+      "Thibault Fouque",
+      "Ulysse Mizrahi",
+      "Philip Torr",
+      "Ivan Laptev",
+      "Fabio Pizzati",
+      "Baptiste Bellot-Gurlet"
+    ],
+    "published": "2026-05-07",
+    "summary": "For artistic applications, video generation requires fine-grained control over both performance and cinematography, i.e., the actor's motion and the camera trajectory. We present ActCam, a zero-shot method for video generation that jointly transfers character motion from a driving video into a new scene and enables per-frame control of intrinsic and extrinsic camera parameters. ActCam builds on any pretrained image-to-video diffusion model that accepts conditioning in terms of scene depth and character pose. Given a source video with a moving character and a target camera motion, ActCam generates pose and depth conditions that remain geometrically consistent across frames. We then run a single sampling process with a two-phase conditioning schedule: early denoising steps condition on both pose and sparse depth to enforce scene structure, after which depth is dropped and pose-only guidance refines high-frequency details without over-constraining the generation. We evaluate ActCam on multiple benchmarks spanning diverse character motions and challenging viewpoint changes. We find that, compared to pose-only control and other pose and camera methods, ActCam improves camera adherence and motion fidelity, and is preferred in human evaluations, especially under large viewpoint changes. Our results highlight that careful camera-consistent conditioning and staged guidance can enable strong joint camera and motion control without training. Project page: https://elkhomar.github.io/actcam/.",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "summary_cn": "对于艺术应用，视频生成需要对表演和摄影进行精细控制，即演员的动作和摄像机轨迹。我们提出了 ActCam，一种用于视频生成的零镜头方法，可将角色运动从驾驶视频联合传输到新场景，并实现内部和外部相机参数的每帧控制。 ActCam 建立在任何预先训练的图像到视频扩散模型的基础上，该模型接受场景深度和角色姿势的调节。给定具有移动角色和目标摄像机运动的源视频，ActCam 会生成跨帧保持几何一致的姿势和深度条件。然后，我们使用两阶段调节计划运行单个采样过程：早期去噪步骤以姿势和稀疏深度为条件，以强制场景结构，之后深度被丢弃，仅姿势指导可细化高频细节，而不会过度约束生成。我们根据涵盖不同角色动作和具有挑战性的视角变化的多个基准来评估 ActCam。我们发现，与仅姿势控制和其他姿势和相机方法相比，ActCam 提高了相机依从性和运动保真度，并且在人类评估中受到青睐，尤其是在较大视点变化的情况下。我们的结果强调，仔细的相机一致调节和分阶段指导可以在无需训练的情况下实现强大的联合相机和运动控制。项目页面：https://elkhomar.github.io/actcam/。",
+    "comment": "SIGGRAPH 2026",
+    "category_en": "Artificial Intelligence",
+    "category_cn": "人工智能",
+    "slug": "2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro",
+    "rel_path": "entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html",
+    "figures": [
+      "assets/papers/2605-06667v1/fig1.png",
+      "assets/papers/2605-06667v1/fig2.png",
+      "assets/papers/2605-06667v1/fig3.png"
+    ],
+    "concepts": [
+      {
         "name": "多模态学习",
         "slug": "multimodal-learning",
         "url": "../../concepts/multimodal-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
+      },
+      {
+        "name": "图神经网络",
+        "slug": "graph-neural-networks",
+        "url": "../../concepts/graph-neural-networks.html"
       }
     ],
-    "method_signal": "To address this issue, we introduce Dual-Stage Registers (DSR), a register-based intervention for both components: trained registers when available, recursive test-time registers otherwise, and diffusion registers for the denoiser.",
-    "topic_signal": "大语言模型 / 多模态学习"
+    "method_signal": "We present ActCam, a zero-shot method for video generation that jointly transfers character motion from a driving video into a new scene and enables per-frame control of intrinsic and extrinsic camera parameters.",
+    "topic_signal": "多模态学习 / 基准评估 / 自动驾驶 / 图神经网络"
   },
   {
-    "id": "2605.05193v1",
-    "title": "Grokability in five inequalities",
+    "id": "2605.06665v1",
+    "title": "UniPool: A Globally Shared Expert Pool for Mixture-of-Experts",
     "authors": [
-      "Paata Ivanisvili",
-      "Xinyuan Xie"
+      "Minbin Huang",
+      "Han Shi",
+      "Chuanyang Zheng",
+      "Yimeng Wu",
+      "Guoxuan Chen",
+      "Xintong Yu",
+      "Yichun Yin",
+      "Hong Cheng"
     ],
-    "published": "2026-05-06",
-    "summary": "In this note, we report five mathematical discoveries made in collaboration with Grok, all of which have been subsequently verified by the authors. These include an improved lower bound on the maximal Gaussian perimeter of convex sets in $\\mathbb{R}^n$, sharper $L_2$-$L_1$ moment comparison inequalities on the Hamming cube $\\{-1,1\\}^n$, a strengthened autoconvolution inequality, improved asymptotic bounds on the size of the largest $g$-Sidon sets in $\\{1,\\dots,n\\}$, and an optimal balanced Szarek's inequality.",
+    "published": "2026-05-07",
+    "summary": "Modern Mixture-of-Experts (MoE) architectures allocate expert capacity through a rigid per-layer rule: each transformer layer owns a separate expert set. This convention couples depth scaling with linear expert-parameter growth and assumes that every layer needs isolated expert capacity. However, recent analyses and our routing probe challenge this allocation rule: replacing a deeper layer's learned top-k router with uniform random routing drops downstream accuracy by only 1.0-1.6 points across multiple production MoE models. Motivated by this redundancy, we propose UniPool, an MoE architecture that treats expert capacity as a global architectural budget by replacing per-layer expert ownership with a single shared pool accessed by independent per-layer routers. To enable stable and balanced training under sharing, we introduce a pool-level auxiliary loss that balances expert utilization across the entire pool, and adopt NormRouter to provide sparse and scale-stable routing into the shared expert pool. Across five LLaMA-architecture model scales (182M, 469M, 650M, 830M, and 978M parameters) trained on 30B tokens from the Pile, UniPool consistently improves validation loss and perplexity over the matched vanilla MoE baselines. Across these scales, UniPool reduces validation loss by up to 0.0386 relative to vanilla MoE. Beyond raw loss improvement, our results identify pool size as an explicit depth-scaling hyperparameter: reduced-pool UniPool variants using only 41.6%-66.7% of the vanilla expert-parameter budget match or outperform layer-wise MoE at the tested scales. This shows that, under a shared-pool design, expert parameters need not grow linearly with depth; they can grow sublinearly while remaining more efficient and effective than vanilla MoE. Further analysis shows that UniPool's benefits compose with finer-grained expert decomposition.",
     "categories": [
-      "math.PR",
-      "cs.AI",
-      "math.AP",
-      "math.CA",
-      "math.FA"
+      "cs.LG",
+      "cs.AI"
     ],
-    "summary_cn": "在这篇文章中，我们报告了与 Grok 合作的五项数学发现，所有这些发现都随后得到了作者的验证。其中包括 $\\mathbb{R}^n$ 中凸集最大高斯周长的改进下界、汉明立方 $\\{-1,1\\}^n$ 上更尖锐的 $L_2$-$L_1$ 矩比较不等式、强化的自卷积不等式、$\\{1,\\dots,n\\}$ 中最大 $g$-Sidon 集大小的改进渐近边界，以及最佳平衡萨雷克不等式。",
+    "summary_cn": "现代专家混合 (MoE) 架构通过严格的每层规则分配专家容量：每个变压器层拥有一个单独的专家集。该约定将深度缩放与线性专家参数增长结合起来，并假设每一层都需要独立的专家容量。然而，最近的分析和我们的路由探测对这一分配规则提出了挑战：用统一的随机路由替换更深层学习的 top-k 路由器，在多个生产 MoE 模型中，下游精度仅下降 1.0-1.6 个点。受这种冗余的推动，我们提出了 UniPool，这是一种 MoE 架构，通过用独立的每层路由器访问的单个共享池取代每层专家所有权，将专家容量视为全局架构预算。为了在共享下实现稳定和平衡的训练，我们引入了池级辅助损失来平衡整个池中的专家利用率，并采用 NormRouter 为共享专家池提供稀疏且规模稳定的路由。在使用来自 Pile 的 30B 代币训练的五个 LLaMA 架构模型规模（182M、469M、650M、830M 和 978M 参数）中，UniPool 持续改善了匹配的普通 MoE 基线的验证损失和困惑度。在这些规模上，UniPool 相对于普通 MoE 将验证损失降低了 0.0386。除了原始损失改进之外，我们的结果将池大小确定为显式深度缩放超参数：缩小池 UniPool 变体仅使用 41.6%-66.7% 的普通专家参数预算匹配或在测试规模上优于逐层 MoE。这表明，在共享池设计下，专家参数不需要随深度线性增长；它们可以亚线性增长，同时保持比普通 MoE 更高的效率和效果。进一步分析表明，UniPool 的好处在于更细粒度的专家分解。",
     "comment": "",
     "category_en": "Artificial Intelligence",
     "category_cn": "人工智能",
-    "slug": "2605-05193v1-grokability-in-five-inequalities",
-    "rel_path": "entities/papers/2605-05193v1-grokability-in-five-inequalities.html",
-    "figures": [],
-    "concepts": [],
-    "method_signal": "In this note, we report five mathematical discoveries made in collaboration with Grok, all of which have been subsequently verified by the authors.",
-    "topic_signal": "math.PR, cs.AI, math.AP"
+    "slug": "2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture",
+    "rel_path": "entities/papers/2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture.html",
+    "figures": [
+      "assets/papers/2605-06665v1/fig1.png",
+      "assets/papers/2605-06665v1/fig2.png",
+      "assets/papers/2605-06665v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      }
+    ],
+    "method_signal": "Motivated by this redundancy, we propose UniPool, an MoE architecture that treats expert capacity as a global architectural budget by replacing per-layer expert ownership with a single shared pool accessed by independent per-layer routers.",
+    "topic_signal": "大语言模型"
   }
 ]

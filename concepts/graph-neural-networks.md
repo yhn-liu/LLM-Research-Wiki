@@ -2,11 +2,12 @@
 layout: concept
 title: 图神经网络
 created: 2026-05-01
-updated: 2026-05-07
+updated: 2026-05-08
 type: concept
 tags: [GNN, graph, neural-network, biomedical, representation-learning, message-passing]
 papers:
   - 2604-28178v1-llm-as-clinical-graph-structure-refiner-enhancing-
+  - 2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro
 ---
 
 # 图神经网络
@@ -63,6 +64,8 @@ LLM 细化后的图结构更清晰、更具可解释性，这对生物医学等�
 
 ## 本库相关论文
 
+- [ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)（2026-05-07）：对于艺术应用，视频生成需要对表演和摄影进行精细控制，即演员的动作和摄像机轨迹。
+
 - [Continual Knowledge Updating in LLM Systems: Learning Through Multi-Timescale Memory Dynamics](../entities/papers/2605-05097v1-continual-knowledge-updating-in-llm-systems-learni.html)（2026-05-06）：法学硕士接受一次培训，然后部署到一个永不停息变化的世界。
 
 - [EQUITRIAGE: A Fairness Audit of Gender Bias in LLM-Based Emergency Department Triage](../entities/papers/2605-03998v1-equitriage-a-fairness-audit-of-gender-bias-in-llm.html)（2026-05-05）：急诊科分诊为患者分配一个视力评分，以确定治疗的优先顺序，临床证据记录了人类视力评估中持续存在的性别差异。
@@ -72,3 +75,4 @@ LLM 细化后的图结构更清晰、更具可解释性，这对生物医学等�
 - [PubMed-Ophtha: An open resource for training ophthalmology vision-language models on scientific literature](../entities/papers/2605-02720v1-pubmed-ophtha-an-open-resource-for-training-ophtha.html)（2026-05-04）：视觉语言模型为眼科带来了巨大的希望，但其发展依赖于仍然稀缺的大规模、高质量的图像文本数据集。
 
 - [Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces](../entities/papers/2605-02801v1-reinforcement-learning-for-llm-based-multi-agent-s.html)（2026-05-04）：随着大型语言模型 (LLM) 代理从孤立的工具用户发展为协调的团队，强化学习 (RL) 不仅必须优化个人操作，还必须优化工作的产生、委托、沟通、聚合和停止方式。
+- **ActCam**（[2605.06667](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)）：使用 3D 网格渲染和深度图构建场景几何表示，与 GNN 在图结构空间推理上方法相关。

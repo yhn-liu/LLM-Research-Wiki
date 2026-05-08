@@ -2,12 +2,13 @@
 layout: concept
 title: 多模态学习
 created: 2026-05-01
-updated: 2026-05-07
+updated: 2026-05-08
 type: concept
 tags: [multimodal, vision-language, cross-modal, perception, reasoning]
 papers:
   - 2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil
   - 2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d
+  - 2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro
 ---
 
 # 多模态学习
@@ -17,6 +18,8 @@ papers:
 多模态学习是让模型同时处理和理解多种数据类型（如文本、图像、3D 点云）的 AI 研究方向。在 LLM 时代，多模态学习的核心挑战是如何将视觉感知与语言推理有效融合。本库中有 2 篇论文从训练方法和应用场景两个角度研究了这一问题。
 
 ## 关键文献与发现
+
+- [ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)（2026-05-07）：对于艺术应用，视频生成需要对表演和摄影进行精细控制，即演员的动作和摄像机轨迹。
 
 - [Taming Outlier Tokens in Diffusion Transformers](../entities/papers/2605-05206v1-taming-outlier-tokens-in-diffusion-transformers.html)（2026-05-06）：研究 DiT 中离群 token 的扩散特性（中间层集中、随噪声水平增大），提出双阶段寄存器统一解决编码器和去噪器两端的离群问题。
 
@@ -68,3 +71,4 @@ HERMES++ 解决了多模态学习中的一个核心矛盾：**语义理解与物
 - [世界模型](world-models.html) — 多模态生成的重要方向
 - [知识蒸馏](knowledge-distillation.html) — 多模态模型的训练方法
 - [自动驾驶](autonomous-driving.html) — 多模态学习的关键应用场景
+- **ActCam**（[2605.06667](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)）：零样本联合摄像机与 3D 动作控制，通过摄像机对齐的深度/姿态条件实现视频生成中的多模态融合。

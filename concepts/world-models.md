@@ -2,7 +2,7 @@
 layout: concept
 title: 世界模型
 created: 2026-05-01
-updated: 2026-05-07
+updated: 2026-05-08
 type: concept
 tags: [world-model, prediction, generation, 3D, driving]
 papers:
@@ -16,6 +16,8 @@ papers:
 世界模型是能够学习环境动态规律、预测未来状态的计算模型。在 AI 领域，世界模型旨在让智能体通过内部模拟理解世界运行规律，用于规划、决策和生成。本库中有 1 篇论文推动了驾驶场景世界模型的前沿。
 
 ## 关键文献与发现
+
+- [Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)（2026-05-07）：强化学习 (RL) 已被应用于改进大型语言模型 (LLM) 推理，但由于缺乏受控、可扩展的环境，对训练如何随任务难度进行扩展的系统研究受到了阻碍。
 
 - [Continual Knowledge Updating in LLM Systems: Learning Through Multi-Timescale Memory Dynamics](../entities/papers/2605-05097v1-continual-knowledge-updating-in-llm-systems-learni.html)（2026-05-06）：法学硕士接受一次培训，然后部署到一个永不停息变化的世界。
 

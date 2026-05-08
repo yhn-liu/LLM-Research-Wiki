@@ -2,12 +2,15 @@
 layout: concept
 title: AI安全与对齐
 created: 2026-05-01
-updated: 2026-05-07
+updated: 2026-05-08
 type: concept
 tags: [safety, alignment, RLHF, adversarial, model-organism, evaluation]
 papers:
   - 2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr
   - 2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic
+  - 2605-06652v1-when-no-benchmark-exists-validating-comparative-ll
+  - 2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti
+  - 2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour
 ---
 
 # AI安全与对齐
@@ -17,6 +20,12 @@ papers:
 AI 安全与对齐（AI Safety and Alignment）是确保人工智能系统的行为与人类意图、价值观和利益保持一致的研究领域。对齐问题的核心挑战在于：如何让 AI 系统真正理解和遵循人类的目标，而不是仅仅在表面上满足指标要求。随着大语言模型能力的快速提升，AI 安全与对齐已成为 AI 研究中最重要的方向之一，涉及技术、伦理和社会等多个层面。
 
 ## 关键文献与发现
+
+- [Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)（2026-05-07）：大型语言模型 (LLM) 为深度研究代理提供支持，将来自数百个网络资源的信息合成为引用的报告，但这些引文无法得到可靠验证。
+
+- [Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients](../entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html)（2026-05-07）：由于确定性验证，具有可验证奖励的强化学习（RLVR）成为增强大型语言模型（LLM）推理能力的主导范式。
+
+- [When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels](../entities/papers/2605-06652v1-when-no-benchmark-exists-validating-comparative-ll.html)（2026-05-07）：在相关语言、部门或监管制度存在标记基准之前，许多部署必须比较候选语言模型的安全性。
 
 - [Text Corpora as Concept Fields: Black-Box Hallucination and Novelty Measurement](../entities/papers/2605-05103v1-text-corpora-as-concept-fields-black-box-hallucina.html)（2026-05-06）：我们引入文本语料库的**概念场**：具有逐点不确定性的局部漂移场，根据连续句子之间的增量在句子嵌入空间中估计。
 
@@ -105,3 +114,6 @@ Exploration Hacking 引入的模型有机体范式：
 - [基准评估](benchmarking.html) — 安全性评估的方法论
 - [知识蒸馏](knowledge-distillation.html) — 蒸馏过程中的安全对齐问题
 - [智能体](ai-agents.html) — 自主智能体的安全行为保障
+- **SimpleAudit**（[2605.06652](../entities/papers/2605-06652v1-when-no-benchmark-exists-validating-comparative-ll.html)）：提出无基准比较安全评分框架，在挪威公共部门采购案例中验证 LLM 安全比较。
+- **POPO**（[2605.06650](../entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html)）：仅正向策略优化避免负向 rollout 的惩罚噪声，与 AI 对齐中安全探索相关。
+- **Cited but Not Verified**（[2605.06635](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)）：揭示 LLM 研究智能体的引用事实准确性问题——表面质量与事实可靠性严重脱节。

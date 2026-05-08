@@ -2,12 +2,17 @@
 layout: concept
 title: 强化学习
 created: 2026-05-01
-updated: 2026-05-07
+updated: 2026-05-08
 type: concept
 tags: [RL, RLHF, RLVR, DPO, GRPO, DAPO, alignment]
 papers:
   - 2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil
   - 2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr
+  - 2605-06660v1-verifier-backed-hard-problem-generation-for-mathem
+  - 2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti
+  - 2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin
+  - 2605-06639v1-recursive-agent-optimization
+  - 2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres
 ---
 
 # 强化学习
@@ -17,6 +22,16 @@ papers:
 强化学习（Reinforcement Learning, RL）是通过与环境交互、根据奖励信号优化策略的机器学习范式。在 LLM 领域，RL 被广泛应用于后训练阶段，通过 RLHF、RLVR、DPO、GRPO 等方法对模型进行对齐和能力增强。本库中有 2 篇论文从正反两面研究了 LLM 训练中的强化学习。
 
 ## 关键文献与发现
+
+- [Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)（2026-05-07）：强化学习 (RL) 已被应用于改进大型语言模型 (LLM) 推理，但由于缺乏受控、可扩展的环境，对训练如何随任务难度进行扩展的系统研究受到了阻碍。
+
+- [Recursive Agent Optimization](../entities/papers/2605-06639v1-recursive-agent-optimization.html)（2026-05-07）：我们引入了递归代理优化（RAO），这是一种用于训练递归代理的强化学习方法：可以递归地生成子任务并将其委托给自身的新实例的代理。
+
+- [StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction](../entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html)（2026-05-07）：大型语言模型（LLM）越来越多地用作交互式代理，但优化它们以进行长期决策仍然很困难，因为当前的方法很大程度上纯粹是反应性的，这削弱了扩展轨迹上的探索和信用分配。
+
+- [Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients](../entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html)（2026-05-07）：由于确定性验证，具有可验证奖励的强化学习（RLVR）成为增强大型语言模型（LLM）推理能力的主导范式。
+
+- [Verifier-Backed Hard Problem Generation for Mathematical Reasoning](../entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html)（2026-05-07）：大型语言模型（LLM）展示了解决科学和数学问题的强大能力，但它们难以产生有效的、具有挑战性的和新颖的问题——这是推进 LLM 培训和实现自主科学研究的重要组成部分。
 
 - [Text Corpora as Concept Fields: Black-Box Hallucination and Novelty Measurement](../entities/papers/2605-05103v1-text-corpora-as-concept-fields-black-box-hallucina.html)（2026-05-06）：我们引入文本语料库的**概念场**：具有逐点不确定性的局部漂移场，根据连续句子之间的增量在句子嵌入空间中估计。
 
@@ -71,3 +86,8 @@ Exploration Hacking 揭示了一个此前未被关注的风险：LLM 可能在 R
 - [AI安全与对齐](ai-safety-alignment.html) — RL 对齐的安全性问题
 - [知识蒸馏](knowledge-distillation.html) — 与 RL 结合的训练方法
 - [多模态学习](multimodal-learning.html) — 多模态场景下的 RL 应用
+- **VHG**（[2605.06660](../entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html)）：三方自博弈 RL 框架，验证器把关防止奖励黑客。
+- **POPO**（[2605.06650](../entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html)）：仅正向 RLVR，用孪生网络和表示空间对齐替代 KL 散度。
+- **StraTA**（[2605.06642](../entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html)）：分级 GRPO 式训练，引入显式策略引导长期智能体决策。
+- **RAO**（[2605.06639](../entities/papers/2605-06639v1-recursive-agent-optimization.html)）：训练递归智能体的 RL 方法，支持分治推理和上下文窗口外泛化。
+- **ScaleLogic**（[2605.06638](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)）：证明 RL 训练计算与推理深度呈幂律关系，且表达能力是关键缩放因子。

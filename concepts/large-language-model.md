@@ -2,7 +2,7 @@
 layout: concept
 title: 大语言模型
 created: 2026-05-01
-updated: 2026-05-07
+updated: 2026-05-08
 type: concept
 tags: [LLM, transformer, scaling, NLP, deep-learning]
 papers:
@@ -14,6 +14,14 @@ papers:
   - 2604-28061v1-measuring-research-data-reuse-in-scholarly-publica
   - 2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic
   - 2604-28178v1-llm-as-clinical-graph-structure-refiner-enhancing-
+  - 2605-06663v1-emo-pretraining-mixture-of-experts-for-emergent-mo
+  - 2605-06660v1-verifier-backed-hard-problem-generation-for-mathem
+  - 2605-06652v1-when-no-benchmark-exists-validating-comparative-ll
+  - 2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti
+  - 2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin
+  - 2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres
+  - 2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour
+  - 2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture
 ---
 
 # 大语言模型
@@ -23,6 +31,22 @@ papers:
 大语言模型（Large Language Model, LLM）是基于 Transformer 架构、通过海量文本预训练的大规模神经网络，能够执行文本生成、理解、推理等多种任务。自 GPT-3 展示涌现能力以来，LLM 已成为 AI 研究的核心范式，本库中有 8 篇论文从不同角度对其进行研究。
 
 ## 关键文献与发现
+
+- [UniPool: A Globally Shared Expert Pool for Mixture-of-Experts](../entities/papers/2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture.html)（2026-05-07）：现代专家混合 (MoE) 架构通过严格的每层规则分配专家容量：每个变压器层拥有一个单独的专家集。
+
+- [Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)（2026-05-07）：大型语言模型 (LLM) 为深度研究代理提供支持，将来自数百个网络资源的信息合成为引用的报告，但这些引文无法得到可靠验证。
+
+- [Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)（2026-05-07）：强化学习 (RL) 已被应用于改进大型语言模型 (LLM) 推理，但由于缺乏受控、可扩展的环境，对训练如何随任务难度进行扩展的系统研究受到了阻碍。
+
+- [StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction](../entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html)（2026-05-07）：大型语言模型（LLM）越来越多地用作交互式代理，但优化它们以进行长期决策仍然很困难，因为当前的方法很大程度上纯粹是反应性的，这削弱了扩展轨迹上的探索和信用分配。
+
+- [Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients](../entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html)（2026-05-07）：由于确定性验证，具有可验证奖励的强化学习（RLVR）成为增强大型语言模型（LLM）推理能力的主导范式。
+
+- [When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels](../entities/papers/2605-06652v1-when-no-benchmark-exists-validating-comparative-ll.html)（2026-05-07）：在相关语言、部门或监管制度存在标记基准之前，许多部署必须比较候选语言模型的安全性。
+
+- [Verifier-Backed Hard Problem Generation for Mathematical Reasoning](../entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html)（2026-05-07）：大型语言模型（LLM）展示了解决科学和数学问题的强大能力，但它们难以产生有效的、具有挑战性的和新颖的问题——这是推进 LLM 培训和实现自主科学研究的重要组成部分。
+
+- [EMO: Pretraining Mixture of Experts for Emergent Modularity](../entities/papers/2605-06663v1-emo-pretraining-mixture-of-experts-for-emergent-mo.html)（2026-05-07）：大型语言模型通常部署为整体系统，即使应用程序只需要一小部分功能（例如代码、数学或特定领域的知识），也需要完整的模型。
 
 - [Taming Outlier Tokens in Diffusion Transformers](../entities/papers/2605-05206v1-taming-outlier-tokens-in-diffusion-transformers.html)（2026-05-06）：发现离群 token 同时存在于 DiT 编码器和去噪器，提出双阶段寄存器（DSR）统一解决，RAE-DiT FID 从 5.89 降至 4.58。
 
@@ -160,3 +184,11 @@ papers:
 - [基准评估](benchmarking.html) — LLM 能力的系统性评估
 - [智能体](ai-agents.html) — 基于 LLM 的自主智能系统
 - [AI安全与对齐](ai-safety-alignment.html) — 确保 LLM 行为安全可控
+- **EMO**（[2605.06663](../entities/papers/2605-06663v1-emo-pretraining-mixture-of-experts-for-emergent-mo.html)）：提出通过文档级路由约束使 MoE 专家在语义层面涌现模块化分组，支持选择性专家使用。
+- **VHG**（[2605.06660](../entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html)）：引入三方自博弈框架（出题者-解题者-验证器），防止奖励黑客，生成有效且困难的数学问题。
+- **SimpleAudit**（[2605.06652](../entities/papers/2605-06652v1-when-no-benchmark-exists-validating-comparative-ll.html)）：正式化无基准比较安全评分，提出工具有效性链，在无真实标签时提供可复现的 LLM 安全性比较。
+- **POPO**（[2605.06650](../entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html)）：提出仅使用正向 rollout 的 RLVR 框架，通过概率重分配产生隐式负梯度，在 AIME 2025 上超越 GRPO。
+- **StraTA**（[2605.06642](../entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html)）：将显式轨迹级策略引入智能体 RL，在 ALFWorld 和 WebShop 上取得领先成功率。
+- **ScaleLogic**（[2605.06638](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)）：揭示 RL 训练计算与推理深度间的幂律关系，证明逻辑表达能力是下游迁移的关键因素。
+- **Cited but Not Verified**（[2605.06635](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)）：发现 LLM 深度研究智能体的引用事实准确性仅 39-77%，更多检索反而降低准确性。
+- **UniPool**（[2605.06665](../entities/papers/2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture.html)）：提出全局共享专家池替代逐层专家所有权，实现专家参数的亚线性深度缩放。

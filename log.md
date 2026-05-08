@@ -191,3 +191,18 @@
   - [2605.05090v1] Automatically Finding and Validating Unexpected Side-Effects of Interventions on
   - [2605.05206v1] Taming Outlier Tokens in Diffusion Transformers
   - [2605.05193v1] Grokability in five inequalities
+
+## [2026-05-08] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 更新相关概念页提及: 31 处
+- 不生成 PDF；论文页面包含英文摘要、中文摘要、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.06663v1] EMO: Pretraining Mixture of Experts for Emergent Modularity
+  - [2605.06660v1] Verifier-Backed Hard Problem Generation for Mathematical Reasoning
+  - [2605.06652v1] When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Grou
+  - [2605.06650v1] Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negati
+  - [2605.06642v1] StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory A
+  - [2605.06639v1] Recursive Agent Optimization
+  - [2605.06638v1] Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key
+  - [2605.06635v1] Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Re
+  - [2605.06667v1] ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation
+  - [2605.06665v1] UniPool: A Globally Shared Expert Pool for Mixture-of-Experts

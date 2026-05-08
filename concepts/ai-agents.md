@@ -2,7 +2,7 @@
 layout: concept
 title: 智能体
 created: 2026-05-01
-updated: 2026-05-07
+updated: 2026-05-08
 type: concept
 tags: [agent, tool-use, planning, LLM-agent, multi-agent, collaboration]
 papers:
@@ -14,6 +14,9 @@ papers:
   - 2305-19118-arxiv-query-searchqueryampidlist230519118ampstart0
   - 2604-28181v1-synthetic-computers-at-scale-for-long-horizon-prod
   - 2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr
+  - 2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin
+  - 2605-06639v1-recursive-agent-optimization
+  - 2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour
 ---
 
 # 智能体
@@ -23,6 +26,12 @@ papers:
 智能体（AI Agent）是指能够感知环境、进行推理、做出决策并采取行动以实现特定目标的自主系统。基于大语言模型的智能体将 LLM 作为核心"大脑"，通过工具使用、规划和记忆机制与外部环境交互。本库中有 8 篇论文从单智能体能力、多智能体协作、训练安全等角度研究了这一方向。
 
 ## 关键文献与发现
+
+- [Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)（2026-05-07）：大型语言模型 (LLM) 为深度研究代理提供支持，将来自数百个网络资源的信息合成为引用的报告，但这些引文无法得到可靠验证。
+
+- [Recursive Agent Optimization](../entities/papers/2605-06639v1-recursive-agent-optimization.html)（2026-05-07）：我们引入了递归代理优化（RAO），这是一种用于训练递归代理的强化学习方法：可以递归地生成子任务并将其委托给自身的新实例的代理。
+
+- [StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction](../entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html)（2026-05-07）：大型语言模型（LLM）越来越多地用作交互式代理，但优化它们以进行长期决策仍然很困难，因为当前的方法很大程度上纯粹是反应性的，这削弱了扩展轨迹上的探索和信用分配。
 
 - [Automatically Finding and Validating Unexpected Side-Effects of Interventions on Language Models](../entities/papers/2605-05090v1-automatically-finding-and-validating-unexpected-si.html)（2026-05-06）：我们提出了一个自动化的对比评估流程，用于审核干预措施对大型语言模型的行为影响。
 
@@ -108,3 +117,6 @@ papers:
 - [强化学习](reinforcement-learning.html) — 智能体训练的关键方法
 - [世界模型](world-models.html) — 智能体进行规划和预测的基础
 - [AI安全与对齐](ai-safety-alignment.html) — 智能体行为的安全性和可控性
+- **StraTA**（[2605.06642](../entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html)）：引入显式轨迹策略到智能体 RL，在 ALFWorld（93.1%）和 WebShop（84.2%）上取得 SOTA。
+- **RAO**（[2605.06639](../entities/papers/2605-06639v1-recursive-agent-optimization.html)）：训练递归智能体，支持子任务委托和分治推理，可泛化到超越训练难度和上下文窗口的任务。
+- **Cited but Not Verified**（[2605.06635](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)）：评估 LLM 深度研究智能体的引用质量，发现更多工具调用并不产生更准确引用。

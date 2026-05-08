@@ -2,11 +2,13 @@
 layout: concept
 title: 自动驾驶
 created: 2026-05-01
-updated: 2026-05-05
+updated: 2026-05-08
 type: concept
 tags: [autonomous-driving, perception, prediction, planning, 3D, world-model]
 papers:
   - 2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d
+  - 2605-06660v1-verifier-backed-hard-problem-generation-for-mathem
+  - 2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin
 ---
 
 # 自动驾驶
@@ -16,6 +18,12 @@ papers:
 自动驾驶（Autonomous Driving）是指通过传感器感知、环境理解、行为预测和路径规划等技术，使车辆能够在无人干预或最小干预的情况下自主行驶的系统。现代自动驾驶系统深度依赖人工智能技术，包括计算机视觉、深度学习、强化学习和世界模型等。随着端到端学习和世界模型的发展，自动驾驶正从模块化架构向统一感知-预测-规划的端到端架构演进。
 
 ## 关键文献与发现
+
+- [ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)（2026-05-07）：对于艺术应用，视频生成需要对表演和摄影进行精细控制，即演员的动作和摄像机轨迹。
+
+- [StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction](../entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html)（2026-05-07）：大型语言模型（LLM）越来越多地用作交互式代理，但优化它们以进行长期决策仍然很困难，因为当前的方法很大程度上纯粹是反应性的，这削弱了扩展轨迹上的探索和信用分配。
+
+- [Verifier-Backed Hard Problem Generation for Mathematical Reasoning](../entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html)（2026-05-07）：大型语言模型（LLM）展示了解决科学和数学问题的强大能力，但它们难以产生有效的、具有挑战性的和新颖的问题——这是推进 LLM 培训和实现自主科学研究的重要组成部分。
 
 - [Laplacian Frequency Interaction Network for Rural Thematic Road Extraction](../entities/papers/2605-02866v1-laplacian-frequency-interaction-network-for-rural.html)（2026-05-04）：农村专题路网建设旨在从农机运动轨迹图像中提取拓扑道路结构。
 
@@ -84,3 +92,5 @@ HERMES++ 的工作代表了自动驾驶从模块化向统一架构演进的最�
 - [图神经网络](graph-neural-networks.html) — 交通场景中关系建模的方法
 - [基准评估](benchmarking.html) — 自动驾驶系统的评估方法
 - [大语言模型](large-language-model.html) — LLM 在自动驾驶决策中的应用潜力
+- **VHG**（[2605.06660](../entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html)）：三方自博弈框架与自动驾驶中多智能体交互和安全验证具有方法论联系。
+- **StraTA**（[2605.06642](../entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html)）：策略引导的长期智能体决策方法与自动驾驶的轨迹规划方法论相关。
