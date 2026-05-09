@@ -2,7 +2,7 @@
 layout: concept
 title: 基准评估
 created: 2026-05-01
-updated: 2026-05-08
+updated: 2026-05-09
 type: concept
 tags: [benchmark, evaluation, testing, metrics, domain-specific, assessment]
 papers:
@@ -23,6 +23,22 @@ papers:
 基准评估（Benchmarking）是通过设计标准化的测试任务和评估指标来系统性地衡量 AI 模型能力的研究方法。一个好的基准测试需要具备区分度、公平性、可复现性和时效性，能够真实反映模型在特定领域或通用任务上的性能水平。随着 AI 模型能力的快速提升，基准评估本身也面临着被"饱和"或被"游戏化"的挑战。
 
 ## 关键文献与发现
+
+- [Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval](../entities/papers/2605-06647v1-superintelligent-retrieval-agent-the-next-frontier.html)（2026-05-07）：检索增强代理越来越多地成为大型组织知识库的接口，但大多数仍然将检索视为黑匣子：它们发出探索性查询，检查返回的片段，并迭代地重新制定，直到出现有用的证据。
+
+- [AI Co-Mathematician: Accelerating Mathematicians with Agentic AI](../entities/papers/2605-06651v1-ai-co-mathematician-accelerating-mathematicians-wi.html)（2026-05-07）：我们推出了 AI 联合数学家，这是数学家可以交互地利用 AI 代理进行开放式研究的工作台。
+
+- [DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining with High-Order Ranking Consistency](../entities/papers/2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for.html)（2026-05-07）：对比语言图像预训练（CLIP）存在两个结构性弱点：对称的 InfoNCE 损失丢弃了不匹配的批内对之间的相对顺序，全局池化将视觉表示折叠成对细粒度局部结构不敏感的语义瓶颈。
+
+- [DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification](../entities/papers/2605-06637v1-dpm-dynamic-masked-metric-learning-for-occluded-pe.html)（2026-05-07）：尽管行人重识别取得了令人瞩目的进展，但障碍物造成的遮挡在实际应用中仍然是一个悬而未决的问题。
+
+- [GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generation](../entities/papers/2605-06641v1-glazybench-a-benchmark-for-ceramic-glaze-property.html)（2026-05-07）：由于化学成分复杂，开发陶瓷釉料是一个成本高昂、耗时的反复试验过程，给独立艺术家带来了沉重的负担。
+
+- [Are We Making Progress in Multimodal Domain Generalization? A Comprehensive Benchmark Study](../entities/papers/2605-06643v1-are-we-making-progress-in-multimodal-domain-genera.html)（2026-05-07）：尽管用于增强模型鲁棒性的多模态域泛化（MMDG）越来越受欢迎，但仍不清楚报告的性能增益是否反映了真正的算法进展，还是不一致的评估协议的产物。
+
+- [Relit-LiVE: Relight Video by Jointly Learning Environment Video](../entities/papers/2605-06658v1-relit-live-relight-video-by-jointly-learning-envir.html)（2026-05-07）：最近的进展表明，大规模视频扩散模型可以重新用作神经渲染器，首先将视频分解为内在场景表示，然后在新颖的照明下执行前向渲染。
+
+- [BAMI: Training-Free Bias Mitigation in GUI Grounding](../entities/papers/2605-06664v1-bami-training-free-bias-mitigation-in-gui-groundin.html)（2026-05-07）：GUI 接地是使 GUI 代理能够执行单击和拖动等任务的关键功能。
 
 - [ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)（2026-05-07）：对于艺术应用，视频生成需要对表演和摄影进行精细控制，即演员的动作和摄像机轨迹。
 

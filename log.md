@@ -206,3 +206,18 @@
   - [2605.06635v1] Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Re
   - [2605.06667v1] ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation
   - [2605.06665v1] UniPool: A Globally Shared Expert Pool for Mixture-of-Experts
+
+## [2026-05-09] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 更新相关概念页提及: 28 处
+- 不生成 PDF；论文页面包含英文摘要、中文摘要、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.06664v1] BAMI: Training-Free Bias Mitigation in GUI Grounding
+  - [2605.06658v1] Relit-LiVE: Relight Video by Jointly Learning Environment Video
+  - [2605.06643v1] Are We Making Progress in Multimodal Domain Generalization? A Comprehensive Benc
+  - [2605.06641v1] GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generati
+  - [2605.06637v1] DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification
+  - [2605.06610v1] SoftSAE: Dynamic Top-K Selection for Adaptive Sparse Autoencoders
+  - [2605.06592v1] DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining 
+  - [2605.06654v1] Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretrain
+  - [2605.06651v1] AI Co-Mathematician: Accelerating Mathematicians with Agentic AI
+  - [2605.06647v1] Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval

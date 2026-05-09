@@ -2,7 +2,7 @@
 layout: concept
 title: 多模态学习
 created: 2026-05-01
-updated: 2026-05-08
+updated: 2026-05-09
 type: concept
 tags: [multimodal, vision-language, cross-modal, perception, reasoning]
 papers:
@@ -18,6 +18,16 @@ papers:
 多模态学习是让模型同时处理和理解多种数据类型（如文本、图像、3D 点云）的 AI 研究方向。在 LLM 时代，多模态学习的核心挑战是如何将视觉感知与语言推理有效融合。本库中有 2 篇论文从训练方法和应用场景两个角度研究了这一问题。
 
 ## 关键文献与发现
+
+- [DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining with High-Order Ranking Consistency](../entities/papers/2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for.html)（2026-05-07）：对比语言图像预训练（CLIP）存在两个结构性弱点：对称的 InfoNCE 损失丢弃了不匹配的批内对之间的相对顺序，全局池化将视觉表示折叠成对细粒度局部结构不敏感的语义瓶颈。
+
+- [GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generation](../entities/papers/2605-06641v1-glazybench-a-benchmark-for-ceramic-glaze-property.html)（2026-05-07）：由于化学成分复杂，开发陶瓷釉料是一个成本高昂、耗时的反复试验过程，给独立艺术家带来了沉重的负担。
+
+- [Are We Making Progress in Multimodal Domain Generalization? A Comprehensive Benchmark Study](../entities/papers/2605-06643v1-are-we-making-progress-in-multimodal-domain-genera.html)（2026-05-07）：尽管用于增强模型鲁棒性的多模态域泛化（MMDG）越来越受欢迎，但仍不清楚报告的性能增益是否反映了真正的算法进展，还是不一致的评估协议的产物。
+
+- [Relit-LiVE: Relight Video by Jointly Learning Environment Video](../entities/papers/2605-06658v1-relit-live-relight-video-by-jointly-learning-envir.html)（2026-05-07）：最近的进展表明，大规模视频扩散模型可以重新用作神经渲染器，首先将视频分解为内在场景表示，然后在新颖的照明下执行前向渲染。
+
+- [BAMI: Training-Free Bias Mitigation in GUI Grounding](../entities/papers/2605-06664v1-bami-training-free-bias-mitigation-in-gui-groundin.html)（2026-05-07）：GUI 接地是使 GUI 代理能够执行单击和拖动等任务的关键功能。
 
 - [ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)（2026-05-07）：对于艺术应用，视频生成需要对表演和摄影进行精细控制，即演员的动作和摄像机轨迹。
 

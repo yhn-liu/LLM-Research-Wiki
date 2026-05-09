@@ -2,7 +2,7 @@
 layout: concept
 title: 智能体
 created: 2026-05-01
-updated: 2026-05-08
+updated: 2026-05-09
 type: concept
 tags: [agent, tool-use, planning, LLM-agent, multi-agent, collaboration]
 papers:
@@ -26,6 +26,16 @@ papers:
 智能体（AI Agent）是指能够感知环境、进行推理、做出决策并采取行动以实现特定目标的自主系统。基于大语言模型的智能体将 LLM 作为核心"大脑"，通过工具使用、规划和记忆机制与外部环境交互。本库中有 8 篇论文从单智能体能力、多智能体协作、训练安全等角度研究了这一方向。
 
 ## 关键文献与发现
+
+- [Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval](../entities/papers/2605-06647v1-superintelligent-retrieval-agent-the-next-frontier.html)（2026-05-07）：检索增强代理越来越多地成为大型组织知识库的接口，但大多数仍然将检索视为黑匣子：它们发出探索性查询，检查返回的片段，并迭代地重新制定，直到出现有用的证据。
+
+- [AI Co-Mathematician: Accelerating Mathematicians with Agentic AI](../entities/papers/2605-06651v1-ai-co-mathematician-accelerating-mathematicians-wi.html)（2026-05-07）：我们推出了 AI 联合数学家，这是数学家可以交互地利用 AI 代理进行开放式研究的工作台。
+
+- [SoftSAE: Dynamic Top-K Selection for Adaptive Sparse Autoencoders](../entities/papers/2605-06610v1-softsae-dynamic-top-k-selection-for-adaptive-spars.html)（2026-05-07）：稀疏自动编码器 (SAE) 已成为机械可解释性的重要工具，有助于分析大型语言模型 (LLM) 和视觉变换器 (ViT) 中的内部表示。
+
+- [Relit-LiVE: Relight Video by Jointly Learning Environment Video](../entities/papers/2605-06658v1-relit-live-relight-video-by-jointly-learning-envir.html)（2026-05-07）：最近的进展表明，大规模视频扩散模型可以重新用作神经渲染器，首先将视频分解为内在场景表示，然后在新颖的照明下执行前向渲染。
+
+- [BAMI: Training-Free Bias Mitigation in GUI Grounding](../entities/papers/2605-06664v1-bami-training-free-bias-mitigation-in-gui-groundin.html)（2026-05-07）：GUI 接地是使 GUI 代理能够执行单击和拖动等任务的关键功能。
 
 - [Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)（2026-05-07）：大型语言模型 (LLM) 为深度研究代理提供支持，将来自数百个网络资源的信息合成为引用的报告，但这些引文无法得到可靠验证。
 

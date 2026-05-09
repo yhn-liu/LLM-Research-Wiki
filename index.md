@@ -6,113 +6,113 @@ title: LLM Research Wiki
 # 🔬 LLM Research Wiki
 
 > AI/ML 领域的维基式知识库。按概念组织，论文为据，持续更新。
-> 最后更新：2026-05-08 | 概念：61 | 论文：80
+> 最后更新：2026-05-09 | 概念：61 | 论文：90
 
 ---
 
 ## 🌟 今日新论文
 
-> 2026-05-08 自动更新，共 10 篇。这里是网站版每日论文导读；点击标题进入论文页面查看摘要、方法信号、相关主题和关键图示。
+> 2026-05-09 自动更新，共 10 篇。这里是网站版每日论文导读；点击标题进入论文页面查看摘要、方法信号、相关主题和关键图示。
 
 <div class="daily-papers">
 <div class="daily-paper-card">
-  <a href="entities/papers/2605-06663v1-emo-pretraining-mixture-of-experts-for-emergent-mo.html" class="daily-thumb"><img src="assets/papers/2605-06663v1/fig1.png" alt="EMO: Pretraining Mixture of Experts for Emergent Modularity"></a>
+  <a href="entities/papers/2605-06664v1-bami-training-free-bias-mitigation-in-gui-groundin.html" class="daily-thumb"><img src="assets/papers/2605-06664v1/fig1.png" alt="BAMI: Training-Free Bias Mitigation in GUI Grounding"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06663v1-emo-pretraining-mixture-of-experts-for-emergent-mo.html">EMO: Pretraining Mixture of Experts for Emergent Modularity</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.CL · 大语言模型</div>
-    <p><strong>方法/亮点：</strong>We introduce EMO, an MoE designed for modularity-the independent use and composition of expert subsets-without requiring human-defined priors.</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>大型语言模型通常部署为整体系统，即使应用程序只需要一小部分功能（例如代码、数学或特定领域的知识），也需要完整的模型。专家混合 (MoE) 似乎提供了一种潜在的替代方案，即每个输入仅激活一部分专家，但实际上，将推理限制为给定领域的一部分专家会导致性能严重下降。这限制了它们在内存受限环境中的实用性，尤其是当模型变得更大、更稀疏时。我们引入了 EMO，这是一种为模块化而设计的 MoE，即专家子集的独立使用和组合，而不需要人类定义的先验。我们的...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> Large language models are typically deployed as monolithic systems, requiring the full model even when applications need only a narrow subset of capabilities, e.g., code, math, or domain-specific knowledge. Mixture-of-Ex...</p>
+    <h3><a href="entities/papers/2605-06664v1-bami-training-free-bias-mitigation-in-gui-groundin.html">BAMI: Training-Free Bias Mitigation in GUI Grounding</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.CV, cs.AI · 多模态学习 / 基准评估 / AI安全与对齐 / 智能体</div>
+    <p><strong>方法/亮点：</strong>To address these challenges, we introduce \textbf{Bias-Aware Manipulation Inference (BAMI)}, which incorporates two key manipulations, coarse-to-fine focus and candidate selection, to effectively mitigate these biases.</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>GUI 接地是使 GUI 代理能够执行单击和拖动等任务的关键功能。然而，在 ScreenSpot-Pro 基准测试等复杂场景中，现有模型的性能常常不佳。利用所提出的\textbf{掩模预测分布（MPD）}归因方法，我们发现错误的主要来源有两个：高图像分辨率（导致精度偏差）和复杂的界面元素（导致模糊性偏差）。为了应对这些挑战，我们引入了偏差感知操纵推理（BAMI），它结合了两个关键操作，从粗到细的聚焦和候选选择，以有效地减轻这些偏差。我们...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> GUI grounding is a critical capability for enabling GUI agents to execute tasks such as clicking and dragging. However, in complex scenarios like the ScreenSpot-Pro benchmark, existing models often suffer from suboptimal...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html" class="daily-thumb"><img src="assets/papers/2605-06660v1/fig1.png" alt="Verifier-Backed Hard Problem Generation for Mathematical Reasoning"></a>
+  <a href="entities/papers/2605-06658v1-relit-live-relight-video-by-jointly-learning-envir.html" class="daily-thumb"><img src="assets/papers/2605-06658v1/fig1.png" alt="Relit-LiVE: Relight Video by Jointly Learning Environment Video"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06660v1-verifier-backed-hard-problem-generation-for-mathem.html">Verifier-Backed Hard Problem Generation for Mathematical Reasoning</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.LG, cs.AI, cs.CL · 大语言模型 / 强化学习 / 基准评估 / 自动驾驶</div>
-    <p><strong>方法/亮点：</strong>Large Language Models (LLMs) demonstrate strong capabilities for solving scientific and mathematical problems, yet they struggle to produce valid, challenging, and novel problems - an essential component for advancing LLM training and enabl</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>大型语言模型（LLM）展示了解决科学和数学问题的强大能力，但它们难以产生有效的、具有挑战性的和新颖的问题——这是推进 LLM 培训和实现自主科学研究的重要组成部分。现有的问题生成方法要么依赖于昂贵的人类专家参与，要么采用幼稚的自我博弈范式，这些范式经常因奖励黑客而产生无效问题。这项工作介绍了 VHG，一种基于三方自博构建的验证者增强型难题生成框架。通过将独立验证者集成到传统的设置器-求解器二元性中，我们的设计将设置器的奖励限制为由问题有...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> Large Language Models (LLMs) demonstrate strong capabilities for solving scientific and mathematical problems, yet they struggle to produce valid, challenging, and novel problems - an essential component for advancing LL...</p>
+    <h3><a href="entities/papers/2605-06658v1-relit-live-relight-video-by-jointly-learning-envir.html">Relit-LiVE: Relight Video by Jointly Learning Environment Video</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.CV · 多模态学习 / 基准评估 / AI安全与对齐 / 智能体</div>
+    <p><strong>方法/亮点：</strong>In this work, we present Relit-LiVE, a novel video relighting framework that produces physically consistent, temporally stable results without requiring prior knowledge of camera pose.</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>最近的进展表明，大规模视频扩散模型可以重新用作神经渲染器，首先将视频分解为内在场景表示，然后在新颖的照明下执行前向渲染。虽然很有希望，但这种范例从根本上依赖于准确的内在分解，这对于现实世界的视频来说仍然非常不可靠，并且经常导致外观扭曲、材料损坏以及重新照明期间累积​​的时间伪影。在这项工作中，我们提出了 Relit-LiVE，这是一种新颖的视频重新照明框架，可以产生物理一致、时间稳定的结果，而无需事先了解相机姿势。我们的主要见解是将原始...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> Recent advances have shown that large-scale video diffusion models can be repurposed as neural renderers by first decomposing videos into intrinsic scene representations and then performing forward rendering under novel ...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2605-06652v1-when-no-benchmark-exists-validating-comparative-ll.html" class="daily-thumb"><img src="assets/papers/2605-06652v1/fig1.png" alt="When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels"></a>
+  <a href="entities/papers/2605-06643v1-are-we-making-progress-in-multimodal-domain-genera.html" class="daily-thumb"><img src="assets/papers/2605-06643v1/fig1.png" alt="Are We Making Progress in Multimodal Domain Generalization? A Comprehensive Benchmark Study"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06652v1-when-no-benchmark-exists-validating-comparative-ll.html">When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.LG, cs.AI, cs.CL · 大语言模型 / 基准评估 / AI安全与对齐</div>
-    <p><strong>方法/亮点：</strong>Many deployments must compare candidate language models for safety before a labeled benchmark exists for the relevant language, sector, or regulatory regime.</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>在相关语言、部门或监管制度存在标记基准之前，许多部署必须比较候选语言模型的安全性。我们将这种设置正式化为无基准比较安全评分，并指定基于场景的审计可以解释为部署证据的合同。分数仅在固定场景包、评分标准、审核员、法官、抽样配置和重新运行预算下有效。由于没有可用的标签，我们用工具有效性链取代了基本事实协议：对受控安全与消除对比的响应、目标驱动方差对审计和判断工件的主导地位以及重新运行的稳定性。我们在 SimpleAudit（本地优先的评分工具...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> Many deployments must compare candidate language models for safety before a labeled benchmark exists for the relevant language, sector, or regulatory regime. We formalize this setting as benchmarkless comparative safety ...</p>
+    <h3><a href="entities/papers/2605-06643v1-are-we-making-progress-in-multimodal-domain-genera.html">Are We Making Progress in Multimodal Domain Generalization? A Comprehensive Benchmark Study</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.CV, cs.AI, cs.LG · 多模态学习 / 基准评估 / AI安全与对齐</div>
+    <p><strong>方法/亮点：</strong>To address this issue, we introduce MMDG-Bench, the first unified and comprehensive benchmark for MMDG, which standardizes evaluation across six datasets spanning three diverse tasks: action recognition, mechanical fault diagnosis, and sent</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>尽管用于增强模型鲁棒性的多模态域泛化（MMDG）越来越受欢迎，但仍不清楚报告的性能增益是否反映了真正的算法进展，还是不一致的评估协议的产物。目前的研究是分散的，研究在数据集、模态配置和实验设置方面存在显着差异。此外，现有的基准主要关注动作识别，往往忽略了现实世界的关键挑战，例如输入损坏、模式缺失和模型可信度。标准化的缺乏阻碍了对该领域进展的可靠评估。为了解决这个问题，我们引入了 MMDG-Bench，这是第一个统一且全面的 MMDG 基...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> Despite the growing popularity of Multimodal Domain Generalization (MMDG) for enhancing model robustness, it remains unclear whether reported performance gains reflect genuine algorithmic progress or are artifacts of inc...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html" class="daily-thumb"><img src="assets/papers/2605-06650v1/fig1.png" alt="Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients"></a>
+  <a href="entities/papers/2605-06641v1-glazybench-a-benchmark-for-ceramic-glaze-property.html" class="daily-thumb"><img src="assets/papers/2605-06641v1/fig1.png" alt="GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generation"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06650v1-beyond-negative-rollouts-positive-only-policy-opti.html">Beyond Negative Rollouts: Positive-Only Policy Optimization with Implicit Negative Gradients</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.CL · 大语言模型 / 强化学习 / 基准评估 / AI安全与对齐</div>
-    <p><strong>方法/亮点：</strong>In this work, we propose Positive-Only Policy Optimization (POPO), a novel RLVR framework in which learning can occur exclusively via online positive rollouts.</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>由于确定性验证，具有可验证奖励的强化学习（RLVR）成为增强大型语言模型（LLM）推理能力的主导范式。社区见证了从近端策略优化（PPO）到组相对策略优化（GRPO）的快速变化，其中GRPO通过对分组正向和负向推出的简单估计来减少复杂的优势估计。然而，我们注意到，负数推出可能不承认失败严重程度的分级，并且组合的巨大性使得惩罚一些采样负数不太可能在稀疏的二元奖励下覆盖有意义的奖励信号。在这项工作中，我们提出了仅正向策略优化（POPO），这是...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> Reinforcement learning with verifiable rewards (RLVR), due to the deterministic verification, becomes a dominant paradigm for enhancing the reasoning ability of large language models (LLMs). The community witnesses the r...</p>
+    <h3><a href="entities/papers/2605-06641v1-glazybench-a-benchmark-for-ceramic-glaze-property.html">GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generation</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.AI, cs.CV · 大语言模型 / 多模态学习 / 基准评估</div>
+    <p><strong>方法/亮点：</strong>We propose GlazyBench, the first dataset for AI-assisted glaze design.</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>由于化学成分复杂，开发陶瓷釉料是一个成本高昂、耗时的反复试验过程，给独立艺术家带来了沉重的负担。虽然多模式人工智能的最新进展提供了现代解决方案，但该领域缺乏训练这些模型所需的大规模数据集。我们提出 GlazyBench，这是人工智能辅助釉料设计的第一个数据集。 GlazyBench 包含 23,148 种真实釉料配方，支持两项主要任务：预测原材料烧成后的表面特性，例如颜色和透明度，并根据这些特性生成釉料的准确视觉表示。我们使用传统机器学...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> Developing ceramic glazes is a costly, time-consuming process of trial and error due to complex chemistry, placing a significant burden on independent artists. While recent advances in multimodal AI offer a modern soluti...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  
+  <a href="entities/papers/2605-06637v1-dpm-dynamic-masked-metric-learning-for-occluded-pe.html" class="daily-thumb"><img src="assets/papers/2605-06637v1/fig1.png" alt="DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html">StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.CL, cs.AI · 大语言模型 / 强化学习 / 自动驾驶 / 智能体</div>
-    <p><strong>方法/亮点：</strong>In this work, we present Strategic Trajectory Abstraction (StraTA), a simple framework that introduces an explicit trajectory-level strategy into agentic reinforcement learning (RL).</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>大型语言模型（LLM）越来越多地用作交互式代理，但优化它们以进行长期决策仍然很困难，因为当前的方法很大程度上纯粹是反应性的，这削弱了扩展轨迹上的探索和信用分配。在这项工作中，我们提出了策略轨迹抽象（StraTA），这是一个简单的框架，它将显式轨迹级策略引入代理强化学习（RL）中。 StraTA 从初始任务状态中采样紧凑策略，根据该策略调整后续操作，并与分层 GRPO 式推出设计联合训练策略生成和操作执行，并通过多样化策略推出和关键自我判...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> Large language models (LLMs) are increasingly used as interactive agents, but optimizing them for long-horizon decision making remains difficult because current methods are largely purely reactive, which weakens both exp...</p>
+    <h3><a href="entities/papers/2605-06637v1-dpm-dynamic-masked-metric-learning-for-occluded-pe.html">DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.CV · 基准评估 / AI安全与对齐</div>
+    <p><strong>方法/亮点：</strong>In this paper, we propose DPM++, a Dynamic Masked Metric Learning framework for occluded person re-identification.</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>尽管行人重识别取得了令人瞩目的进展，但障碍物造成的遮挡在实际应用中仍然是一个悬而未决的问题。困难在于不完整的遮挡样本与整体身份表示之间的不匹配。严重的遮挡消除了有区别的身体线索，并引入了背景杂乱和遮挡物的干扰，使得全局度量学习变得不可靠。现有方法主要依靠额外的预训练模型来估计可见部分以进行对齐或通过数据增强构建遮挡样本，但仍然缺乏一个统一的框架来学习现实遮挡模式下鲁棒的可见性一致匹配。在本文中，我们提出了 DPM++，一种用于遮挡人员重...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> Although person re-identification has made impressive progress, occlusion caused by obstacles remains an unsettled issue in real applications. The difficulty lies in the mismatch between incomplete occluded samples and h...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  
+  <a href="entities/papers/2605-06610v1-softsae-dynamic-top-k-selection-for-adaptive-spars.html" class="daily-thumb"><img src="assets/papers/2605-06610v1/fig1.png" alt="SoftSAE: Dynamic Top-K Selection for Adaptive Sparse Autoencoders"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06639v1-recursive-agent-optimization.html">Recursive Agent Optimization</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.LG, cs.AI, cs.CL · 强化学习 / 智能体</div>
-    <p><strong>方法/亮点：</strong>We introduce Recursive Agent Optimization (RAO), a reinforcement learning approach for training recursive agents: agents that can spawn and delegate sub-tasks to new instantiations of themselves recursively.</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>我们引入了递归代理优化（RAO），这是一种用于训练递归代理的强化学习方法：可以递归地生成子任务并将其委托给自身的新实例的代理。递归代理实现了推理时间缩放算法，该算法自然地允许代理扩展到更长的上下文，并通过分治法推广到更困难的问题。 RAO 提供了一种训练模型的方法，以最好地利用这种递归推理，指导代理何时以及如何进行委派和通信。我们发现，以这种方式训练的递归代理具有更好的训练效率，可以扩展到超出模型上下文窗口的任务，泛化到比代理训练的任务...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> We introduce Recursive Agent Optimization (RAO), a reinforcement learning approach for training recursive agents: agents that can spawn and delegate sub-tasks to new instantiations of themselves recursively. Recursive ag...</p>
+    <h3><a href="entities/papers/2605-06610v1-softsae-dynamic-top-k-selection-for-adaptive-spars.html">SoftSAE: Dynamic Top-K Selection for Adaptive Sparse Autoencoders</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.LG, cs.CV · 大语言模型 / 智能体</div>
+    <p><strong>方法/亮点：</strong>To address this issue, we propose SoftSAE, a sparse autoencoder with a Dynamic Top-K selection mechanism.</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>稀疏自动编码器 (SAE) 已成为机械可解释性的重要工具，有助于分析大型语言模型 (LLM) 和视觉变换器 (ViT) 中的内部表示。通过将多语义激活分解为稀疏的单语义特征集，SAE 旨在将神经网络计算转化为人类可理解的概念。然而，诸如 TopK SAE 之类的常见架构依赖于固定的稀疏级别。它们在所有输入中强制执行相同数量的活动特征 (K)，忽略现实世界数据的不同复杂性。自然数据通常位于具有不同局部固有维数的流形上，这意味着相关因素的数...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> Sparse Autoencoders (SAEs) have become an important tool in mechanistic interpretability, helping to analyze internal representations in both Large Language Models (LLMs) and Vision Transformers (ViTs). By decomposing po...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html" class="daily-thumb"><img src="assets/papers/2605-06638v1/fig1.png" alt="Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key"></a>
+  <a href="entities/papers/2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for.html" class="daily-thumb"><img src="assets/papers/2605-06592v1/fig1.png" alt="DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining with High-Order Ranking Consistency"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html">Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.AI, cs.CL · 大语言模型 / 强化学习 / 基准评估 / 世界模型</div>
-    <p><strong>方法/亮点：</strong>We introduce ScaleLogic, a synthetic logical reasoning framework that offers independent control over two axes of difficulty: the depth of the required proof planning (i.e., the horizon) and the expressiveness of the underlying logic.</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>强化学习 (RL) 已被应用于改进大型语言模型 (LLM) 推理，但由于缺乏受控、可扩展的环境，对训练如何随任务难度进行扩展的系统研究受到了阻碍。我们引入了 ScaleLogic，一个综合逻辑推理框架，它提供对两个难度轴的独立控制：所需证明计划的深度（即范围）和底层逻辑的表达能力。我们提出的框架支持广泛的逻辑：从简单的仅蕴涵逻辑（“if-then”）到更具表现力的一阶推理，包括合取（“and”）、析取（“or”）、否定（“not”）和通...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> Reinforcement learning (RL) has been applied to improve large language model (LLM) reasoning, yet the systematic study of how training scales with task difficulty has been hampered by the lack of controlled, scalable env...</p>
+    <h3><a href="entities/papers/2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for.html">DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining with High-Order Ranking Consistency</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.CV, cs.AI, cs.LG · 多模态学习 / 基准评估 / AI安全与对齐 / 图神经网络</div>
+    <p><strong>方法/亮点：</strong>We propose DINORANKCLIP, a pretraining framework that addresses both jointly.</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>对比语言图像预训练（CLIP）存在两个结构性弱点：对称的 InfoNCE 损失丢弃了不匹配的批内对之间的相对顺序，全局池化将视觉表示折叠成对细粒度局部结构不敏感的语义瓶颈。 RANKCLIP 通过列表方式的 Plackett-Luce 排名一致性损失部分解决了第一个问题，但其模型是严格的一阶模型，并且继承了第二个弱点。我们提出了 DINORANKCLIP，这是一个联合解决这两个问题的预训练框架。我们的主要贡献是通过双分支轻量级学生和具有...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> Contrastive language-image pretraining (CLIP) suffers from two structural weaknesses: the symmetric InfoNCE loss discards the relative ordering among unmatched in-batch pairs, and global pooling collapses the visual repr...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html" class="daily-thumb"><img src="assets/papers/2605-06635v1/fig1.png" alt="Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents"></a>
+  <a href="entities/papers/2605-06654v1-optimizer-model-consistency-full-finetuning-with-t.html" class="daily-thumb"><img src="assets/papers/2605-06654v1/fig1.png" alt="Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html">Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.CL · 大语言模型 / 基准评估 / AI安全与对齐 / 智能体</div>
-    <p><strong>方法/亮点：</strong>We introduce the first source attribution evaluation framework that uses a reproducible AST parser to extract and evaluate inline citations from LLM-generated Markdown reports at scale.</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>大型语言模型 (LLM) 为深度研究代理提供支持，将来自数百个网络资源的信息合成为引用的报告，但这些引文无法得到可靠验证。当前的方法要么信任模型准确自引，但存在偏见，要么采用检索增强生成（RAG），但不验证来源的可访问性、相关性或事实一致性。我们引入了第一个来源归因评估框架，该框架使用可重复的 AST 解析器从 LLM 生成的 Markdown 报告中大规模提取和评估内联引用。与单独验证声明的方法不同，我们的框架通过检索实际引用的内容来...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> Large language models (LLMs) power deep research agents that synthesize information from hundreds of web sources into cited reports, yet these citations cannot be reliably verified. Current approaches either trust models...</p>
+    <h3><a href="entities/papers/2605-06654v1-optimizer-model-consistency-full-finetuning-with-t.html">Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.LG, cs.AI, math.OC · 大语言模型</div>
+    <p><strong>方法/亮点：</strong>In this paper, we present an observation that full finetuning with the same optimizer as in pretraining achieves a better learning-forgetting tradeoff, i.e., forgetting less while achieving the same or better performance on the new task, th</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>在训练大型语言模型 (LLM) 时，优化器在预训练和微调阶段都发挥着重要作用。在本文中，我们提出了一个观察结果，即在监督微调（SFT）阶段，使用与预训练相同的优化器进行完全微调可以实现更好的学习-遗忘权衡，即在新任务上实现相同或更好性能的同时，与其他优化器以及可能令人惊讶的 LoRA 相比，遗忘更少。我们将这种现象称为优化器模型一致性。为了更好地理解它，通过受控实验和理论分析，我们表明：1）优化器可以通过对激活进行正则化影响来塑造模型，...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> Optimizers play an important role in both pretraining and finetuning stages when training large language models (LLMs). In this paper, we present an observation that full finetuning with the same optimizer as in pretrain...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html" class="daily-thumb"><img src="assets/papers/2605-06667v1/fig1.png" alt="ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation"></a>
+  <a href="entities/papers/2605-06651v1-ai-co-mathematician-accelerating-mathematicians-wi.html" class="daily-thumb"><img src="assets/papers/2605-06651v1/fig1.png" alt="AI Co-Mathematician: Accelerating Mathematicians with Agentic AI"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html">ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.CV, cs.AI, cs.LG · 多模态学习 / 基准评估 / 自动驾驶 / 图神经网络</div>
-    <p><strong>方法/亮点：</strong>We present ActCam, a zero-shot method for video generation that jointly transfers character motion from a driving video into a new scene and enables per-frame control of intrinsic and extrinsic camera parameters.</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>对于艺术应用，视频生成需要对表演和摄影进行精细控制，即演员的动作和摄像机轨迹。我们提出了 ActCam，一种用于视频生成的零镜头方法，可将角色运动从驾驶视频联合传输到新场景，并实现内部和外部相机参数的每帧控制。 ActCam 建立在任何预先训练的图像到视频扩散模型的基础上，该模型接受场景深度和角色姿势的调节。给定具有移动角色和目标摄像机运动的源视频，ActCam 会生成跨帧保持几何一致的姿势和深度条件。然后，我们使用两阶段调节计划运行单...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> For artistic applications, video generation requires fine-grained control over both performance and cinematography, i.e., the actor&#x27;s motion and the camera trajectory. We present ActCam, a zero-shot method for video gene...</p>
+    <h3><a href="entities/papers/2605-06651v1-ai-co-mathematician-accelerating-mathematicians-wi.html">AI Co-Mathematician: Accelerating Mathematicians with Agentic AI</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.AI · 基准评估 / 智能体</div>
+    <p><strong>方法/亮点：</strong>We introduce the AI co-mathematician, a workbench for mathematicians to interactively leverage AI agents to pursue open-ended research.</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>我们推出了 AI 联合数学家，这是数学家可以交互地利用 AI 代理进行开放式研究的工作台。 AI 联合数学家经过优化，可为数学工作流程的探索性和迭代现实提供整体支持，包括构思、文献检索、计算探索、定理证明和理论构建。通过提供一个异步、有状态的工作空间来管理不确定性、完善用户意图、跟踪失败的假设并输出本地数学工件，该系统反映了人类协作工作流程。在早期测试中，人工智能联合数学家帮助研究人员解决开放问题，确定新的研究方向，并发现被忽视的文献参...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> We introduce the AI co-mathematician, a workbench for mathematicians to interactively leverage AI agents to pursue open-ended research. The AI co-mathematician is optimized to provide holistic support for the exploratory...</p>
   </div>
 </div>
 <div class="daily-paper-card">
-  <a href="entities/papers/2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture.html" class="daily-thumb"><img src="assets/papers/2605-06665v1/fig1.png" alt="UniPool: A Globally Shared Expert Pool for Mixture-of-Experts"></a>
+  <a href="entities/papers/2605-06647v1-superintelligent-retrieval-agent-the-next-frontier.html" class="daily-thumb"><img src="assets/papers/2605-06647v1/fig1.png" alt="Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval"></a>
   <div class="daily-paper-body">
-    <h3><a href="entities/papers/2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture.html">UniPool: A Globally Shared Expert Pool for Mixture-of-Experts</a></h3>
-    <div class="daily-meta">2026-05-07 · cs.LG, cs.AI · 大语言模型</div>
-    <p><strong>方法/亮点：</strong>Motivated by this redundancy, we propose UniPool, an MoE architecture that treats expert capacity as a global architectural budget by replacing per-layer expert ownership with a single shared pool accessed by independent per-layer routers.</p>
-    <p class="daily-abstract"><strong>摘要（中文）：</strong>现代专家混合 (MoE) 架构通过严格的每层规则分配专家容量：每个变压器层拥有一个单独的专家集。该约定将深度缩放与线性专家参数增长结合起来，并假设每一层都需要独立的专家容量。然而，最近的分析和我们的路由探测对这一分配规则提出了挑战：用统一的随机路由替换更深层学习的 top-k 路由器，在多个生产 MoE 模型中，下游精度仅下降 1.0-1.6 个点。受这种冗余的推动，我们提出了 UniPool，这是一种 MoE 架构，通过用独立的每层路...</p>
-    <p class="daily-abstract"><strong>Abstract:</strong> Modern Mixture-of-Experts (MoE) architectures allocate expert capacity through a rigid per-layer rule: each transformer layer owns a separate expert set. This convention couples depth scaling with linear expert-parameter...</p>
+    <h3><a href="entities/papers/2605-06647v1-superintelligent-retrieval-agent-the-next-frontier.html">Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval</a></h3>
+    <div class="daily-meta">2026-05-07 · cs.IR, cs.AI, cs.LG · 大语言模型 / 基准评估 / 智能体</div>
+    <p><strong>方法/亮点：</strong>We introduce \textit{SuperIntelligent Retrieval Agent} (SIRA), which defines \emph{superintelligence} in retrieval as the ability to compress multi-round exploratory search into a single corpus-discriminative retrieval action.</p>
+    <p class="daily-abstract"><strong>摘要（中文）：</strong>检索增强代理越来越多地成为大型组织知识库的接口，但大多数仍然将检索视为黑匣子：它们发出探索性查询，检查返回的片段，并迭代地重新制定，直到出现有用的证据。这种方法类似于新手如何搜索不熟悉的数据库，而不是专家如何利用有关术语和可能证据的强大先验来导航它，并导致不必要的检索轮次、延迟增加和召回率低。我们引入\textit{超级智能检索代理}（SIRA），它将检索中的\emph{超级智能}定义为将多轮探索性搜索压缩为单个语料库判别性检索操作的能...</p>
+    <p class="daily-abstract"><strong>Abstract:</strong> Retrieval-augmented agents are increasingly the interface to large organizational knowledge bases, yet most still treat retrieval as a black box: they issue exploratory queries, inspect returned snippets, and iteratively...</p>
   </div>
 </div>
 </div>

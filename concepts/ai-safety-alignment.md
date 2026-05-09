@@ -2,7 +2,7 @@
 layout: concept
 title: AI安全与对齐
 created: 2026-05-01
-updated: 2026-05-08
+updated: 2026-05-09
 type: concept
 tags: [safety, alignment, RLHF, adversarial, model-organism, evaluation]
 papers:
@@ -20,6 +20,16 @@ papers:
 AI 安全与对齐（AI Safety and Alignment）是确保人工智能系统的行为与人类意图、价值观和利益保持一致的研究领域。对齐问题的核心挑战在于：如何让 AI 系统真正理解和遵循人类的目标，而不是仅仅在表面上满足指标要求。随着大语言模型能力的快速提升，AI 安全与对齐已成为 AI 研究中最重要的方向之一，涉及技术、伦理和社会等多个层面。
 
 ## 关键文献与发现
+
+- [DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining with High-Order Ranking Consistency](../entities/papers/2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for.html)（2026-05-07）：对比语言图像预训练（CLIP）存在两个结构性弱点：对称的 InfoNCE 损失丢弃了不匹配的批内对之间的相对顺序，全局池化将视觉表示折叠成对细粒度局部结构不敏感的语义瓶颈。
+
+- [DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification](../entities/papers/2605-06637v1-dpm-dynamic-masked-metric-learning-for-occluded-pe.html)（2026-05-07）：尽管行人重识别取得了令人瞩目的进展，但障碍物造成的遮挡在实际应用中仍然是一个悬而未决的问题。
+
+- [Are We Making Progress in Multimodal Domain Generalization? A Comprehensive Benchmark Study](../entities/papers/2605-06643v1-are-we-making-progress-in-multimodal-domain-genera.html)（2026-05-07）：尽管用于增强模型鲁棒性的多模态域泛化（MMDG）越来越受欢迎，但仍不清楚报告的性能增益是否反映了真正的算法进展，还是不一致的评估协议的产物。
+
+- [Relit-LiVE: Relight Video by Jointly Learning Environment Video](../entities/papers/2605-06658v1-relit-live-relight-video-by-jointly-learning-envir.html)（2026-05-07）：最近的进展表明，大规模视频扩散模型可以重新用作神经渲染器，首先将视频分解为内在场景表示，然后在新颖的照明下执行前向渲染。
+
+- [BAMI: Training-Free Bias Mitigation in GUI Grounding](../entities/papers/2605-06664v1-bami-training-free-bias-mitigation-in-gui-groundin.html)（2026-05-07）：GUI 接地是使 GUI 代理能够执行单击和拖动等任务的关键功能。
 
 - [Cited but Not Verified: Parsing and Evaluating Source Attribution in LLM Deep Research Agents](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)（2026-05-07）：大型语言模型 (LLM) 为深度研究代理提供支持，将来自数百个网络资源的信息合成为引用的报告，但这些引文无法得到可靠验证。
 

@@ -2,7 +2,7 @@
 layout: concept
 title: 大语言模型
 created: 2026-05-01
-updated: 2026-05-08
+updated: 2026-05-09
 type: concept
 tags: [LLM, transformer, scaling, NLP, deep-learning]
 papers:
@@ -31,6 +31,14 @@ papers:
 大语言模型（Large Language Model, LLM）是基于 Transformer 架构、通过海量文本预训练的大规模神经网络，能够执行文本生成、理解、推理等多种任务。自 GPT-3 展示涌现能力以来，LLM 已成为 AI 研究的核心范式，本库中有 8 篇论文从不同角度对其进行研究。
 
 ## 关键文献与发现
+
+- [Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval](../entities/papers/2605-06647v1-superintelligent-retrieval-agent-the-next-frontier.html)（2026-05-07）：检索增强代理越来越多地成为大型组织知识库的接口，但大多数仍然将检索视为黑匣子：它们发出探索性查询，检查返回的片段，并迭代地重新制定，直到出现有用的证据。
+
+- [Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less](../entities/papers/2605-06654v1-optimizer-model-consistency-full-finetuning-with-t.html)（2026-05-07）：在训练大型语言模型 (LLM) 时，优化器在预训练和微调阶段都发挥着重要作用。
+
+- [SoftSAE: Dynamic Top-K Selection for Adaptive Sparse Autoencoders](../entities/papers/2605-06610v1-softsae-dynamic-top-k-selection-for-adaptive-spars.html)（2026-05-07）：稀疏自动编码器 (SAE) 已成为机械可解释性的重要工具，有助于分析大型语言模型 (LLM) 和视觉变换器 (ViT) 中的内部表示。
+
+- [GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generation](../entities/papers/2605-06641v1-glazybench-a-benchmark-for-ceramic-glaze-property.html)（2026-05-07）：由于化学成分复杂，开发陶瓷釉料是一个成本高昂、耗时的反复试验过程，给独立艺术家带来了沉重的负担。
 
 - [UniPool: A Globally Shared Expert Pool for Mixture-of-Experts](../entities/papers/2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture.html)（2026-05-07）：现代专家混合 (MoE) 架构通过严格的每层规则分配专家容量：每个变压器层拥有一个单独的专家集。
 
