@@ -1,427 +1,264 @@
 [
   {
-    "id": "2605.06664v1",
-    "title": "BAMI: Training-Free Bias Mitigation in GUI Grounding",
+    "id": "2605.06301v1",
+    "title": "Higher-order interactions in ecology can be hidden in plain sight",
     "authors": [
-      "Borui Zhang",
-      "Bo Zhang",
-      "Bo Wang",
-      "Wenzhao Zheng",
-      "Yuhao Cheng",
-      "Liang Tang",
-      "Yiqiang Yan",
-      "Jie Zhou",
-      "Jiwen Lu"
+      "Violeta Calleja-Solanas",
+      "Santiago Lamata-Otín",
+      "Carlos Gómez-Ambrosi",
+      "Jesús Gómez-Gardeñes",
+      "Sandro Meloni"
     ],
     "published": "2026-05-07",
-    "summary": "GUI grounding is a critical capability for enabling GUI agents to execute tasks such as clicking and dragging. However, in complex scenarios like the ScreenSpot-Pro benchmark, existing models often suffer from suboptimal performance. Utilizing the proposed \\textbf{Masked Prediction Distribution (MPD)} attribution method, we identify that the primary sources of errors are twofold: high image resolution (leading to precision bias) and intricate interface elements (resulting in ambiguity bias). To address these challenges, we introduce \\textbf{Bias-Aware Manipulation Inference (BAMI)}, which incorporates two key manipulations, coarse-to-fine focus and candidate selection, to effectively mitigate these biases. Our extensive experimental results demonstrate that BAMI significantly enhances the accuracy of various GUI grounding models in a training-free setting. For instance, applying our method to the TianXi-Action-7B model boosts its accuracy on the ScreenSpot-Pro benchmark from 51.9\\% to 57.8\\%. Furthermore, ablation studies confirm the robustness of the BAMI approach across diverse parameter configurations, highlighting its stability and effectiveness. Code is available at https://github.com/Neur-IO/BAMI.",
+    "summary": "Higher-order interactions are increasingly recognized as a key component of ecological dynamics. However, we show that higher-order Lotka-Volterra dynamics can, in some scenarios, be accurately reproduced by effective pairwise models fitted to the same abundance time series. Consequently, higher-order interactions cannot, in general, be inferred from time-series data alone. We further identify a fundamental problem of mechanistic identifiability, whereby distinct interaction mechanisms generate nearly indistinguishable dynamics, potentially leading to accurate yet misleading ecological interpretations. Our results highlight the need to complement time-series data with additional ecological information to infer interaction structure reliably.",
     "categories": [
-      "cs.CV",
-      "cs.AI"
+      "q-bio.PE",
+      "cond-mat.stat-mech",
+      "physics.soc-ph"
     ],
-    "summary_cn": "GUI 接地是使 GUI 代理能够执行单击和拖动等任务的关键功能。然而，在 ScreenSpot-Pro 基准测试等复杂场景中，现有模型的性能常常不佳。利用所提出的\\textbf{掩模预测分布（MPD）}归因方法，我们发现错误的主要来源有两个：高图像分辨率（导致精度偏差）和复杂的界面元素（导致模糊性偏差）。为了应对这些挑战，我们引入了偏差感知操纵推理（BAMI），它结合了两个关键操作，从粗到细的聚焦和候选选择，以有效地减轻这些偏差。我们广泛的实验结果表明，BAMI 在免训练环境中显着提高了各种 GUI 接地模型的准确性。例如，将我们的方法应用于 TianXi-Action-7B 模型，可将其在 ScreenSpot-Pro 基准测试中的准确率从 51.9% 提高到 57.8%。此外，消融研究证实了 BAMI 方法在不同参数配置中的稳健性，突出了其稳定性和有效性。代码可在 https://github.com/Neur-IO/BAMI 获取。",
-    "comment": "Accepted by CVPR 2026",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2605-06664v1-bami-training-free-bias-mitigation-in-gui-groundin",
-    "rel_path": "entities/papers/2605-06664v1-bami-training-free-bias-mitigation-in-gui-groundin.html",
+    "summary_cn": "高阶相互作用越来越被认为是生态动力学的关键组成部分。然而，我们表明，在某些情况下，高阶 Lotka-Volterra 动力学可以通过拟合相同丰度时间序列的有效成对模型来准确再现。因此，通常不能仅从时间序列数据推断出高阶相互作用。我们进一步确定了机械可识别性的一个基本问题，即不同的相互作用机制产生几乎无法区分的动力学，可能导致准确但误导性的生态解释。我们的结果强调需要用额外的生态信息来补充时间序列数据，以可靠地推断相互作用结构。",
+    "comment": "8 pages, 4 figures",
+    "category_en": "Populations & Evolution (Bio)",
+    "category_cn": "种群与进化(生物)",
+    "slug": "2605-06301v1-higher-order-interactions-in-ecology-can-be-hidden",
+    "rel_path": "entities/papers/2605-06301v1-higher-order-interactions-in-ecology-can-be-hidden.html",
     "figures": [
-      "assets/papers/2605-06664v1/fig1.png",
-      "assets/papers/2605-06664v1/fig2.png",
-      "assets/papers/2605-06664v1/fig3.png"
+      "assets/papers/2605-06301v1/fig1.png",
+      "assets/papers/2605-06301v1/fig2.png",
+      "assets/papers/2605-06301v1/fig3.png"
     ],
     "concepts": [
       {
-        "name": "多模态学习",
-        "slug": "multimodal-learning",
-        "url": "../../concepts/multimodal-learning.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
       }
     ],
-    "method_signal": "To address these challenges, we introduce \\textbf{Bias-Aware Manipulation Inference (BAMI)}, which incorporates two key manipulations, coarse-to-fine focus and candidate selection, to effectively mitigate these biases.",
-    "topic_signal": "多模态学习 / 基准评估 / AI安全与对齐 / 智能体"
+    "method_signal": "Higher-order interactions are increasingly recognized as a key component of ecological dynamics.",
+    "topic_signal": "世界模型"
   },
   {
-    "id": "2605.06658v1",
-    "title": "Relit-LiVE: Relight Video by Jointly Learning Environment Video",
+    "id": "2605.06243v1",
+    "title": "A $μ$-distance for semidirected orchard phylogenetic networks",
     "authors": [
-      "Weiqing Xiao",
-      "Hong Li",
-      "Xiuyu Yang",
-      "Houyuan Chen",
-      "Wenyi Li",
-      "Tianqi Liu",
-      "Shaocong Xu",
-      "Chongjie Ye",
-      "Hao Zhao",
-      "Beibei Wang"
+      "Gerard Ribas",
+      "Joan Carles Pons",
+      "Cécile Ané"
     ],
     "published": "2026-05-07",
-    "summary": "Recent advances have shown that large-scale video diffusion models can be repurposed as neural renderers by first decomposing videos into intrinsic scene representations and then performing forward rendering under novel illumination. While promising, this paradigm fundamentally relies on accurate intrinsic decomposition, which remains highly unreliable for real-world videos and often leads to distorted appearances, broken materials, and accumulated temporal artifacts during relighting. In this work, we present Relit-LiVE, a novel video relighting framework that produces physically consistent, temporally stable results without requiring prior knowledge of camera pose. Our key insight is to explicitly introduce raw reference images into the rendering process, enabling the model to recover critical scene cues that are inevitably lost or corrupted in intrinsic representations. Furthermore, we propose a novel environment video prediction formulation that simultaneously generates relit videos and per-frame environment maps aligned with each camera viewpoint in a single diffusion process. This joint prediction enforces strong geometric-illumination alignment and naturally supports dynamic lighting and camera motion, significantly improving physical consistency in video relighting while easing the requirement of known per-frame camera pose. Extensive experiments demonstrate that Relit-LiVE consistently outperforms state-of-the-art video relighting and neural rendering methods across synthetic and real-world benchmarks. Beyond relighting, our framework naturally supports a wide range of downstream applications, including scene-level rendering, material editing, object insertion, and streaming video relighting. The Project is available at https://github.com/zhuxing0/Relit-LiVE.",
+    "summary": "In evolutionary biology, phylogenetic networks are now widely used to represent the historical relationships between species and population, when this history includes reticulation events such as hybridization, gene flow and admixture between populations. Semidirected phylogenetic networks are appropriate models when the direction of some edges and the root position are not identifiable from data. Comparing semidirected networks is important in many applications. For rooted and directed networks, a $μ$-representation was originally introduced to distinguish tree-child networks, and has since been extended in two different directions: to the larger class of orchard directed networks by adding an extra component that counts paths to reticulations; and to semidirected networks, through an edge-based variant. However, the latter does not provide a distance between semidirected and orchard networks. We introduce here a new edge-based $μ$-representation capable of distinguishing distinct orchard binary semidirected networks. For this class, we provide a reconstruction algorithm and therefore obtain a true distance that is computable in polynomial time.",
     "categories": [
-      "cs.CV"
+      "math.CO",
+      "q-bio.PE"
     ],
-    "summary_cn": "最近的进展表明，大规模视频扩散模型可以重新用作神经渲染器，首先将视频分解为内在场景表示，然后在新颖的照明下执行前向渲染。虽然很有希望，但这种范例从根本上依赖于准确的内在分解，这对于现实世界的视频来说仍然非常不可靠，并且经常导致外观扭曲、材料损坏以及重新照明期间累积​​的时间伪影。在这项工作中，我们提出了 Relit-LiVE，这是一种新颖的视频重新照明框架，可以产生物理一致、时间稳定的结果，而无需事先了解相机姿势。我们的主要见解是将原始参考图像显式引入渲染过程，使模型能够恢复内在表示中不可避免地丢失或损坏的关键场景线索。此外，我们提出了一种新颖的环境视频预测公式，该公式可以在单个扩散过程中同时生成与每个摄像机视点对齐的重照明视频和每帧环境图。这种联合预测强制执行强大的几何照明对齐，并自然支持动态照明和相机运动，显着提高视频重新照明的物理一致性，同时减轻已知每帧相机姿势的要求。大量实验表明，Relit-LiVE 在合成和现实基准测试中始终优于最先进的视频重新照明和神经渲染方法。除了重新照明之外，我们的框架自然支持广泛的下游应用程序，包括场景级渲染、材质编辑、对象插入和流视频重新照明。该项目可在 https://github.com/zhuxing0/Relit-LiVE 获取。",
-    "comment": "Accepted at SIGGRAPH 2026. Project site: https://github.com/zhuxing0/Relit-LiVE",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2605-06658v1-relit-live-relight-video-by-jointly-learning-envir",
-    "rel_path": "entities/papers/2605-06658v1-relit-live-relight-video-by-jointly-learning-envir.html",
-    "figures": [
-      "assets/papers/2605-06658v1/fig1.png",
-      "assets/papers/2605-06658v1/fig2.png",
-      "assets/papers/2605-06658v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "多模态学习",
-        "slug": "multimodal-learning",
-        "url": "../../concepts/multimodal-learning.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "In this work, we present Relit-LiVE, a novel video relighting framework that produces physically consistent, temporally stable results without requiring prior knowledge of camera pose.",
-    "topic_signal": "多模态学习 / 基准评估 / AI安全与对齐 / 智能体"
-  },
-  {
-    "id": "2605.06643v1",
-    "title": "Are We Making Progress in Multimodal Domain Generalization? A Comprehensive Benchmark Study",
-    "authors": [
-      "Hao Dong",
-      "Hongzhao Li",
-      "Shupan Li",
-      "Muhammad Haris Khan",
-      "Eleni Chatzi",
-      "Olga Fink"
-    ],
-    "published": "2026-05-07",
-    "summary": "Despite the growing popularity of Multimodal Domain Generalization (MMDG) for enhancing model robustness, it remains unclear whether reported performance gains reflect genuine algorithmic progress or are artifacts of inconsistent evaluation protocols. Current research is fragmented, with studies varying significantly across datasets, modality configurations, and experimental settings. Furthermore, existing benchmarks focus predominantly on action recognition, often neglecting critical real-world challenges such as input corruptions, missing modalities, and model trustworthiness. This lack of standardization obscures a reliable assessment of the field's advancement. To address this issue, we introduce MMDG-Bench, the first unified and comprehensive benchmark for MMDG, which standardizes evaluation across six datasets spanning three diverse tasks: action recognition, mechanical fault diagnosis, and sentiment analysis. MMDG-Bench encompasses six modality combinations, nine representative methods, and multiple evaluation settings. Beyond standard accuracy, it systematically assesses corruption robustness, missing-modality generalization, misclassification detection, and out-of-distribution detection. With 7, 402 neural networks trained in total across 95 unique cross-domain tasks, MMDG-Bench yields five key findings: (1) under fair comparisons, recent specialized MMDG methods offer only marginal improvements over ERM baseline; (2) no single method consistently outperforms others across datasets or modality combinations; (3) a substantial gap to upper-bound performance persists, indicating that MMDG remains far from solved; (4) trimodal fusion does not consistently outperform the strongest bimodal configurations; and (5) all evaluated methods exhibit significant degradation under corruption and missing-modality scenarios, with some methods further compromising model trustworthiness.",
-    "categories": [
-      "cs.CV",
-      "cs.AI",
-      "cs.LG",
-      "cs.MM"
-    ],
-    "summary_cn": "尽管用于增强模型鲁棒性的多模态域泛化（MMDG）越来越受欢迎，但仍不清楚报告的性能增益是否反映了真正的算法进展，还是不一致的评估协议的产物。目前的研究是分散的，研究在数据集、模态配置和实验设置方面存在显着差异。此外，现有的基准主要关注动作识别，往往忽略了现实世界的关键挑战，例如输入损坏、模式缺失和模型可信度。标准化的缺乏阻碍了对该领域进展的可靠评估。为了解决这个问题，我们引入了 MMDG-Bench，这是第一个统一且全面的 MMDG 基准，它标准化了跨越三个不同任务的六个数据集的评估：动作识别、机械故障诊断和情感分析。 MMDG-Bench 包含六种模态组合、九种代表性方法和多种评估设置。除了标准准确性之外，它还系统地评估腐败鲁棒性、缺失模态泛化、错误分类检测和分布外检测。通过在 95 个独特的跨域任务中总共训练了 7, 402 个神经网络，MMDG-Bench 得出了五个关键发现：（1）在公平比较下，最近的专门 MMDG 方法仅比 ERM 基线提供了微小的改进； (2) 没有任何一种方法能够在数据集或模态组合中始终优于其他方法； (3) 与上限绩效的巨大差距仍然存在，表明 MMDG 仍远未得到解决； (4) 三峰融合并不总是优于最强的双峰配置； （5）所有评估的方法在腐败和缺失模态场景下都表现出显着的退化，其中一些方法进一步损害了模型的可信度。",
-    "comment": "Code: https://github.com/lihongzhao99/MMDG_Benchmark",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2605-06643v1-are-we-making-progress-in-multimodal-domain-genera",
-    "rel_path": "entities/papers/2605-06643v1-are-we-making-progress-in-multimodal-domain-genera.html",
-    "figures": [
-      "assets/papers/2605-06643v1/fig1.png",
-      "assets/papers/2605-06643v1/fig2.png",
-      "assets/papers/2605-06643v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "多模态学习",
-        "slug": "multimodal-learning",
-        "url": "../../concepts/multimodal-learning.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      }
-    ],
-    "method_signal": "To address this issue, we introduce MMDG-Bench, the first unified and comprehensive benchmark for MMDG, which standardizes evaluation across six datasets spanning three diverse tasks: action recognition, mechanical fault diagnosis, and sentiment analysis.",
-    "topic_signal": "多模态学习 / 基准评估 / AI安全与对齐"
-  },
-  {
-    "id": "2605.06641v1",
-    "title": "GlazyBench: A Benchmark for Ceramic Glaze Property Prediction and Image Generation",
-    "authors": [
-      "Ziyu Zhai",
-      "Siyou Li",
-      "Juexi Shao",
-      "Juntao Yu"
-    ],
-    "published": "2026-05-07",
-    "summary": "Developing ceramic glazes is a costly, time-consuming process of trial and error due to complex chemistry, placing a significant burden on independent artists. While recent advances in multimodal AI offer a modern solution, the field lacks the large-scale datasets required to train these models. We propose GlazyBench, the first dataset for AI-assisted glaze design. Comprising 23,148 real glaze formulations, GlazyBench supports two primary tasks: predicting post-firing surface properties, such as color and transparency, from raw materials, and generating accurate visual representations of the glaze based on these properties. We establish comprehensive baselines for property prediction using traditional machine learning and large language models, alongside image generation benchmarks using deep generative and large multimodal models. Our experiments demonstrate promising yet challenging results. GlazyBench pioneers a new research direction in AI-assisted material design, providing a standardized benchmark for systematic evaluation.",
-    "categories": [
-      "cs.AI",
-      "cs.CV"
-    ],
-    "summary_cn": "由于化学成分复杂，开发陶瓷釉料是一个成本高昂、耗时的反复试验过程，给独立艺术家带来了沉重的负担。虽然多模式人工智能的最新进展提供了现代解决方案，但该领域缺乏训练这些模型所需的大规模数据集。我们提出 GlazyBench，这是人工智能辅助釉料设计的第一个数据集。 GlazyBench 包含 23,148 种真实釉料配方，支持两项主要任务：预测原材料烧成后的表面特性，例如颜色和透明度，并根据这些特性生成釉料的准确视觉表示。我们使用传统机器学习和大型语言模型建立了全面的属性预测基线，以及使用深度生成和大型多模态模型的图像生成基准。我们的实验证明了有希望但具有挑战性的结果。 GlazyBench开创了人工智能辅助材料设计的新研究方向，为系统评估提供了标准化基准。",
+    "summary_cn": "在进化生物学中，系统发育网络现在被广泛用于表示物种和种群之间的历史关系，其中这种历史包括网状事件，例如种群之间的杂交、基因流动和混合。当某些边的方向和根位置无法从数据中识别时，半定向系统发育网络是合适的模型。比较半定向网络在许多应用中都很重要。对于有根网络和有向网络，$μ$ 表示最初是为了区分树子网络而引入的，此后已在两个不同的方向上扩展：通过添加计算网状路径的额外组件，扩展到更大的果园有向网络类别；以及通过基于边缘的变体实现半定向网络。然而，后者不提供半定向网络和果园网络之间的距离。我们在这里引入一种新的基于边缘的 $μ$ 表示，能够区分不同的果园二元半有向网络。对于此类，我们提供了一种重建算法，从而获得可在多项式时间内计算的真实距离。",
     "comment": "",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2605-06641v1-glazybench-a-benchmark-for-ceramic-glaze-property",
-    "rel_path": "entities/papers/2605-06641v1-glazybench-a-benchmark-for-ceramic-glaze-property.html",
+    "category_en": "Populations & Evolution (Bio)",
+    "category_cn": "种群与进化(生物)",
+    "slug": "2605-06243v1-a--distance-for-semidirected-orchard-phylogenetic",
+    "rel_path": "entities/papers/2605-06243v1-a--distance-for-semidirected-orchard-phylogenetic.html",
     "figures": [
-      "assets/papers/2605-06641v1/fig1.png",
-      "assets/papers/2605-06641v1/fig2.png",
-      "assets/papers/2605-06641v1/fig3.png"
+      "assets/papers/2605-06243v1/fig1.png",
+      "assets/papers/2605-06243v1/fig2.png",
+      "assets/papers/2605-06243v1/fig3.png"
     ],
     "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "多模态学习",
-        "slug": "multimodal-learning",
-        "url": "../../concepts/multimodal-learning.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "We propose GlazyBench, the first dataset for AI-assisted glaze design.",
-    "topic_signal": "大语言模型 / 多模态学习 / 基准评估"
-  },
-  {
-    "id": "2605.06637v1",
-    "title": "DPM++: Dynamic Masked Metric Learning for Occluded Person Re-identification",
-    "authors": [
-      "Lei Tan",
-      "Yingshi Luan",
-      "Pincong Zou",
-      "Pingyang Dai",
-      "Liujuan Cao"
-    ],
-    "published": "2026-05-07",
-    "summary": "Although person re-identification has made impressive progress, occlusion caused by obstacles remains an unsettled issue in real applications. The difficulty lies in the mismatch between incomplete occluded samples and holistic identity representations. Severe occlusion removes discriminative body cues and introduces interference from background clutter and occluders, making global metric learning unreliable. Existing methods mainly rely on extra pre-trained models to estimate visible parts for alignment or construct occluded samples via data augmentation, but still lack a unified framework that learns robust visibility-consistent matching under realistic occlusion patterns. In this paper, we propose DPM++, a Dynamic Masked Metric Learning framework for occluded person re-identification. DPM++ learns an input-adaptive masked metric that dynamically selects reliable identity subspaces for each occluded instance, enabling matching to emphasize visibility-consistent evidence while suppressing unreliable components. Built upon the classifier-prototype space, DPM++ introduces a CLIP-based two-stage supervision scheme, where ID-level semantic priors are learned from the text branch and transferred into the classifier-prototype space for dynamic masked matching. To strengthen the masked metric, we introduce a saliency-guided patch transfer strategy to synthesize controllable and photo-realistic occluded samples during training. Exploiting real scene priors, this strategy exposes the model to realistic partial observations and provides richer supervision than random erasing. In addition, occlusion-aware sample pairing and mask-guided optimization improve the stability and effectiveness of the framework. Experiments on occluded and holistic person re-identification benchmarks show that DPM++ consistently outperforms previous state-of-the-art methods in both holistic and occlusion scenarios.",
-    "categories": [
-      "cs.CV"
-    ],
-    "summary_cn": "尽管行人重识别取得了令人瞩目的进展，但障碍物造成的遮挡在实际应用中仍然是一个悬而未决的问题。困难在于不完整的遮挡样本与整体身份表示之间的不匹配。严重的遮挡消除了有区别的身体线索，并引入了背景杂乱和遮挡物的干扰，使得全局度量学习变得不可靠。现有方法主要依靠额外的预训练模型来估计可见部分以进行对齐或通过数据增强构建遮挡样本，但仍然缺乏一个统一的框架来学习现实遮挡模式下鲁棒的可见性一致匹配。在本文中，我们提出了 DPM++，一种用于遮挡人员重新识别的动态掩模度量学习框架。 DPM++ 学习输入自适应屏蔽度量，为每个遮挡实例动态选择可靠的身份子空间，从而实现匹配以强调可见性一致的证据，同时抑制不可靠的组件。 DPM++ 建立在分类器原型空间的基础上，引入了基于 CLIP 的两阶段监督方案，其中从文本分支中学习 ID 级语义先验，并将其转移到分类器原型空间中以进行动态屏蔽匹配。为了加强掩模指标，我们引入了显着性引导的补丁转移策略，以在训练期间合成可控且逼真的遮挡样本。利用真实场景先验，该策略将模型暴露给现实的部分观察，并提供比随机擦除更丰富的监督。此外，遮挡感知样本配对和掩模引导优化提高了框架的稳定性和有效性。对遮挡和整体行人重新识别基准的实验表明，DPM++ 在整体和遮挡场景中始终优于以前最先进的方法。",
-    "comment": "",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2605-06637v1-dpm-dynamic-masked-metric-learning-for-occluded-pe",
-    "rel_path": "entities/papers/2605-06637v1-dpm-dynamic-masked-metric-learning-for-occluded-pe.html",
-    "figures": [
-      "assets/papers/2605-06637v1/fig1.png",
-      "assets/papers/2605-06637v1/fig2.png",
-      "assets/papers/2605-06637v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      }
-    ],
-    "method_signal": "In this paper, we propose DPM++, a Dynamic Masked Metric Learning framework for occluded person re-identification.",
-    "topic_signal": "基准评估 / AI安全与对齐"
-  },
-  {
-    "id": "2605.06610v1",
-    "title": "SoftSAE: Dynamic Top-K Selection for Adaptive Sparse Autoencoders",
-    "authors": [
-      "Jakub Stępień",
-      "Marcin Mazur",
-      "Jacek Tabor",
-      "Przemysław Spurek"
-    ],
-    "published": "2026-05-07",
-    "summary": "Sparse Autoencoders (SAEs) have become an important tool in mechanistic interpretability, helping to analyze internal representations in both Large Language Models (LLMs) and Vision Transformers (ViTs). By decomposing polysemantic activations into sparse sets of monosemantic features, SAEs aim to translate neural network computations into human-understandable concepts. However, common architectures such as TopK SAEs rely on a fixed sparsity level. They enforce the same number of active features (K) across all inputs, ignoring the varying complexity of real-world data. Natural data often lies on manifolds with varying local intrinsic dimensionality, meaning the number of relevant factors can change significantly across samples. This suggests that a fixed sparsity level is not optimal. Simple inputs may require only a few features, while more complex ones need more expressive representations. Using a constant K can therefore introduce noise in simple cases or miss important structure in more complex ones. To address this issue, we propose SoftSAE, a sparse autoencoder with a Dynamic Top-K selection mechanism. Our method uses a differentiable Soft Top-K operator to learn an input-dependent sparsity level k. This allows the model to adjust the number of active features based on the complexity of each input. As a result, the representation better matches the structure of the data, and the explanation length reflects the amount of information in the input. Experimental results confirm that SoftSAE not only finds meaningful features, but also selects the right number of features for each concept. The source code is available at: https://anonymous.4open.science/r/SoftSAE-8F71/.",
-    "categories": [
-      "cs.LG",
-      "cs.CV"
-    ],
-    "summary_cn": "稀疏自动编码器 (SAE) 已成为机械可解释性的重要工具，有助于分析大型语言模型 (LLM) 和视觉变换器 (ViT) 中的内部表示。通过将多语义激活分解为稀疏的单语义特征集，SAE 旨在将神经网络计算转化为人类可理解的概念。然而，诸如 TopK SAE 之类的常见架构依赖于固定的稀疏级别。它们在所有输入中强制执行相同数量的活动特征 (K)，忽略现实世界数据的不同复杂性。自然数据通常位于具有不同局部固有维数的流形上，这意味着相关因素的数量在样本中可能会发生显着变化。这表明固定的稀疏度水平并不是最佳的。简单的输入可能只需要几个特征，而更复杂的输入则需要更具表现力的表示。因此，使用常数 K 可能会在简单情况下引入噪声，或者在更复杂的情况下错过重要结构。为了解决这个问题，我们提出了 SoftSAE，一种具有动态 Top-K 选择机制的稀疏自动编码器。我们的方法使用可微的 Soft Top-K 算子来学习依赖于输入的稀疏度 k。这允许模型根据每个输入的复杂性来调整活动特征的数量。结果，表示更好地匹配数据的结构，并且解释长度反映了输入中的信息量。实验结果证实，SoftSAE 不仅可以找到有意义的特征，而且可以为每个概念选择正确数量的特征。源代码位于：https://anonymous.4open.science/r/SoftSAE-8F71/。",
-    "comment": "",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2605-06610v1-softsae-dynamic-top-k-selection-for-adaptive-spars",
-    "rel_path": "entities/papers/2605-06610v1-softsae-dynamic-top-k-selection-for-adaptive-spars.html",
-    "figures": [
-      "assets/papers/2605-06610v1/fig1.png",
-      "assets/papers/2605-06610v1/fig2.png",
-      "assets/papers/2605-06610v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "To address this issue, we propose SoftSAE, a sparse autoencoder with a Dynamic Top-K selection mechanism.",
-    "topic_signal": "大语言模型 / 智能体"
-  },
-  {
-    "id": "2605.06592v1",
-    "title": "DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining with High-Order Ranking Consistency",
-    "authors": [
-      "Shuyang Jiang",
-      "Nan Yu",
-      "Yiming Zhang",
-      "Zenghui Ding",
-      "Zhenyu Wu"
-    ],
-    "published": "2026-05-07",
-    "summary": "Contrastive language-image pretraining (CLIP) suffers from two structural weaknesses: the symmetric InfoNCE loss discards the relative ordering among unmatched in-batch pairs, and global pooling collapses the visual representation into a semantic bottleneck that is poorly sensitive to fine-grained local structure. RANKCLIP partially addresses the first issue with a list-wise Plackett-Luce ranking-consistency loss, but its model is strictly first-order and inherits the second weakness untouched. We propose DINORANKCLIP, a pretraining framework that addresses both jointly. Our principal contribution is injecting a frozen DINOv3 teacher into the contrastive trunk through a dual-branch lightweight student and a multi-scale fusion module with channel-spatial attention, a self-attention refiner, and a conflict-aware gate that preserves the cross-modal alignment up to first order. Complementarily, we introduce a high-order Plackett-Luce ranking model in which the per-position utility is augmented with attention-parameterised pairwise and tuple-wise transition terms; the family contains CLIP and RANKCLIP as nested zero-order and first-order special cases, and the optimal order on every benchmark is $R^*=3$. The full empirical study -- order sweep, Fine-grained Probe on five datasets, four-node Modality-Gap analysis, six-variant Fusion ablation -- fits in 72 hours on a single eight-GPU H100 node and trains entirely on Conceptual Captions 3M. DINORANKCLIP consistently outperforms CLIP, CyCLIP, ALIP, and RANKCLIP under matched compute, with the largest relative gains on the fine-grained and out-of-distribution evaluations that most directly stress local structural reasoning.",
-    "categories": [
-      "cs.CV",
-      "cs.AI",
-      "cs.LG"
-    ],
-    "summary_cn": "对比语言图像预训练（CLIP）存在两个结构性弱点：对称的 InfoNCE 损失丢弃了不匹配的批内对之间的相对顺序，全局池化将视觉表示折叠成对细粒度局部结构不敏感的语义瓶颈。 RANKCLIP 通过列表方式的 Plackett-Luce 排名一致性损失部分解决了第一个问题，但其模型是严格的一阶模型，并且继承了第二个弱点。我们提出了 DINORANKCLIP，这是一个联合解决这两个问题的预训练框架。我们的主要贡献是通过双分支轻量级学生和具有通道空间注意力的多尺度融合模块、自注意力细化器和冲突感知门将冻结的 DINOv3 教师注入到对比主干中，该模块将跨模态对齐保留到一阶。作为补充，我们引入了高阶 Plackett-Luce 排序模型，其中每个位置的效用通过注意参数化的成对和元组转换项得到增强；该系列包含 CLIP 和 RANKCLIP 作为嵌套的零阶和一阶特殊情况，并且每个基准上的最佳阶数为 $R^*=3$。完整的实证研究——顺序扫描、五个数据集上的细粒度探测、四节点模态差距分析、六变体融合消融——在单个八 GPU H100 节点上花费 72 小时完成，并完全在 Conceptual Captions 3M 上进行训练。在匹配计算下，DINORANKCLIP 的性能始终优于 CLIP、CyCLIP、ALIP 和 RANKCLIP，在最直接强调局部结构推理的细粒度和分布外评估方面具有最大的相对增益。",
-    "comment": "18 pages, 7 figures, 9 tables. Code will be made publicly available upon acceptance",
-    "category_en": "Computer Vision",
-    "category_cn": "计算机视觉",
-    "slug": "2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for",
-    "rel_path": "entities/papers/2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for.html",
-    "figures": [
-      "assets/papers/2605-06592v1/fig1.png",
-      "assets/papers/2605-06592v1/fig2.jpg",
-      "assets/papers/2605-06592v1/fig3.jpg"
-    ],
-    "concepts": [
-      {
-        "name": "多模态学习",
-        "slug": "multimodal-learning",
-        "url": "../../concepts/multimodal-learning.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      },
       {
         "name": "图神经网络",
         "slug": "graph-neural-networks",
         "url": "../../concepts/graph-neural-networks.html"
       }
     ],
-    "method_signal": "We propose DINORANKCLIP, a pretraining framework that addresses both jointly.",
-    "topic_signal": "多模态学习 / 基准评估 / AI安全与对齐 / 图神经网络"
+    "method_signal": "We introduce here a new edge-based $μ$-representation capable of distinguishing distinct orchard binary semidirected networks.",
+    "topic_signal": "图神经网络"
   },
   {
-    "id": "2605.06654v1",
-    "title": "Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less",
+    "id": "2605.05966v1",
+    "title": "Towards a unified framework for multiple stable states in ecological systems",
     "authors": [
-      "Yuxing Liu",
-      "Jianyu Wang",
-      "Tong Zhang"
+      "Jennifer Paige",
+      "Denis D. Patterson",
+      "Alan Hastings"
     ],
     "published": "2026-05-07",
-    "summary": "Optimizers play an important role in both pretraining and finetuning stages when training large language models (LLMs). In this paper, we present an observation that full finetuning with the same optimizer as in pretraining achieves a better learning-forgetting tradeoff, i.e., forgetting less while achieving the same or better performance on the new task, than other optimizers and, possibly surprisingly, LoRA, during the supervised finetuning (SFT) stage. We term this phenomenon optimizer-model consistency. To better understand it, through controlled experiments and theoretical analysis, we show that: 1) optimizers can shape the models by having regularization effects on the activations, leading to different landscapes around the pretrained checkpoints; 2) in response to this regularization effect, the weight update in SFT should follow some specific structures to lower forgetting of the knowledge learned in pretraining, which can be obtained by using the same optimizer. Moreover, we specifically compare Muon and AdamW when they are employed throughout the pretraining and SFT stages and find that Muon performs worse when finetuned for reasoning tasks. With a synthetic language modeling experiment, we demonstrate that this can come from Muon's strong tendency towards rote memorization, which may hurt pattern acquisition with a small amount of data, as for SFT.",
+    "summary": "Multiple stable states - the coexistence of two or more distinct ecological configurations under identical environmental conditions - have attracted sustained interest in ecology, yet the field still lacks a unified framework connecting ecological mechanisms to dynamical models. Here, we review empirical and theoretical approaches to multiple stable states, synthesising perspectives on stability, tipping, hysteresis, and transient dynamics, and contextualise these within a common mathematical framework. Drawing on examples of well-known ecosystem models, we highlight the central and necessary role of positive feedback loops and identify other common, unifying features of ecological systems that exhibit multiple stable states. We further discuss the relationship between stable and transient dynamics, the roles of spatial and temporal scales in feedback identification, and the implications for ecological restoration and management. We conclude with open questions and challenges for the field, including extending multistability theory to persistent-transient frameworks and harnessing emerging data-collection technologies to sharpen empirical inference.",
     "categories": [
+      "q-bio.PE"
+    ],
+    "summary_cn": "多重稳定状态——相同环境条件下两种或多种不同生态配置的共存——引起了生态学的持续关注，但该领域仍然缺乏连接生态机制和动力学模型的统一框架。在这里，我们回顾了多种稳定状态的经验和理论方法，综合了稳定性、倾斜、滞后和瞬态动力学的观点，并将这些观点置于共同的数学框架中。借鉴著名的生态系统模型的例子，我们强调了正反馈循环的核心和必要作用，并确定了表现出多种稳定状态的生态系统的其他共同的、统一的特征。我们进一步讨论稳定动态和瞬态动态之间的关系、时空尺度在反馈识别中的作用以及对生态恢复和管理的影响。最后，我们提出了该领域的开放性问题和挑战，包括将多稳定性理论扩展到持续瞬态框架，并利用新兴的数据收集技术来加强经验推理。",
+    "comment": "30 pages, 4 figures, 2 tables",
+    "category_en": "Populations & Evolution (Bio)",
+    "category_cn": "种群与进化(生物)",
+    "slug": "2605-05966v1-towards-a-unified-framework-for-multiple-stable-st",
+    "rel_path": "entities/papers/2605-05966v1-towards-a-unified-framework-for-multiple-stable-st.html",
+    "figures": [
+      "assets/papers/2605-05966v1/fig1.png",
+      "assets/papers/2605-05966v1/fig2.png",
+      "assets/papers/2605-05966v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "Multiple stable states - the coexistence of two or more distinct ecological configurations under identical environmental conditions - have attracted sustained interest in ecology, yet the field still lacks a unified framework connecting ecological mechanisms to dynamical models.",
+    "topic_signal": "世界模型 / 智能体"
+  },
+  {
+    "id": "2605.05464v1",
+    "title": "The Origin of Life in the Light of Evolution",
+    "authors": [
+      "Betül Kaçar",
+      "Tom A. Williams",
+      "Laura Eme",
+      "Johann Peter Gogarten",
+      "Patricia Sanchez-Baracaldo",
+      "Anja Spang",
+      "Frank O. Aylward",
+      "Michael Travisano",
+      "Paula V. Welander",
+      "Julie A. Huber",
+      "Vaughn S. Cooper",
+      "Paul E. Turner",
+      "Timothy W. Lyons",
+      "Andrew D. Ellington",
+      "Shelley D. Copley",
+      "Eugene V. Koonin",
+      "Michael Lynch"
+    ],
+    "published": "2026-05-06",
+    "summary": "The origin of life is often framed primarily as a chemical problem, yet life's defining feature is evolution. Advances in geochemistry, prebiotic chemistry, and molecular biology have produced diverse scenarios for the emergence of genomes, metabolism, and cellular compartments on the early Earth, but most of these models lack a population-genetics framework. Here, we argue that origin-of-life research must expand from asking simply how life began to exploring how it evolved from pre-biological systems. Synthesizing evidence from comparative genomics, phylogenetics, biochemistry, and geoscience, we emphasize that the last universal common ancestor (LUCA) was already a complex, ecologically adapted population far removed from the starting point of life, implying a deep pre-LUCA evolutionary history. We highlight how population genetics, ecology, and synthetic biology can constrain origin-of-life scenarios by making explicit the roles of selection, drift, mutation, horizontal gene transfer, parasites, and compartmentalization in shaping early communities. Finally, we outline an evolutionary research agenda spanning protometabolic and autocatalytic networks, protocells, the emergence of translation, and the transition to DNA genomes, in which qualitative models can now be buttressed and formalized by evolution-driven hypotheses subject to testing using theory and laboratory experiments, including those with synthetic cells.",
+    "categories": [
+      "q-bio.PE"
+    ],
+    "summary_cn": "生命的起源通常主要被认为是一个化学问题，但生命的定义特征是进化。地球化学、生命起源前化学和分子生物学的进步为早期地球上基因组、新陈代谢和细胞区室的出现创造了多种场景，但大多数模型缺乏群体遗传学框架。在这里，我们认为生命起源研究必须从简单地询问生命如何开始扩展到探索它如何从前生物系统进化而来。综合比较基因组学、系统发育学、生物化学和地球科学的证据，我们强调最后的普遍共同祖先（LUCA）已经是一个复杂的、生态适应的群体，远离生命的起点，这意味着深刻的前 LUCA 进化历史。我们强调群体遗传学、生态学和合成生物学如何通过明确选择、漂移、突变、水平基因转移、寄生虫和区划在塑造早期群落中的作用来限制生命起源场景。最后，我们概述了一个涵盖原代谢和自催化网络、原始细胞、翻译的出现以及向 DNA 基因组的过渡的进化研究议程，其中定性模型现在可以通过进化驱动的假设得到支持和形式化，并通过理论和实验室实验（包括合成细胞的实验）进行测试。",
+    "comment": "This article is currently under review",
+    "category_en": "Populations & Evolution (Bio)",
+    "category_cn": "种群与进化(生物)",
+    "slug": "2605-05464v1-the-origin-of-life-in-the-light-of-evolution",
+    "rel_path": "entities/papers/2605-05464v1-the-origin-of-life-in-the-light-of-evolution.html",
+    "figures": [],
+    "concepts": [],
+    "method_signal": "The origin of life is often framed primarily as a chemical problem, yet life's defining feature is evolution.",
+    "topic_signal": "q-bio.PE"
+  },
+  {
+    "id": "2605.05385v1",
+    "title": "Chapter 2: Geometry of the Fitness Surface and Trajectory Dynamics of Replicator Systems",
+    "authors": [
+      "A. S. Bratus",
+      "S. Drozhzhin",
+      "T. Yakushkina"
+    ],
+    "published": "2026-05-06",
+    "summary": "We study the geometry of the mean fitness surface of replicator systems and its relationship to evolutionary trajectory dynamics. Using the symmetric--antisymmetric decomposition of the fitness landscape matrix, we derive an explicit formula for the rate of change of mean fitness and establish necessary conditions for its monotonicity along trajectories. In general, replicator trajectories do not reach the maximum of the fitness surface, even in the presence of a unique asymptotically stable equilibrium. We characterise, in terms of the symmetric and antisymmetric parts of the fitness matrix, the precise conditions under which an equilibrium coincides with a local extremum of the fitness surface. Circulant matrices are identified as a natural and nontrivial class satisfying these conditions. We establish a two-way connection between fitness surface maxima and evolutionarily stable states: evolutionary stability implies a local fitness maximum, and the converse holds under the identified structural conditions. When the unique asymptotically stable equilibrium is a local maximum, it is evolutionarily stable and realises the global maximum of the fitness surface; an unstable equilibrium forces the global maximum to the boundary of the simplex. The framework is extended to general Lotka--Volterra systems, where an analogue of mean fitness is shown to share the same extremal properties. Results are illustrated through six examples spanning autocatalytic and hypercyclic replication, a parametric family exhibiting Andronov--Hopf bifurcation and heteroclinic cycles, and the Eigen quasispecies model.",
+    "categories": [
+      "q-bio.PE",
+      "math.DS"
+    ],
+    "summary_cn": "我们研究复制系统平均适应度表面的几何形状及其与进化轨迹动力学的关系。利用适应度景观矩阵的对称-反对称分解，我们推导出平均适应度变化率的显式公式，并为其沿轨迹的单调性建立了必要条件。一般来说，即使存在唯一的渐近稳定平衡，复制器轨迹也不会达到适应表面的最大值。我们根据适应度矩阵的对称和反对称部分来描述平衡与适应度表面的局部极值一致的精确条件。循环矩阵被认为是满足这些条件的自然且非平凡的类。我们在适应度表面最大值和进化稳定状态之间建立了双向联系：进化稳定性意味着局部适应度最大值，反之亦然。当唯一渐近稳定平衡为局部极大值时，是进化稳定的，实现了适应度面的全局极大值；不稳定的平衡迫使全局最大值到达单纯形的边界。该框架被扩展到一般的 Lotka-Volterra 系统，其中平均适应度的类似物被证明具有相同的极值属性。结果通过涵盖自催化和超循环复制、展示安德罗诺夫-霍普夫分岔和异宿循环的参数族以及本征准种模型的六个示例进行说明。",
+    "comment": "",
+    "category_en": "Populations & Evolution (Bio)",
+    "category_cn": "种群与进化(生物)",
+    "slug": "2605-05385v1-chapter-2-geometry-of-the-fitness-surface-and-traj",
+    "rel_path": "entities/papers/2605-05385v1-chapter-2-geometry-of-the-fitness-surface-and-traj.html",
+    "figures": [
+      "assets/papers/2605-05385v1/fig1.png",
+      "assets/papers/2605-05385v1/fig2.png",
+      "assets/papers/2605-05385v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
+      },
+      {
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
+      }
+    ],
+    "method_signal": "We study the geometry of the mean fitness surface of replicator systems and its relationship to evolutionary trajectory dynamics.",
+    "topic_signal": "基准评估 / 自动驾驶 / 世界模型"
+  },
+  {
+    "id": "2605.05284v1",
+    "title": "Direct From Darwin: Deriving Advanced Optimizers From Evolutionary First Principles",
+    "authors": [
+      "Daniel Grimmer"
+    ],
+    "published": "2026-05-06",
+    "summary": "Evolutionary computation has long promised to deliver both high-performance optimization tools as well as rigorous scientific simulations of Darwinian evolution. However, modern algorithms frequently abandon evolutionary fidelity for physics-inspired heuristics or superficial biological metaphors. This paper derives a suite of advanced gradient-based optimization algorithms directly from evolutionary first principles. We introduce Darwinian Lineage Simulations (DLS) to prove that, in an asexual context, Fisher's and Wright's historically opposed views of evolution are actually formally equivalent. This unification requires carefully partitioning Fisher's deterministically-evolving total population into Wright's randomly-drifting sub-populations. We prove that proper bookkeeping requires introducing a specific kind of structured noise (the DLS noise relation). Crucially, however, any bookkeeping choices which satisfy this relation will result in a faithful simulation of evolution. Using this vast representational freedom, we prove that a broad family of battle-tested optimization algorithms are already perfectly compatible with evolutionary dynamics. These include: Stochastic Gradient Descent, Natural Gradient Descent, and the Damped Newton's method among many others. By simply adding DLS noise (i.e., evolutionarily faithful genetic drift), these algorithms become scientifically valid in silico simulations of Darwinian evolution. Finally, we demonstrate that even the state-of-the-art Adam optimizer can be brought into evolutionary compliance through a minor mathematical surgery.",
+    "categories": [
+      "cs.NE",
       "cs.LG",
-      "cs.AI",
-      "math.OC"
+      "q-bio.PE",
+      "q-bio.QM"
     ],
-    "summary_cn": "在训练大型语言模型 (LLM) 时，优化器在预训练和微调阶段都发挥着重要作用。在本文中，我们提出了一个观察结果，即在监督微调（SFT）阶段，使用与预训练相同的优化器进行完全微调可以实现更好的学习-遗忘权衡，即在新任务上实现相同或更好性能的同时，与其他优化器以及可能令人惊讶的 LoRA 相比，遗忘更少。我们将这种现象称为优化器模型一致性。为了更好地理解它，通过受控实验和理论分析，我们表明：1）优化器可以通过对激活进行正则化影响来塑造模型，从而在预训练检查点周围产生不同的景观； 2）针对这种正则化效果，SFT中的权重更新应该遵循一些特定的结构，以减少对预训练中学到的知识的遗忘，这可以通过使用相同的优化器来获得。此外，我们特别比较了 Muon 和 AdamW 在整个预训练和 SFT 阶段的使用情况，发现 Muon 在针对推理任务进行微调时表现更差。通过合成语言建模实验，我们证明这可能来自 Muon 强烈的死记硬背倾向，这可能会损害少量数据的模式获取，就像 SFT 一样。",
-    "comment": "",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-06654v1-optimizer-model-consistency-full-finetuning-with-t",
-    "rel_path": "entities/papers/2605-06654v1-optimizer-model-consistency-full-finetuning-with-t.html",
+    "summary_cn": "进化计算长期以来一直致力于提供高性能优化工具以及达尔文进化论的严格科学模拟。然而，现代算法经常放弃进化保真度，转而采用物理启发式或肤浅的生物隐喻。本文直接从进化第一原理推导出一套先进的基于梯度的优化算法。我们引入达尔文谱系模拟（DLS）来证明，在无性背景下，费舍尔和赖特历史上对立的进化论实际上在形式上是等价的。这种统一需要仔细地将费舍尔确定性演化的总种群划分为赖特随机漂移的子种群。我们证明，正确的簿记需要引入一种特定类型的结构化噪声（DLS 噪声关系）。然而，至关重要的是，任何满足这种关系的簿记选择都将导致对进化的忠实模拟。利用这种巨大的表征自由度，我们证明了一系列经过实战检验的优化算法已经与进化动力学完美兼容。其中包括：随机梯度下降、自然梯度下降和阻尼牛顿法等。通过简单地添加 DLS 噪声（即，进化上忠实的遗传漂变），这些算法在达尔文进化论的计算机模拟中变得科学有效。最后，我们证明即使是最先进的 Adam 优化器也可以通过一个小的数学手术来实现进化合规性。",
+    "comment": "38 pages, 5 figures. Submitted to Evolutionary Computation, May 2026. Code available at: https://github.com/danielgrimmer/adam-dls",
+    "category_en": "Populations & Evolution (Bio)",
+    "category_cn": "种群与进化(生物)",
+    "slug": "2605-05284v1-direct-from-darwin-deriving-advanced-optimizers-fr",
+    "rel_path": "entities/papers/2605-05284v1-direct-from-darwin-deriving-advanced-optimizers-fr.html",
     "figures": [
-      "assets/papers/2605-06654v1/fig1.png",
-      "assets/papers/2605-06654v1/fig2.png",
-      "assets/papers/2605-06654v1/fig3.png"
+      "assets/papers/2605-05284v1/fig1.png",
+      "assets/papers/2605-05284v1/fig2.png",
+      "assets/papers/2605-05284v1/fig3.png"
     ],
     "concepts": [
       {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
       }
     ],
-    "method_signal": "In this paper, we present an observation that full finetuning with the same optimizer as in pretraining achieves a better learning-forgetting tradeoff, i.e., forgetting less while achieving the same or better performance on the new task, than other optimizers and, possibly surprisingly, LoRA, during the supervised finetuning (SFT) stage.",
-    "topic_signal": "大语言模型"
+    "method_signal": "We introduce Darwinian Lineage Simulations (DLS) to prove that, in an asexual context, Fisher's and Wright's historically opposed views of evolution are actually formally equivalent.",
+    "topic_signal": "世界模型"
   },
   {
-    "id": "2605.06651v1",
-    "title": "AI Co-Mathematician: Accelerating Mathematicians with Agentic AI",
+    "id": "2605.04807v1",
+    "title": "A process-based dynamic occupancy model to study range dynamics under non-equilibrium conditions",
     "authors": [
-      "Daniel Zheng",
-      "Ingrid von Glehn",
-      "Yori Zwols",
-      "Iuliya Beloshapka",
-      "Lars Buesing",
-      "Daniel M. Roy",
-      "Martin Wattenberg",
-      "Bogdan Georgiev",
-      "Tatiana Schmidt",
-      "Andrew Cowie",
-      "Fernanda Viegas",
-      "Dimitri Kanevsky",
-      "Vineet Kahlon",
-      "Hartmut Maennel",
-      "Sophia Alj",
-      "George Holland",
-      "Alex Davies",
-      "Pushmeet Kohli"
+      "Simon Lacombe",
+      "Sébastien Devillard",
+      "Cécile Kauffmann",
+      "Olivier Gimenez"
     ],
-    "published": "2026-05-07",
-    "summary": "We introduce the AI co-mathematician, a workbench for mathematicians to interactively leverage AI agents to pursue open-ended research. The AI co-mathematician is optimized to provide holistic support for the exploratory and iterative reality of mathematical workflows, including ideation, literature search, computational exploration, theorem proving and theory building. By providing an asynchronous, stateful workspace that manages uncertainty, refines user intent, tracks failed hypotheses, and outputs native mathematical artifacts, the system mirrors human collaborative workflows. In early tests, the AI co-mathematician helped researchers solve open problems, identify new research directions, and uncover overlooked literature references. Besides demonstrating a highly interactive paradigm for AI-assisted mathematical discovery, the AI co-mathematician also achieves state of the art results on hard problem-solving benchmarks, including scoring 48% on FrontierMath Tier 4, a new high score among all AI systems evaluated.",
+    "published": "2026-05-06",
+    "summary": "Failing to account for ecological processes such as dispersal and connectivity when modeling distributions can lead to biased inference about environmental drivers and reduced predictive performance. Spatial dynamic occupancy models are promising to study range dynamics while accounting for dispersal and connectivity, but they currently rely on restrictive formulations of the colonization process, and computational constraints prevent their application at large spatial scales. Here, we propose a process-based dynamic occupancy model to study the distribution of range-expanding species while accounting for connectivity and effects of the environment. We introduce a formulation based on dispersal-pressure that provides a flexible and ecologically interpretable representation of the colonization process, and develop a computational approach based on sparse distance matrices that enables its application to national and transnational scales. We conducted a simulation study that showed unbiased parameter estimation across various ecological scenarios. We also applied our model to two range-expanding carnivores offering complementary insights: the grey wolf and the Eurasian otter. Our model revealed contrasting colonization dynamic, with wolves primarily constrained by altitude and forest cover while otters where only marginally affected by the environment, suggesting that their distribution is limited by dispersal history rather than habitat preferences. By explicitly disentangling the influence of dispersal and environment on distributions, our model provides better insight into occupancy-environment relationships under non-equilibrium conditions, and help identifies what limits species distributions. In light of the increasing availability of large-scale biodiversity data, our framework offers opportunities to study range dynamics using mechanistic approaches across entire landscapes.",
     "categories": [
-      "cs.AI"
+      "q-bio.PE"
     ],
-    "summary_cn": "我们推出了 AI 联合数学家，这是数学家可以交互地利用 AI 代理进行开放式研究的工作台。 AI 联合数学家经过优化，可为数学工作流程的探索性和迭代现实提供整体支持，包括构思、文献检索、计算探索、定理证明和理论构建。通过提供一个异步、有状态的工作空间来管理不确定性、完善用户意图、跟踪失败的假设并输出本地数学工件，该系统反映了人类协作工作流程。在早期测试中，人工智能联合数学家帮助研究人员解决开放问题，确定新的研究方向，并发现被忽视的文献参考。除了展示人工智能辅助数学发现的高度交互范例外，这位人工智能联合数学家还在难题解决基准上取得了最先进的成绩，包括在 FrontierMath Tier 4 上得分 48%，这是所有评估的人工智能系统中的新高分。",
-    "comment": "22 pages",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-06651v1-ai-co-mathematician-accelerating-mathematicians-wi",
-    "rel_path": "entities/papers/2605-06651v1-ai-co-mathematician-accelerating-mathematicians-wi.html",
+    "summary_cn": "在对分布进行建模时未能考虑分散和连通性等生态过程可能会导致对环境驱动因素的有偏见的推断并降低预测性能。空间动态占用模型有望在考虑分散和连通性的同时研究范围动态，但它们目前依赖于殖民过程的限制性公式，并且计算限制阻碍了它们在大空间尺度上的应用。在这里，我们提出了一种基于过程的动态占用模型来研究范围扩大的物种的分布，同时考虑环境的连通性和影响。我们引入了一种基于分散压力的公式，该公式提供了殖民过程的灵活且生态上可解释的表示，并开发了一种基于稀疏距离矩阵的计算方法，使其能够应用于国家和跨国规模。我们进行了一项模拟研究，显示了各种生态场景中的无偏参数估计。我们还将我们的模型应用于两种范围扩大的食肉动物：灰狼和欧亚水獭，提供了互补的见解。我们的模型揭示了对比的殖民动态，狼主要受到海拔和森林覆盖的限制，而水獭仅受环境的轻微影响，这表明它们的分布受到扩散历史而不是栖息地偏好的限制。通过明确地解开扩散和环境对分布的影响，我们的模型可以更好地洞察非平衡条件下的占用与环境关系，并帮助确定限制物种分布的因素。鉴于大规模生物多样性数据的可用性不断增加，我们的框架提供了使用整个景观的机械方法来研究范围动态的机会。",
+    "comment": "29 pages, 6 figures",
+    "category_en": "Populations & Evolution (Bio)",
+    "category_cn": "种群与进化(生物)",
+    "slug": "2605-04807v1-a-process-based-dynamic-occupancy-model-to-study-r",
+    "rel_path": "entities/papers/2605-04807v1-a-process-based-dynamic-occupancy-model-to-study-r.html",
     "figures": [
-      "assets/papers/2605-06651v1/fig1.png",
-      "assets/papers/2605-06651v1/fig2.png",
-      "assets/papers/2605-06651v1/fig3.png"
+      "assets/papers/2605-04807v1/fig1.png",
+      "assets/papers/2605-04807v1/fig2.png",
+      "assets/papers/2605-04807v1/fig3.png"
     ],
     "concepts": [
       {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
       },
       {
         "name": "智能体",
@@ -429,46 +266,51 @@
         "url": "../../concepts/ai-agents.html"
       }
     ],
-    "method_signal": "We introduce the AI co-mathematician, a workbench for mathematicians to interactively leverage AI agents to pursue open-ended research.",
-    "topic_signal": "基准评估 / 智能体"
+    "method_signal": "Here, we propose a process-based dynamic occupancy model to study the distribution of range-expanding species while accounting for connectivity and effects of the environment.",
+    "topic_signal": "世界模型 / 智能体"
   },
   {
-    "id": "2605.06647v1",
-    "title": "Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval",
+    "id": "2605.04498v1",
+    "title": "Algorithmic bottlenecks in evolution: Genetic code, symbolic language, and the Great Filter hypothesis",
     "authors": [
-      "Zeyu Yang",
-      "Qi Ma",
-      "Jason Chen",
-      "Anshumali Shrivastava"
+      "Mikhail Prokopenko",
+      "Nihat Ay",
+      "Angelica Breviario",
+      "Roland M. Crocker",
+      "Paul C. W. Davies",
+      "Pauline Davies",
+      "Darren Dougan",
+      "Roland Fletcher",
+      "Michael Harré",
+      "Marcus G. Heisler",
+      "Zdenka Kuncic",
+      "Geraint F. Lewis",
+      "Ori Livson",
+      "Vivienne Reiner",
+      "Jaime Ruiz Serra"
     ],
-    "published": "2026-05-07",
-    "summary": "Retrieval-augmented agents are increasingly the interface to large organizational knowledge bases, yet most still treat retrieval as a black box: they issue exploratory queries, inspect returned snippets, and iteratively reformulate until useful evidence emerges. This approach resembles how a newcomer searches an unfamiliar database rather than how an expert navigates it with strong priors about terminology and likely evidence, and results in unnecessary retrieval rounds, increased latency, and poor recall.   We introduce \\textit{SuperIntelligent Retrieval Agent} (SIRA), which defines \\emph{superintelligence} in retrieval as the ability to compress multi-round exploratory search into a single corpus-discriminative retrieval action. SIRA does not merely ask what terms are relevant to the query; it asks which terms are likely to separate the desired evidence from corpus-level confusers. On the corpus side, an LLM enriches each document offline with missing search vocabulary; on the query side, it predicts evidence vocabulary omitted by the query; and document-frequency statistics as a tool call to filter proposed terms that are absent, overly common, or unlikely to create retrieval margin. The final retrieval step is a single weighted BM25 call combining the original query with the validated expansion.   Across ten BEIR benchmarks and downstream question-answering tasks, SIRA achieves the significantly superior performance outperforming dense retrievers and state-of-the-art multi-round agentic baselines, demonstrating that one well-formed lexical query, guided by LLM cognition and lightweight corpus statistics, can exceed substantially more expensive multi-round search while remaining interpretable, training-free, and efficient.",
+    "published": "2026-05-06",
+    "summary": "The Great Filter hypothesis proposes that the emergence of technological societies capable of interstellar travel depends on a small number of exceptionally hard and highly improbable steps. Traditional versions of this hypothesis enumerate such \"hard steps\" along the trajectory from inanimate matter to complex technological societies, but diverge in their explanations for why these particular steps should be so improbable. The theory of Major Evolutionary Transitions also faces challenges in identifying which steps should be considered universally \"hard\" across different evolutionary pathways. In contrast, we argue that two deeply structural obstacles dominate the evolutionary landscape: the coding threshold associated with the origin of the genetic code, and the language threshold associated with the emergence of symbolic communication. We examine the developmental precursors of both transitions and analyze the underlying algorithmic bottlenecks: points at which evolving systems separate code from function, while entangling them within information hierarchies. Using a game-theoretic analysis of coupled signaling and coordination dynamics, we then argue that the corresponding multichannel games exhibit unstable equilibria that render the transitions intrinsically difficult. We conjecture that the so-called Great Filter is best understood not as a sequence of isolated improbable events, but as a nested structure of tangled information hierarchies. Under this interpretation, the rarity of advanced societies follows from the difficulty of crossing these coding thresholds in a competitive noisy environment. This perspective reframes the Great Filter as an algorithmic property of evolving systems, highlighting why only a vanishingly small fraction of life may ever traverse the path toward technological societies capable of interstellar travel.",
     "categories": [
-      "cs.IR",
-      "cs.AI",
-      "cs.LG"
+      "q-bio.PE"
     ],
-    "summary_cn": "检索增强代理越来越多地成为大型组织知识库的接口，但大多数仍然将检索视为黑匣子：它们发出探索性查询，检查返回的片段，并迭代地重新制定，直到出现有用的证据。这种方法类似于新手如何搜索不熟悉的数据库，而不是专家如何利用有关术语和可能证据的强大先验来导航它，并导致不必要的检索轮次、延迟增加和召回率低。我们引入\\textit{超级智能检索代理}（SIRA），它将检索中的\\emph{超级智能}定义为将多轮探索性搜索压缩为单个语料库判别性检索操作的能力。 SIRA 不仅会询问哪些术语与查询相关；还会询问哪些术语与查询相关。它询问哪些术语可能将所需的证据与语料库级别的混淆分开。在语料库方面，法学硕士通过缺失的搜索词汇离线丰富每个文档；在查询方面，它预测查询省略的证据词汇；文档频率统计作为一种工具调用来过滤不存在​​、过于常见或不太可能创造检索余量的建议术语。最后的检索步骤是单个加权 BM25 调用，将原始查询与经过验证的扩展相结合。在十个 BEIR 基准测试和下游问答任务中，SIRA 实现了明显优于密集检索器和最先进的多轮代理基线的性能，证明在 LLM 认知和轻量级语料库统计的指导下，一个格式良好的词汇查询可以超越更昂贵的多轮搜索，同时保持可解释、免训练和高效。",
-    "comment": "",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-06647v1-superintelligent-retrieval-agent-the-next-frontier",
-    "rel_path": "entities/papers/2605-06647v1-superintelligent-retrieval-agent-the-next-frontier.html",
-    "figures": [
-      "assets/papers/2605-06647v1/fig1.png",
-      "assets/papers/2605-06647v1/fig2.png",
-      "assets/papers/2605-06647v1/fig3.png"
-    ],
+    "summary_cn": "大过滤假说提出，能够进行星际旅行的技术社会的出现取决于少数异常困难且极不可能的步骤。这一假设的传统版本列举了从无生命物质到复杂技术社会的轨迹上的“艰难步骤”，但对于为什么这些特定步骤如此不可能的解释存在分歧。主要进化转变理论还面临着确定哪些步骤应该被认为在不同进化路径中普遍“困难”的挑战。相比之下，我们认为两个深层的结构性障碍主导着进化景观：与遗传密码的起源相关的编码阈值，以及与符号交流的出现相关的语言阈值。我们研究了这两种转变的发展前兆，并分析了潜在的算法瓶颈：不断发展的系统将代码与功能分开的点，同时将它们纠缠在信息层次结构中。通过对耦合信号和协调动力学的博弈论分析，我们认为相应的多通道博弈表现出不稳定的平衡，导致转变本质上很困难。我们推测，所谓的大过滤器最好不要理解为一系列孤立的不可能事件，而是理解为错综复杂的信息层次结构的嵌套结构。根据这种解释，先进社会的稀有性源于在竞争激烈的环境中跨越这些编码阈值的困难。这种观点将大过滤器重新定义为进化系统的算法属性，强调了为什么只有极少数生命可能走上通往能够星际旅行的技术社会的道路。",
+    "comment": "21 pages, 1 table",
+    "category_en": "Populations & Evolution (Bio)",
+    "category_cn": "种群与进化(生物)",
+    "slug": "2605-04498v1-algorithmic-bottlenecks-in-evolution-genetic-code",
+    "rel_path": "entities/papers/2605-04498v1-algorithmic-bottlenecks-in-evolution-genetic-code.html",
+    "figures": [],
     "concepts": [
       {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
       },
       {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
       },
       {
         "name": "智能体",
@@ -476,7 +318,7 @@
         "url": "../../concepts/ai-agents.html"
       }
     ],
-    "method_signal": "We introduce \\textit{SuperIntelligent Retrieval Agent} (SIRA), which defines \\emph{superintelligence} in retrieval as the ability to compress multi-round exploratory search into a single corpus-discriminative retrieval action.",
-    "topic_signal": "大语言模型 / 基准评估 / 智能体"
+    "method_signal": "The Great Filter hypothesis proposes that the emergence of technological societies capable of interstellar travel depends on a small number of exceptionally hard and highly improbable steps.",
+    "topic_signal": "自动驾驶 / 世界模型 / 智能体"
   }
 ]

@@ -2,7 +2,7 @@
 layout: concept
 title: 自动驾驶
 created: 2026-05-01
-updated: 2026-05-08
+updated: 2026-05-10
 type: concept
 tags: [autonomous-driving, perception, prediction, planning, 3D, world-model]
 papers:
@@ -18,6 +18,10 @@ papers:
 自动驾驶（Autonomous Driving）是指通过传感器感知、环境理解、行为预测和路径规划等技术，使车辆能够在无人干预或最小干预的情况下自主行驶的系统。现代自动驾驶系统深度依赖人工智能技术，包括计算机视觉、深度学习、强化学习和世界模型等。随着端到端学习和世界模型的发展，自动驾驶正从模块化架构向统一感知-预测-规划的端到端架构演进。
 
 ## 关键文献与发现
+
+- [Algorithmic bottlenecks in evolution: Genetic code, symbolic language, and the Great Filter hypothesis](../entities/papers/2605-04498v1-algorithmic-bottlenecks-in-evolution-genetic-code.html)（2026-05-06）：大过滤假说提出，能够进行星际旅行的技术社会的出现取决于少数异常困难且极不可能的步骤。
+
+- [Chapter 2: Geometry of the Fitness Surface and Trajectory Dynamics of Replicator Systems](../entities/papers/2605-05385v1-chapter-2-geometry-of-the-fitness-surface-and-traj.html)（2026-05-06）：我们研究复制系统平均适应度表面的几何形状及其与进化轨迹动力学的关系。
 
 - [ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation](../entities/papers/2605-06667v1-actcam-zero-shot-joint-camera-and-3d-motion-contro.html)（2026-05-07）：对于艺术应用，视频生成需要对表演和摄影进行精细控制，即演员的动作和摄像机轨迹。
 

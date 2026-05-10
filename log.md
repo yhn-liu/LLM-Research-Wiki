@@ -221,3 +221,16 @@
   - [2605.06654v1] Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretrain
   - [2605.06651v1] AI Co-Mathematician: Accelerating Mathematicians with Agentic AI
   - [2605.06647v1] Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval
+
+## [2026-05-10] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 8 篇
+- 更新相关概念页提及: 13 处
+- 不生成 PDF；论文页面包含英文摘要、中文摘要、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.06301v1] Higher-order interactions in ecology can be hidden in plain sight
+  - [2605.06243v1] A $μ$-distance for semidirected orchard phylogenetic networks
+  - [2605.05966v1] Towards a unified framework for multiple stable states in ecological systems
+  - [2605.05464v1] The Origin of Life in the Light of Evolution
+  - [2605.05385v1] Chapter 2: Geometry of the Fitness Surface and Trajectory Dynamics of Replicator
+  - [2605.05284v1] Direct From Darwin: Deriving Advanced Optimizers From Evolutionary First Princip
+  - [2605.04807v1] A process-based dynamic occupancy model to study range dynamics under non-equili
+  - [2605.04498v1] Algorithmic bottlenecks in evolution: Genetic code, symbolic language, and the G

@@ -2,7 +2,7 @@
 layout: concept
 title: 世界模型
 created: 2026-05-01
-updated: 2026-05-08
+updated: 2026-05-10
 type: concept
 tags: [world-model, prediction, generation, 3D, driving]
 papers:
@@ -16,6 +16,18 @@ papers:
 世界模型是能够学习环境动态规律、预测未来状态的计算模型。在 AI 领域，世界模型旨在让智能体通过内部模拟理解世界运行规律，用于规划、决策和生成。本库中有 1 篇论文推动了驾驶场景世界模型的前沿。
 
 ## 关键文献与发现
+
+- [Algorithmic bottlenecks in evolution: Genetic code, symbolic language, and the Great Filter hypothesis](../entities/papers/2605-04498v1-algorithmic-bottlenecks-in-evolution-genetic-code.html)（2026-05-06）：大过滤假说提出，能够进行星际旅行的技术社会的出现取决于少数异常困难且极不可能的步骤。
+
+- [A process-based dynamic occupancy model to study range dynamics under non-equilibrium conditions](../entities/papers/2605-04807v1-a-process-based-dynamic-occupancy-model-to-study-r.html)（2026-05-06）：在对分布进行建模时未能考虑分散和连通性等生态过程可能会导致对环境驱动因素的有偏见的推断并降低预测性能。
+
+- [Direct From Darwin: Deriving Advanced Optimizers From Evolutionary First Principles](../entities/papers/2605-05284v1-direct-from-darwin-deriving-advanced-optimizers-fr.html)（2026-05-06）：进化计算长期以来一直致力于提供高性能优化工具以及达尔文进化论的严格科学模拟。
+
+- [Chapter 2: Geometry of the Fitness Surface and Trajectory Dynamics of Replicator Systems](../entities/papers/2605-05385v1-chapter-2-geometry-of-the-fitness-surface-and-traj.html)（2026-05-06）：我们研究复制系统平均适应度表面的几何形状及其与进化轨迹动力学的关系。
+
+- [Towards a unified framework for multiple stable states in ecological systems](../entities/papers/2605-05966v1-towards-a-unified-framework-for-multiple-stable-st.html)（2026-05-07）：多重稳定状态——相同环境条件下两种或多种不同生态配置的共存——引起了生态学的持续关注，但该领域仍然缺乏连接生态机制和动力学模型的统一框架。
+
+- [Higher-order interactions in ecology can be hidden in plain sight](../entities/papers/2605-06301v1-higher-order-interactions-in-ecology-can-be-hidden.html)（2026-05-07）：高阶相互作用越来越被认为是生态动力学的关键组成部分。
 
 - [Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)（2026-05-07）：强化学习 (RL) 已被应用于改进大型语言模型 (LLM) 推理，但由于缺乏受控、可扩展的环境，对训练如何随任务难度进行扩展的系统研究受到了阻碍。
 

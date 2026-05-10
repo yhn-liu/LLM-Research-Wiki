@@ -2,7 +2,7 @@
 layout: concept
 title: 智能体
 created: 2026-05-01
-updated: 2026-05-09
+updated: 2026-05-10
 type: concept
 tags: [agent, tool-use, planning, LLM-agent, multi-agent, collaboration]
 papers:
@@ -26,6 +26,12 @@ papers:
 智能体（AI Agent）是指能够感知环境、进行推理、做出决策并采取行动以实现特定目标的自主系统。基于大语言模型的智能体将 LLM 作为核心"大脑"，通过工具使用、规划和记忆机制与外部环境交互。本库中有 8 篇论文从单智能体能力、多智能体协作、训练安全等角度研究了这一方向。
 
 ## 关键文献与发现
+
+- [Algorithmic bottlenecks in evolution: Genetic code, symbolic language, and the Great Filter hypothesis](../entities/papers/2605-04498v1-algorithmic-bottlenecks-in-evolution-genetic-code.html)（2026-05-06）：大过滤假说提出，能够进行星际旅行的技术社会的出现取决于少数异常困难且极不可能的步骤。
+
+- [A process-based dynamic occupancy model to study range dynamics under non-equilibrium conditions](../entities/papers/2605-04807v1-a-process-based-dynamic-occupancy-model-to-study-r.html)（2026-05-06）：在对分布进行建模时未能考虑分散和连通性等生态过程可能会导致对环境驱动因素的有偏见的推断并降低预测性能。
+
+- [Towards a unified framework for multiple stable states in ecological systems](../entities/papers/2605-05966v1-towards-a-unified-framework-for-multiple-stable-st.html)（2026-05-07）：多重稳定状态——相同环境条件下两种或多种不同生态配置的共存——引起了生态学的持续关注，但该领域仍然缺乏连接生态机制和动力学模型的统一框架。
 
 - [Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval](../entities/papers/2605-06647v1-superintelligent-retrieval-agent-the-next-frontier.html)（2026-05-07）：检索增强代理越来越多地成为大型组织知识库的接口，但大多数仍然将检索视为黑匣子：它们发出探索性查询，检查返回的片段，并迭代地重新制定，直到出现有用的证据。
 

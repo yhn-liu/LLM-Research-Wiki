@@ -2,7 +2,7 @@
 layout: concept
 title: 基准评估
 created: 2026-05-01
-updated: 2026-05-09
+updated: 2026-05-10
 type: concept
 tags: [benchmark, evaluation, testing, metrics, domain-specific, assessment]
 papers:
@@ -23,6 +23,8 @@ papers:
 基准评估（Benchmarking）是通过设计标准化的测试任务和评估指标来系统性地衡量 AI 模型能力的研究方法。一个好的基准测试需要具备区分度、公平性、可复现性和时效性，能够真实反映模型在特定领域或通用任务上的性能水平。随着 AI 模型能力的快速提升，基准评估本身也面临着被"饱和"或被"游戏化"的挑战。
 
 ## 关键文献与发现
+
+- [Chapter 2: Geometry of the Fitness Surface and Trajectory Dynamics of Replicator Systems](../entities/papers/2605-05385v1-chapter-2-geometry-of-the-fitness-surface-and-traj.html)（2026-05-06）：我们研究复制系统平均适应度表面的几何形状及其与进化轨迹动力学的关系。
 
 - [Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval](../entities/papers/2605-06647v1-superintelligent-retrieval-agent-the-next-frontier.html)（2026-05-07）：检索增强代理越来越多地成为大型组织知识库的接口，但大多数仍然将检索视为黑匣子：它们发出探索性查询，检查返回的片段，并迭代地重新制定，直到出现有用的证据。
 

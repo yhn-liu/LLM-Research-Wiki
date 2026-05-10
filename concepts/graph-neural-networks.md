@@ -2,7 +2,7 @@
 layout: concept
 title: 图神经网络
 created: 2026-05-01
-updated: 2026-05-09
+updated: 2026-05-10
 type: concept
 tags: [GNN, graph, neural-network, biomedical, representation-learning, message-passing]
 papers:
@@ -63,6 +63,8 @@ LLM 细化后的图结构更清晰、更具可解释性，这对生物医学等�
 - [知识蒸馏](knowledge-distillation.html) — GNN 模型的压缩与迁移
 
 ## 本库相关论文
+
+- [A $μ$-distance for semidirected orchard phylogenetic networks](../entities/papers/2605-06243v1-a--distance-for-semidirected-orchard-phylogenetic.html)（2026-05-07）：在进化生物学中，系统发育网络现在被广泛用于表示物种和种群之间的历史关系，其中这种历史包括网状事件，例如种群之间的杂交、基因流动和混合。
 
 - [DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining with High-Order Ranking Consistency](../entities/papers/2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for.html)（2026-05-07）：对比语言图像预训练（CLIP）存在两个结构性弱点：对称的 InfoNCE 损失丢弃了不匹配的批内对之间的相对顺序，全局池化将视觉表示折叠成对细粒度局部结构不敏感的语义瓶颈。
 
