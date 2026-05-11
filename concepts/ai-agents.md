@@ -2,7 +2,7 @@
 layout: concept
 title: 智能体
 created: 2026-05-01
-updated: 2026-05-10
+updated: 2026-05-11
 type: concept
 tags: [agent, tool-use, planning, LLM-agent, multi-agent, collaboration]
 papers:
@@ -26,6 +26,10 @@ papers:
 智能体（AI Agent）是指能够感知环境、进行推理、做出决策并采取行动以实现特定目标的自主系统。基于大语言模型的智能体将 LLM 作为核心"大脑"，通过工具使用、规划和记忆机制与外部环境交互。本库中有 8 篇论文从单智能体能力、多智能体协作、训练安全等角度研究了这一方向。
 
 ## 关键文献与发现
+
+- [The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents](../entities/papers/2605-08060v1-the-memory-curse-how-expanded-recall-erodes-cooper.html)（2026-05-08）：上下文窗口扩展通常被视为法学硕士的直接能力升级，但我们发现它在多智能体社会困境中系统性地失败。
+
+- [LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling](../entities/papers/2605-08083v1-llms-improving-llms-agentic-discovery-for-test-tim.html)（2026-05-08）：测试时间缩放（TTS）已成为通过在推理过程中分配额外计算来提高大型语言模型性能的有效方法。
 
 - [Algorithmic bottlenecks in evolution: Genetic code, symbolic language, and the Great Filter hypothesis](../entities/papers/2605-04498v1-algorithmic-bottlenecks-in-evolution-genetic-code.html)（2026-05-06）：大过滤假说提出，能够进行星际旅行的技术社会的出现取决于少数异常困难且极不可能的步骤。
 

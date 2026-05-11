@@ -2,7 +2,7 @@
 layout: concept
 title: 大语言模型
 created: 2026-05-01
-updated: 2026-05-09
+updated: 2026-05-11
 type: concept
 tags: [LLM, transformer, scaling, NLP, deep-learning]
 papers:
@@ -31,6 +31,20 @@ papers:
 大语言模型（Large Language Model, LLM）是基于 Transformer 架构、通过海量文本预训练的大规模神经网络，能够执行文本生成、理解、推理等多种任务。自 GPT-3 展示涌现能力以来，LLM 已成为 AI 研究的核心范式，本库中有 8 篇论文从不同角度对其进行研究。
 
 ## 关键文献与发现
+
+- [VecCISC: Improving Confidence-Informed Self-Consistency with Reasoning Trace Clustering and Candidate Answer Selection](../entities/papers/2605-08070v1-veccisc-improving-confidence-informed-self-consist.html)（2026-05-08）：扩展推理时间推理的标准技术是自我一致性，即从法学硕士中抽取多个候选答案，并选择最常见的答案。
+
+- [EmambaIR: Efficient Visual State Space Model for Event-guided Image Reconstruction](../entities/papers/2605-08073v1-emambair-efficient-visual-state-space-model-for-ev.html)（2026-05-08）：最近基于事件的图像重建方法主要依靠卷积神经网络（CNN）和视觉变换器（ViT）来处理补充事件信息。
+
+- [Fast Byte Latent Transformer](../entities/papers/2605-08044v1-fast-byte-latent-transformer.html)（2026-05-08）：最近的字节级语言模型（LM）在不依赖子词词汇的情况下与令牌级模型的性能相匹配，但它们的实用性受到缓慢的逐字节自回归生成的限制。
+
+- [Accurate and Efficient Statistical Testing for Word Semantic Breadth](../entities/papers/2605-08048v1-accurate-and-efficient-statistical-testing-for-wor.html)（2026-05-08）：通过上下文化的标记嵌入，测量单词含义的广度或其在上下文中的传播已经变得可行。
+
+- [CA-SQL: Complexity-Aware Inference Time Reasoning for Text-to-SQL via Exploration and Compute Budget Allocation](../entities/papers/2605-08057v1-ca-sql-complexity-aware-inference-time-reasoning-f.html)（2026-05-08）：虽然推理时间学习的最新进展改进了文本到 SQL 任务的 LLM 推理，但当前的解决方案仍然难以在 Bird-Bench (BIRD) 基准测试中最具挑战性的任务上表现良好。
+
+- [The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents](../entities/papers/2605-08060v1-the-memory-curse-how-expanded-recall-erodes-cooper.html)（2026-05-08）：上下文窗口扩展通常被视为法学硕士的直接能力升级，但我们发现它在多智能体社会困境中系统性地失败。
+
+- [LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling](../entities/papers/2605-08083v1-llms-improving-llms-agentic-discovery-for-test-tim.html)（2026-05-08）：测试时间缩放（TTS）已成为通过在推理过程中分配额外计算来提高大型语言模型性能的有效方法。
 
 - [Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval](../entities/papers/2605-06647v1-superintelligent-retrieval-agent-the-next-frontier.html)（2026-05-07）：检索增强代理越来越多地成为大型组织知识库的接口，但大多数仍然将检索视为黑匣子：它们发出探索性查询，检查返回的片段，并迭代地重新制定，直到出现有用的证据。
 

@@ -2,7 +2,7 @@
 layout: concept
 title: 基准评估
 created: 2026-05-01
-updated: 2026-05-10
+updated: 2026-05-11
 type: concept
 tags: [benchmark, evaluation, testing, metrics, domain-specific, assessment]
 papers:
@@ -23,6 +23,20 @@ papers:
 基准评估（Benchmarking）是通过设计标准化的测试任务和评估指标来系统性地衡量 AI 模型能力的研究方法。一个好的基准测试需要具备区分度、公平性、可复现性和时效性，能够真实反映模型在特定领域或通用任务上的性能水平。随着 AI 模型能力的快速提升，基准评估本身也面临着被"饱和"或被"游戏化"的挑战。
 
 ## 关键文献与发现
+
+- [VecCISC: Improving Confidence-Informed Self-Consistency with Reasoning Trace Clustering and Candidate Answer Selection](../entities/papers/2605-08070v1-veccisc-improving-confidence-informed-self-consist.html)（2026-05-08）：扩展推理时间推理的标准技术是自我一致性，即从法学硕士中抽取多个候选答案，并选择最常见的答案。
+
+- [EmambaIR: Efficient Visual State Space Model for Event-guided Image Reconstruction](../entities/papers/2605-08073v1-emambair-efficient-visual-state-space-model-for-ev.html)（2026-05-08）：最近基于事件的图像重建方法主要依靠卷积神经网络（CNN）和视觉变换器（ViT）来处理补充事件信息。
+
+- [Position: Mechanistic Interpretability Must Disclose Identification Assumptions for Causal Claims](../entities/papers/2605-08012v1-position-mechanistic-interpretability-must-disclos.html)（2026-05-08）：机械可解释性论文越来越多地使用因果词汇：电路、中介、因果抽象、单一语义。
+
+- [Accurate and Efficient Statistical Testing for Word Semantic Breadth](../entities/papers/2605-08048v1-accurate-and-efficient-statistical-testing-for-wor.html)（2026-05-08）：通过上下文化的标记嵌入，测量单词含义的广度或其在上下文中的传播已经变得可行。
+
+- [CA-SQL: Complexity-Aware Inference Time Reasoning for Text-to-SQL via Exploration and Compute Budget Allocation](../entities/papers/2605-08057v1-ca-sql-complexity-aware-inference-time-reasoning-f.html)（2026-05-08）：虽然推理时间学习的最新进展改进了文本到 SQL 任务的 LLM 推理，但当前的解决方案仍然难以在 Bird-Bench (BIRD) 基准测试中最具挑战性的任务上表现良好。
+
+- [Conformal Path Reasoning: Trustworthy Knowledge Graph Question Answering via Path-Level Calibration](../entities/papers/2605-08077v1-conformal-path-reasoning-trustworthy-knowledge-gra.html)（2026-05-08）：知识图问答（KGQA）已显示出有基础且可解释的推理的前景，但现有方法往往无法对检索到的答案提供可靠的覆盖保证。
+
+- [LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling](../entities/papers/2605-08083v1-llms-improving-llms-agentic-discovery-for-test-tim.html)（2026-05-08）：测试时间缩放（TTS）已成为通过在推理过程中分配额外计算来提高大型语言模型性能的有效方法。
 
 - [Chapter 2: Geometry of the Fitness Surface and Trajectory Dynamics of Replicator Systems](../entities/papers/2605-05385v1-chapter-2-geometry-of-the-fitness-surface-and-traj.html)（2026-05-06）：我们研究复制系统平均适应度表面的几何形状及其与进化轨迹动力学的关系。
 

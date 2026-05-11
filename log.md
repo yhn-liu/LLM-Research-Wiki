@@ -234,3 +234,18 @@
   - [2605.05284v1] Direct From Darwin: Deriving Advanced Optimizers From Evolutionary First Princip
   - [2605.04807v1] A process-based dynamic occupancy model to study range dynamics under non-equili
   - [2605.04498v1] Algorithmic bottlenecks in evolution: Genetic code, symbolic language, and the G
+
+## [2026-05-11] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 更新相关概念页提及: 21 处
+- 不生成 PDF；论文页面包含英文摘要、中文摘要、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.08083v1] LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling
+  - [2605.08077v1] Conformal Path Reasoning: Trustworthy Knowledge Graph Question Answering via Pat
+  - [2605.08060v1] The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents
+  - [2605.08057v1] CA-SQL: Complexity-Aware Inference Time Reasoning for Text-to-SQL via Exploratio
+  - [2605.08048v1] Accurate and Efficient Statistical Testing for Word Semantic Breadth
+  - [2605.08045v1] Uncertainty-Aware Structured Data Extraction from Full CMR Reports via Distilled
+  - [2605.08044v1] Fast Byte Latent Transformer
+  - [2605.08012v1] Position: Mechanistic Interpretability Must Disclose Identification Assumptions 
+  - [2605.08073v1] EmambaIR: Efficient Visual State Space Model for Event-guided Image Reconstructi
+  - [2605.08070v1] VecCISC: Improving Confidence-Informed Self-Consistency with Reasoning Trace Clu

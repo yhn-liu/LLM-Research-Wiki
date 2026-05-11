@@ -2,7 +2,7 @@
 layout: concept
 title: AI安全与对齐
 created: 2026-05-01
-updated: 2026-05-09
+updated: 2026-05-11
 type: concept
 tags: [safety, alignment, RLHF, adversarial, model-organism, evaluation]
 papers:
@@ -20,6 +20,10 @@ papers:
 AI 安全与对齐（AI Safety and Alignment）是确保人工智能系统的行为与人类意图、价值观和利益保持一致的研究领域。对齐问题的核心挑战在于：如何让 AI 系统真正理解和遵循人类的目标，而不是仅仅在表面上满足指标要求。随着大语言模型能力的快速提升，AI 安全与对齐已成为 AI 研究中最重要的方向之一，涉及技术、伦理和社会等多个层面。
 
 ## 关键文献与发现
+
+- [Position: Mechanistic Interpretability Must Disclose Identification Assumptions for Causal Claims](../entities/papers/2605-08012v1-position-mechanistic-interpretability-must-disclos.html)（2026-05-08）：机械可解释性论文越来越多地使用因果词汇：电路、中介、因果抽象、单一语义。
+
+- [Accurate and Efficient Statistical Testing for Word Semantic Breadth](../entities/papers/2605-08048v1-accurate-and-efficient-statistical-testing-for-wor.html)（2026-05-08）：通过上下文化的标记嵌入，测量单词含义的广度或其在上下文中的传播已经变得可行。
 
 - [DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining with High-Order Ranking Consistency](../entities/papers/2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for.html)（2026-05-07）：对比语言图像预训练（CLIP）存在两个结构性弱点：对称的 InfoNCE 损失丢弃了不匹配的批内对之间的相对顺序，全局池化将视觉表示折叠成对细粒度局部结构不敏感的语义瓶颈。
 

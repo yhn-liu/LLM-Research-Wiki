@@ -2,7 +2,7 @@
 layout: concept
 title: 多模态学习
 created: 2026-05-01
-updated: 2026-05-09
+updated: 2026-05-11
 type: concept
 tags: [multimodal, vision-language, cross-modal, perception, reasoning]
 papers:
@@ -18,6 +18,8 @@ papers:
 多模态学习是让模型同时处理和理解多种数据类型（如文本、图像、3D 点云）的 AI 研究方向。在 LLM 时代，多模态学习的核心挑战是如何将视觉感知与语言推理有效融合。本库中有 2 篇论文从训练方法和应用场景两个角度研究了这一问题。
 
 ## 关键文献与发现
+
+- [EmambaIR: Efficient Visual State Space Model for Event-guided Image Reconstruction](../entities/papers/2605-08073v1-emambair-efficient-visual-state-space-model-for-ev.html)（2026-05-08）：最近基于事件的图像重建方法主要依靠卷积神经网络（CNN）和视觉变换器（ViT）来处理补充事件信息。
 
 - [DINORANKCLIP: DINOv3 Distillation and Injection for Vision-Language Pretraining with High-Order Ranking Consistency](../entities/papers/2605-06592v1-dinorankclip-dinov3-distillation-and-injection-for.html)（2026-05-07）：对比语言图像预训练（CLIP）存在两个结构性弱点：对称的 InfoNCE 损失丢弃了不匹配的批内对之间的相对顺序，全局池化将视觉表示折叠成对细粒度局部结构不敏感的语义瓶颈。
 

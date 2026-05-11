@@ -2,7 +2,7 @@
 layout: concept
 title: 图神经网络
 created: 2026-05-01
-updated: 2026-05-10
+updated: 2026-05-11
 type: concept
 tags: [GNN, graph, neural-network, biomedical, representation-learning, message-passing]
 papers:
@@ -63,6 +63,8 @@ LLM 细化后的图结构更清晰、更具可解释性，这对生物医学等�
 - [知识蒸馏](knowledge-distillation.html) — GNN 模型的压缩与迁移
 
 ## 本库相关论文
+
+- [Conformal Path Reasoning: Trustworthy Knowledge Graph Question Answering via Path-Level Calibration](../entities/papers/2605-08077v1-conformal-path-reasoning-trustworthy-knowledge-gra.html)（2026-05-08）：知识图问答（KGQA）已显示出有基础且可解释的推理的前景，但现有方法往往无法对检索到的答案提供可靠的覆盖保证。
 
 - [A $μ$-distance for semidirected orchard phylogenetic networks](../entities/papers/2605-06243v1-a--distance-for-semidirected-orchard-phylogenetic.html)（2026-05-07）：在进化生物学中，系统发育网络现在被广泛用于表示物种和种群之间的历史关系，其中这种历史包括网状事件，例如种群之间的杂交、基因流动和混合。
 

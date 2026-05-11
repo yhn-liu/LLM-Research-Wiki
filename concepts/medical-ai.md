@@ -2,7 +2,7 @@
 layout: concept
 title: 医学AI
 created: 2026-05-01
-updated: 2026-05-07
+updated: 2026-05-11
 type: concept
 tags: [medical-ai, clinical, eeg, seizure-detection, healthcare]
 papers:
@@ -16,6 +16,8 @@ papers:
 医学AI是将人工智能技术应用于医疗健康领域的研究方向，涵盖医学影像分析、临床辅助诊断、生物信号处理等。本库中有 1 篇论文探索了 LLM 在临床信号处理中的跨领域应用。
 
 ## 关键文献与发现
+
+- [Uncertainty-Aware Structured Data Extraction from Full CMR Reports via Distilled LLMs](../entities/papers/2605-08045v1-uncertainty-aware-structured-data-extraction-from.html)（2026-05-08）：将自由文本心脏磁共振 (CMR) 报告转换为可审核的结构化数据仍然是队列组装、纵向管理和临床决策支持的瓶颈。
 
 - [Beyond Semantics: An Evidential Reasoning-Aware Multi-View Learning Framework for Trustworthy Mental Health Prediction](../entities/papers/2605-05121v1-beyond-semantics-an-evidential-reasoning-aware-mul.html)（2026-05-06）：使用文本数据进行的自动心理健康预测通过深度学习和大型语言模型显示出了有希望的结果。
 
