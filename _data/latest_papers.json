@@ -1,330 +1,79 @@
 [
   {
-    "id": "2605.08083v1",
-    "title": "LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling",
+    "id": "2605.10938v1",
+    "title": "ELF: Embedded Language Flows",
     "authors": [
-      "Tong Zheng",
-      "Haolin Liu",
-      "Chengsong Huang",
-      "Huiwen Bao",
-      "Sheng Zhang",
-      "Rui Liu",
-      "Runpeng Dai",
-      "Ruibo Chen",
-      "Chenxi Liu",
-      "Tianyi Xiong",
-      "Xidong Wu",
-      "Hongming Zhang",
-      "Heng Huang"
+      "Keya Hu",
+      "Linlu Qiu",
+      "Yiyang Lu",
+      "Hanhong Zhao",
+      "Tianhong Li",
+      "Yoon Kim",
+      "Jacob Andreas",
+      "Kaiming He"
     ],
-    "published": "2026-05-08",
-    "summary": "Test-time scaling (TTS) has become an effective approach for improving large language model performance by allocating additional computation during inference. However, existing TTS strategies are largely hand-crafted: researchers manually design reasoning patterns and tune heuristics by intuition, leaving much of the computation-allocation space unexplored. We propose an environment-driven framework, AutoTTS, that changes what researchers design: from individual TTS heuristics to environments where TTS strategies can be discovered automatically. The key to AutoTTS lies in environment construction: the discovery environment must make the control space tractable and provide cheap, frequent feedback for TTS search. As a concrete instantiation, we formulate width--depth TTS as controller synthesis over pre-collected reasoning trajectories and probe signals, where controllers decide when to branch, continue, probe, prune, or stop and can be evaluated cheaply without repeated LLM calls. We further introduce beta parameterization to make the search tractable and fine-grained execution trace feedback to improve discovery efficiency by helping the agent diagnose why a TTS program fails. Experiments on mathematical reasoning benchmarks show that the discovered strategies improve the overall accuracy--cost tradeoff over strong manually designed baselines. The discovered strategies generalize to held-out benchmarks and model scales, while the entire discovery costs only $39.9 and 160 minutes. Our data, and code will be open-source at https://github.com/zhengkid/AutoTTS.",
-    "categories": [
-      "cs.CL"
-    ],
-    "summary_cn": "测试时间缩放（TTS）已成为通过在推理过程中分配额外计算来提高大型语言模型性能的有效方法。然而，现有的 TTS 策略很大程度上是手工设计的：研究人员手动设计推理模式并凭直觉调整启发式方法，从而留下了许多计算分配空间未被探索。我们提出了一个环境驱动的框架 AutoTTS，它改变了研究人员的设计：从单独的 TTS 启发法到可以自动发现 TTS 策略的环境。 AutoTTS的关键在于环境构建：发现环境必须使控制空间易于处理，并为TTS搜索提供廉价、频繁的反馈。作为一个具体的实例，我们将宽度-深度 TTS 制定为预先收集的推理轨迹和探测信号的控制器综合，其中控制器决定何时分支、继续、探测、修剪或停止，并且可以廉价地进行评估，而无需重复的 LLM 调用。我们进一步引入 beta 参数化，使搜索易于处理，并提供细粒度的执行跟踪反馈，通过帮助代理诊断 TTS 程序失败的原因来提高发现效率。数学推理基准的实验表明，所发现的策略提高了整体准确性——相对于强大的手动设计基准的成本权衡。发现的策略可推广到现有的基准和模型规模，而整个发现的成本仅为 39.9 美元和 160 分钟。我们的数据和代码将在 https://github.com/zhengkid/AutoTTS 开源。",
-    "comment": "25 pages",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-08083v1-llms-improving-llms-agentic-discovery-for-test-tim",
-    "rel_path": "entities/papers/2605-08083v1-llms-improving-llms-agentic-discovery-for-test-tim.html",
-    "figures": [
-      "assets/papers/2605-08083v1/fig1.png",
-      "assets/papers/2605-08083v1/fig2.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "We propose an environment-driven framework, AutoTTS, that changes what researchers design: from individual TTS heuristics to environments where TTS strategies can be discovered automatically.",
-    "topic_signal": "大语言模型 / 基准评估 / 智能体"
-  },
-  {
-    "id": "2605.08077v1",
-    "title": "Conformal Path Reasoning: Trustworthy Knowledge Graph Question Answering via Path-Level Calibration",
-    "authors": [
-      "Shuhang Lin",
-      "Chuhao Zhou",
-      "Xiao Lin",
-      "Zihan Dong",
-      "Kuan Lu",
-      "Zhencan Peng",
-      "Jie Yin",
-      "Dimitris N. Metaxas"
-    ],
-    "published": "2026-05-08",
-    "summary": "Knowledge Graph Question Answering (KGQA) has shown promise for grounded and interpretable reasoning, yet existing approaches often fail to provide reliable coverage guarantees over retrieved answers. While Conformal Prediction (CP) offers a principled framework for producing prediction sets with statistical guarantees, prior methods suffer from critical limitations in both calibration validity and score discriminability, resulting in violated coverage guarantees and excessively large prediction sets. To address these pitfalls, we propose Conformal Path Reasoning (CPR), a trustworthy KGQA framework with two key innovations. First, we perform query-level conformal calibration over path-level scores, preserving the exchangeability while generating path prediction sets. Second, we introduce the Residual Conformal Value Network (RCVNet), a lightweight module trained via PUCT-guided exploration to learn discriminative path-level nonconformity scores. Experiments on benchmarks show that CPR significantly improves the Empirical Coverage Rate by 34% while reducing average prediction set size by 40% compared to conformal baselines. These results validate the efficacy of CPR in satisfying coverage guarantees with substantially more compact answer sets.",
-    "categories": [
-      "cs.CL"
-    ],
-    "summary_cn": "知识图问答（KGQA）已显示出有基础且可解释的推理的前景，但现有方法往往无法对检索到的答案提供可靠的覆盖保证。虽然保形预测（CP）提供了一个用于生成具有统计保证的预测集的原则框架，但先前的方法在校准有效性和分数可辨别性方面都受到严重限制，导致违反覆盖率保证和过大的预测集。为了解决这些陷阱，我们提出了保形路径推理 (CPR)，这是一个值得信赖的 KGQA 框架，具有两项关键创新。首先，我们对路径级分数执行查询级保形校准，在生成路径预测集的同时保留可交换性。其次，我们介绍了残余共形价值网络（RCVNet），这是一个通过 PUCT 引导探索训练的轻量级模块，用于学习有区别的路径级不合格分数。基准实验表明，与保形基线相比，CPR 将经验覆盖率显着提高了 34%，同时将平均预测集大小减少了 40%。这些结果验证了 CPR 在通过更加紧凑的答案集满足覆盖保证方面的功效。",
-    "comment": "13 pages, 3 figures, 2 tables;",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-08077v1-conformal-path-reasoning-trustworthy-knowledge-gra",
-    "rel_path": "entities/papers/2605-08077v1-conformal-path-reasoning-trustworthy-knowledge-gra.html",
-    "figures": [
-      "assets/papers/2605-08077v1/fig1.png",
-      "assets/papers/2605-08077v1/fig2.png",
-      "assets/papers/2605-08077v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "图神经网络",
-        "slug": "graph-neural-networks",
-        "url": "../../concepts/graph-neural-networks.html"
-      }
-    ],
-    "method_signal": "To address these pitfalls, we propose Conformal Path Reasoning (CPR), a trustworthy KGQA framework with two key innovations.",
-    "topic_signal": "基准评估 / 图神经网络"
-  },
-  {
-    "id": "2605.08060v1",
-    "title": "The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents",
-    "authors": [
-      "Jiayuan Liu",
-      "Tianqin Li",
-      "Shiyi Du",
-      "Xin Luo",
-      "Haoxuan Zeng",
-      "Emanuel Tewolde",
-      "Tai Sing Lee",
-      "Tonghan Wang",
-      "Carl Kingsford",
-      "Vincent Conitzer"
-    ],
-    "published": "2026-05-08",
-    "summary": "Context window expansion is often treated as a straightforward capability upgrade for LLMs, but we find it systematically fails in multi-agent social dilemmas. Across 7 LLMs and 4 games over 500 rounds, expanding accessible history degrades cooperation in 18 of 28 model--game settings, a pattern we term the memory curse. We isolate the underlying mechanism through three analyses. First, lexical analysis of 378,000 reasoning traces associates this breakdown with eroding forward-looking intent rather than rising paranoia. We validate this using targeted fine-tuning as a cognitive probe: a LoRA adapter trained exclusively on forward-looking traces mitigates the decay and transfers zero-shot to distinct games. Second, memory sanitization holds prompt length fixed while replacing visible history with synthetic cooperative records, which restores cooperation substantially, proving the trigger is memory content, not length alone. Finally, ablating explicit Chain-of-Thought reasoning often reduces the collapse, showing that deliberation paradoxically amplifies the memory curse. Together, these results recast memory as an active determinant of multi-agent behavior: longer recall can either destabilize or support cooperation depending on the reasoning patterns it elicits.",
-    "categories": [
-      "cs.CL",
-      "cs.AI",
-      "cs.GT",
-      "cs.MA"
-    ],
-    "summary_cn": "上下文窗口扩展通常被视为法学硕士的直接能力升级，但我们发现它在多智能体社会困境中系统性地失败。在 7 个法学硕士和 4 个超过 500 轮的游戏中，扩展可访问的历史会降低 28 个模型中的 18 个模型的合作——游戏设置，我们将这种模式称为“记忆诅咒”。我们通过三个分析来分离出潜在的机制。首先，对 378,000 条推理痕迹的词汇分析将这种故障与前瞻性意图的削弱而不是偏执的增加联系起来。我们使用有针对性的微调作为认知探针来验证这一点：专门针对前瞻性轨迹进行训练的 LoRA 适配器可以减轻衰减并将零样本转移到不同的游戏。其次，内存清理保持提示长度固定，同时用合成合作记录替换可见历史，这基本上恢复了合作，证明触发因素是内存内容，而不仅仅是长度。最后，消除明确的思想链推理通常会减少崩溃，这表明深思熟虑反而会放大记忆诅咒。总之，这些结果将记忆重塑为多智能体行为的主动决定因素：较长的回忆可能会破坏稳定或支持合作，具体取决于它引发的推理模式。",
-    "comment": "",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-08060v1-the-memory-curse-how-expanded-recall-erodes-cooper",
-    "rel_path": "entities/papers/2605-08060v1-the-memory-curse-how-expanded-recall-erodes-cooper.html",
-    "figures": [
-      "assets/papers/2605-08060v1/fig1.png",
-      "assets/papers/2605-08060v1/fig2.png",
-      "assets/papers/2605-08060v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "Context window expansion is often treated as a straightforward capability upgrade for LLMs, but we find it systematically fails in multi-agent social dilemmas.",
-    "topic_signal": "大语言模型 / 智能体"
-  },
-  {
-    "id": "2605.08057v1",
-    "title": "CA-SQL: Complexity-Aware Inference Time Reasoning for Text-to-SQL via Exploration and Compute Budget Allocation",
-    "authors": [
-      "James Petullo",
-      "Nianwen Xue"
-    ],
-    "published": "2026-05-08",
-    "summary": "While recent advancements in inference-time learning have improved LLM reasoning on Text-to-SQL tasks, current solutions still struggle to perform well on the most challenging tasks in the Bird-Bench (BIRD) benchmark. This is due to inadequate solution space exploration, which is necessary to uncover promising candidate queries that can be further refined to produce the correct output. To address this challenge, we introduce CA-SQL, a novel Text-to-SQL pipeline that utilizes the estimated difficulty of a task to dynamically scale the breadth of the exploration for generating solution candidates. In addition, we use a custom prompt seeding method, based on principles of evolutionary search, to further elicit exploratory behavior from the base LLM and a novel voting method to select the best candidate solution at the end of the search. Experiments demonstrate that our solution achieves a state-of-the-art score of 51.72% on the \"challenging\" tier of BIRD development set problems, using only GPT-4o-mini, out-performing other in-context learning approaches, even those that leverage larger models. Overall, our method attains a competitive 61.06% execution accuracy and 68.77% Soft F1 score on the BIRD development dataset.",
-    "categories": [
-      "cs.CL",
-      "cs.AI"
-    ],
-    "summary_cn": "虽然推理时间学习的最新进展改进了文本到 SQL 任务的 LLM 推理，但当前的解决方案仍然难以在 Bird-Bench (BIRD) 基准测试中最具挑战性的任务上表现良好。这是由于解决方案空间探索不充分，而解决方案空间探索对于发现有希望的候选查询是必要的，这些候选查询可以进一步细化以产生正确的输出。为了应对这一挑战，我们引入了 CA-SQL，这是一种新颖的文本到 SQL 管道，它利用任务的估计难度来动态扩展生成候选解决方案的探索广度。此外，我们使用基于进化搜索原理的自定义提示播种方法，进一步从基础 LLM 中引发探索行为，并使用新颖的投票方法在搜索结束时选择最佳候选解决方案。实验表明，我们的解决方案仅使用 GPT-4o-mini，在 BIRD 开发集问题的“挑战性”层上取得了 51.72% 的最先进分数，优于其他上下文学习方法，甚至是那些利用更大模型的方法。总体而言，我们的方法在 BIRD 开发数据集上获得了具有竞争力的 61.06% 执行精度和 68.77% Soft F1 分数。",
-    "comment": "",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-08057v1-ca-sql-complexity-aware-inference-time-reasoning-f",
-    "rel_path": "entities/papers/2605-08057v1-ca-sql-complexity-aware-inference-time-reasoning-f.html",
-    "figures": [],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      }
-    ],
-    "method_signal": "To address this challenge, we introduce CA-SQL, a novel Text-to-SQL pipeline that utilizes the estimated difficulty of a task to dynamically scale the breadth of the exploration for generating solution candidates.",
-    "topic_signal": "大语言模型 / 基准评估"
-  },
-  {
-    "id": "2605.08048v1",
-    "title": "Accurate and Efficient Statistical Testing for Word Semantic Breadth",
-    "authors": [
-      "Yo Ehara"
-    ],
-    "published": "2026-05-08",
-    "summary": "Measuring the breadth of a word's meaning, or its spread across contexts, has become feasible with contextualized token embeddings. A word type can be represented as a cloud of token vectors, with dispersion-based statistics serving as proxies for contextual diversity (Nagata and Tanaka-Ishii, ACL2025). These measurements are useful for deciding appropriate sense distinctions when constructing thesauri and domain-specific dictionaries. However, when comparing the breadth of two word types, naive hypothesis testing on dispersion can be misleading: differences in semantic direction can masquerade as dispersion differences, inflating Type-I error and yielding \"statistically significant\" outcomes even when there is no true breadth difference. This is problematic because significance testing should distinguish genuine effects from incidental fluctuations in small-difference regimes. We propose a Householder-aligned permutation test to isolate dispersion differences from directional differences. Our method applies a single Householder reflection to align the mean directions of the two word types and then performs a permutation test on the aligned token clouds, yielding calibrated, non-parametric p-values. For practicality, we introduce a GPU-oriented implementation that batches permutations and linear algebra operations. Empirically, our alignment reduced Type-I error by 32.5% while preserving sensitivity to genuine breadth differences, and achieved a 23x speedup over the CPU baseline.",
-    "categories": [
-      "cs.CL"
-    ],
-    "summary_cn": "通过上下文化的标记嵌入，测量单词含义的广度或其在上下文中的传播已经变得可行。单词类型可以表示为令牌向量云，并使用基于分散的统计数据作为上下文多样性的代理（Nagata 和 Tanaka-Ishii，ACL2025）。这些测量对于在构建同义词库和特定领域词典时确定适当的语义区别非常有用。然而，在比较两种单词类型的广度时，对分散度的朴素假设检验可能会产生误导：语义方向的差异可能会伪装成分散度差异，从而夸大第一类错误并产生“统计上显着”的结果，即使没有真正的广度差异。这是有问题的，因为显着性检验应该区分小差异状态下的真实影响和偶然波动。我们提出了一种与 Householder 对齐的排列测试，以将色散差异与方向差异隔离开来。我们的方法应用单个 Householder 反射来对齐两种单词类型的平均方向，然后对对齐的标记云执行排列测试，产生校准的非参数 p 值。为了实用性，我们引入了一种面向 GPU 的实现，可批量排列排列和线性代数运算。根据经验，我们的对齐将 I 类错误减少了 32.5%，同时保留了对真正宽度差异的敏感性，并实现了 CPU 基线的 23 倍加速。",
-    "comment": "Accepted to ACL 2026 Main Conference",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-08048v1-accurate-and-efficient-statistical-testing-for-wor",
-    "rel_path": "entities/papers/2605-08048v1-accurate-and-efficient-statistical-testing-for-wor.html",
-    "figures": [
-      "assets/papers/2605-08048v1/fig1.png",
-      "assets/papers/2605-08048v1/fig2.png",
-      "assets/papers/2605-08048v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      }
-    ],
-    "method_signal": "We propose a Householder-aligned permutation test to isolate dispersion differences from directional differences.",
-    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐"
-  },
-  {
-    "id": "2605.08045v1",
-    "title": "Uncertainty-Aware Structured Data Extraction from Full CMR Reports via Distilled LLMs",
-    "authors": [
-      "Yi Yu",
-      "Parker Martin",
-      "Zhenyu Bu",
-      "Yixuan Liu",
-      "Yi-Yu Zheng",
-      "Orlando Simonetti",
-      "Yuchi Han",
-      "Yuan Xue"
-    ],
-    "published": "2026-05-08",
-    "summary": "Converting free-text cardiac magnetic resonance (CMR) reports into auditable structured data remains a bottleneck for cohort assembly, longitudinal curation, and clinical decision support. We present CMR-EXTR, a lightweight framework that converts free-text CMR reports into structured data and assigns per-field confidence for quality control. A teacher-student distillation pipeline enables fully offline inference while limiting manual annotation. Uncertainty integrates three complementary principles -- distribution plausibility, sampling stability, and cross-field consistency -- to triage human review. Experiments show that CMR-EXTR achieves 99.65% variable-level accuracy, demonstrating both reliable extraction and informative confidence scores. To our knowledge, this is the first CMR-specific extraction system with integrated confidence estimation. The code is available at https://github.com/yuyi1005/CMR-EXTR.",
-    "categories": [
-      "cs.CL"
-    ],
-    "summary_cn": "将自由文本心脏磁共振 (CMR) 报告转换为可审核的结构化数据仍然是队列组装、纵向管理和临床决策支持的瓶颈。我们推出了 CMR-EXTR，这是一个轻量级框架，可将自由文本 CMR 报告转换为结构化数据，并为每个字段分配质量控制的置信度。师生蒸馏管道可以实现完全离线推理，同时限制手动注释。不确定性整合了三个互补的原则——分布合理性、抽样稳定性和跨领域一致性——来对人工审查进行分类。实验表明，CMR-EXTR 达到了 99.65% 的变量级别准确率，证明了可靠的提取和信息丰富的置信度得分。据我们所知，这是第一个具有集成置信度估计的 CMR 特定提取系统。该代码可从 https://github.com/yuyi1005/CMR-EXTR 获取。",
-    "comment": "Accepted to ISBI 2026",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-08045v1-uncertainty-aware-structured-data-extraction-from",
-    "rel_path": "entities/papers/2605-08045v1-uncertainty-aware-structured-data-extraction-from.html",
-    "figures": [
-      "assets/papers/2605-08045v1/fig1.png",
-      "assets/papers/2605-08045v1/fig2.png",
-      "assets/papers/2605-08045v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "医学AI",
-        "slug": "medical-ai",
-        "url": "../../concepts/medical-ai.html"
-      }
-    ],
-    "method_signal": "We present CMR-EXTR, a lightweight framework that converts free-text CMR reports into structured data and assigns per-field confidence for quality control.",
-    "topic_signal": "医学AI"
-  },
-  {
-    "id": "2605.08044v1",
-    "title": "Fast Byte Latent Transformer",
-    "authors": [
-      "Julie Kallini",
-      "Artidoro Pagnoni",
-      "Tomasz Limisiewicz",
-      "Gargi Ghosh",
-      "Luke Zettlemoyer",
-      "Christopher Potts",
-      "Xiaochuang Han",
-      "Srinivasan Iyer"
-    ],
-    "published": "2026-05-08",
-    "summary": "Recent byte-level language models (LMs) match the performance of token-level models without relying on subword vocabularies, yet their utility is limited by slow, byte-by-byte autoregressive generation. We address this bottleneck in the Byte Latent Transformer (BLT) through new training and generation techniques. First, we introduce BLT Diffusion (BLT-D), a new model and our fastest BLT variant, trained with an auxiliary block-wise diffusion objective alongside the standard next-byte prediction loss. This enables an inference procedure that generates multiple bytes in parallel per decoding step, substantially reducing the number of forward passes required to generate a sequence. Second, we propose two extensions inspired by speculative decoding that trade some of this speed for higher generation quality: BLT Self-speculation (BLT-S), in which BLT's local decoder continues generating past its normal patch boundaries to draft bytes, which are then verified with a single full-model forward pass; and BLT Diffusion+Verification (BLT-DV), which augments BLT-D with an autoregressive verification step after diffusion-based generation. All methods may achieve an estimated memory-bandwidth cost over 50% lower than BLT on generation tasks. Each approach offers its own unique advantages, together removing key barriers to the practical use of byte-level LMs.",
+    "published": "2026-05-11",
+    "summary": "Diffusion and flow-based models have become the de facto approaches for generating continuous data, e.g., in domains such as images and videos. Their success has attracted growing interest in applying them to language modeling. Unlike their image-domain counterparts, today's leading diffusion language models (DLMs) primarily operate over discrete tokens. In this paper, we show that continuous DLMs can be made effective with minimal adaptation to the discrete domain. We propose Embedded Language Flows (ELF), a class of diffusion models in continuous embedding space based on continuous-time Flow Matching. Unlike existing DLMs, ELF predominantly stays within the continuous embedding space until the final time step, where it maps to discrete tokens using a shared-weight network. This formulation makes it straightforward to adapt established techniques from image-domain diffusion models, e.g., classifier-free guidance (CFG). Experiments show that ELF substantially outperforms leading discrete and continuous DLMs, achieving better generation quality with fewer sampling steps. These results suggest that ELF offers a promising path toward effective continuous DLMs.",
     "categories": [
       "cs.CL",
       "cs.AI",
       "cs.LG"
     ],
-    "summary_cn": "最近的字节级语言模型（LM）在不依赖子词词汇的情况下与令牌级模型的性能相匹配，但它们的实用性受到缓慢的逐字节自回归生成的限制。我们通过新的训练和生成技术解决了 Byte Latent Transformer (BLT) 中的这一瓶颈。首先，我们介绍 BLT 扩散 (BLT-D)，这是一种新模型，也是我们最快的 BLT 变体，它使用辅助分块扩散目标以及标准下一个字节预测损失进行训练。这使得推理过程能够在每个解码步骤并行生成多个字节，从而大大减少生成序列所需的前向传递的数量。其次，我们提出了两个受推测解码启发的扩展，它们以部分速度换取更高的生成质量：BLT 自推测 (BLT-S)，其中 BLT 的本地解码器继续生成超过其正常补丁边界的草稿字节，然后使用单个全模型前向传递进行验证； BLT 扩散+验证 (BLT-DV)，它在基于扩散的生成之后通过自回归验证步骤增强了 BLT-D。在生成任务中，所有方法都可以实现比 BLT 低 50% 以上的估计内存带宽成本。每种方法都有其独特的优势，共同消除了字节级 LM 实际使用的关键障碍。",
-    "comment": "",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-08044v1-fast-byte-latent-transformer",
-    "rel_path": "entities/papers/2605-08044v1-fast-byte-latent-transformer.html",
+    "summary_cn": "扩散和基于流的模型已成为生成连续数据的事实上的方法，例如在图像和视频等领域。他们的成功引起了人们越来越多的兴趣将其应用于语言建模。与图像领域的模型不同，当今领先的扩散语言模型 (DLM) 主要在离散标记上运行。在本文中，我们证明连续 DLM 可以通过对离散域的最小适应而变得有效。我们提出了嵌入式语言流（ELF），这是一类基于连续时间流匹配的连续嵌入空间中的扩散模型。与现有的 DLM 不同，ELF 主要停留在连续嵌入空间内，直到最后一个时间步，它使用共享权重网络映射到离散令牌。这种公式可以直接适应图像域扩散模型中的现有技术，例如无分类器引导（CFG）。实验表明，ELF 的性能明显优于领先的离散和连续 DLM，以更少的采样步骤实现了更好的生成质量。这些结果表明 ELF 为有效的连续 DLM 提供了一条有希望的道路。",
+    "comment": "Tech Report. Project webpage: https://github.com/lillian039/ELF",
+    "category_en": "Artificial Intelligence",
+    "category_cn": "人工智能",
+    "slug": "2605-10938v1-elf-embedded-language-flows",
+    "rel_path": "entities/papers/2605-10938v1-elf-embedded-language-flows.html",
     "figures": [
-      "assets/papers/2605-08044v1/fig1.png",
-      "assets/papers/2605-08044v1/fig2.png",
-      "assets/papers/2605-08044v1/fig3.png"
+      "assets/papers/2605-10938v1/fig1.png",
+      "assets/papers/2605-10938v1/fig2.png",
+      "assets/papers/2605-10938v1/fig3.png"
     ],
     "concepts": [
       {
         "name": "大语言模型",
         "slug": "large-language-model",
         "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "多模态学习",
+        "slug": "multimodal-learning",
+        "url": "../../concepts/multimodal-learning.html"
       }
     ],
-    "method_signal": "First, we introduce BLT Diffusion (BLT-D), a new model and our fastest BLT variant, trained with an auxiliary block-wise diffusion objective alongside the standard next-byte prediction loss.",
-    "topic_signal": "大语言模型"
+    "method_signal": "We propose Embedded Language Flows (ELF), a class of diffusion models in continuous embedding space based on continuous-time Flow Matching.",
+    "topic_signal": "大语言模型 / 多模态学习"
   },
   {
-    "id": "2605.08012v1",
-    "title": "Position: Mechanistic Interpretability Must Disclose Identification Assumptions for Causal Claims",
+    "id": "2605.10934v1",
+    "title": "Variational Inference for Lévy Process-Driven SDEs via Neural Tilting",
     "authors": [
-      "Zezheng Lin",
-      "Fengming Liu"
+      "Yaman Kindap",
+      "Manfred Opper",
+      "Benjamin Dupuis",
+      "Umut Simsekli",
+      "Tolga Birdal"
     ],
-    "published": "2026-05-08",
-    "summary": "Mechanistic interpretability papers increasingly use causal vocabulary: circuits, mediators, causal abstraction, monosemanticity. Such claims require explicit identification assumptions. A purposive audit of 10 papers across four methodological strands finds no dedicated identification-assumptions section and a recurring pattern: validation metrics such as faithfulness, completeness, monosemanticity, alignment, or ablation effects are reported as causal support without stating the assumptions that make them identifying. A two-human-coder audit on $n=30$ reproduces the direction of the main finding: dedicated identification sections are absent, and validation-metric substitution is common, though exact Dim B/D counts are coding-rule sensitive. The paper proposes a disclosure norm: state whether the claim is causal, name the identification strategy, enumerate assumptions, stress at least one, and explain how conclusions shift if assumptions fail. Validation is not identification.",
+    "published": "2026-05-11",
+    "summary": "Modelling extreme events and heavy-tailed phenomena is central to building reliable predictive systems in domains such as finance, climate science, and safety-critical AI. While Lévy processes provide a natural mathematical framework for capturing jumps and heavy tails, Bayesian inference for Lévy-driven stochastic differential equations (SDEs) remains intractable with existing methods: Monte Carlo approaches are rigorous but lack scalability, whereas neural variational inference methods are efficient but rely on Gaussian assumptions that fail to capture discontinuities. We address this tension by introducing a neural exponential tilting framework for variational inference in Lévy-driven SDEs. Our approach constructs a flexible variational family by exponentially reweighting the Lévy measure using neural networks. This parametrization preserves the jump structure of the underlying process while remaining computationally tractable. To enable efficient inference, we develop a quadratic neural parametrization that yields closed-form normalization of the tilted measure, a conditional Gaussian representation for stable processes that facilitates simulation, and symmetry-aware Monte Carlo estimators for scalable optimization. Empirically, we demonstrate that the method accurately captures jump dynamics and yields reliable posterior inference in regimes where Gaussian-based variational approaches fail, on both synthetic and real-world datasets.",
     "categories": [
       "cs.LG",
       "cs.AI",
-      "cs.CL"
+      "cs.CV",
+      "cs.RO",
+      "stat.ML"
     ],
-    "summary_cn": "机械可解释性论文越来越多地使用因果词汇：电路、中介、因果抽象、单一语义。此类主张需要明确的识别假设。对四个方法论分支的 10 篇论文进行了有目的的审核，发现没有专门的识别假设部分和重复出现的模式：诸如忠实性、完整性、单义性、对齐或消融效应等验证指标被报告为因果支持，但没有说明使它们识别的假设。对 $n=30$ 的两人编码员审计重现了主要发现的方向：缺少专用标识部分，并且验证度量替换很常见，尽管精确的 Dim B/D 计数对编码规则敏感。该论文提出了一种披露规范：说明主张是否有因果关系，命名识别策略，列举假设，强调至少一个，并解释如果假设失败，结论将如何变化。验证不是识别。",
-    "comment": "10 pages, 2 figures. Submitted to NeurIPS 2026 (Position Track)",
-    "category_en": "Natural Language Processing",
-    "category_cn": "自然语言处理",
-    "slug": "2605-08012v1-position-mechanistic-interpretability-must-disclos",
-    "rel_path": "entities/papers/2605-08012v1-position-mechanistic-interpretability-must-disclos.html",
+    "summary_cn": "对极端事件和重尾现象进行建模对于在金融、气候科学和安全关键型人工智能等领域构建可靠的预测系统至关重要。虽然 Lévy 过程为捕获跳跃和重尾提供了一个自然的数学框架，但 Lévy 驱动的随机微分方程 (SDE) 的贝叶斯推理仍然难以用现有方法处理：蒙特卡洛方法很严格，但缺乏可扩展性，而神经变分推理方法很有效，但依赖于无法捕获不连续性的高斯假设。我们通过在 Lévy 驱动的 SDE 中引入用于变分推理的神经指数倾斜框架来解决这种紧张关系。我们的方法通过使用神经网络对 Lévy 度量进行指数级重新加权来构建灵活的变分族。这种参数化保留了底层进程的跳转结构，同时保持计算上的易处理性。为了实现有效的推理，我们开发了一种二次神经参数化，可以产生倾斜测量的封闭式归一化、有利于模拟的稳定过程的条件高斯表示，以及用于可扩展优化的对称感知蒙特卡洛估计器。根据经验，我们证明该方法可以准确地捕获跳跃动态，并在基于高斯的变分方法失败的情况下，在合成数据集和真实数据集上产生可靠的后验推理。",
+    "comment": "The associated project page which contains the official implementation can be found in https://circle-group.github.io/research/NeuralTilting/",
+    "category_en": "Artificial Intelligence",
+    "category_cn": "人工智能",
+    "slug": "2605-10934v1-variational-inference-for-lvy-process-driven-sdes",
+    "rel_path": "entities/papers/2605-10934v1-variational-inference-for-lvy-process-driven-sdes.html",
     "figures": [
-      "assets/papers/2605-08012v1/fig1.png",
-      "assets/papers/2605-08012v1/fig2.png"
+      "assets/papers/2605-10934v1/fig1.png",
+      "assets/papers/2605-10934v1/fig2.png",
+      "assets/papers/2605-10934v1/fig3.png"
     ],
     "concepts": [
       {
@@ -336,35 +85,36 @@
         "name": "AI安全与对齐",
         "slug": "ai-safety-alignment",
         "url": "../../concepts/ai-safety-alignment.html"
+      },
+      {
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
       }
     ],
-    "method_signal": "A purposive audit of 10 papers across four methodological strands finds no dedicated identification-assumptions section and a recurring pattern: validation metrics such as faithfulness, completeness, monosemanticity, alignment, or ablation effects are reported as causal support without stating the assumptions that make them identifying.",
-    "topic_signal": "基准评估 / AI安全与对齐"
+    "method_signal": "Our approach constructs a flexible variational family by exponentially reweighting the Lévy measure using neural networks.",
+    "topic_signal": "基准评估 / AI安全与对齐 / 世界模型"
   },
   {
-    "id": "2605.08073v1",
-    "title": "EmambaIR: Efficient Visual State Space Model for Event-guided Image Reconstruction",
+    "id": "2605.10916v1",
+    "title": "Confidence-Guided Diffusion Augmentation for Enhanced Bangla Compound Character Recognition",
     "authors": [
-      "Wei Yu",
-      "Yunhang Qian"
+      "Md. Sultan Al Rayhan",
+      "Maheen Islam"
     ],
-    "published": "2026-05-08",
-    "summary": "Recent event-based image reconstruction methods predominantly rely on Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs) to process complementary event information. However, these architectures face fundamental limitations: CNNs often fail to capture global feature correlations, whereas ViTs incur quadratic computational complexity (e.g., $O(n^2)$), hindering their application in high-resolution scenarios. To address these bottlenecks, we introduce EmambaIR, an Efficient visual State Space Model designed for image reconstruction using spatially sparse and temporally continuous event streams. Our framework introduces two key components: the cross-modal Top-k Sparse Attention Module (TSAM) and the Gated State-Space Module (GSSM). TSAM efficiently performs pixel-level top-k sparse attention to guide cross-modal interactions, yielding rich yet sparse fusion features. Subsequently, GSSM utilizes a nonlinear gated unit to enhance the temporal representation of vanilla linear-complexity ($O(n)$) SSMs, effectively capturing global contextual dependencies without the typical computational overhead. Extensive experiments on six datasets across three diverse image reconstruction tasks - motion deblurring, deraining, and High Dynamic Range (HDR) enhancement - demonstrate that EmambaIR significantly outperforms state-of-the-art methods while offering substantial reductions in memory consumption and computational cost. The source code and data are publicly available at: https://github.com/YunhangWickert/EmambaIR",
+    "published": "2026-05-11",
+    "summary": "Recognition of handwritten Bangla compound characters remains a challenging problem due to complex character structures, large intra-class variation, and limited availability of high-quality annotated data. Existing Bangla handwritten character recognition systems often struggle to generalize across diverse writing styles, particularly for compound characters containing intricate ligatures and diacritical variations. In this work, we propose a confidence-guided diffusion augmentation framework for low-resolution Bangla compound character recognition. Our framework combines class-conditional diffusion modeling with classifier guidance to synthesize high-quality handwritten compound character samples. To further improve generation quality, we introduce Squeeze-and-Excitation enhanced residual blocks within the diffusion model's U-Net backbone. We additionally propose a confidence-based filtering mechanism where pre-trained classifiers act as quality gates to retain only highly class-consistent synthetic samples. The filtered synthetic images are fused with the original training data and used to retrain multiple classification architectures. Experiments conducted on the AIBangla compound character dataset demonstrate consistent performance improvements across ResNet50, DenseNet121, VGG16, and Vision Transformer architectures. Our best-performing model achieves 89.2\\% classification accuracy, surpassing the previously published AIBangla benchmark by a substantial margin. The results demonstrate that quality-aware diffusion augmentation can effectively enhance handwritten character recognition performance in low-resource script domains.",
     "categories": [
       "cs.CV",
       "cs.AI"
     ],
-    "summary_cn": "最近基于事件的图像重建方法主要依靠卷积神经网络（CNN）和视觉变换器（ViT）来处理补充事件信息。然而，这些架构面临着根本的限制：CNN 通常无法捕获全局特征相关性，而 ViT 会产生二次计算复杂度（例如 $O(n^2)$），阻碍了它们在高分辨率场景中的应用。为了解决这些瓶颈，我们引入了 EmambaIR，这是一种高效的视觉状态空间模型，设计用于使用空间稀疏和时间连续的事件流进行图像重建。我们的框架引入了两个关键组件：跨模态 Top-k 稀疏注意力模块（TSAM）和门控状态空间模块（GSSM）。 TSAM 有效地执行像素级 top-k 稀疏注意力来指导跨模态交互，产生丰富而稀疏的融合特征。随后，GSSM 利用非线性门控单元来增强普通线性复杂度 ($O(n)$) SSM 的时间表示，从而有效捕获全局上下文依赖性，而无需典型的计算开销。对三个不同图像重建任务（运动去模糊、去雨和高动态范围 (HDR) 增强）的六个数据集进行的广泛实验表明，EmambaIR 的性能显着优于最先进的方法，同时大幅降低了内存消耗和计算成本。源代码和数据可公开获取：https://github.com/YunhangWickert/EmambaIR",
+    "summary_cn": "由于字符结构复杂、类内差异大以及高质量注释数据的可用性有限，手写孟加拉复合字符的识别仍然是一个具有挑战性的问题。现有的孟加拉语手写字符识别系统通常很难概括不同的书写风格，特别是对于包含复杂连字和变音变体的复合字符。在这项工作中，我们提出了一种用于低分辨率孟加拉语复合字符识别的置信引导扩散增强框架。我们的框架将类条件扩散建模与分类器指导相结合，以合成高质量的手写复合字符样本。为了进一步提高生成质量，我们在扩散模型的 U-Net 主干中引入了挤压和激励增强残差块。我们还提出了一种基于置信度的过滤机制，其中预先训练的分类器充当质量门，仅保留高度类一致的合成样本。过滤后的合成图像与原始训练数据融合，并用于重新训练多个分类架构。在 AIBangla 复合字符数据集上进行的实验表明，ResNet50、DenseNet121、VGG16 和 Vision Transformer 架构的性能得到了一致的改进。我们表现​​最好的模型达到了 89.2% 的分类准确率，大幅超过了之前发布的 AIBangla 基准。结果表明，质量感知扩散增强可以有效增强低资源脚本域中的手写字符识别性能。",
     "comment": "",
     "category_en": "Artificial Intelligence",
     "category_cn": "人工智能",
-    "slug": "2605-08073v1-emambair-efficient-visual-state-space-model-for-ev",
-    "rel_path": "entities/papers/2605-08073v1-emambair-efficient-visual-state-space-model-for-ev.html",
-    "figures": [
-      "assets/papers/2605-08073v1/fig1.png",
-      "assets/papers/2605-08073v1/fig2.png",
-      "assets/papers/2605-08073v1/fig3.png"
-    ],
+    "slug": "2605-10916v1-confidence-guided-diffusion-augmentation-for-enhan",
+    "rel_path": "entities/papers/2605-10916v1-confidence-guided-diffusion-augmentation-for-enhan.html",
+    "figures": [],
     "concepts": [
       {
         "name": "大语言模型",
@@ -382,33 +132,91 @@
         "url": "../../concepts/benchmarking.html"
       }
     ],
-    "method_signal": "To address these bottlenecks, we introduce EmambaIR, an Efficient visual State Space Model designed for image reconstruction using spatially sparse and temporally continuous event streams.",
+    "method_signal": "In this work, we propose a confidence-guided diffusion augmentation framework for low-resolution Bangla compound character recognition.",
     "topic_signal": "大语言模型 / 多模态学习 / 基准评估"
   },
   {
-    "id": "2605.08070v1",
-    "title": "VecCISC: Improving Confidence-Informed Self-Consistency with Reasoning Trace Clustering and Candidate Answer Selection",
+    "id": "2605.10913v1",
+    "title": "Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace",
     "authors": [
-      "James Petullo",
-      "Sonny George",
-      "Dylan Cashman",
-      "Nianwen Xue"
+      "Simon Yu",
+      "Derek Chong",
+      "Ananjan Nandi",
+      "Dilara Soylu",
+      "Jiuding Sun",
+      "Christopher D Manning",
+      "Weiyan Shi"
     ],
-    "published": "2026-05-08",
-    "summary": "A standard technique for scaling inference-time reasoning is Self-Consistency, whereby multiple candidate answers are sampled from an LLM and the most common answer is selected. More recently, it has been shown that weighted majority voting (e.g. Confidence-Informed Self Consistency (CISC)), which assigns a confidence value to each candidate answer and chooses the answer with the largest accumulated score, tends to be more accurate on a wide range of popular benchmarks. In practice, weighted majority voting necessitates calling a critic LLM on each candidate's reasoning trace to produce the answer's confidence score. This secondary series of LLM calls greatly increases the overhead and cost of weighted majority voting, despite its potential performance benefits. To reduce this expense, we propose VecCISC, a lightweight, adaptive framework that uses a measure of semantic similarity to filter reasoning traces that are semantically equivalent to others, degenerate, or hallucinated, thus decreasing the number of candidate answers that must be evaluated by the critic. To ensure adequate experimental thoroughness, we evaluate VecCISC on five challenging, widely-adopted datasets spanning the domains of mathematics, chemistry, biology, commonsense reasoning, and the humanities. Our results demonstrate that VecCISC reduces the total token usage by 47%, while maintaining or exceeding the accuracy of CISC.",
+    "published": "2026-05-11",
+    "summary": "We introduce Shepherd, a functional programming model that formalizes meta-agent operations on target agents as functions, with core operations mechanized in Lean. Shepherd records every agent-environment interaction as a typed event in a Git-like execution trace, enabling any past state to be forked and replayed. The system forks the agent process and its filesystem $5\\times$ faster than Docker, achieving $>95\\%$ prompt-cache reuse on replay. We demonstrate the model through three applications. First, in runtime intervention, a live supervisor increases pair coding pass rates from 28.8% to 54.7% on CooperBench. Second, in counterfactual meta-optimization, branching exploration outperforms baselines across four benchmarks by up to 11 points while reducing wall-clock time by up to 58%. Third, in Tree-RL training, forking rollouts at selected turns improves TerminalBench-2 performance from 34.2% to 39.4%. These results establish Shepherd as an efficient infrastructure for programming meta-agents. We open-source the system to support future research.",
     "categories": [
-      "cs.AI"
+      "cs.AI",
+      "cs.PL",
+      "cs.SE"
     ],
-    "summary_cn": "扩展推理时间推理的标准技术是自我一致性，即从法学硕士中抽取多个候选答案，并选择最常见的答案。最近，事实证明，加权多数投票（例如信心知情的自我一致性（CISC））为每个候选答案分配一个置信值并选择累积分数最大的答案，在各种流行的基准上往往更准确。在实践中，加权多数投票需要对每个候选人的推理轨迹调用批评者法学硕士，以产生答案的置信度分数。尽管具有潜在的性能优势，但第二系列的 LLM 调用极大地增加了加权多数投票的开销和成本。为了减少这种费用，我们提出了 VecCISC，这是一个轻量级的自适应框架，它使用语义相似性度量来过滤语义上与其他推理等同、退化或幻觉的推理痕迹，从而减少评论家必须评估的候选答案的数量。为了确保足够的实验彻底性，我们在五个具有挑战性的、广泛采用的数据集上评估 VecCISC，这些数据集涵盖数学、化学、生物学、常识推理和人文学科。我们的结果表明，VecCISC 将总代币使用量减少了 47%，同时保持或超过 CISC 的准确性。",
-    "comment": "Accepted to Findings of ACL 2026",
+    "summary_cn": "我们引入 Shepherd，这是一种函数式编程模型，它将目标代理上的元代理操作形式化为函数，并在精益中机械化核心操作。 Shepherd 将每个代理与环境的交互记录为类似 Git 的执行跟踪中的类型化事件，从而可以分叉和重播任何过去的状态。该系统分叉代理进程及其文件系统比 Docker 快 $5\\time$，在重放时实现 $>95\\%$ 提示缓存重用。我们通过三个应用程序演示该模型。首先，在运行时干预中，现场主管将 CooperBench 上的配对编码通过率从 28.8% 提高到 54.7%。其次，在反事实元优化中，分支探索在四个基准测试中的表现优于基线高达 11 个点，同时减少挂钟时间高达 58%。第三，在 Tree-RL 训练中，在选定的回合进行分叉部署将 TerminalBench-2 的性能从 34.2% 提高到 39.4%。这些结果使 Shepherd 成为编程元代理的高效基础设施。我们开源该系统以支持未来的研究。",
+    "comment": "56 pages, 21 figures, 14 tables",
     "category_en": "Artificial Intelligence",
     "category_cn": "人工智能",
-    "slug": "2605-08070v1-veccisc-improving-confidence-informed-self-consist",
-    "rel_path": "entities/papers/2605-08070v1-veccisc-improving-confidence-informed-self-consist.html",
+    "slug": "2605-10913v1-shepherd-a-runtime-substrate-empowering-meta-agent",
+    "rel_path": "entities/papers/2605-10913v1-shepherd-a-runtime-substrate-empowering-meta-agent.html",
     "figures": [
-      "assets/papers/2605-08070v1/fig1.png",
-      "assets/papers/2605-08070v1/fig2.png",
-      "assets/papers/2605-08070v1/fig3.png"
+      "assets/papers/2605-10913v1/fig1.png",
+      "assets/papers/2605-10913v1/fig2.png",
+      "assets/papers/2605-10913v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "We introduce Shepherd, a functional programming model that formalizes meta-agent operations on target agents as functions, with core operations mechanized in Lean.",
+    "topic_signal": "大语言模型 / 强化学习 / 基准评估 / 智能体"
+  },
+  {
+    "id": "2605.10907v1",
+    "title": "Engineering Robustness into Personal Agents with the AI Workflow Store",
+    "authors": [
+      "Roxana Geambasu",
+      "Mariana Raykova",
+      "Pierre Tholoniat",
+      "Trishita Tiwari",
+      "Lillian Tsai",
+      "Wen Zhang"
+    ],
+    "published": "2026-05-11",
+    "summary": "The dominant paradigm for AI agents is an \"on-the-fly\" loop in which agents synthesize plans and execute actions within seconds or minutes in response to user prompts. We argue that this paradigm short-circuits disciplined software engineering (SE) processes -- iterative design, rigorous testing, adversarial evaluation, staged deployment, and more -- that have delivered the (relatively) reliable and secure systems we use today. By focusing on rapid, real-time synthesis, are AI agents effectively delivering users improvised prototypes rather than systems fit for high-stakes scenarios in which users may unwittingly apply them?   This paper argues for the need to integrate rigorous SE processes into the agentic loop to produce production-grade, hardened, and deterministically-constrained agent *workflows* that substantially outperform the potentially brittle and vulnerable results of on-the-fly synthesis. Doing so may require extra compute and time, and if so, we must amortize the cost of rigor through reuse across a broad user community. We envision an *AI Workflow Store* that consists of hardened and reusable workflows that agents can invoke with far greater reliability and security than improvised tool chains. We outline the research challenges of this vision, which stem from a broader flexibility-robustness tension that we argue requires moving beyond the ``on-the-fly'' paradigm to navigate effectively.",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "summary_cn": "人工智能代理的主导范例是“即时”循环，其中代理综合计划并在几秒或几分钟内执行操作以响应用户提示。我们认为，这种范式短路了严格的软件工程（SE）流程——迭代设计、严格测试、对抗性评估、分阶段部署等等——这些流程提供了我们今天使用的（相对）可靠和安全的系统。通过专注于快速、实时的综合，人工智能代理是否可以有效地为用户提供临时原型，而不是适合用户可能无意中应用它们的高风险场景的系统？本文认为需要将严格的 SE 流程集成到代理循环中，以生成生产级、强化且确定性约束的代理“工作流程”，其性能大大优于即时合成的潜在脆弱性和易受攻击的结果。这样做可能需要额外的计算和时间，如果是这样，我们必须通过在广泛的用户社区中重用来分摊严格成本。我们设想一个“人工智能工作流存储”，由强化且可重用的工作流组成，代理可以比临时工具链以更高的可靠性和安全性调用这些工作流。我们概述了这一愿景的研究挑战，这些挑战源于更广泛的灵活性-鲁棒性张力，我们认为需要超越“即时”范式才能有效导航。",
+    "comment": "",
+    "category_en": "Artificial Intelligence",
+    "category_cn": "人工智能",
+    "slug": "2605-10907v1-engineering-robustness-into-personal-agents-with-t",
+    "rel_path": "entities/papers/2605-10907v1-engineering-robustness-into-personal-agents-with-t.html",
+    "figures": [
+      "assets/papers/2605-10907v1/fig1.png",
+      "assets/papers/2605-10907v1/fig2.png",
+      "assets/papers/2605-10907v1/fig3.png"
     ],
     "concepts": [
       {
@@ -420,9 +228,185 @@
         "name": "基准评估",
         "slug": "benchmarking",
         "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
       }
     ],
-    "method_signal": "To reduce this expense, we propose VecCISC, a lightweight, adaptive framework that uses a measure of semantic similarity to filter reasoning traces that are semantically equivalent to others, degenerate, or hallucinated, thus decreasing the number of candidate answers that must be evaluated by the critic.",
-    "topic_signal": "大语言模型 / 基准评估"
+    "method_signal": "We argue that this paradigm short-circuits disciplined software engineering (SE) processes -- iterative design, rigorous testing, adversarial evaluation, staged deployment, and more -- that have delivered the (relatively) reliable and secure systems we use today.",
+    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐 / 智能体"
+  },
+  {
+    "id": "2605.10906v1",
+    "title": "DataMaster: Towards Autonomous Data Engineering for Machine Learning",
+    "authors": [
+      "Yaxin Du",
+      "Xiyuan Yang",
+      "Zhifan Zhou",
+      "Wanxu Liu",
+      "Zixing Lei",
+      "Zimeng Chen",
+      "Fenyi Liu",
+      "Haotian Wu",
+      "Yuzhu Cai",
+      "Zexi Liu",
+      "Xinyu Zhu",
+      "WenHao Wang",
+      "Linfeng Zhang",
+      "Chen Qian",
+      "Siheng Chen"
+    ],
+    "published": "2026-05-11",
+    "summary": "As model families, training recipes, and compute budgets become increasingly standardized, further gains in machine learning systems depend increasingly on data. Yet data engineering remains largely manual and ad hoc: practitioners repeatedly search for external datasets, adapt them to existing pipelines, validate candidate data through downstream training, and carry forward lessons from prior attempts. We study task-conditioned autonomous data engineering, where an autonomous agent improves a fixed learning algorithm by optimizing only the data side, including external data discovery, data selection and composition, cleaning and transformation. The goal is to obtain a stronger downstream solution while leaving the learning algorithm unchanged. To address the open-ended search space, branch-dependent refinement, and delayed validation inherent in autonomous data engineering, we propose DataMaster, a data-agent framework that integrates tree-structured search, shared candidate data, and cumulative memory. DataMaster consists of three key components: a DataTree that organizes alternative data-engineering branches, a shared Data Pool that stores discovered external data sources for reuse, and a Global Memory that records node outcomes, artifacts, and reusable findings. Together, these components allow the agent to discover candidate data, construct executable training inputs, evaluate them through downstream feedback, and carry useful evidence across branches. We evaluate DataMaster on two types of benchmarks, MLE-Bench Lite and PostTrainBench. On MLE-Bench Lite, it improves medal rate by 32.27% over the initial score; on PostTrainBench, it surpasses the instruct model on GPQA (31.02% vs 30.35%).",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "summary_cn": "随着模型系列、训练方法和计算预算变得越来越标准化，机器学习系统的进一步收益越来越依赖于数据。然而，数据工程仍然主要是手动和临时的：从业者反复搜索外部数据集，使它们适应现有的管道，通过下游培训验证候选数据，并从先前的尝试中吸取教训。我们研究任务条件自主数据工程，其中自主代理通过仅优化数据侧来改进固定学习算法，包括外部数据发现、数据选择和组合、清理和转换。目标是在保持学习算法不变的情况下获得更强的下游解决方案。为了解决自主数据工程中固有的开放式搜索空间、分支相关的细化和延迟验证问题，我们提出了 DataMaster，这是一个集成了树结构搜索、共享候选数据和累积内存的数据代理框架。 DataMaster 由三个关键组件组成：组织替代数据工程分支的 DataTree、存储发现的外部数据源以供重用的共享数据池以及记录节点结果、工件和可重用结果的全局内存。这些组件共同允许代理发现候选数据，构建可执行的训练输入，通过下游反馈对其进行评估，并跨分支携带有用的证据。我们使用两种类型的基准测试来评估 DataMaster：MLE-Bench Lite 和 PostTrainBench。在MLE-Bench Lite上，较初始成绩提升32.27%的奖牌率；在 PostTrainBench 上，它超越了 GPQA 上的指导模型（31.02% vs 30.35%）。",
+    "comment": "",
+    "category_en": "Artificial Intelligence",
+    "category_cn": "人工智能",
+    "slug": "2605-10906v1-datamaster-towards-autonomous-data-engineering-for",
+    "rel_path": "entities/papers/2605-10906v1-datamaster-towards-autonomous-data-engineering-for.html",
+    "figures": [
+      "assets/papers/2605-10906v1/fig1.png",
+      "assets/papers/2605-10906v1/fig2.png",
+      "assets/papers/2605-10906v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
+      },
+      {
+        "name": "图神经网络",
+        "slug": "graph-neural-networks",
+        "url": "../../concepts/graph-neural-networks.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "To address the open-ended search space, branch-dependent refinement, and delayed validation inherent in autonomous data engineering, we propose DataMaster, a data-agent framework that integrates tree-structured search, shared candidate data, and cumulative memory.",
+    "topic_signal": "基准评估 / 自动驾驶 / 图神经网络 / 智能体"
+  },
+  {
+    "id": "2605.10889v1",
+    "title": "Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why",
+    "authors": [
+      "Mohammadreza Armandpour",
+      "Fatih Ilhan",
+      "David Harrison",
+      "Ajay Jaiswal",
+      "Duc N. M Hoang",
+      "Fartash Faghri",
+      "Yizhe Zhang",
+      "Minsik Cho",
+      "Mehrdad Farajtabar"
+    ],
+    "published": "2026-05-11",
+    "summary": "On-policy distillation offers dense, per-token supervision for training reasoning models; however, it remains unclear under which conditions this signal is beneficial and under which it is detrimental. Which teacher model should be used, and in the case of self-distillation, which specific context should serve as the supervisory signal? Does the optimal choice vary from one token to the next? At present, addressing these questions typically requires costly training runs whose aggregate performance metrics obscure the dynamics at the level of individual tokens. We introduce a training-free diagnostic framework that operates at the highest resolution: per token, per question, and per teacher. We derive an ideal per-node gradient defined as the parameter update that maximally increases the student's probability of success. We then develop a scalable targeted-rollout algorithm to estimate this gradient efficiently, even for long chains of intermediate thoughts. The gradient alignment score, defined as the cosine similarity between this ideal gradient and any given distillation gradient, quantifies the extent to which a particular configuration approximates the ideal signal. Across a range of self-distillation settings and external teacher models, we observe that distillation guidance exhibits substantially higher alignment with the ideal on incorrect rollouts than on correct ones, where the student already performs well and the teacher's signal tends to become noisy. Furthermore, we find that the optimal distillation context depends jointly on the student model's capacity and the target task, and that no single universally effective configuration emerges. These findings motivate the use of per-task, per-token diagnostic analyses for distillation.",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "summary_cn": "在策略蒸馏为训练推理模型提供密集的、按令牌的监督；然而，目前尚不清楚该信号在哪些条件下有益，在哪些条件下有害。应该采用哪种教师模式，在自我蒸馏的情况下，应该以哪种具体情境作为监督信号？不同代币的最佳选择是否有所不同？目前，解决这些问题通常需要昂贵的训练运行，其总体性能指标掩盖了单个代币级别的动态。我们引入了一个免培训的诊断框架，该框架以最高分辨率运行：每个令牌、每个问题和每个教师。我们推导出一个理想的每节点梯度，定义为最大程度地增加学生成功概率的参数更新。然后，我们开发了一种可扩展的有针对性的推出算法来有效地估计这个梯度，即使对于长链的中间思想也是如此。梯度对齐分数定义为该理想梯度与任何给定蒸馏梯度之间的余弦相似度，量化特定配置近似理想信号的程度。在一系列自蒸馏设置和外部教师模型中，我们观察到蒸馏指导在不正确的部署中表现出比在正确的部署中更高的理想一致性，在正确的部署中，学生已经表现良好，而教师的信号往往会变得嘈杂。此外，我们发现最佳蒸馏上下文共同取决于学生模型的能力和目标任务，并且没有出现单一的普遍有效的配置。这些发现促使使用每个任务、每个标记的诊断分析来进行蒸馏。",
+    "comment": "",
+    "category_en": "Artificial Intelligence",
+    "category_cn": "人工智能",
+    "slug": "2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh",
+    "rel_path": "entities/papers/2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh.html",
+    "figures": [
+      "assets/papers/2605-10889v1/fig1.png",
+      "assets/papers/2605-10889v1/fig2.png",
+      "assets/papers/2605-10889v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      }
+    ],
+    "method_signal": "We introduce a training-free diagnostic framework that operates at the highest resolution: per token, per question, and per teacher.",
+    "topic_signal": "大语言模型 / 强化学习 / 基准评估 / AI安全与对齐"
+  },
+  {
+    "id": "2605.10888v1",
+    "title": "Shields to Guarantee Probabilistic Safety in MDPs",
+    "authors": [
+      "Linus Heck",
+      "Filip Macák",
+      "Roman Andriushchenko",
+      "Milan Češka",
+      "Sebastian Junges"
+    ],
+    "published": "2026-05-11",
+    "summary": "Shielding is a prominent model-based technique to ensure safety of autonomous agents. Classical shielding aims to ensure that nothing bad ever happens and comes with strong guarantees about safety and maximal permissiveness. However, shielding systems for probabilistic safety, where something bad is allowed to happen with an acceptable probability, has proven to be more intricate. This paper presents a formal framework that conservatively extends classical shields to probabilistic safety. In this framework, we (i) demonstrate the impossibility of preserving the strong guarantees on safety and permissiveness, (ii) provide natural shields with weaker guarantees, and (iii) introduce offline and online shield constructions ensuring strong safety guarantees. The empirical evaluation highlights the practical advantages of the new shields, as well as their computational feasibility.",
+    "categories": [
+      "cs.LO",
+      "cs.AI"
+    ],
+    "summary_cn": "屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。经典屏蔽旨在确保不会发生任何不良情况，并提供安全性和最大允许性的强有力保证。然而，概率安全屏蔽系统（允许不良事件以可接受的概率发生）已被证明更加复杂。本文提出了一个正式的框架，保守地将经典屏蔽扩展到概率安全。在此框架中，我们（i）证明了不可能保留对安全性和许可性的强有力保障，（ii）提供保障较弱的天然屏障，以及（iii）引入离线和在线屏障建设，以确保强有力的安全保障。实证评估强调了新屏蔽的实际优势及其计算可行性。",
+    "comment": "Accepted to CAV 2026",
+    "category_en": "Artificial Intelligence",
+    "category_cn": "人工智能",
+    "slug": "2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps",
+    "rel_path": "entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html",
+    "figures": [],
+    "concepts": [
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      },
+      {
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "Shielding is a prominent model-based technique to ensure safety of autonomous agents.",
+    "topic_signal": "基准评估 / AI安全与对齐 / 自动驾驶 / 智能体"
   }
 ]

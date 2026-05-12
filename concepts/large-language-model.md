@@ -2,7 +2,7 @@
 layout: concept
 title: 大语言模型
 created: 2026-05-01
-updated: 2026-05-11
+updated: 2026-05-12
 type: concept
 tags: [LLM, transformer, scaling, NLP, deep-learning]
 papers:
@@ -31,6 +31,16 @@ papers:
 大语言模型（Large Language Model, LLM）是基于 Transformer 架构、通过海量文本预训练的大规模神经网络，能够执行文本生成、理解、推理等多种任务。自 GPT-3 展示涌现能力以来，LLM 已成为 AI 研究的核心范式，本库中有 8 篇论文从不同角度对其进行研究。
 
 ## 关键文献与发现
+
+- [Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why](../entities/papers/2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh.html)（2026-05-11）：在策略蒸馏为训练推理模型提供密集的、按令牌的监督；然而，目前尚不清楚该信号在哪些条件下有益，在哪些条件下有害。
+
+- [Engineering Robustness into Personal Agents with the AI Workflow Store](../entities/papers/2605-10907v1-engineering-robustness-into-personal-agents-with-t.html)（2026-05-11）：人工智能代理的主导范例是“即时”循环，其中代理综合计划并在几秒或几分钟内执行操作以响应用户提示。
+
+- [Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace](../entities/papers/2605-10913v1-shepherd-a-runtime-substrate-empowering-meta-agent.html)（2026-05-11）：我们引入 Shepherd，这是一种函数式编程模型，它将目标代理上的元代理操作形式化为函数，并在精益中机械化核心操作。
+
+- [Confidence-Guided Diffusion Augmentation for Enhanced Bangla Compound Character Recognition](../entities/papers/2605-10916v1-confidence-guided-diffusion-augmentation-for-enhan.html)（2026-05-11）：由于字符结构复杂、类内差异大以及高质量注释数据的可用性有限，手写孟加拉复合字符的识别仍然是一个具有挑战性的问题。
+
+- [ELF: Embedded Language Flows](../entities/papers/2605-10938v1-elf-embedded-language-flows.html)（2026-05-11）：扩散和基于流的模型已成为生成连续数据的事实上的方法，例如在图像和视频等领域。
 
 - [VecCISC: Improving Confidence-Informed Self-Consistency with Reasoning Trace Clustering and Candidate Answer Selection](../entities/papers/2605-08070v1-veccisc-improving-confidence-informed-self-consist.html)（2026-05-08）：扩展推理时间推理的标准技术是自我一致性，即从法学硕士中抽取多个候选答案，并选择最常见的答案。
 

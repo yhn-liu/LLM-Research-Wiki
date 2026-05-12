@@ -2,7 +2,7 @@
 layout: concept
 title: 世界模型
 created: 2026-05-01
-updated: 2026-05-10
+updated: 2026-05-12
 type: concept
 tags: [world-model, prediction, generation, 3D, driving]
 papers:
@@ -16,6 +16,8 @@ papers:
 世界模型是能够学习环境动态规律、预测未来状态的计算模型。在 AI 领域，世界模型旨在让智能体通过内部模拟理解世界运行规律，用于规划、决策和生成。本库中有 1 篇论文推动了驾驶场景世界模型的前沿。
 
 ## 关键文献与发现
+
+- [Variational Inference for Lévy Process-Driven SDEs via Neural Tilting](../entities/papers/2605-10934v1-variational-inference-for-lvy-process-driven-sdes.html)（2026-05-11）：对极端事件和重尾现象进行建模对于在金融、气候科学和安全关键型人工智能等领域构建可靠的预测系统至关重要。
 
 - [Algorithmic bottlenecks in evolution: Genetic code, symbolic language, and the Great Filter hypothesis](../entities/papers/2605-04498v1-algorithmic-bottlenecks-in-evolution-genetic-code.html)（2026-05-06）：大过滤假说提出，能够进行星际旅行的技术社会的出现取决于少数异常困难且极不可能的步骤。
 

@@ -2,7 +2,7 @@
 layout: concept
 title: 强化学习
 created: 2026-05-01
-updated: 2026-05-08
+updated: 2026-05-12
 type: concept
 tags: [RL, RLHF, RLVR, DPO, GRPO, DAPO, alignment]
 papers:
@@ -22,6 +22,10 @@ papers:
 强化学习（Reinforcement Learning, RL）是通过与环境交互、根据奖励信号优化策略的机器学习范式。在 LLM 领域，RL 被广泛应用于后训练阶段，通过 RLHF、RLVR、DPO、GRPO 等方法对模型进行对齐和能力增强。本库中有 2 篇论文从正反两面研究了 LLM 训练中的强化学习。
 
 ## 关键文献与发现
+
+- [Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why](../entities/papers/2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh.html)（2026-05-11）：在策略蒸馏为训练推理模型提供密集的、按令牌的监督；然而，目前尚不清楚该信号在哪些条件下有益，在哪些条件下有害。
+
+- [Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace](../entities/papers/2605-10913v1-shepherd-a-runtime-substrate-empowering-meta-agent.html)（2026-05-11）：我们引入 Shepherd，这是一种函数式编程模型，它将目标代理上的元代理操作形式化为函数，并在精益中机械化核心操作。
 
 - [Can RL Teach Long-Horizon Reasoning to LLMs? Expressiveness Is Key](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)（2026-05-07）：强化学习 (RL) 已被应用于改进大型语言模型 (LLM) 推理，但由于缺乏受控、可扩展的环境，对训练如何随任务难度进行扩展的系统研究受到了阻碍。
 

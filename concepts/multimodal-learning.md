@@ -2,7 +2,7 @@
 layout: concept
 title: 多模态学习
 created: 2026-05-01
-updated: 2026-05-11
+updated: 2026-05-12
 type: concept
 tags: [multimodal, vision-language, cross-modal, perception, reasoning]
 papers:
@@ -18,6 +18,10 @@ papers:
 多模态学习是让模型同时处理和理解多种数据类型（如文本、图像、3D 点云）的 AI 研究方向。在 LLM 时代，多模态学习的核心挑战是如何将视觉感知与语言推理有效融合。本库中有 2 篇论文从训练方法和应用场景两个角度研究了这一问题。
 
 ## 关键文献与发现
+
+- [Confidence-Guided Diffusion Augmentation for Enhanced Bangla Compound Character Recognition](../entities/papers/2605-10916v1-confidence-guided-diffusion-augmentation-for-enhan.html)（2026-05-11）：由于字符结构复杂、类内差异大以及高质量注释数据的可用性有限，手写孟加拉复合字符的识别仍然是一个具有挑战性的问题。
+
+- [ELF: Embedded Language Flows](../entities/papers/2605-10938v1-elf-embedded-language-flows.html)（2026-05-11）：扩散和基于流的模型已成为生成连续数据的事实上的方法，例如在图像和视频等领域。
 
 - [EmambaIR: Efficient Visual State Space Model for Event-guided Image Reconstruction](../entities/papers/2605-08073v1-emambair-efficient-visual-state-space-model-for-ev.html)（2026-05-08）：最近基于事件的图像重建方法主要依靠卷积神经网络（CNN）和视觉变换器（ViT）来处理补充事件信息。
 

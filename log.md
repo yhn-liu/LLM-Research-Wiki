@@ -249,3 +249,16 @@
   - [2605.08012v1] Position: Mechanistic Interpretability Must Disclose Identification Assumptions 
   - [2605.08073v1] EmambaIR: Efficient Visual State Space Model for Event-guided Image Reconstructi
   - [2605.08070v1] VecCISC: Improving Confidence-Informed Self-Consistency with Reasoning Trace Clu
+
+## [2026-05-12] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 8 篇
+- 更新相关概念页提及: 28 处
+- 不生成 PDF；论文页面包含英文摘要、中文摘要、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.10938v1] ELF: Embedded Language Flows
+  - [2605.10934v1] Variational Inference for Lévy Process-Driven SDEs via Neural Tilting
+  - [2605.10916v1] Confidence-Guided Diffusion Augmentation for Enhanced Bangla Compound Character 
+  - [2605.10913v1] Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution
+  - [2605.10907v1] Engineering Robustness into Personal Agents with the AI Workflow Store
+  - [2605.10906v1] DataMaster: Towards Autonomous Data Engineering for Machine Learning
+  - [2605.10889v1] Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why
+  - [2605.10888v1] Shields to Guarantee Probabilistic Safety in MDPs

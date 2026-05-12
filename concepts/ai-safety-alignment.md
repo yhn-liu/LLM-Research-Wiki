@@ -2,7 +2,7 @@
 layout: concept
 title: AI安全与对齐
 created: 2026-05-01
-updated: 2026-05-11
+updated: 2026-05-12
 type: concept
 tags: [safety, alignment, RLHF, adversarial, model-organism, evaluation]
 papers:
@@ -20,6 +20,14 @@ papers:
 AI 安全与对齐（AI Safety and Alignment）是确保人工智能系统的行为与人类意图、价值观和利益保持一致的研究领域。对齐问题的核心挑战在于：如何让 AI 系统真正理解和遵循人类的目标，而不是仅仅在表面上满足指标要求。随着大语言模型能力的快速提升，AI 安全与对齐已成为 AI 研究中最重要的方向之一，涉及技术、伦理和社会等多个层面。
 
 ## 关键文献与发现
+
+- [Shields to Guarantee Probabilistic Safety in MDPs](../entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html)（2026-05-11）：屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。
+
+- [Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why](../entities/papers/2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh.html)（2026-05-11）：在策略蒸馏为训练推理模型提供密集的、按令牌的监督；然而，目前尚不清楚该信号在哪些条件下有益，在哪些条件下有害。
+
+- [Engineering Robustness into Personal Agents with the AI Workflow Store](../entities/papers/2605-10907v1-engineering-robustness-into-personal-agents-with-t.html)（2026-05-11）：人工智能代理的主导范例是“即时”循环，其中代理综合计划并在几秒或几分钟内执行操作以响应用户提示。
+
+- [Variational Inference for Lévy Process-Driven SDEs via Neural Tilting](../entities/papers/2605-10934v1-variational-inference-for-lvy-process-driven-sdes.html)（2026-05-11）：对极端事件和重尾现象进行建模对于在金融、气候科学和安全关键型人工智能等领域构建可靠的预测系统至关重要。
 
 - [Position: Mechanistic Interpretability Must Disclose Identification Assumptions for Causal Claims](../entities/papers/2605-08012v1-position-mechanistic-interpretability-must-disclos.html)（2026-05-08）：机械可解释性论文越来越多地使用因果词汇：电路、中介、因果抽象、单一语义。
 

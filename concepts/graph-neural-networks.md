@@ -2,7 +2,7 @@
 layout: concept
 title: 图神经网络
 created: 2026-05-01
-updated: 2026-05-11
+updated: 2026-05-12
 type: concept
 tags: [GNN, graph, neural-network, biomedical, representation-learning, message-passing]
 papers:
@@ -63,6 +63,8 @@ LLM 细化后的图结构更清晰、更具可解释性，这对生物医学等�
 - [知识蒸馏](knowledge-distillation.html) — GNN 模型的压缩与迁移
 
 ## 本库相关论文
+
+- [DataMaster: Towards Autonomous Data Engineering for Machine Learning](../entities/papers/2605-10906v1-datamaster-towards-autonomous-data-engineering-for.html)（2026-05-11）：随着模型系列、训练方法和计算预算变得越来越标准化，机器学习系统的进一步收益越来越依赖于数据。
 
 - [Conformal Path Reasoning: Trustworthy Knowledge Graph Question Answering via Path-Level Calibration](../entities/papers/2605-08077v1-conformal-path-reasoning-trustworthy-knowledge-gra.html)（2026-05-08）：知识图问答（KGQA）已显示出有基础且可解释的推理的前景，但现有方法往往无法对检索到的答案提供可靠的覆盖保证。
 

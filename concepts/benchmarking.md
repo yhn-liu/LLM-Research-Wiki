@@ -2,7 +2,7 @@
 layout: concept
 title: 基准评估
 created: 2026-05-01
-updated: 2026-05-11
+updated: 2026-05-12
 type: concept
 tags: [benchmark, evaluation, testing, metrics, domain-specific, assessment]
 papers:
@@ -23,6 +23,20 @@ papers:
 基准评估（Benchmarking）是通过设计标准化的测试任务和评估指标来系统性地衡量 AI 模型能力的研究方法。一个好的基准测试需要具备区分度、公平性、可复现性和时效性，能够真实反映模型在特定领域或通用任务上的性能水平。随着 AI 模型能力的快速提升，基准评估本身也面临着被"饱和"或被"游戏化"的挑战。
 
 ## 关键文献与发现
+
+- [Shields to Guarantee Probabilistic Safety in MDPs](../entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html)（2026-05-11）：屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。
+
+- [Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why](../entities/papers/2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh.html)（2026-05-11）：在策略蒸馏为训练推理模型提供密集的、按令牌的监督；然而，目前尚不清楚该信号在哪些条件下有益，在哪些条件下有害。
+
+- [DataMaster: Towards Autonomous Data Engineering for Machine Learning](../entities/papers/2605-10906v1-datamaster-towards-autonomous-data-engineering-for.html)（2026-05-11）：随着模型系列、训练方法和计算预算变得越来越标准化，机器学习系统的进一步收益越来越依赖于数据。
+
+- [Engineering Robustness into Personal Agents with the AI Workflow Store](../entities/papers/2605-10907v1-engineering-robustness-into-personal-agents-with-t.html)（2026-05-11）：人工智能代理的主导范例是“即时”循环，其中代理综合计划并在几秒或几分钟内执行操作以响应用户提示。
+
+- [Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace](../entities/papers/2605-10913v1-shepherd-a-runtime-substrate-empowering-meta-agent.html)（2026-05-11）：我们引入 Shepherd，这是一种函数式编程模型，它将目标代理上的元代理操作形式化为函数，并在精益中机械化核心操作。
+
+- [Confidence-Guided Diffusion Augmentation for Enhanced Bangla Compound Character Recognition](../entities/papers/2605-10916v1-confidence-guided-diffusion-augmentation-for-enhan.html)（2026-05-11）：由于字符结构复杂、类内差异大以及高质量注释数据的可用性有限，手写孟加拉复合字符的识别仍然是一个具有挑战性的问题。
+
+- [Variational Inference for Lévy Process-Driven SDEs via Neural Tilting](../entities/papers/2605-10934v1-variational-inference-for-lvy-process-driven-sdes.html)（2026-05-11）：对极端事件和重尾现象进行建模对于在金融、气候科学和安全关键型人工智能等领域构建可靠的预测系统至关重要。
 
 - [VecCISC: Improving Confidence-Informed Self-Consistency with Reasoning Trace Clustering and Candidate Answer Selection](../entities/papers/2605-08070v1-veccisc-improving-confidence-informed-self-consist.html)（2026-05-08）：扩展推理时间推理的标准技术是自我一致性，即从法学硕士中抽取多个候选答案，并选择最常见的答案。
 

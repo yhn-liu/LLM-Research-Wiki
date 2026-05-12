@@ -2,7 +2,7 @@
 layout: concept
 title: 智能体
 created: 2026-05-01
-updated: 2026-05-11
+updated: 2026-05-12
 type: concept
 tags: [agent, tool-use, planning, LLM-agent, multi-agent, collaboration]
 papers:
@@ -26,6 +26,14 @@ papers:
 智能体（AI Agent）是指能够感知环境、进行推理、做出决策并采取行动以实现特定目标的自主系统。基于大语言模型的智能体将 LLM 作为核心"大脑"，通过工具使用、规划和记忆机制与外部环境交互。本库中有 8 篇论文从单智能体能力、多智能体协作、训练安全等角度研究了这一方向。
 
 ## 关键文献与发现
+
+- [Shields to Guarantee Probabilistic Safety in MDPs](../entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html)（2026-05-11）：屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。
+
+- [DataMaster: Towards Autonomous Data Engineering for Machine Learning](../entities/papers/2605-10906v1-datamaster-towards-autonomous-data-engineering-for.html)（2026-05-11）：随着模型系列、训练方法和计算预算变得越来越标准化，机器学习系统的进一步收益越来越依赖于数据。
+
+- [Engineering Robustness into Personal Agents with the AI Workflow Store](../entities/papers/2605-10907v1-engineering-robustness-into-personal-agents-with-t.html)（2026-05-11）：人工智能代理的主导范例是“即时”循环，其中代理综合计划并在几秒或几分钟内执行操作以响应用户提示。
+
+- [Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace](../entities/papers/2605-10913v1-shepherd-a-runtime-substrate-empowering-meta-agent.html)（2026-05-11）：我们引入 Shepherd，这是一种函数式编程模型，它将目标代理上的元代理操作形式化为函数，并在精益中机械化核心操作。
 
 - [The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents](../entities/papers/2605-08060v1-the-memory-curse-how-expanded-recall-erodes-cooper.html)（2026-05-08）：上下文窗口扩展通常被视为法学硕士的直接能力升级，但我们发现它在多智能体社会困境中系统性地失败。
 

@@ -2,7 +2,7 @@
 layout: concept
 title: 自动驾驶
 created: 2026-05-01
-updated: 2026-05-10
+updated: 2026-05-12
 type: concept
 tags: [autonomous-driving, perception, prediction, planning, 3D, world-model]
 papers:
@@ -18,6 +18,10 @@ papers:
 自动驾驶（Autonomous Driving）是指通过传感器感知、环境理解、行为预测和路径规划等技术，使车辆能够在无人干预或最小干预的情况下自主行驶的系统。现代自动驾驶系统深度依赖人工智能技术，包括计算机视觉、深度学习、强化学习和世界模型等。随着端到端学习和世界模型的发展，自动驾驶正从模块化架构向统一感知-预测-规划的端到端架构演进。
 
 ## 关键文献与发现
+
+- [Shields to Guarantee Probabilistic Safety in MDPs](../entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html)（2026-05-11）：屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。
+
+- [DataMaster: Towards Autonomous Data Engineering for Machine Learning](../entities/papers/2605-10906v1-datamaster-towards-autonomous-data-engineering-for.html)（2026-05-11）：随着模型系列、训练方法和计算预算变得越来越标准化，机器学习系统的进一步收益越来越依赖于数据。
 
 - [Algorithmic bottlenecks in evolution: Genetic code, symbolic language, and the Great Filter hypothesis](../entities/papers/2605-04498v1-algorithmic-bottlenecks-in-evolution-genetic-code.html)（2026-05-06）：大过滤假说提出，能够进行星际旅行的技术社会的出现取决于少数异常困难且极不可能的步骤。
 
