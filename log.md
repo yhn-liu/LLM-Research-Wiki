@@ -262,3 +262,18 @@
   - [2605.10906v1] DataMaster: Towards Autonomous Data Engineering for Machine Learning
   - [2605.10889v1] Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why
   - [2605.10888v1] Shields to Guarantee Probabilistic Safety in MDPs
+
+## [2026-05-13] update | arXiv Daily Website Update
+- 更新网站首页今日新论文: 10 篇
+- 更新相关概念页提及: 29 处
+- 不生成 PDF；论文页面包含英文摘要、中文摘要、相关主题、关键图示（如 arXiv HTML 可用）
+  - [2605.12493v1] LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues
+  - [2605.12487v1] Task-Adaptive Embedding Refinement via Test-time LLM Guidance
+  - [2605.12477v1] MEME: Multi-entity & Evolving Memory Evaluation
+  - [2605.12476v1] Routers Learn the Geometry of Their Experts: Geometric Coupling in Sparse Mixtur
+  - [2605.12471v1] KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference
+  - [2605.12466v1] Solve the Loop: Attractor Models for Language and Reasoning
+  - [2605.12460v1] Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts,
+  - [2605.12456v1] TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection
+  - [2605.12495v1] AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decomposi
+  - [2605.12484v1] Learning, Fast and Slow: Towards LLMs That Adapt Continually

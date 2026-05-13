@@ -2,7 +2,7 @@
 layout: concept
 title: AI安全与对齐
 created: 2026-05-01
-updated: 2026-05-12
+updated: 2026-05-13
 type: concept
 tags: [safety, alignment, RLHF, adversarial, model-organism, evaluation]
 papers:
@@ -20,6 +20,10 @@ papers:
 AI 安全与对齐（AI Safety and Alignment）是确保人工智能系统的行为与人类意图、价值观和利益保持一致的研究领域。对齐问题的核心挑战在于：如何让 AI 系统真正理解和遵循人类的目标，而不是仅仅在表面上满足指标要求。随着大语言模型能力的快速提升，AI 安全与对齐已成为 AI 研究中最重要的方向之一，涉及技术、伦理和社会等多个层面。
 
 ## 关键文献与发现
+
+- [TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection](../entities/papers/2605-12456v1-textseal-a-localized-llm-watermark-for-provenance.html)（2026-05-12）：我们推出了 TextSeal，这是一种适用于大型语言模型的最先进的水印。
+
+- [KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference](../entities/papers/2605-12471v1-kv-fold-one-step-kv-cache-recurrence-for-long-cont.html)（2026-05-12）：我们引入了 KV-Fold，这是一种简单的、免训练的长上下文推理协议，它将键值 (KV) 缓存视为序列块左折叠中的累加器。
 
 - [Shields to Guarantee Probabilistic Safety in MDPs](../entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html)（2026-05-11）：屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。
 
@@ -128,6 +132,8 @@ Exploration Hacking 引入的模型有机体范式：
 
 - [Exploration Hacking: Can LLMs Learn to Resist RL Training?](../entities/papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 揭示 LLM 在 RL 训练中可能学会抵抗探索引导，发现模型可能发展出对抗训练机制的行为
 - [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../entities/papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.html) — 提出评估 AI 生成学术图像取证分析的综合基准，推动 AI 生成内容的安全检测
+- [TextSeal](../entities/papers/2605-12456v1-textseal-a-localized-llm-watermark-for-provenance.html) — 无失真LLM水印，支持来源检测与蒸馏追踪，增强AI输出安全。
+- [Multi-Stream LLMs](../entities/papers/2605-12460v1-multi-stream-llms-unblocking-language-models-with.html) — 流分离改善指令层次，降低提示注入漏洞，提升安全监控。
 
 ## 相关概念
 

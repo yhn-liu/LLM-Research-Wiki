@@ -2,7 +2,7 @@
 layout: concept
 title: 基准评估
 created: 2026-05-01
-updated: 2026-05-12
+updated: 2026-05-13
 type: concept
 tags: [benchmark, evaluation, testing, metrics, domain-specific, assessment]
 papers:
@@ -23,6 +23,20 @@ papers:
 基准评估（Benchmarking）是通过设计标准化的测试任务和评估指标来系统性地衡量 AI 模型能力的研究方法。一个好的基准测试需要具备区分度、公平性、可复现性和时效性，能够真实反映模型在特定领域或通用任务上的性能水平。随着 AI 模型能力的快速提升，基准评估本身也面临着被"饱和"或被"游戏化"的挑战。
 
 ## 关键文献与发现
+
+- [AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward](../entities/papers/2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen.html)（2026-05-12）：在本文中，我们提出了 AlphaGRPO，这是一种新颖的框架，它将组相对策略优化 (GRPO) 应用于 AR-扩散统一多模态模型 (UMM)，以增强多模态生成能力，而无需额外的冷启动阶段。
+
+- [TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection](../entities/papers/2605-12456v1-textseal-a-localized-llm-watermark-for-provenance.html)（2026-05-12）：我们推出了 TextSeal，这是一种适用于大型语言模型的最先进的水印。
+
+- [KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference](../entities/papers/2605-12471v1-kv-fold-one-step-kv-cache-recurrence-for-long-cont.html)（2026-05-12）：我们引入了 KV-Fold，这是一种简单的、免训练的长上下文推理协议，它将键值 (KV) 缓存视为序列块左折叠中的累加器。
+
+- [Routers Learn the Geometry of Their Experts: Geometric Coupling in Sparse Mixture-of-Experts](../entities/papers/2605-12476v1-routers-learn-the-geometry-of-their-experts-geomet.html)（2026-05-12）：稀疏专家混合 (SMoE) 模型可以有效地扩展语言模型，但训练它们仍然具有挑战性，因为路由可能会崩溃到少数专家身上，而辅助负载平衡损失可能会减少专业化。
+
+- [MEME: Multi-entity & Evolving Memory Evaluation](../entities/papers/2605-12477v1-meme-multi-entity-evolving-memory-evaluation.html)（2026-05-12）：基于 LLM 的代理越来越多地在持久环境中运行，它们必须在许多会话中存储、更新和推理信息。
+
+- [Task-Adaptive Embedding Refinement via Test-time LLM Guidance](../entities/papers/2605-12487v1-task-adaptive-embedding-refinement-via-test-time-l.html)（2026-05-12）：我们探索了法学硕士引导的查询细化范式的有效性，以扩展嵌入模型的可用性以应对零样本搜索和分类任务。
+
+- [LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues](../entities/papers/2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t.html)（2026-05-12）：长期记忆对于专门网络环境中的代理至关重要，其中的成功取决于对界面可供性、状态动态、工作流程和重复出现的故障模式的回忆。
 
 - [Shields to Guarantee Probabilistic Safety in MDPs](../entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html)（2026-05-11）：屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。
 
@@ -196,6 +210,12 @@ AEGIS 和 TopBench 代表了基准评估从通用向领域专用深化的趋势�
 
 - [AEGIS: A Holistic Benchmark for Evaluating Forensic Analysis of AI-Generated Academic Images](../entities/papers/2604-28177v1-aegis-a-holistic-benchmark-for-evaluating-forensic.html) — 提出评估 AI 生成学术图像取证分析的综合基准，涵盖检测、定位、溯源等多个评估维度
 - [TopBench: A Benchmark for Implicit Prediction and Reasoning over Tabular Question Answering](../entities/papers/2604-28076v1-topbench-a-benchmark-for-implicit-prediction-and-r.html) — 针对表格问答中的隐式预测和推理能力提出新基准，评估模型在结构化数据上的推理能力
+- [LongMemEval-V2](../entities/papers/2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t.html) — 长期智能体记忆评估基准，451个问题覆盖五项记忆能力。
+- [Task-Adaptive Embedding](../entities/papers/2605-12487v1-task-adaptive-embedding-refinement-via-test-time-l.html) — LLM引导测试时嵌入优化的搜索/分类基准评估。
+- [MEME](../entities/papers/2605-12477v1-meme-multi-entity-evolving-memory-evaluation.html) — 多实体演化记忆基准，定义六项任务揭示依赖推理困难。
+- [KV-Fold](../entities/papers/2605-12471v1-kv-fold-one-step-kv-cache-recurrence-for-long-cont.html) — 大海捞针基准上100%检索，评估长上下文推理。
+- [TextSeal](../entities/papers/2605-12456v1-textseal-a-localized-llm-watermark-for-provenance.html) — 在12个推理基准上保持下游性能的水印方案。
+- [AlphaGRPO](../entities/papers/2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen.html) — GenEval、TIIF-Bench等基准上的多模态生成RL评估。
 
 ## 相关概念
 

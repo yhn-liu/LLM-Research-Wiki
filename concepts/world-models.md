@@ -2,7 +2,7 @@
 layout: concept
 title: 世界模型
 created: 2026-05-01
-updated: 2026-05-12
+updated: 2026-05-13
 type: concept
 tags: [world-model, prediction, generation, 3D, driving]
 papers:
@@ -16,6 +16,10 @@ papers:
 世界模型是能够学习环境动态规律、预测未来状态的计算模型。在 AI 领域，世界模型旨在让智能体通过内部模拟理解世界运行规律，用于规划、决策和生成。本库中有 1 篇论文推动了驾驶场景世界模型的前沿。
 
 ## 关键文献与发现
+
+- [Routers Learn the Geometry of Their Experts: Geometric Coupling in Sparse Mixture-of-Experts](../entities/papers/2605-12476v1-routers-learn-the-geometry-of-their-experts-geomet.html)（2026-05-12）：稀疏专家混合 (SMoE) 模型可以有效地扩展语言模型，但训练它们仍然具有挑战性，因为路由可能会崩溃到少数专家身上，而辅助负载平衡损失可能会减少专业化。
+
+- [LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues](../entities/papers/2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t.html)（2026-05-12）：长期记忆对于专门网络环境中的代理至关重要，其中的成功取决于对界面可供性、状态动态、工作流程和重复出现的故障模式的回忆。
 
 - [Variational Inference for Lévy Process-Driven SDEs via Neural Tilting](../entities/papers/2605-10934v1-variational-inference-for-lvy-process-driven-sdes.html)（2026-05-11）：对极端事件和重尾现象进行建模对于在金融、气候科学和安全关键型人工智能等领域构建可靠的预测系统至关重要。
 
@@ -62,6 +66,8 @@ HERMES++ 代表了世界模型从"纯生成"向"理解+生成统一"的转变：
 ## 相关论文
 
 - [HERMES++](../entities/papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 统一 3D 场景理解与未来几何预测
+- [LongMemEval-V2](../entities/papers/2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t.html) — 环境特定经验如何构建智能体的世界模型。
+- [Router Geometry](../entities/papers/2605-12476v1-routers-learn-the-geometry-of-their-experts-geomet.html) — SMoE中路由器的几何结构形成分配几何。
 
 ## 相关概念
 

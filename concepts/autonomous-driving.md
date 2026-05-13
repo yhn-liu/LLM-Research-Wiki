@@ -2,7 +2,7 @@
 layout: concept
 title: 自动驾驶
 created: 2026-05-01
-updated: 2026-05-12
+updated: 2026-05-13
 type: concept
 tags: [autonomous-driving, perception, prediction, planning, 3D, world-model]
 papers:
@@ -18,6 +18,8 @@ papers:
 自动驾驶（Autonomous Driving）是指通过传感器感知、环境理解、行为预测和路径规划等技术，使车辆能够在无人干预或最小干预的情况下自主行驶的系统。现代自动驾驶系统深度依赖人工智能技术，包括计算机视觉、深度学习、强化学习和世界模型等。随着端到端学习和世界模型的发展，自动驾驶正从模块化架构向统一感知-预测-规划的端到端架构演进。
 
 ## 关键文献与发现
+
+- [Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts, Inputs and Outputs](../entities/papers/2605-12460v1-multi-stream-llms-unblocking-language-models-with.html)（2026-05-12）：语言模型能力的持续改进已经释放了它们作为自主代理驱动程序的广泛用途，例如在编码或计算机使用应用程序中。
 
 - [Shields to Guarantee Probabilistic Safety in MDPs](../entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html)（2026-05-11）：屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。
 
@@ -92,6 +94,7 @@ HERMES++ 的工作代表了自动驾驶从模块化向统一架构演进的最�
 ## 相关论文
 
 - [HERMES++: Toward a Unified Driving World Model for 3D Scene Understanding and Generation](../entities/papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 构建统一的驾驶世界模型，实现 3D 场景的端到端理解与生成，推动自动驾驶从模块化向统一架构的演进
+- [Multi-Stream LLMs](../entities/papers/2605-12460v1-multi-stream-llms-unblocking-language-models-with.html) — 多并行流LLM解除计算阻塞，提升自主代理系统的实时交互效率。
 
 ## 相关概念
 

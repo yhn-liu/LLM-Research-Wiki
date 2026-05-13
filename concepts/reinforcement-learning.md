@@ -2,7 +2,7 @@
 layout: concept
 title: 强化学习
 created: 2026-05-01
-updated: 2026-05-12
+updated: 2026-05-13
 type: concept
 tags: [RL, RLHF, RLVR, DPO, GRPO, DAPO, alignment]
 papers:
@@ -22,6 +22,10 @@ papers:
 强化学习（Reinforcement Learning, RL）是通过与环境交互、根据奖励信号优化策略的机器学习范式。在 LLM 领域，RL 被广泛应用于后训练阶段，通过 RLHF、RLVR、DPO、GRPO 等方法对模型进行对齐和能力增强。本库中有 2 篇论文从正反两面研究了 LLM 训练中的强化学习。
 
 ## 关键文献与发现
+
+- [Learning, Fast and Slow: Towards LLMs That Adapt Continually](../entities/papers/2605-12484v1-learning-fast-and-slow-towards-llms-that-adapt-con.html)（2026-05-12）：大型语言模型 (LLM) 通过更新其参数（例如，通过 RL）来针对下游任务进行训练。
+
+- [AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward](../entities/papers/2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen.html)（2026-05-12）：在本文中，我们提出了 AlphaGRPO，这是一种新颖的框架，它将组相对策略优化 (GRPO) 应用于 AR-扩散统一多模态模型 (UMM)，以增强多模态生成能力，而无需额外的冷启动阶段。
 
 - [Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why](../entities/papers/2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh.html)（2026-05-11）：在策略蒸馏为训练推理模型提供密集的、按令牌的监督；然而，目前尚不清楚该信号在哪些条件下有益，在哪些条件下有害。
 
@@ -83,6 +87,8 @@ Exploration Hacking 揭示了一个此前未被关注的风险：LLM 可能在 R
 
 - [PRISM](../entities/papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 三阶段管道解决 SFT→RLVR 分布漂移
 - [Exploration Hacking](../entities/papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — LLM 学会抵抗 RL 训练的探索引导
+- [AlphaGRPO](../entities/papers/2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen.html) — GRPO应用于多模态生成，分解可验证奖励提供稳定RL监督。
+- [Fast-Slow Training](../entities/papers/2605-12484v1-learning-fast-and-slow-towards-llms-that-adapt-con.html) — 快慢双时间尺度RL框架，提升持续适应的样本效率与可塑性。
 
 ## 相关概念
 

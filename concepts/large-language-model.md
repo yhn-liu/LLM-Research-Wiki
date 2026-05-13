@@ -2,7 +2,7 @@
 layout: concept
 title: 大语言模型
 created: 2026-05-01
-updated: 2026-05-12
+updated: 2026-05-13
 type: concept
 tags: [LLM, transformer, scaling, NLP, deep-learning]
 papers:
@@ -31,6 +31,26 @@ papers:
 大语言模型（Large Language Model, LLM）是基于 Transformer 架构、通过海量文本预训练的大规模神经网络，能够执行文本生成、理解、推理等多种任务。自 GPT-3 展示涌现能力以来，LLM 已成为 AI 研究的核心范式，本库中有 8 篇论文从不同角度对其进行研究。
 
 ## 关键文献与发现
+
+- [Learning, Fast and Slow: Towards LLMs That Adapt Continually](../entities/papers/2605-12484v1-learning-fast-and-slow-towards-llms-that-adapt-con.html)（2026-05-12）：大型语言模型 (LLM) 通过更新其参数（例如，通过 RL）来针对下游任务进行训练。
+
+- [AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward](../entities/papers/2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen.html)（2026-05-12）：在本文中，我们提出了 AlphaGRPO，这是一种新颖的框架，它将组相对策略优化 (GRPO) 应用于 AR-扩散统一多模态模型 (UMM)，以增强多模态生成能力，而无需额外的冷启动阶段。
+
+- [TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection](../entities/papers/2605-12456v1-textseal-a-localized-llm-watermark-for-provenance.html)（2026-05-12）：我们推出了 TextSeal，这是一种适用于大型语言模型的最先进的水印。
+
+- [Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts, Inputs and Outputs](../entities/papers/2605-12460v1-multi-stream-llms-unblocking-language-models-with.html)（2026-05-12）：语言模型能力的持续改进已经释放了它们作为自主代理驱动程序的广泛用途，例如在编码或计算机使用应用程序中。
+
+- [Solve the Loop: Attractor Models for Language and Reasoning](../entities/papers/2605-12466v1-solve-the-loop-attractor-models-for-language-and-r.html)（2026-05-12）：循环变压器通过迭代地细化潜在表示、改进语言建模和推理，为纯粹前馈计算提供了一种有前景的替代方案。
+
+- [KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference](../entities/papers/2605-12471v1-kv-fold-one-step-kv-cache-recurrence-for-long-cont.html)（2026-05-12）：我们引入了 KV-Fold，这是一种简单的、免训练的长上下文推理协议，它将键值 (KV) 缓存视为序列块左折叠中的累加器。
+
+- [Routers Learn the Geometry of Their Experts: Geometric Coupling in Sparse Mixture-of-Experts](../entities/papers/2605-12476v1-routers-learn-the-geometry-of-their-experts-geomet.html)（2026-05-12）：稀疏专家混合 (SMoE) 模型可以有效地扩展语言模型，但训练它们仍然具有挑战性，因为路由可能会崩溃到少数专家身上，而辅助负载平衡损失可能会减少专业化。
+
+- [MEME: Multi-entity & Evolving Memory Evaluation](../entities/papers/2605-12477v1-meme-multi-entity-evolving-memory-evaluation.html)（2026-05-12）：基于 LLM 的代理越来越多地在持久环境中运行，它们必须在许多会话中存储、更新和推理信息。
+
+- [Task-Adaptive Embedding Refinement via Test-time LLM Guidance](../entities/papers/2605-12487v1-task-adaptive-embedding-refinement-via-test-time-l.html)（2026-05-12）：我们探索了法学硕士引导的查询细化范式的有效性，以扩展嵌入模型的可用性以应对零样本搜索和分类任务。
+
+- [LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues](../entities/papers/2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t.html)（2026-05-12）：长期记忆对于专门网络环境中的代理至关重要，其中的成功取决于对界面可供性、状态动态、工作流程和重复出现的故障模式的回忆。
 
 - [Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why](../entities/papers/2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh.html)（2026-05-11）：在策略蒸馏为训练推理模型提供密集的、按令牌的监督；然而，目前尚不清楚该信号在哪些条件下有益，在哪些条件下有害。
 
@@ -223,4 +243,14 @@ papers:
 - **StraTA**（[2605.06642](../entities/papers/2605-06642v1-strata-incentivizing-agentic-reinforcement-learnin.html)）：将显式轨迹级策略引入智能体 RL，在 ALFWorld 和 WebShop 上取得领先成功率。
 - **ScaleLogic**（[2605.06638](../entities/papers/2605-06638v1-can-rl-teach-long-horizon-reasoning-to-llms-expres.html)）：揭示 RL 训练计算与推理深度间的幂律关系，证明逻辑表达能力是下游迁移的关键因素。
 - **Cited but Not Verified**（[2605.06635](../entities/papers/2605-06635v1-cited-but-not-verified-parsing-and-evaluating-sour.html)）：发现 LLM 深度研究智能体的引用事实准确性仅 39-77%，更多检索反而降低准确性。
-- **UniPool**（[2605.06665](../entities/papers/2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture.html)）：提出全局共享专家池替代逐层专家所有权，实现专家参数的亚线性深度缩放。
+- [UniPool](../entities/papers/2605-06665v1-unipool-a-globally-shared-expert-pool-for-mixture.html) — 提出全局共享专家池替代逐层专家所有权，实现专家参数的亚线性深度缩放。
+- [LongMemEval-V2](../entities/papers/2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t.html) — 评估长期记忆使智能体成为环境专家的基准。
+- [Task-Adaptive Embedding](../entities/papers/2605-12487v1-task-adaptive-embedding-refinement-via-test-time-l.html) — LLM引导的测试时嵌入优化，改善零样本搜索与分类。
+- [MEME](../entities/papers/2605-12477v1-meme-multi-entity-evolving-memory-evaluation.html) — 多实体演化记忆评估，揭示依赖推理的根本性困难。
+- [Router Geometry](../entities/papers/2605-12476v1-routers-learn-the-geometry-of-their-experts-geomet.html) — 揭示SMoE中路由器与专家的几何耦合机制。
+- [KV-Fold](../entities/papers/2605-12471v1-kv-fold-one-step-kv-cache-recurrence-for-long-cont.html) — 免训练的长上下文推理协议，利用KV缓存递归实现100%大海捞针检索。
+- [Attractor Models](../entities/papers/2605-12466v1-solve-the-loop-attractor-models-for-language-and-r.html) — 隐式微分不动点迭代，实现可扩展的循环推理架构。
+- [Multi-Stream LLMs](../entities/papers/2605-12460v1-multi-stream-llms-unblocking-language-models-with.html) — 多并行流指令微调解除聊天模型阻塞，改善效率与安全。
+- [TextSeal](../entities/papers/2605-12456v1-textseal-a-localized-llm-watermark-for-provenance.html) — 无失真LLM水印，支持局部检测与蒸馏追踪。
+- [AlphaGRPO](../entities/papers/2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen.html) — GRPO应用于统一多模态模型，解锁自反思生成能力。
+- [Fast-Slow Training](../entities/papers/2605-12484v1-learning-fast-and-slow-towards-llms-that-adapt-con.html) — 快慢权重双时间尺度学习框架，提升持续适应能力。

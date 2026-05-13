@@ -2,7 +2,7 @@
 layout: concept
 title: 智能体
 created: 2026-05-01
-updated: 2026-05-12
+updated: 2026-05-13
 type: concept
 tags: [agent, tool-use, planning, LLM-agent, multi-agent, collaboration]
 papers:
@@ -26,6 +26,14 @@ papers:
 智能体（AI Agent）是指能够感知环境、进行推理、做出决策并采取行动以实现特定目标的自主系统。基于大语言模型的智能体将 LLM 作为核心"大脑"，通过工具使用、规划和记忆机制与外部环境交互。本库中有 8 篇论文从单智能体能力、多智能体协作、训练安全等角度研究了这一方向。
 
 ## 关键文献与发现
+
+- [Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts, Inputs and Outputs](../entities/papers/2605-12460v1-multi-stream-llms-unblocking-language-models-with.html)（2026-05-12）：语言模型能力的持续改进已经释放了它们作为自主代理驱动程序的广泛用途，例如在编码或计算机使用应用程序中。
+
+- [KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference](../entities/papers/2605-12471v1-kv-fold-one-step-kv-cache-recurrence-for-long-cont.html)（2026-05-12）：我们引入了 KV-Fold，这是一种简单的、免训练的长上下文推理协议，它将键值 (KV) 缓存视为序列块左折叠中的累加器。
+
+- [MEME: Multi-entity & Evolving Memory Evaluation](../entities/papers/2605-12477v1-meme-multi-entity-evolving-memory-evaluation.html)（2026-05-12）：基于 LLM 的代理越来越多地在持久环境中运行，它们必须在许多会话中存储、更新和推理信息。
+
+- [LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues](../entities/papers/2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t.html)（2026-05-12）：长期记忆对于专门网络环境中的代理至关重要，其中的成功取决于对界面可供性、状态动态、工作流程和重复出现的故障模式的回忆。
 
 - [Shields to Guarantee Probabilistic Safety in MDPs](../entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html)（2026-05-11）：屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。
 
@@ -138,6 +146,9 @@ papers:
 - [MAD](../entities/papers/2305-19118-arxiv-query-searchqueryampidlist230519118ampstart0.html) — 多 agent 辩论克服思维退化
 - [Synthetic Computers](../entities/papers/2604-28181v1-synthetic-computers-at-scale-for-long-horizon-prod.html) — 大规模合成环境用于长期模拟
 - [Exploration Hacking](../entities/papers/2604-28182v1-exploration-hacking-can-llms-learn-to-resist-rl-tr.html) — 智能体 RL 训练中的意外行为
+- [LongMemEval-V2](../entities/papers/2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t.html) — 长期记忆使智能体成为环境专家的基准。
+- [MEME](../entities/papers/2605-12477v1-meme-multi-entity-evolving-memory-evaluation.html) — 多实体演化记忆评估，揭示智能体依赖推理困难。
+- [Multi-Stream LLMs](../entities/papers/2605-12460v1-multi-stream-llms-unblocking-language-models-with.html) — 多并行流解除智能体计算阻塞，改善效率与安全。
 
 ## 相关概念
 

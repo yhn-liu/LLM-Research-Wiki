@@ -2,7 +2,7 @@
 layout: concept
 title: 多模态学习
 created: 2026-05-01
-updated: 2026-05-12
+updated: 2026-05-13
 type: concept
 tags: [multimodal, vision-language, cross-modal, perception, reasoning]
 papers:
@@ -18,6 +18,8 @@ papers:
 多模态学习是让模型同时处理和理解多种数据类型（如文本、图像、3D 点云）的 AI 研究方向。在 LLM 时代，多模态学习的核心挑战是如何将视觉感知与语言推理有效融合。本库中有 2 篇论文从训练方法和应用场景两个角度研究了这一问题。
 
 ## 关键文献与发现
+
+- [AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward](../entities/papers/2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen.html)（2026-05-12）：在本文中，我们提出了 AlphaGRPO，这是一种新颖的框架，它将组相对策略优化 (GRPO) 应用于 AR-扩散统一多模态模型 (UMM)，以增强多模态生成能力，而无需额外的冷启动阶段。
 
 - [Confidence-Guided Diffusion Augmentation for Enhanced Bangla Compound Character Recognition](../entities/papers/2605-10916v1-confidence-guided-diffusion-augmentation-for-enhan.html)（2026-05-11）：由于字符结构复杂、类内差异大以及高质量注释数据的可用性有限，手写孟加拉复合字符的识别仍然是一个具有挑战性的问题。
 
@@ -80,6 +82,7 @@ HERMES++ 解决了多模态学习中的一个核心矛盾：**语义理解与物
 
 - [PRISM](../entities/papers/2604-28123v1-prism-pre-alignment-via-black-box-on-policy-distil.html) — 多模态推理的分布对齐训练
 - [HERMES++](../entities/papers/2604-28196v1-hermes-toward-a-unified-driving-world-model-for-3d.html) — 统一 3D 场景理解与生成
+- [AlphaGRPO](../entities/papers/2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen.html) — GRPO应用于AR-扩散统一多模态模型，解锁自反思多模态生成。
 
 ## 相关概念
 

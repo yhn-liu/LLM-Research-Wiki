@@ -1,34 +1,31 @@
 [
   {
-    "id": "2605.10938v1",
-    "title": "ELF: Embedded Language Flows",
+    "id": "2605.12493v1",
+    "title": "LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues",
     "authors": [
-      "Keya Hu",
-      "Linlu Qiu",
-      "Yiyang Lu",
-      "Hanhong Zhao",
-      "Tianhong Li",
-      "Yoon Kim",
-      "Jacob Andreas",
-      "Kaiming He"
+      "Di Wu",
+      "Zixiang Ji",
+      "Asmi Kawatkar",
+      "Bryan Kwan",
+      "Jia-Chen Gu",
+      "Nanyun Peng",
+      "Kai-Wei Chang"
     ],
-    "published": "2026-05-11",
-    "summary": "Diffusion and flow-based models have become the de facto approaches for generating continuous data, e.g., in domains such as images and videos. Their success has attracted growing interest in applying them to language modeling. Unlike their image-domain counterparts, today's leading diffusion language models (DLMs) primarily operate over discrete tokens. In this paper, we show that continuous DLMs can be made effective with minimal adaptation to the discrete domain. We propose Embedded Language Flows (ELF), a class of diffusion models in continuous embedding space based on continuous-time Flow Matching. Unlike existing DLMs, ELF predominantly stays within the continuous embedding space until the final time step, where it maps to discrete tokens using a shared-weight network. This formulation makes it straightforward to adapt established techniques from image-domain diffusion models, e.g., classifier-free guidance (CFG). Experiments show that ELF substantially outperforms leading discrete and continuous DLMs, achieving better generation quality with fewer sampling steps. These results suggest that ELF offers a promising path toward effective continuous DLMs.",
+    "published": "2026-05-12",
+    "summary": "Long-term memory is crucial for agents in specialized web environments, where success depends on recalling interface affordances, state dynamics, workflows, and recurring failure modes. However, existing memory benchmarks for agents mostly focus on user histories, short traces, or downstream task success, leaving open how to directly evaluate whether memory systems effectively internalize environment-specific experience. To address this gap, we introduce LongMemEval-V2 (LME-V2), a benchmark for evaluating whether memory systems can help agents acquire the experience needed to become knowledgeable colleagues in customized environments. LME-V2 contains 451 manually curated questions covering five core memory abilities for web agents: static state recall, dynamic state tracking, workflow knowledge, environment gotchas, and premise awareness. Questions are paired with history trajectories containing up to 500 trajectories and 115M tokens. We use a context gathering formulation: memory systems consume history trajectories and return compact evidence for downstream question answering. We propose a suite of two memory methods: AgentRunbook-R, an efficient RAG-based memory with knowledge pools for raw state observations, events, and strategy notes, and AgentRunbook-C, which stores trajectories as files and invokes a coding agent to gather evidence in an augmented sandbox. Experiments show that AgentRunbook-C achieves the best performance with 72.5% average accuracy, outperforming the strongest RAG baseline (48.5%) and the off-the-shelf coding agent baseline (69.3%). Despite the strong performance gains, coding agent based methods have high latency costs. While AgentRunbook-C advances the accuracy-latency Pareto frontier, substantial room for improvement remains. Together, these results establish LME-V2 as a challenging testbed for developing long-term memory systems for environment experience.",
     "categories": [
-      "cs.CL",
-      "cs.AI",
-      "cs.LG"
+      "cs.CL"
     ],
-    "summary_cn": "扩散和基于流的模型已成为生成连续数据的事实上的方法，例如在图像和视频等领域。他们的成功引起了人们越来越多的兴趣将其应用于语言建模。与图像领域的模型不同，当今领先的扩散语言模型 (DLM) 主要在离散标记上运行。在本文中，我们证明连续 DLM 可以通过对离散域的最小适应而变得有效。我们提出了嵌入式语言流（ELF），这是一类基于连续时间流匹配的连续嵌入空间中的扩散模型。与现有的 DLM 不同，ELF 主要停留在连续嵌入空间内，直到最后一个时间步，它使用共享权重网络映射到离散令牌。这种公式可以直接适应图像域扩散模型中的现有技术，例如无分类器引导（CFG）。实验表明，ELF 的性能明显优于领先的离散和连续 DLM，以更少的采样步骤实现了更好的生成质量。这些结果表明 ELF 为有效的连续 DLM 提供了一条有希望的道路。",
-    "comment": "Tech Report. Project webpage: https://github.com/lillian039/ELF",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-10938v1-elf-embedded-language-flows",
-    "rel_path": "entities/papers/2605-10938v1-elf-embedded-language-flows.html",
+    "summary_cn": "长期记忆对于专门网络环境中的代理至关重要，其中的成功取决于对界面可供性、状态动态、工作流程和重复出现的故障模式的回忆。然而，现有的智能体记忆基准主要关注用户历史、短踪迹或下游任务成功，如何直接评估记忆系统是否有效地内化特定环境的体验仍然是一个悬而未决的问题。为了解决这一差距，我们引入了 LongMemEval-V2 (LME-V2)，这是一个评估内存系统是否可以帮助智能体获得在定制环境中成为知识渊博的同事所需的经验的基准。 LME-V2 包含 451 个手动策划的问题，涵盖 Web 代理的五种核心记忆能力：静态回忆、动态状态跟踪、工作流程知识、环境陷阱和前提感知。问题与历史轨迹配对，其中包含多达 500 条轨迹和 1.15 亿个代币。我们使用上下文收集公式：记忆系统消耗历史轨迹并返回下游问答的紧凑证据。我们提出了一套两种内存方法：AgentRunbook-R，一种基于 RAG 的高效内存，具有用于原始状态观察、事件和策略注释的知识池；以及 AgentRunbook-C，它将轨迹存储为文件并调用编码代理在增强沙箱中收集证据。实验表明，AgentRunbook-C 实现了最佳性能，平均准确率为 72.5%，优于最强的 RAG 基线 (48.5%) 和现成的编码代理基线 (69.3%)。尽管性能提升显着，但基于编码代理的方法具有很高的延迟成本。虽然 AgentRunbook-C 提高了准确性-延迟帕累托边界，但仍然存在很大的改进空间。总之，这些结果使 LME-V2 成为开发环境体验长期记忆系统的具有挑战性的测试平台。",
+    "comment": "Work in Progress",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t",
+    "rel_path": "entities/papers/2605-12493v1-longmemeval-v2-evaluating-long-term-agent-memory-t.html",
     "figures": [
-      "assets/papers/2605-10938v1/fig1.png",
-      "assets/papers/2605-10938v1/fig2.png",
-      "assets/papers/2605-10938v1/fig3.png"
+      "assets/papers/2605-12493v1/fig1.png",
+      "assets/papers/2605-12493v1/fig2.png",
+      "assets/papers/2605-12493v1/fig3.png"
     ],
     "concepts": [
       {
@@ -37,54 +34,149 @@
         "url": "../../concepts/large-language-model.html"
       },
       {
-        "name": "多模态学习",
-        "slug": "multimodal-learning",
-        "url": "../../concepts/multimodal-learning.html"
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "世界模型",
+        "slug": "world-models",
+        "url": "../../concepts/world-models.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
       }
     ],
-    "method_signal": "We propose Embedded Language Flows (ELF), a class of diffusion models in continuous embedding space based on continuous-time Flow Matching.",
-    "topic_signal": "大语言模型 / 多模态学习"
+    "method_signal": "To address this gap, we introduce LongMemEval-V2 (LME-V2), a benchmark for evaluating whether memory systems can help agents acquire the experience needed to become knowledgeable colleagues in customized environments.",
+    "topic_signal": "大语言模型 / 基准评估 / 世界模型 / 智能体"
   },
   {
-    "id": "2605.10934v1",
-    "title": "Variational Inference for Lévy Process-Driven SDEs via Neural Tilting",
+    "id": "2605.12487v1",
+    "title": "Task-Adaptive Embedding Refinement via Test-time LLM Guidance",
     "authors": [
-      "Yaman Kindap",
-      "Manfred Opper",
-      "Benjamin Dupuis",
-      "Umut Simsekli",
-      "Tolga Birdal"
+      "Ariel Gera",
+      "Shir Ashury-Tahan",
+      "Gal Bloch",
+      "Ohad Eytan",
+      "Assaf Toledo"
     ],
-    "published": "2026-05-11",
-    "summary": "Modelling extreme events and heavy-tailed phenomena is central to building reliable predictive systems in domains such as finance, climate science, and safety-critical AI. While Lévy processes provide a natural mathematical framework for capturing jumps and heavy tails, Bayesian inference for Lévy-driven stochastic differential equations (SDEs) remains intractable with existing methods: Monte Carlo approaches are rigorous but lack scalability, whereas neural variational inference methods are efficient but rely on Gaussian assumptions that fail to capture discontinuities. We address this tension by introducing a neural exponential tilting framework for variational inference in Lévy-driven SDEs. Our approach constructs a flexible variational family by exponentially reweighting the Lévy measure using neural networks. This parametrization preserves the jump structure of the underlying process while remaining computationally tractable. To enable efficient inference, we develop a quadratic neural parametrization that yields closed-form normalization of the tilted measure, a conditional Gaussian representation for stable processes that facilitates simulation, and symmetry-aware Monte Carlo estimators for scalable optimization. Empirically, we demonstrate that the method accurately captures jump dynamics and yields reliable posterior inference in regimes where Gaussian-based variational approaches fail, on both synthetic and real-world datasets.",
+    "published": "2026-05-12",
+    "summary": "We explore the effectiveness of an LLM-guided query refinement paradigm for extending the usability of embedding models to challenging zero-shot search and classification tasks. Our approach refines the embedding representation of a user query using feedback from a generative LLM on a small set of documents, enabling embeddings to adapt in real time to the target task. We conduct extensive experiments with state-of-the-art text embedding models across a diverse set of challenging search and classification benchmarks. Empirical results indicate that LLM-guided query refinement yields consistent gains across all models and datasets, with relative improvements of up to +25% in literature search, intent detection, key-point matching, and nuanced query-instruction following. The refined queries improve ranking quality and induce clearer binary separation across the corpus, enabling the embedding space to better reflect the nuanced, task-specific constraints of each ad-hoc user query. Importantly, this expands the range of practical settings in which embedding models can be effectively deployed, making them a compelling alternative when costly LLM pipelines are not viable at corpus-scale. We release our experimental code for reproducibility, at https://github.com/IBM/task-aware-embedding-refinement.",
     "categories": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CV",
-      "cs.RO",
-      "stat.ML"
+      "cs.CL",
+      "cs.IR",
+      "cs.LG"
     ],
-    "summary_cn": "对极端事件和重尾现象进行建模对于在金融、气候科学和安全关键型人工智能等领域构建可靠的预测系统至关重要。虽然 Lévy 过程为捕获跳跃和重尾提供了一个自然的数学框架，但 Lévy 驱动的随机微分方程 (SDE) 的贝叶斯推理仍然难以用现有方法处理：蒙特卡洛方法很严格，但缺乏可扩展性，而神经变分推理方法很有效，但依赖于无法捕获不连续性的高斯假设。我们通过在 Lévy 驱动的 SDE 中引入用于变分推理的神经指数倾斜框架来解决这种紧张关系。我们的方法通过使用神经网络对 Lévy 度量进行指数级重新加权来构建灵活的变分族。这种参数化保留了底层进程的跳转结构，同时保持计算上的易处理性。为了实现有效的推理，我们开发了一种二次神经参数化，可以产生倾斜测量的封闭式归一化、有利于模拟的稳定过程的条件高斯表示，以及用于可扩展优化的对称感知蒙特卡洛估计器。根据经验，我们证明该方法可以准确地捕获跳跃动态，并在基于高斯的变分方法失败的情况下，在合成数据集和真实数据集上产生可靠的后验推理。",
-    "comment": "The associated project page which contains the official implementation can be found in https://circle-group.github.io/research/NeuralTilting/",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-10934v1-variational-inference-for-lvy-process-driven-sdes",
-    "rel_path": "entities/papers/2605-10934v1-variational-inference-for-lvy-process-driven-sdes.html",
+    "summary_cn": "我们探索了法学硕士引导的查询细化范式的有效性，以扩展嵌入模型的可用性以应对零样本搜索和分类任务。我们的方法使用来自生成式 LLM 对一小组文档的反馈来细化用户查询的嵌入表示，使嵌入能够实时适应目标任务。我们在一系列具有挑战性的搜索和分类基准中使用最先进的文本嵌入模型进行了广泛的实验。实证结果表明，LLM 引导的查询细化在所有模型和数据集上都产生了一致的收益，在文献搜索、意图检测、关键点匹配和细致入微的查询指令跟踪方面的相对改进高达 +25%。细化的查询提高了排名质量，并在整个语料库中产生更清晰的二进制分离，使嵌入空间能够更好地反映每个临时用户查询的细微差别、特定于任务的约束。重要的是，这扩大了嵌入模型可以有效部署的实际设置范围，当昂贵的法学硕士管道在语料库规模上不可行时，它们成为一个引人注目的替代方案。我们在 https://github.com/IBM/task-aware-embedding-refinement 上发布了可重复性的实验代码。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-12487v1-task-adaptive-embedding-refinement-via-test-time-l",
+    "rel_path": "entities/papers/2605-12487v1-task-adaptive-embedding-refinement-via-test-time-l.html",
     "figures": [
-      "assets/papers/2605-10934v1/fig1.png",
-      "assets/papers/2605-10934v1/fig2.png",
-      "assets/papers/2605-10934v1/fig3.png"
+      "assets/papers/2605-12487v1/fig1.png",
+      "assets/papers/2605-12487v1/fig2.png",
+      "assets/papers/2605-12487v1/fig3.png"
     ],
     "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      }
+    ],
+    "method_signal": "Our approach refines the embedding representation of a user query using feedback from a generative LLM on a small set of documents, enabling embeddings to adapt in real time to the target task.",
+    "topic_signal": "大语言模型 / 基准评估"
+  },
+  {
+    "id": "2605.12477v1",
+    "title": "MEME: Multi-entity & Evolving Memory Evaluation",
+    "authors": [
+      "Seokwon Jung",
+      "Alexander Rubinstein",
+      "Arnas Uselis",
+      "Sangdoo Yun",
+      "Seong Joon Oh"
+    ],
+    "published": "2026-05-12",
+    "summary": "LLM-based agents increasingly operate in persistent environments where they must store, update, and reason over information across many sessions. While prior benchmarks evaluate only single-entity updates, MEME defines six tasks spanning the full space defined by the multi-entity and evolving axes, including three not scored by prior work: Cascade and Absence (dependency reasoning) and Deletion (post-removal state). Evaluating six memory systems spanning three memory paradigms on 100 controlled episodes, we find that all systems collapse on dependency reasoning under the default configuration (Cascade: 3%, Absence: 1% in average accuracy) despite adequate static retrieval performance. Prompt optimization, deeper retrieval, reduced filler noise, and most stronger LLMs fail to close this gap. Only a file-based agent paired with Claude Opus 4.7 as its internal LLM partially closes the gap, but at ~70x the baseline cost, indicating closure currently depends on configurations that are not practical at scale. Code and data are available on the project page: https://seokwonjung-jay.github.io/meme-eval/.",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "summary_cn": "基于 LLM 的代理越来越多地在持久环境中运行，它们必须在许多会话中存储、更新和推理信息。虽然之前的基准仅评估单实体更新，但 MEME 定义了跨越多实体和演化轴定义的整个空间的六项任务，其中包括之前工作未评分的三项任务：级联和缺席（依赖推理）以及删除（删除后状态）。通过在 100 个受控事件上评估跨越三种内存范式的六个内存系统，我们发现尽管有足够的静态检索性能，但所有系统在默认配置下（级联：3％，缺席：平均准确度为 1％）下都在依赖推理上崩溃。及时优化、更深入的检索、减少填充噪音以及大多数更强的法学硕士都无法缩小这一差距。只有基于文件的代理与 Claude Opus 4.7 配对作为其内部 LLM 部分缩小了差距，但成本约为基准成本的 70 倍，这表明目前的关闭取决于在规模上不切实际的配置。代码和数据可在项目页面上找到：https://seokwonjung-jay.github.io/meme-eval/。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-12477v1-meme-multi-entity-evolving-memory-evaluation",
+    "rel_path": "entities/papers/2605-12477v1-meme-multi-entity-evolving-memory-evaluation.html",
+    "figures": [
+      "assets/papers/2605-12477v1/fig1.png",
+      "assets/papers/2605-12477v1/fig2.png",
+      "assets/papers/2605-12477v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
       {
         "name": "基准评估",
         "slug": "benchmarking",
         "url": "../../concepts/benchmarking.html"
       },
       {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "LLM-based agents increasingly operate in persistent environments where they must store, update, and reason over information across many sessions.",
+    "topic_signal": "大语言模型 / 基准评估 / 智能体"
+  },
+  {
+    "id": "2605.12476v1",
+    "title": "Routers Learn the Geometry of Their Experts: Geometric Coupling in Sparse Mixture-of-Experts",
+    "authors": [
+      "Sagi Ahrac",
+      "Noya Hochwald",
+      "Mor Geva"
+    ],
+    "published": "2026-05-12",
+    "summary": "Sparse Mixture-of-Experts (SMoE) models enable scaling language models efficiently, but training them remains challenging, as routing can collapse onto few experts and auxiliary load-balancing losses can reduce specialization. Motivated by these hurdles, we study how routing decisions in SMoEs are formed mechanistically. First, we reveal a geometric coupling between routers and their corresponding experts. For a given token, the router weights for the selected expert and the expert weights processing it receive gradients along the same input direction, differing only in scalar coefficients. Thus, matched router--expert directions accumulate the same routed token history. This theoretical coupling also appears empirically in routing dynamics. In a $1$B SMoE trained from scratch, higher router scores predict stronger expert neuron activations, showing that routing decisions are mirrored inside the selected expert. Next, we analyze the effects of auxiliary load balancing on the router--expert geometric coupling, showing that such losses break this structure by spreading input-directed gradients across router weights, making distinct router directions nearly three times more similar to each other. Last, we demonstrate the centrality of geometric coupling for effective routing with a parameter-free online K-Means router, in which each expert maintains a running average of the hidden states routed to it and tokens are assigned based on cosine similarity. Compared with auxiliary-loss and loss-free balancing, this router achieves the lowest load imbalance with only a modest perplexity increase, indicating that geometric coupling captures a substantial part of what the router learns. Overall, our results explain how routers form assignment geometry that supports an effective division of labor.",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "summary_cn": "稀疏专家混合 (SMoE) 模型可以有效地扩展语言模型，但训练它们仍然具有挑战性，因为路由可能会崩溃到少数专家身上，而辅助负载平衡损失可能会减少专业化。受这些障碍的推动，我们研究了 SMoE 中的路由决策是如何机械形成的。首先，我们揭示了路由器及其相应专家之间的几何耦合。对于给定的令牌，所选专家的路由器权重和处理它的专家权重沿着相同的输入方向接收梯度，仅标量系数不同。因此，匹配的路由器专家方向会累积相同的路由令牌历史记录。这种理论上的耦合也以经验的形式出现在路由动态中。在从头开始训练的 $1$B SMoE 中，较高的路由器分数预示着更强的专家神经元激活，这表明路由决策反映在所选专家内部。接下来，我们分析了辅助负载平衡对路由器-专家几何耦合的影响，表明这种损失通过在路由器权重上传播输入导向的梯度来打破这种结构，使不同的路由器方向彼此相似近三倍。最后，我们证明了几何耦合对于使用无参数在线 K-Means 路由器进行有效路由的中心性，其中每个专家维护路由到它的隐藏状态的运行平均值，并根据余弦相似度分配令牌。与辅助损耗和无损耗平衡相比，该路由器实现了最低的负载不平衡，而困惑度仅略有增加，这表明几何耦合捕获了路由器学习内容的很大一部分。总的来说，我们的结果解释了路由器如何形成支持有效分工的分配几何结构。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-12476v1-routers-learn-the-geometry-of-their-experts-geomet",
+    "rel_path": "entities/papers/2605-12476v1-routers-learn-the-geometry-of-their-experts-geomet.html",
+    "figures": [
+      "assets/papers/2605-12476v1/fig1.png",
+      "assets/papers/2605-12476v1/fig2.png",
+      "assets/papers/2605-12476v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
       },
       {
         "name": "世界模型",
@@ -92,29 +184,223 @@
         "url": "../../concepts/world-models.html"
       }
     ],
-    "method_signal": "Our approach constructs a flexible variational family by exponentially reweighting the Lévy measure using neural networks.",
-    "topic_signal": "基准评估 / AI安全与对齐 / 世界模型"
+    "method_signal": "Sparse Mixture-of-Experts (SMoE) models enable scaling language models efficiently, but training them remains challenging, as routing can collapse onto few experts and auxiliary load-balancing losses can reduce specialization.",
+    "topic_signal": "大语言模型 / 基准评估 / 世界模型"
   },
   {
-    "id": "2605.10916v1",
-    "title": "Confidence-Guided Diffusion Augmentation for Enhanced Bangla Compound Character Recognition",
+    "id": "2605.12471v1",
+    "title": "KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference",
     "authors": [
-      "Md. Sultan Al Rayhan",
-      "Maheen Islam"
+      "Alireza Nadali",
+      "Patrick Cooper",
+      "Ashutosh Trivedi",
+      "Alvaro Velasquez"
     ],
-    "published": "2026-05-11",
-    "summary": "Recognition of handwritten Bangla compound characters remains a challenging problem due to complex character structures, large intra-class variation, and limited availability of high-quality annotated data. Existing Bangla handwritten character recognition systems often struggle to generalize across diverse writing styles, particularly for compound characters containing intricate ligatures and diacritical variations. In this work, we propose a confidence-guided diffusion augmentation framework for low-resolution Bangla compound character recognition. Our framework combines class-conditional diffusion modeling with classifier guidance to synthesize high-quality handwritten compound character samples. To further improve generation quality, we introduce Squeeze-and-Excitation enhanced residual blocks within the diffusion model's U-Net backbone. We additionally propose a confidence-based filtering mechanism where pre-trained classifiers act as quality gates to retain only highly class-consistent synthetic samples. The filtered synthetic images are fused with the original training data and used to retrain multiple classification architectures. Experiments conducted on the AIBangla compound character dataset demonstrate consistent performance improvements across ResNet50, DenseNet121, VGG16, and Vision Transformer architectures. Our best-performing model achieves 89.2\\% classification accuracy, surpassing the previously published AIBangla benchmark by a substantial margin. The results demonstrate that quality-aware diffusion augmentation can effectively enhance handwritten character recognition performance in low-resource script domains.",
+    "published": "2026-05-12",
+    "summary": "We introduce KV-Fold, a simple, training-free long-context inference protocol that treats the key-value (KV) cache as the accumulator in a left fold over sequence chunks. At each step, the model processes the next chunk conditioned on the accumulated cache, appends the newly produced keys and values, and passes the enlarged cache forward; the same one-step update is applied repeatedly, analogous to foldl in functional programming. Building on the KV cache concatenation primitive introduced for latent multi-agent communication, we repurpose it as a chunk-to-chunk recurrence for long-context inference. When processing chunk t, the model attends to the KV cache carried from earlier chunks as a prefix, reusing its internal state across segments without modifying or retraining the model. Despite its simplicity, the induced recurrence is stable: per-step drift rises briefly and then saturates into a flat plateau that persists across deep chains. This plateau is insensitive to a 10,000x change in numerical precision, robust across chunk sizes, and consistent across model families. At the task level, KV-Fold preserves exact information over long distances. On a needle-in-a-haystack benchmark, it achieves 100% exact-match retrieval across 152 trials spanning contexts from 16K to 128K tokens and chain depths up to 511 on Llama-3.1-8B, while remaining within the memory limits of a single 40GB GPU. Compared to streaming methods, which trade fidelity for bounded memory, KV-Fold maintains long-range retrieval while operating as a sequence of tractable forward passes. Overall, our results show that frozen pretrained transformers already support a stable form of KV-cache recurrence, providing a practical route to long-context inference without architectural changes or training.",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "summary_cn": "我们引入了 KV-Fold，这是一种简单的、免训练的长上下文推理协议，它将键值 (KV) 缓存视为序列块左折叠中的累加器。在每一步中，模型都会根据累积的缓存处理下一个块，附加新生成的键和值，并将扩大的缓存向前传递；重复应用相同的一步更新，类似于函数式编程中的foldl。基于为潜在多代理通信引入的 KV 缓存串联原语，我们将其重新调整为用于长上下文推理的块到块递归。当处理块 t 时，模型会关注从早期块携带的 KV 缓存作为前缀，跨段重用其内部状态，而无需修改或重新训练模型。尽管它很简单，但诱导的重复是稳定的：每步漂移短暂上升，然后饱和到在深链中持续存在的平坦平台。该平台对数值精度 10,000 倍的变化不敏感，在块大小上具有鲁棒性，并且在模型系列中保持一致。在任务层面，KV-Fold 可以长距离保存准确的信息。在大海捞针基准测试中，它在 Llama-3.1-8B 上跨越 16K 到 128K 令牌的上下文以及高达 511 的链深度的 152 次试验中实现了 100% 精确匹配检索，同时保持在单个 40GB GPU 的内存限制内。与以保真度换取有限内存的流方法相比，KV-Fold 在作为一系列易于处理的前向传递进行操作的同时，保持了远程检索。总的来说，我们的结果表明，冻结的预训练 Transformer 已经支持稳定形式的 KV 缓存循环，为长上下文推理提供了一条实用的途径，而无需进行架构更改或训练。",
+    "comment": "12 pages, 3 figures, 6 tables",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-12471v1-kv-fold-one-step-kv-cache-recurrence-for-long-cont",
+    "rel_path": "entities/papers/2605-12471v1-kv-fold-one-step-kv-cache-recurrence-for-long-cont.html",
+    "figures": [],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "We introduce KV-Fold, a simple, training-free long-context inference protocol that treats the key-value (KV) cache as the accumulator in a left fold over sequence chunks.",
+    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐 / 智能体"
+  },
+  {
+    "id": "2605.12466v1",
+    "title": "Solve the Loop: Attractor Models for Language and Reasoning",
+    "authors": [
+      "Jacob Fein-Ashley",
+      "Paria Rashidinejad"
+    ],
+    "published": "2026-05-12",
+    "summary": "Looped Transformers offer a promising alternative to purely feed-forward computation by iteratively refining latent representations, improving language modeling and reasoning. Yet recurrent architectures remain unstable to train, costly to optimize and deploy, and constrained to small, fixed recurrence depths. We introduce Attractor Models, in which a backbone module first proposes output embeddings, then an attractor module refines them by solving for the fixed point, with gradients obtained through implicit differentiation. Thus, training memory remains constant in effective depth, and iterations are chosen adaptively by convergence. Empirically, Attractor Models outperform existing models across two regimes, large-scale language-model pretraining and reasoning with tiny models. In language modeling, Attractor Models deliver a Pareto improvement over standard Transformers and stable looped models across sizes, improving perplexity by up to 46.6% and downstream accuracy by up to 19.7% while reducing training cost. Notably, a 770M Attractor Model outperforms a 1.3B Transformer trained on twice as many tokens. On challenging reasoning tasks, we show that our model with only 27M parameters and approximately 1000 examples achieves 91.4% accuracy on Sudoku-Extreme and 93.1% on Maze-Hard, scaling favorably where frontier models like Claude and GPT o3, fail completely, and specialized recursive reasoners collapse at larger sizes. Lastly, we show that Attractor Models exhibit a novel phenomenon, which we call equilibrium internalization: fixed-point training places the model's initial output embedding near equilibrium, allowing the solver to be removed at inference time with little degradation. Together, these results suggest that Attractor Models make iterative refinement scalable by turning recurrence into a computation the model can learn to internalize.",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.NE"
+    ],
+    "summary_cn": "循环变压器通过迭代地细化潜在表示、改进语言建模和推理，为纯粹前馈计算提供了一种有前景的替代方案。然而，循环架构的训练仍然不稳定，优化和部署成本高昂，并且受限于较小的固定循环深度。我们引入吸引器模型，其中主干模块首先提出输出嵌入，然后吸引器模块通过求解固定点来细化它们，并通过隐式微分获得梯度。因此，训练记忆在有效深度上保持恒定，并且通过收敛自适应地选择迭代。根据经验，吸引子模型在大规模语言模型预训练和小型模型推理这两个方面都优于现有模型。在语言建模中，Attractor Models 比标准 Transformer 和不同规模的稳定循环模型提供了帕累托改进，将困惑度提高了 46.6%，下游准确度提高了 19.7%，同时降低了培训成本。值得注意的是，770M 吸引器模型的性能优于 1.3B Transformer，训练的令牌数量是后者的两倍。在具有挑战性的推理任务中，我们表明，我们的模型仅具有 27M 个参数和大约 1000 个示例，在 Sudoku-Extreme 上实现了 91.4% 的准确率，在 Maze-Hard 上实现了 93.1% 的准确率，在 Claude 和 GPT o3 等前沿模型完全失败以及专门的递归推理机在更大尺寸下崩溃的情况下，可以顺利扩展。最后，我们表明吸引子模型表现出一种新的现象，我们称之为平衡内化：定点训练使模型的初始输出嵌入接近平衡，从而允许求解器在推理时被移除，而几乎没有退化。总之，这些结果表明，吸引子模型通过将递归转化为模型可以学习内化的计算，使迭代细化具有可扩展性。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-12466v1-solve-the-loop-attractor-models-for-language-and-r",
+    "rel_path": "entities/papers/2605-12466v1-solve-the-loop-attractor-models-for-language-and-r.html",
+    "figures": [
+      "assets/papers/2605-12466v1/fig1.png",
+      "assets/papers/2605-12466v1/fig2.png",
+      "assets/papers/2605-12466v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      }
+    ],
+    "method_signal": "We introduce Attractor Models, in which a backbone module first proposes output embeddings, then an attractor module refines them by solving for the fixed point, with gradients obtained through implicit differentiation.",
+    "topic_signal": "大语言模型"
+  },
+  {
+    "id": "2605.12460v1",
+    "title": "Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts, Inputs and Outputs",
+    "authors": [
+      "Guinan Su",
+      "Yanwu Yang",
+      "Xueyan Li",
+      "Jonas Geiping"
+    ],
+    "published": "2026-05-12",
+    "summary": "The continued improvements in language model capability have unlocked their widespread use as drivers of autonomous agents, for example in coding or computer use applications. However, the core of these systems has not changed much since early instruction-tuned models like ChatGPT. Even advanced AI agents function on message exchange formats, successively exchanging messages with users, systems, with itself (i.e. chain-of-thought) and tools in a single stream of computation. This bottleneck to a single stream in chat models leads to a number of limitations: the agent cannot act (generate output) while reading, and in reverse, cannot react to new information while writing. Similarly, the agent cannot act while thinking and cannot think while reading or acting on information.   In this work, we show that models can be unblocked by switching from instruction-tuning for sequential message formats to instruction-tuning for multiple, parallel streams of computation, splitting each role into a separate stream. Every forward pass of the language model then simultaneously reads from multiple input streams and generates tokens in multiple output streams, all of which causally depend on earlier timesteps. We argue that this data-driven change remedies a number of usability limitations as outlined above, improves model efficiency through parallelization, improves model security through better separation of concerns and can further improve model monitorability.",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "summary_cn": "语言模型能力的持续改进已经释放了它们作为自主代理驱动程序的广泛用途，例如在编码或计算机使用应用程序中。然而，自 ChatGPT 等早期指令调整模型以来，这些系统的核心并没有太大变化。即使是先进的人工智能代理也可以在消息交换格式上运行，在单个计算流中连续与用户、系统、自身（即思想链）和工具交换消息。聊天模型中单个流的瓶颈导致了许多限制：代理在读取时无法采取行动（生成输出），相反，在写入时无法对新信息做出反应。同样，智能体不能一边思考一边行动，也不能一边阅读信息或根据信息采取行动一边思考。在这项工作中，我们展示了通过从顺序消息格式的指令调整切换到多个并行计算流的指令调整，将每个角色拆分为单独的流，可以畅通模型。然后，语言模型的每次前向传递都会同时从多个输入流中读取并在多个输出流中生成标记，所有这些都因果地依赖于较早的时间步长。我们认为，这种数据驱动的变化弥补了如上所述的许多可用性限制，通过并行化提高了模型效率，通过更好的关注点分离提高了模型安全性，并且可以进一步提高模型的可监控性。",
+    "comment": "Preprint, 37 pages. Code at https://github.com/seal-rg/streaming/",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-12460v1-multi-stream-llms-unblocking-language-models-with",
+    "rel_path": "entities/papers/2605-12460v1-multi-stream-llms-unblocking-language-models-with.html",
+    "figures": [
+      "assets/papers/2605-12460v1/fig1.png",
+      "assets/papers/2605-12460v1/fig2.png",
+      "assets/papers/2605-12460v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "自动驾驶",
+        "slug": "autonomous-driving",
+        "url": "../../concepts/autonomous-driving.html"
+      },
+      {
+        "name": "智能体",
+        "slug": "ai-agents",
+        "url": "../../concepts/ai-agents.html"
+      }
+    ],
+    "method_signal": "The continued improvements in language model capability have unlocked their widespread use as drivers of autonomous agents, for example in coding or computer use applications.",
+    "topic_signal": "大语言模型 / 自动驾驶 / 智能体"
+  },
+  {
+    "id": "2605.12456v1",
+    "title": "TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection",
+    "authors": [
+      "Tom Sander",
+      "Hongyan Chang",
+      "Tomáš Souček",
+      "Tuan Tran",
+      "Valeriu Lacatusu",
+      "Sylvestre-Alvise Rebuffi",
+      "Alexandre Mourachko",
+      "Surya Parimi",
+      "Christophe Ropers",
+      "Rashel Moritz",
+      "Vanessa Stark",
+      "Hady Elsahar",
+      "Pierre Fernandez"
+    ],
+    "published": "2026-05-12",
+    "summary": "We introduce TextSeal, a state-of-the-art watermark for large language models. Building on Gumbel-max sampling, TextSeal introduces dual-key generation to restore output diversity, along with entropy-weighted scoring and multi-region localization for improved detection. It supports serving optimizations such as speculative decoding and multi-token prediction, and does not add any inference overhead. TextSeal strictly dominates baselines like SynthID-text in detection strength and is robust to dilution, maintaining confident localized detection even in heavily mixed human/AI documents. The scheme is theoretically distortion-free, and evaluation across reasoning benchmarks confirms that it preserves downstream performance; while a multilingual human evaluation (6000 A/B comparisons, 5 languages) shows no perceptible quality difference. Beyond its use for provenance detection, TextSeal is also ``radioactive'': its watermark signal transfers through model distillation, enabling detection of unauthorized use.",
+    "categories": [
+      "cs.CR",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "summary_cn": "我们推出了 TextSeal，这是一种适用于大型语言模型的最先进的水印。 TextSeal 以 Gumbel-max 采样为基础，引入了双密钥生成来恢复输出多样性，并引入熵加权评分和多区域定位来改进检测。它支持推测性解码和多令牌预测等服务优化，并且不会增加任何推理开销。 TextSeal 在检测强度方面严格控制 SynthID-text 等基线，并且对稀释具有鲁棒性，即使在高度混合的人类/AI 文档中也能保持可靠的本地检测。该方案理论上是无失真的，并且跨推理基准的评估证实它保留了下游性能；而多语言人工评估（6000 次 A/B 比较，5 种语言）显示没有明显的质量差异。除了用于来源检测之外，TextSeal 还具有“放射性”：其水印信号通过模型蒸馏进行传输，从而能够检测未经授权的使用。",
+    "comment": "",
+    "category_en": "Natural Language Processing",
+    "category_cn": "自然语言处理",
+    "slug": "2605-12456v1-textseal-a-localized-llm-watermark-for-provenance",
+    "rel_path": "entities/papers/2605-12456v1-textseal-a-localized-llm-watermark-for-provenance.html",
+    "figures": [
+      "assets/papers/2605-12456v1/fig1.png",
+      "assets/papers/2605-12456v1/fig2.png",
+      "assets/papers/2605-12456v1/fig3.png"
+    ],
+    "concepts": [
+      {
+        "name": "大语言模型",
+        "slug": "large-language-model",
+        "url": "../../concepts/large-language-model.html"
+      },
+      {
+        "name": "基准评估",
+        "slug": "benchmarking",
+        "url": "../../concepts/benchmarking.html"
+      },
+      {
+        "name": "AI安全与对齐",
+        "slug": "ai-safety-alignment",
+        "url": "../../concepts/ai-safety-alignment.html"
+      }
+    ],
+    "method_signal": "We introduce TextSeal, a state-of-the-art watermark for large language models.",
+    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐"
+  },
+  {
+    "id": "2605.12495v1",
+    "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
+    "authors": [
+      "Runhui Huang",
+      "Jie Wu",
+      "Rui Yang",
+      "Zhe Liu",
+      "Hengshuang Zhao"
+    ],
+    "published": "2026-05-12",
+    "summary": "In this paper, we propose AlphaGRPO, a novel framework that applies Group Relative Policy Optimization (GRPO) to AR-Diffusion Unified Multimodal Models (UMMs) to enhance multimodal generation capabilities without an additional cold-start stage. Our approach unlocks the model's intrinsic potential to perform advanced reasoning tasks: Reasoning Text-to-Image Generation, where the model actively infers implicit user intents, and Self-Reflective Refinement, where it autonomously diagnoses and corrects misalignments in generated outputs. To address the challenge of providing stable supervision for real-world multimodal generation, we introduce the Decompositional Verifiable Reward (DVReward). Unlike holistic scalar rewards, DVReward utilizes an LLM to decompose complex user requests into atomic, verifiable semantic and quality questions, which are then evaluated by a general MLLM to provide reliable and interpretable feedback. Extensive experiments demonstrate that AlphaGRPO yields robust improvements across multimodal generation benchmarks, including GenEval, TIIF-Bench, DPG-Bench and WISE, while also achieving significant gains in editing tasks on GEdit without training on editing tasks. These results validate that our self-reflective reinforcement approach effectively leverages inherent understanding to guide high-fidelity generation. Project page: https://huangrh99.github.io/AlphaGRPO/",
     "categories": [
       "cs.CV",
-      "cs.AI"
+      "cs.AI",
+      "cs.LG"
     ],
-    "summary_cn": "由于字符结构复杂、类内差异大以及高质量注释数据的可用性有限，手写孟加拉复合字符的识别仍然是一个具有挑战性的问题。现有的孟加拉语手写字符识别系统通常很难概括不同的书写风格，特别是对于包含复杂连字和变音变体的复合字符。在这项工作中，我们提出了一种用于低分辨率孟加拉语复合字符识别的置信引导扩散增强框架。我们的框架将类条件扩散建模与分类器指导相结合，以合成高质量的手写复合字符样本。为了进一步提高生成质量，我们在扩散模型的 U-Net 主干中引入了挤压和激励增强残差块。我们还提出了一种基于置信度的过滤机制，其中预先训练的分类器充当质量门，仅保留高度类一致的合成样本。过滤后的合成图像与原始训练数据融合，并用于重新训练多个分类架构。在 AIBangla 复合字符数据集上进行的实验表明，ResNet50、DenseNet121、VGG16 和 Vision Transformer 架构的性能得到了一致的改进。我们表现​​最好的模型达到了 89.2% 的分类准确率，大幅超过了之前发布的 AIBangla 基准。结果表明，质量感知扩散增强可以有效增强低资源脚本域中的手写字符识别性能。",
-    "comment": "",
+    "summary_cn": "在本文中，我们提出了 AlphaGRPO，这是一种新颖的框架，它将组相对策略优化 (GRPO) 应用于 AR-扩散统一多模态模型 (UMM)，以增强多模态生成能力，而无需额外的冷启动阶段。我们的方法释放了模型执行高级推理任务的内在潜力：推理文本到图像生成，其中模型主动推断隐式用户意图，以及自我反思细化，其中它自动诊断和纠正生成输出中的偏差。为了解决为现实世界的多模式生成提供稳定监督的挑战，我们引入了分解可验证奖励（DVReward）。与整体标量奖励不同，DVReward 利用 LLM 将复杂的用户请求分解为原子的、可验证的语义和质量问题，然后由通用 MLLM 进行评估，以提供可靠且可解释的反馈。大量实验表明，AlphaGRPO 在多模式生成基准测试（包括 GenEval、TIIF-Bench、DPG-Bench 和 WISE）上取得了强劲的改进，同时在 GEdit 上的编辑任务中也取得了显着的进步，而无需进行编辑任务培训。这些结果验证了我们的自我反思强化方法有效地利用了固有的理解来指导高保真生成。项目页面：https://huangrh99.github.io/AlphaGRPO/",
+    "comment": "ICML2026",
     "category_en": "Artificial Intelligence",
     "category_cn": "人工智能",
-    "slug": "2605-10916v1-confidence-guided-diffusion-augmentation-for-enhan",
-    "rel_path": "entities/papers/2605-10916v1-confidence-guided-diffusion-augmentation-for-enhan.html",
-    "figures": [],
+    "slug": "2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen",
+    "rel_path": "entities/papers/2605-12495v1-alphagrpo-unlocking-self-reflective-multimodal-gen.html",
+    "figures": [
+      "assets/papers/2605-12495v1/fig1.png",
+      "assets/papers/2605-12495v1/fig2.png",
+      "assets/papers/2605-12495v1/fig3.png"
+    ],
     "concepts": [
       {
         "name": "大语言模型",
@@ -127,43 +413,49 @@
         "url": "../../concepts/multimodal-learning.html"
       },
       {
+        "name": "强化学习",
+        "slug": "reinforcement-learning",
+        "url": "../../concepts/reinforcement-learning.html"
+      },
+      {
         "name": "基准评估",
         "slug": "benchmarking",
         "url": "../../concepts/benchmarking.html"
       }
     ],
-    "method_signal": "In this work, we propose a confidence-guided diffusion augmentation framework for low-resolution Bangla compound character recognition.",
-    "topic_signal": "大语言模型 / 多模态学习 / 基准评估"
+    "method_signal": "In this paper, we propose AlphaGRPO, a novel framework that applies Group Relative Policy Optimization (GRPO) to AR-Diffusion Unified Multimodal Models (UMMs) to enhance multimodal generation capabilities without an additional cold-start stage.",
+    "topic_signal": "大语言模型 / 多模态学习 / 强化学习 / 基准评估"
   },
   {
-    "id": "2605.10913v1",
-    "title": "Shepherd: A Runtime Substrate Empowering Meta-Agents with a Formalized Execution Trace",
+    "id": "2605.12484v1",
+    "title": "Learning, Fast and Slow: Towards LLMs That Adapt Continually",
     "authors": [
-      "Simon Yu",
-      "Derek Chong",
-      "Ananjan Nandi",
-      "Dilara Soylu",
-      "Jiuding Sun",
-      "Christopher D Manning",
-      "Weiyan Shi"
+      "Rishabh Tiwari",
+      "Kusha Sareen",
+      "Lakshya A Agrawal",
+      "Joseph E. Gonzalez",
+      "Matei Zaharia",
+      "Kurt Keutzer",
+      "Inderjit S Dhillon",
+      "Rishabh Agarwal",
+      "Devvrit Khatri"
     ],
-    "published": "2026-05-11",
-    "summary": "We introduce Shepherd, a functional programming model that formalizes meta-agent operations on target agents as functions, with core operations mechanized in Lean. Shepherd records every agent-environment interaction as a typed event in a Git-like execution trace, enabling any past state to be forked and replayed. The system forks the agent process and its filesystem $5\\times$ faster than Docker, achieving $>95\\%$ prompt-cache reuse on replay. We demonstrate the model through three applications. First, in runtime intervention, a live supervisor increases pair coding pass rates from 28.8% to 54.7% on CooperBench. Second, in counterfactual meta-optimization, branching exploration outperforms baselines across four benchmarks by up to 11 points while reducing wall-clock time by up to 58%. Third, in Tree-RL training, forking rollouts at selected turns improves TerminalBench-2 performance from 34.2% to 39.4%. These results establish Shepherd as an efficient infrastructure for programming meta-agents. We open-source the system to support future research.",
+    "published": "2026-05-12",
+    "summary": "Large language models (LLMs) are trained for downstream tasks by updating their parameters (e.g., via RL). However, updating parameters forces them to absorb task-specific information, which can result in catastrophic forgetting and loss of plasticity. In contrast, in-context learning with fixed LLM parameters can cheaply and rapidly adapt to task-specific requirements (e.g., prompt optimization), but cannot by itself typically match the performance gains available through updating LLM parameters. There is no good reason for restricting learning to being in-context or in-weights. Moreover, humans also likely learn at different time scales (e.g., System 1 vs 2). To this end, we introduce a fast-slow learning framework for LLMs, with model parameters as \"slow\" weights and optimized context as \"fast\" weights. These fast \"weights\" can learn from textual feedback to absorb the task-specific information, while allowing slow weights to stay closer to the base model and persist general reasoning behaviors. Fast-Slow Training (FST) is up to 3x more sample-efficient than only slow learning (RL) across reasoning tasks, while consistently reaching a higher performance asymptote. Moreover, FST-trained models remain closer to the base LLM (up to 70% less KL divergence), resulting in less catastrophic forgetting than RL-training. This reduced drift also preserves plasticity: after training on one task, FST trained models adapt more effectively to a subsequent task than parameter-only trained models. In continual learning scenarios, where task domains change on the fly, FST continues to acquire each new task while parameter-only RL stalls.",
     "categories": [
-      "cs.AI",
-      "cs.PL",
-      "cs.SE"
+      "cs.LG",
+      "cs.AI"
     ],
-    "summary_cn": "我们引入 Shepherd，这是一种函数式编程模型，它将目标代理上的元代理操作形式化为函数，并在精益中机械化核心操作。 Shepherd 将每个代理与环境的交互记录为类似 Git 的执行跟踪中的类型化事件，从而可以分叉和重播任何过去的状态。该系统分叉代理进程及其文件系统比 Docker 快 $5\\time$，在重放时实现 $>95\\%$ 提示缓存重用。我们通过三个应用程序演示该模型。首先，在运行时干预中，现场主管将 CooperBench 上的配对编码通过率从 28.8% 提高到 54.7%。其次，在反事实元优化中，分支探索在四个基准测试中的表现优于基线高达 11 个点，同时减少挂钟时间高达 58%。第三，在 Tree-RL 训练中，在选定的回合进行分叉部署将 TerminalBench-2 的性能从 34.2% 提高到 39.4%。这些结果使 Shepherd 成为编程元代理的高效基础设施。我们开源该系统以支持未来的研究。",
-    "comment": "56 pages, 21 figures, 14 tables",
+    "summary_cn": "大型语言模型 (LLM) 通过更新其参数（例如，通过 RL）来针对下游任务进行训练。然而，更新参数迫使它们吸收特定于任务的信息，这可能会导致灾难性的遗忘和可塑性的丧失。相比之下，使用固定 LLM 参数的上下文学习可以廉价且快速地适应特定于任务的要求（例如，即时优化），但其本身通常无法与通过更新 LLM 参数获得的性能增益相匹配。没有充分的理由将学习限制在上下文中或权重中。此外，人类也可能在不同的时间尺度上学习（例如，系统 1 与系统 2）。为此，我们为法学硕士引入了快慢学习框架，其中模型参数作为“慢”权重，优化上下文作为“快”权重。这些快速“权重”可以从文本反馈中学习以吸收特定于任务的信息，同时允许慢速权重更接近基本模型并持续一般推理行为。在推理任务中，快慢训练 (FST) 的样本效率比仅慢速学习 (RL) 高出 3 倍，同时始终达到更高的性能渐近线。此外，FST 训练的模型仍然更接近基础 LLM（KL 散度减少 70%），从而比 RL 训练产生更少的灾难性遗忘。这种减少的漂移还保留了可塑性：在一项任务训练后，FST 训练的模型比仅参数训练的模型更有效地适应后续任务。 In continual learning scenarios, where task domains change on the fly, FST continues to acquire each new task while parameter-only RL stalls.",
+    "comment": "",
     "category_en": "Artificial Intelligence",
     "category_cn": "人工智能",
-    "slug": "2605-10913v1-shepherd-a-runtime-substrate-empowering-meta-agent",
-    "rel_path": "entities/papers/2605-10913v1-shepherd-a-runtime-substrate-empowering-meta-agent.html",
+    "slug": "2605-12484v1-learning-fast-and-slow-towards-llms-that-adapt-con",
+    "rel_path": "entities/papers/2605-12484v1-learning-fast-and-slow-towards-llms-that-adapt-con.html",
     "figures": [
-      "assets/papers/2605-10913v1/fig1.png",
-      "assets/papers/2605-10913v1/fig2.png",
-      "assets/papers/2605-10913v1/fig3.png"
+      "assets/papers/2605-12484v1/fig1.png",
+      "assets/papers/2605-12484v1/fig2.png",
+      "assets/papers/2605-12484v1/fig3.png"
     ],
     "concepts": [
       {
@@ -175,238 +467,9 @@
         "name": "强化学习",
         "slug": "reinforcement-learning",
         "url": "../../concepts/reinforcement-learning.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
       }
     ],
-    "method_signal": "We introduce Shepherd, a functional programming model that formalizes meta-agent operations on target agents as functions, with core operations mechanized in Lean.",
-    "topic_signal": "大语言模型 / 强化学习 / 基准评估 / 智能体"
-  },
-  {
-    "id": "2605.10907v1",
-    "title": "Engineering Robustness into Personal Agents with the AI Workflow Store",
-    "authors": [
-      "Roxana Geambasu",
-      "Mariana Raykova",
-      "Pierre Tholoniat",
-      "Trishita Tiwari",
-      "Lillian Tsai",
-      "Wen Zhang"
-    ],
-    "published": "2026-05-11",
-    "summary": "The dominant paradigm for AI agents is an \"on-the-fly\" loop in which agents synthesize plans and execute actions within seconds or minutes in response to user prompts. We argue that this paradigm short-circuits disciplined software engineering (SE) processes -- iterative design, rigorous testing, adversarial evaluation, staged deployment, and more -- that have delivered the (relatively) reliable and secure systems we use today. By focusing on rapid, real-time synthesis, are AI agents effectively delivering users improvised prototypes rather than systems fit for high-stakes scenarios in which users may unwittingly apply them?   This paper argues for the need to integrate rigorous SE processes into the agentic loop to produce production-grade, hardened, and deterministically-constrained agent *workflows* that substantially outperform the potentially brittle and vulnerable results of on-the-fly synthesis. Doing so may require extra compute and time, and if so, we must amortize the cost of rigor through reuse across a broad user community. We envision an *AI Workflow Store* that consists of hardened and reusable workflows that agents can invoke with far greater reliability and security than improvised tool chains. We outline the research challenges of this vision, which stem from a broader flexibility-robustness tension that we argue requires moving beyond the ``on-the-fly'' paradigm to navigate effectively.",
-    "categories": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "summary_cn": "人工智能代理的主导范例是“即时”循环，其中代理综合计划并在几秒或几分钟内执行操作以响应用户提示。我们认为，这种范式短路了严格的软件工程（SE）流程——迭代设计、严格测试、对抗性评估、分阶段部署等等——这些流程提供了我们今天使用的（相对）可靠和安全的系统。通过专注于快速、实时的综合，人工智能代理是否可以有效地为用户提供临时原型，而不是适合用户可能无意中应用它们的高风险场景的系统？本文认为需要将严格的 SE 流程集成到代理循环中，以生成生产级、强化且确定性约束的代理“工作流程”，其性能大大优于即时合成的潜在脆弱性和易受攻击的结果。这样做可能需要额外的计算和时间，如果是这样，我们必须通过在广泛的用户社区中重用来分摊严格成本。我们设想一个“人工智能工作流存储”，由强化且可重用的工作流组成，代理可以比临时工具链以更高的可靠性和安全性调用这些工作流。我们概述了这一愿景的研究挑战，这些挑战源于更广泛的灵活性-鲁棒性张力，我们认为需要超越“即时”范式才能有效导航。",
-    "comment": "",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-10907v1-engineering-robustness-into-personal-agents-with-t",
-    "rel_path": "entities/papers/2605-10907v1-engineering-robustness-into-personal-agents-with-t.html",
-    "figures": [
-      "assets/papers/2605-10907v1/fig1.png",
-      "assets/papers/2605-10907v1/fig2.png",
-      "assets/papers/2605-10907v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "We argue that this paradigm short-circuits disciplined software engineering (SE) processes -- iterative design, rigorous testing, adversarial evaluation, staged deployment, and more -- that have delivered the (relatively) reliable and secure systems we use today.",
-    "topic_signal": "大语言模型 / 基准评估 / AI安全与对齐 / 智能体"
-  },
-  {
-    "id": "2605.10906v1",
-    "title": "DataMaster: Towards Autonomous Data Engineering for Machine Learning",
-    "authors": [
-      "Yaxin Du",
-      "Xiyuan Yang",
-      "Zhifan Zhou",
-      "Wanxu Liu",
-      "Zixing Lei",
-      "Zimeng Chen",
-      "Fenyi Liu",
-      "Haotian Wu",
-      "Yuzhu Cai",
-      "Zexi Liu",
-      "Xinyu Zhu",
-      "WenHao Wang",
-      "Linfeng Zhang",
-      "Chen Qian",
-      "Siheng Chen"
-    ],
-    "published": "2026-05-11",
-    "summary": "As model families, training recipes, and compute budgets become increasingly standardized, further gains in machine learning systems depend increasingly on data. Yet data engineering remains largely manual and ad hoc: practitioners repeatedly search for external datasets, adapt them to existing pipelines, validate candidate data through downstream training, and carry forward lessons from prior attempts. We study task-conditioned autonomous data engineering, where an autonomous agent improves a fixed learning algorithm by optimizing only the data side, including external data discovery, data selection and composition, cleaning and transformation. The goal is to obtain a stronger downstream solution while leaving the learning algorithm unchanged. To address the open-ended search space, branch-dependent refinement, and delayed validation inherent in autonomous data engineering, we propose DataMaster, a data-agent framework that integrates tree-structured search, shared candidate data, and cumulative memory. DataMaster consists of three key components: a DataTree that organizes alternative data-engineering branches, a shared Data Pool that stores discovered external data sources for reuse, and a Global Memory that records node outcomes, artifacts, and reusable findings. Together, these components allow the agent to discover candidate data, construct executable training inputs, evaluate them through downstream feedback, and carry useful evidence across branches. We evaluate DataMaster on two types of benchmarks, MLE-Bench Lite and PostTrainBench. On MLE-Bench Lite, it improves medal rate by 32.27% over the initial score; on PostTrainBench, it surpasses the instruct model on GPQA (31.02% vs 30.35%).",
-    "categories": [
-      "cs.LG",
-      "cs.AI"
-    ],
-    "summary_cn": "随着模型系列、训练方法和计算预算变得越来越标准化，机器学习系统的进一步收益越来越依赖于数据。然而，数据工程仍然主要是手动和临时的：从业者反复搜索外部数据集，使它们适应现有的管道，通过下游培训验证候选数据，并从先前的尝试中吸取教训。我们研究任务条件自主数据工程，其中自主代理通过仅优化数据侧来改进固定学习算法，包括外部数据发现、数据选择和组合、清理和转换。目标是在保持学习算法不变的情况下获得更强的下游解决方案。为了解决自主数据工程中固有的开放式搜索空间、分支相关的细化和延迟验证问题，我们提出了 DataMaster，这是一个集成了树结构搜索、共享候选数据和累积内存的数据代理框架。 DataMaster 由三个关键组件组成：组织替代数据工程分支的 DataTree、存储发现的外部数据源以供重用的共享数据池以及记录节点结果、工件和可重用结果的全局内存。这些组件共同允许代理发现候选数据，构建可执行的训练输入，通过下游反馈对其进行评估，并跨分支携带有用的证据。我们使用两种类型的基准测试来评估 DataMaster：MLE-Bench Lite 和 PostTrainBench。在MLE-Bench Lite上，较初始成绩提升32.27%的奖牌率；在 PostTrainBench 上，它超越了 GPQA 上的指导模型（31.02% vs 30.35%）。",
-    "comment": "",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-10906v1-datamaster-towards-autonomous-data-engineering-for",
-    "rel_path": "entities/papers/2605-10906v1-datamaster-towards-autonomous-data-engineering-for.html",
-    "figures": [
-      "assets/papers/2605-10906v1/fig1.png",
-      "assets/papers/2605-10906v1/fig2.png",
-      "assets/papers/2605-10906v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "自动驾驶",
-        "slug": "autonomous-driving",
-        "url": "../../concepts/autonomous-driving.html"
-      },
-      {
-        "name": "图神经网络",
-        "slug": "graph-neural-networks",
-        "url": "../../concepts/graph-neural-networks.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "To address the open-ended search space, branch-dependent refinement, and delayed validation inherent in autonomous data engineering, we propose DataMaster, a data-agent framework that integrates tree-structured search, shared candidate data, and cumulative memory.",
-    "topic_signal": "基准评估 / 自动驾驶 / 图神经网络 / 智能体"
-  },
-  {
-    "id": "2605.10889v1",
-    "title": "Unmasking On-Policy Distillation: Where It Helps, Where It Hurts, and Why",
-    "authors": [
-      "Mohammadreza Armandpour",
-      "Fatih Ilhan",
-      "David Harrison",
-      "Ajay Jaiswal",
-      "Duc N. M Hoang",
-      "Fartash Faghri",
-      "Yizhe Zhang",
-      "Minsik Cho",
-      "Mehrdad Farajtabar"
-    ],
-    "published": "2026-05-11",
-    "summary": "On-policy distillation offers dense, per-token supervision for training reasoning models; however, it remains unclear under which conditions this signal is beneficial and under which it is detrimental. Which teacher model should be used, and in the case of self-distillation, which specific context should serve as the supervisory signal? Does the optimal choice vary from one token to the next? At present, addressing these questions typically requires costly training runs whose aggregate performance metrics obscure the dynamics at the level of individual tokens. We introduce a training-free diagnostic framework that operates at the highest resolution: per token, per question, and per teacher. We derive an ideal per-node gradient defined as the parameter update that maximally increases the student's probability of success. We then develop a scalable targeted-rollout algorithm to estimate this gradient efficiently, even for long chains of intermediate thoughts. The gradient alignment score, defined as the cosine similarity between this ideal gradient and any given distillation gradient, quantifies the extent to which a particular configuration approximates the ideal signal. Across a range of self-distillation settings and external teacher models, we observe that distillation guidance exhibits substantially higher alignment with the ideal on incorrect rollouts than on correct ones, where the student already performs well and the teacher's signal tends to become noisy. Furthermore, we find that the optimal distillation context depends jointly on the student model's capacity and the target task, and that no single universally effective configuration emerges. These findings motivate the use of per-task, per-token diagnostic analyses for distillation.",
-    "categories": [
-      "cs.LG",
-      "cs.AI"
-    ],
-    "summary_cn": "在策略蒸馏为训练推理模型提供密集的、按令牌的监督；然而，目前尚不清楚该信号在哪些条件下有益，在哪些条件下有害。应该采用哪种教师模式，在自我蒸馏的情况下，应该以哪种具体情境作为监督信号？不同代币的最佳选择是否有所不同？目前，解决这些问题通常需要昂贵的训练运行，其总体性能指标掩盖了单个代币级别的动态。我们引入了一个免培训的诊断框架，该框架以最高分辨率运行：每个令牌、每个问题和每个教师。我们推导出一个理想的每节点梯度，定义为最大程度地增加学生成功概率的参数更新。然后，我们开发了一种可扩展的有针对性的推出算法来有效地估计这个梯度，即使对于长链的中间思想也是如此。梯度对齐分数定义为该理想梯度与任何给定蒸馏梯度之间的余弦相似度，量化特定配置近似理想信号的程度。在一系列自蒸馏设置和外部教师模型中，我们观察到蒸馏指导在不正确的部署中表现出比在正确的部署中更高的理想一致性，在正确的部署中，学生已经表现良好，而教师的信号往往会变得嘈杂。此外，我们发现最佳蒸馏上下文共同取决于学生模型的能力和目标任务，并且没有出现单一的普遍有效的配置。这些发现促使使用每个任务、每个标记的诊断分析来进行蒸馏。",
-    "comment": "",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh",
-    "rel_path": "entities/papers/2605-10889v1-unmasking-on-policy-distillation-where-it-helps-wh.html",
-    "figures": [
-      "assets/papers/2605-10889v1/fig1.png",
-      "assets/papers/2605-10889v1/fig2.png",
-      "assets/papers/2605-10889v1/fig3.png"
-    ],
-    "concepts": [
-      {
-        "name": "大语言模型",
-        "slug": "large-language-model",
-        "url": "../../concepts/large-language-model.html"
-      },
-      {
-        "name": "强化学习",
-        "slug": "reinforcement-learning",
-        "url": "../../concepts/reinforcement-learning.html"
-      },
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      }
-    ],
-    "method_signal": "We introduce a training-free diagnostic framework that operates at the highest resolution: per token, per question, and per teacher.",
-    "topic_signal": "大语言模型 / 强化学习 / 基准评估 / AI安全与对齐"
-  },
-  {
-    "id": "2605.10888v1",
-    "title": "Shields to Guarantee Probabilistic Safety in MDPs",
-    "authors": [
-      "Linus Heck",
-      "Filip Macák",
-      "Roman Andriushchenko",
-      "Milan Češka",
-      "Sebastian Junges"
-    ],
-    "published": "2026-05-11",
-    "summary": "Shielding is a prominent model-based technique to ensure safety of autonomous agents. Classical shielding aims to ensure that nothing bad ever happens and comes with strong guarantees about safety and maximal permissiveness. However, shielding systems for probabilistic safety, where something bad is allowed to happen with an acceptable probability, has proven to be more intricate. This paper presents a formal framework that conservatively extends classical shields to probabilistic safety. In this framework, we (i) demonstrate the impossibility of preserving the strong guarantees on safety and permissiveness, (ii) provide natural shields with weaker guarantees, and (iii) introduce offline and online shield constructions ensuring strong safety guarantees. The empirical evaluation highlights the practical advantages of the new shields, as well as their computational feasibility.",
-    "categories": [
-      "cs.LO",
-      "cs.AI"
-    ],
-    "summary_cn": "屏蔽是一种重要的基于模型的技术，可确保自主代理的安全。经典屏蔽旨在确保不会发生任何不良情况，并提供安全性和最大允许性的强有力保证。然而，概率安全屏蔽系统（允许不良事件以可接受的概率发生）已被证明更加复杂。本文提出了一个正式的框架，保守地将经典屏蔽扩展到概率安全。在此框架中，我们（i）证明了不可能保留对安全性和许可性的强有力保障，（ii）提供保障较弱的天然屏障，以及（iii）引入离线和在线屏障建设，以确保强有力的安全保障。实证评估强调了新屏蔽的实际优势及其计算可行性。",
-    "comment": "Accepted to CAV 2026",
-    "category_en": "Artificial Intelligence",
-    "category_cn": "人工智能",
-    "slug": "2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps",
-    "rel_path": "entities/papers/2605-10888v1-shields-to-guarantee-probabilistic-safety-in-mdps.html",
-    "figures": [],
-    "concepts": [
-      {
-        "name": "基准评估",
-        "slug": "benchmarking",
-        "url": "../../concepts/benchmarking.html"
-      },
-      {
-        "name": "AI安全与对齐",
-        "slug": "ai-safety-alignment",
-        "url": "../../concepts/ai-safety-alignment.html"
-      },
-      {
-        "name": "自动驾驶",
-        "slug": "autonomous-driving",
-        "url": "../../concepts/autonomous-driving.html"
-      },
-      {
-        "name": "智能体",
-        "slug": "ai-agents",
-        "url": "../../concepts/ai-agents.html"
-      }
-    ],
-    "method_signal": "Shielding is a prominent model-based technique to ensure safety of autonomous agents.",
-    "topic_signal": "基准评估 / AI安全与对齐 / 自动驾驶 / 智能体"
+    "method_signal": "To this end, we introduce a fast-slow learning framework for LLMs, with model parameters as \"slow\" weights and optimized context as \"fast\" weights.",
+    "topic_signal": "大语言模型 / 强化学习"
   }
 ]
